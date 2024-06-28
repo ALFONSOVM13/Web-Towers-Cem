@@ -11,7 +11,9 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "next": "14.2.4",
+    "sass": "^1.49.8",
+    "boxicons": "^2.1.1"
   },
   "devDependencies": {
     "postcss": "^8",
