@@ -1,7 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    
+import { join } from "path";
 
+export const sassOptions = {
+  includePaths: ["src/app/(website)"],
 };
-
-export default nextConfig;

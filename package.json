@@ -9,16 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
+    "boxicons": "^2.1.1",
     "next": "14.2.4",
-    "sass": "^1.49.8",
-    "boxicons": "^2.1.1"
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8",
+    "sass": "^1.77.6",
+    "tailwindcss": "^3.4.1"
   }
 }
