@@ -21,8 +21,8 @@ export default {
         },
       },
       fontFamily: {
-        nexa: ["Nexa", "sans-serif"],
-        chopin: ["Chopin", "sans-serif"],
+        content: ["Nexa", "sans-serif"],
+        title: ["Chopin", "sans-serif"],
       },
     },
   },
