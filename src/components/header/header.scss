@@ -1,63 +1,72 @@
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 5rem;
+}
 
-    &__content {
-        max-width: 1120px;
-        height: 100%;
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+.header__content {
+  max-width: 99%;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .hamburger-menu {
-    height: 4rem;
-    width: 3rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
+  height: 4rem;
+  width: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
-  
 .bar {
-    width: 1.9rem;
-    height: 1.5px;
-    border-radius: 2px;
-    background-color: #eee;
-    transition: 0.5s;
-    position: relative;
-  }
-  
-  .bar:before,
-  .bar:after {
-    content: "";
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    background-color: #eee;
-    transition: 0.5s;
-  }
-  
-  .bar:before {
-    transform: translateY(-9px);
-  }
-  
-  .bar:after {
-    transform: translateY(9px);
-  }
-  
+  width: 2.9rem;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+  transition: 0.5s;
+  position: relative;
+}
 
+.bar:before,
+.bar:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.bar:before {
+  transform: translateY(-9px);
+}
+
+.bar:after {
+  transform: translateY(9px);
+}
+
+.hamburger-menu.active .bar {
+  background-color: transparent;
+}
+
+.hamburger-menu.active .bar:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:after {
+  transform: translateY(0) rotate(-45deg);
+}

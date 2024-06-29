@@ -14,13 +14,13 @@ const Menu = ({ active, setActive }) => {
   return (
     <ul className={`menu ${active ? "active" : ""}`}>
       <li>
-        <Link href="/">Inicio</Link>
+        <Link href="/" className="text-complementary-200">Inicio</Link>
       </li>
       <li>
-        <Link href="/">Contacto</Link>
+        <Link href="/" className="text-complementary-200">Contacto</Link>
       </li>
       <li>
-        <Link href="/">Noticias</Link>
+        <Link href="/" className="text-complementary-200">Noticias</Link>
       </li>
     </ul>
   );

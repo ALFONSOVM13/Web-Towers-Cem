@@ -8,7 +8,7 @@ const CustomButton = ({ type = 'primary', onClick, children, className }) => {
   // Estilos para el botón primario y secundario
   const typeClasses = type === 'primary'
     ? 'bg-primary-100 text-white hover:bg-primary-200'
-    : 'border border-gray-500 text-commplementary-200 hover:bg-gray-100 hover:text-primary-100';
+    : 'border border-complementary-200 text-commplementary-200 hover:bg-gray-100 hover:text-primary-100';
 
   return (
     <button

@@ -8,7 +8,7 @@ const HeroSection = () => {
       className="relative w-full h-screen bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: "url('/images/hero-background.jpg')" }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-70"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-90"></div>
 
       <div className="absolute inset-0 flex items-center justify-center text-center text-complementary-200">
         <div className="max-w-4xl px-6 md:px-10 lg:px-20">
