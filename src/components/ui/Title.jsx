@@ -10,7 +10,7 @@ const Title = ({ text, size, className }) => {
   }
 
   return (
-    <h1 className={`font-chopin font-bold ${textSizeClasses} leading-tight tracking-tight ${className}`}>
+    <h1 className={`font-chopin font-bold ${textSizeClasses} leading-tight tracking-tight  ${className}`}>
       {text}
     </h1>
   );

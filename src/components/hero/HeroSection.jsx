@@ -11,11 +11,12 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-90"></div>
 
       <div className="absolute inset-0 flex items-center justify-center text-center text-complementary-200">
-        <div className="max-w-4xl px-6 md:px-10 lg:px-20">
+        <div className="max-w-4xl px-6 md:px-10 lg:px-20 ">
           <Title
             text="CONSTRUYENDO CIUDADES QUE RESPIRAN"
             size="large"
             color="white"
+            className={"animate-jump-in"}
           />
           <p className="mt-4 text-lg md:text-xl leading-relaxed">
             Innovación y sostenibilidad se unen para construir el futuro con
