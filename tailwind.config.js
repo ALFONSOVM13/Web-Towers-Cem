@@ -19,12 +19,12 @@ export default {
           200: "#ffffff",
           300: "#000000",
         },
-        fontFamily: {
-          nexa: ["Nexa", "sans-serif"],
-          chopin: ["Chopin", "sans-serif"],
-        },
+      },
+      fontFamily: {
+        nexa: ["Nexa", "sans-serif"],
+        chopin: ["Chopin", "sans-serif"],
       },
     },
-    plugins: [],
   },
+  plugins: [],
 };

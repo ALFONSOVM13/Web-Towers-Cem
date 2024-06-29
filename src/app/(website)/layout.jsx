@@ -1,4 +1,4 @@
-"use client"; // Asegúrate de usar 'use client'; al inicio del archivo
+"use client";
 
 import React, { useState } from "react";
 import Menu from "@/components/menu/Menu";
