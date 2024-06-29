@@ -1,21 +1,32 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap"; // Asegúrate de tener GSAP instalado (npm install gsap)
 
 const WhatWeDo = () => {
   const sectionRef = useRef(null);
   const contentRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1.5, ease: "power3.out" }
-    );
-    gsap.fromTo(
-      contentRef.current.children, // Anima cada elemento dentro de contentRef
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: "power2.out" }
-    );
+    const section = sectionRef.current;
+    const content = contentRef.current.children;
+
+    // Animación para el contenedor principal
+    section.style.opacity = 0;
+    section.style.transform = "translateY(50px)";
+    setTimeout(() => {
+      section.style.transition = "opacity 1.5s, transform 1.5s";
+      section.style.opacity = 1;
+      section.style.transform = "translateY(0)";
+    }, 100);
+
+    // Animación para el contenido
+    Array.from(content).forEach((child, index) => {
+      child.style.opacity = 0;
+      child.style.transform = "translateY(20px)";
+      setTimeout(() => {
+        child.style.transition = `opacity 1s ${index * 0.15}s, transform 1s ${index * 0.15}s`;
+        child.style.opacity = 1;
+        child.style.transform = "translateY(0)";
+      }, 100);
+    });
   }, []);
 
   return (
@@ -57,8 +68,6 @@ const WhatWeDo = () => {
           </a>
         </div>
       </div>
-
-      {/* (Opcional) Puedes agregar elementos decorativos como en el ejemplo anterior */}
     </section>
   );
 };
