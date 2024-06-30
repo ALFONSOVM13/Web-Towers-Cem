@@ -39,9 +39,9 @@ export const timeSince = (date) => {
     return `${ value } ${ value > 1 ? 'segundos' : 'segundo' }`
 }
 
-const TimeSince = ({ date }) => {
+const TimeSince = ({ date, className }) => {
     return (
-        <div className="font-semibold">
+        <div className={`font-semibold ${className}`}>
             Hace { timeSince(date) }
         </div>
     )
