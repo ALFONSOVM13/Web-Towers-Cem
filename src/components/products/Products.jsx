@@ -1,57 +1,66 @@
-import React from "react"
-import Image from 'next/image'
-import Title from '../ui/Title'
-import CustomButton from '../ui/CustomButton'
-import SliderButton from '../ui/SliderButton'
+//!1er modelo
 
-const Products = () => {
-  return (
-    <div className='flex flex-col md:flex-row p-6 md:p-14 justify-center items-center min-h-screen'>
-      <div className='w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center'>
-        <div className='flex flex-col flex-2 md:ml-10 items-center md:items-start'>
-          <Image
-            src="/images/cemento.svg"
-            width={400}
-            height={400}
-            alt="Cemento uso general"
-          />
-          <SliderButton className='mx-auto w-auto space-y-4 mt-2 md:mt-0'/>
-        </div>
-        <div className='flex flex-col space-y-8 flex-1 mt-10 md:mt-0 items-center md:items-start text-center md:text-left'>
-          <Title
-            text="X-CEM"
-            className='font-title font-bold text-primary-100'
-            size='large'
-          />
-          <Title
-            text="CEMENTO USO GENERAL"
-            className='font-title font-bold'
-          />
-          <p className='text-complementary-300 font-title text-xl px-4 md:px-0'>Nuestro cemento X-Cem utiliza tecnología avanzada para proporcionar altos niveles de durabilidad y sostenibilidad. Descubre cómo X-Cem puede transformar tus proyectos de construcción.</p>
+// import React from "react"
+// import Image from 'next/image'
+// import Title from '../ui/Title'
+// import CustomButton from '../ui/CustomButton'
+// import SliderButton from '../ui/SliderButton'
 
-          <div className='flex flex-col md:flex-row gap-6 mt-10'>
-            <CustomButton
-              type='primary'
-              onClick={() => {}}
-              className='rounded-2xl'
-            >
-              VER FICHA TECNICA
-            </CustomButton>
-            <CustomButton
-              type='secundary'
-              onClick={() => {}}
-              className='rounded-2xl'
-            >
-              SOLICITAR MUESTRAS
-            </CustomButton>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-export default Products
+// const Products = () => {
+//   return (
+//     <div className='flex flex-col md:flex-row p-6 md:p-14 justify-center items-center min-h-screen'>
+//       <div className='w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center'>
+//         <div className='flex flex-col flex-2 md:ml-10 items-center md:items-start'>
+//           <Image
+//             src="/images/cemento.svg"
+//             width={400}
+//             height={400}
+//             alt="Cemento uso general"
+//           />
+//           <SliderButton className='mx-auto w-auto space-y-4 mt-2 md:mt-0'/>
+//         </div>
+//         <div className='flex flex-col space-y-8 flex-1 mt-10 md:mt-0 items-center md:items-start text-center md:text-left'>
+//           <Title
+//             text="X-CEM"
+//             className='font-title font-bold text-primary-100'
+//             size='large'
+//           />
+//           <Title
+//             text="CEMENTO USO GENERAL"
+//             className='font-title font-bold'
+//           />
+//           <p className='text-complementary-300 font-title text-xl px-4 md:px-0'>Nuestro cemento X-Cem utiliza tecnología avanzada para proporcionar altos niveles de durabilidad y sostenibilidad. Descubre cómo X-Cem puede transformar tus proyectos de construcción.</p>
 
+//           <div className='flex flex-col md:flex-row gap-6 mt-10'>
+//             <CustomButton
+//               type='primary'
+//               onClick={() => {}}
+//               className='rounded-2xl'
+//             >
+//               VER FICHA TECNICA
+//             </CustomButton>
+//             <CustomButton
+//               type='secundary'
+//               onClick={() => {}}
+//               className='rounded-2xl'
+//             >
+//               SOLICITAR MUESTRAS
+//             </CustomButton>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+// export default Products
+
+
+
+
+
+
+
+//! 2do modelo
 
 // import React, { useState } from "react";
 // import Image from 'next/image';
@@ -67,19 +76,19 @@ export default Products
 
 // const productData = [
 //   {
-//     image: URL="/public/images/cemento.svg",
+//     image: "/images/cemento.svg",
 //     title: "X-CEM",
 //     subtitle: "USO GENERAL",
 //     description: "Nuestro cemento X-Cem utiliza tecnología avanzada para proporcionar altos niveles de durabilidad y sostenibilidad. Descubre cómo X-Cem puede transformar tus proyectos de construcción."
 //   },
 //   {
-//     image: URL="/public/images/bolsa-blanca-42.5.png",
+//     image: "/images/bolsa-blanca-42.5.png",
 //     title: "X-CEM",
 //     subtitle: "USO ESTRUCTURAL",
 //     description: "Revolucionamos los estándares de la construcción, minimizamos el impacto en el ecosistema y maximizamos la eficiencia de los recursos. Cada tonelada (t) de cemento X-cem remueve hasta 173.35 Kg de CO2 de la atmósfera."
 //   },
 //   {
-//     image: URL="/public/images/bolsa-42.50kg-marron.png",
+//     image: "/images/bolsa-42.50kg-marron.png",
 //     title: "X-CEM",
 //     subtitle: "USO ESTRUCTURAL",
 //     description: "Revolucionamos los estándares de la construcción, minimizamos el impacto en el ecosistema y maximizamos la eficiencia de los recursos. Cada tonelada (t) de cemento X-cem remueve hasta 173.35 Kg de CO2 de la atmósfera."
@@ -156,3 +165,100 @@ export default Products
 // };
 
 // export default Products;
+
+
+
+
+
+//! 3er modelo
+
+import React, { useState } from "react"
+import Image from 'next/image'
+import Title from '../ui/Title'
+import CustomButton from '../ui/CustomButton'
+import SliderButton from '../ui/SliderButton'
+
+const Products = () => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const products = [
+    {
+      image: "/images/cemento.svg",
+      title: "X-CEM",
+      subtitle: "USO GENERAL",
+      description: "Nuestro cemento X-Cem utiliza tecnología avanzada para proporcionar altos niveles de durabilidad y sostenibilidad. Descubre cómo X-Cem puede transformar tus proyectos de construcción."
+    },
+    {
+      image: "/images/bolsa-blanca.png",
+      title: "X-CEM",
+      subtitle: "USO ESTRUCTURAL",
+      description: "Revolucionamos los estándares de la construcción, minimizamos el impacto en el ecosistema y maximizamos la eficiencia de los recursos. Cada tonelada (t) de cemento X-cem remueve hasta 173.35 Kg de CO2 de la atmósfera."
+    },
+    // {
+    //   image: "/images/bolsa-marron.png",
+    //   title: "X-CEM",
+    //   subtitle: "USO ESTRUCTURAL",
+    //   description: "Revolucionamos los estándares de la construcción, minimizamos el impacto en el ecosistema y maximizamos la eficiencia de los recursos. Cada tonelada (t) de cemento X-cem remueve hasta 173.35 Kg de CO2 de la atmósfera."
+    // },
+  ]
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % products.length)
+  }
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + products.length) % products.length)
+  }
+
+  const currentProduct = products[currentIndex]
+
+  return (
+    <div className='flex flex-col md:flex-row p-6 md:p-14 justify-center items-center min-h-screen'>
+      <div className='w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center'>
+        <div className='flex flex-col flex-2 md:ml-10 items-center md:items-start'>
+          <Image
+            src={currentProduct.image}
+            width={400}
+            height={400}
+            alt={currentProduct.subtitle}
+          />
+          <SliderButton
+            onClickLeft={handlePrev}
+            onClickRight={handleNext}
+            className='mx-auto w-auto space-y-4 mt-2 md:mt-0'
+          />
+        </div>
+        <div className='flex flex-col space-y-8 flex-1 mt-10 md:mt-0 items-center md:items-start text-center md:text-left'>
+          <Title
+            text={currentProduct.title}
+            className='font-title font-bold text-primary-100'
+            size='large'
+          />
+          <Title
+            text={currentProduct.subtitle}
+            className='font-title font-bold'
+          />
+          <p className='text-complementary-300 font-title text-xl px-4 md:px-0'>{currentProduct.description}</p>
+
+          <div className='flex flex-col md:flex-row gap-6 mt-10'>
+            <CustomButton
+              type='primary'
+              onClick={() => { }}
+              className='rounded-2xl'
+            >
+              VER FICHA TECNICA
+            </CustomButton>
+            <CustomButton
+              type='secundary'
+              onClick={() => { }}
+              className='rounded-2xl'
+            >
+              SOLICITAR MUESTRAS
+            </CustomButton>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+export default Products
