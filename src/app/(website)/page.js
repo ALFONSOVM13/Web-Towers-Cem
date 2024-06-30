@@ -61,7 +61,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="h-screen w-full overflow-hidden">
+    <div className="h-screen w-full sm:overflow-y-auto xl:overflow-hidden">
       <div ref={(el) => (sectionRefs.current[0] = el)} className="h-screen">
         <HeroSection />
       </div>
