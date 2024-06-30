@@ -57,7 +57,7 @@ const HomePage = () => {
 
     setTimeout(() => {
       isScrolling.current = false;
-    }, 200); // Ajusta el tiempo según sea necesario
+    }, 900); // Ajusta el tiempo según sea necesario
   };
 
   return (
