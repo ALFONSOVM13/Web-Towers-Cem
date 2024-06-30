@@ -13,7 +13,7 @@ const Header = ({ active, setActive }) => {
             className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain mt-12"
           />
         </div>
-        <div className=" bg-primary-100 p-1">
+        <div className=" p-0.5">
           <div
             className={`hamburger-menu  ${active ? "active" : ""}  `}
             onClick={() => setActive(!active)}
