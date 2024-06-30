@@ -2,13 +2,15 @@
 
 import React from 'react';
 
+
+
 const CustomButton = ({ type = 'primary', onClick, children, className }) => {
-  const baseClasses = 'px-4 py-2 rounded font-semibold focus:outline-none transition duration-300';
+  const baseClasses = 'px-4 py-2 rounded font-semibold focus:outline-none color transition-colors duration-300';
 
   // Estilos para el botón primario y secundario
   const typeClasses = type === 'primary'
     ? 'bg-primary-100 text-white hover:bg-primary-200'
-    : 'border border-complementary-200 text-commplementary-200 hover:bg-gray-100 hover:text-primary-100';
+    : 'border border-primary-100 text-primary-100 hover:bg-complementary-100 hover:text-white color transition-colors duration-500';
 
   return (
     <button
