@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import "./Menu.scss";
+import "./styles.scss"
 
 const Menu = ({ active, setActive }) => {
   const pathname = usePathname();

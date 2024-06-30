@@ -1,26 +1,31 @@
-"use client"; 
+"use client";
 import React, { useEffect, useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
-import Products from '@/components/products/Products'
+import Products from "@/components/products/Products";
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
+  const isScrolling = useRef(false);
 
   useEffect(() => {
     const handleScroll = (event) => {
-      if (event.deltaY > 0) {
-        scrollToSection(1);
-      } else if (event.deltaY < 0) {
-        scrollToSection(-1);
+      if (!isScrolling.current) {
+        if (event.deltaY > 0) {
+          scrollToSection(1);
+        } else if (event.deltaY < 0) {
+          scrollToSection(-1);
+        }
       }
     };
 
     const handleKeyDown = (event) => {
-      if (event.key === "ArrowDown") {
-        scrollToSection(1);
-      } else if (event.key === "ArrowUp") {
-        scrollToSection(-1);
+      if (!isScrolling.current) {
+        if (event.key === "ArrowDown") {
+          scrollToSection(1);
+        } else if (event.key === "ArrowUp") {
+          scrollToSection(-1);
+        }
       }
     };
 
@@ -34,6 +39,8 @@ const HomePage = () => {
   }, []);
 
   const scrollToSection = (direction) => {
+    isScrolling.current = true;
+
     const currentSectionIndex = sectionRefs.current.findIndex((section) => {
       const rect = section.getBoundingClientRect();
       return rect.top === 0;
@@ -47,11 +54,14 @@ const HomePage = () => {
     sectionRefs.current[nextSectionIndex].scrollIntoView({
       behavior: "smooth",
     });
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 200); // Ajusta el tiempo según sea necesario
   };
 
   return (
-    <div className="h-screen w-full overflow-hidden">
-      
+    <div className="h-screen w-full sm:overflow-y-auto xl:overflow-hidden">
       <div ref={(el) => (sectionRefs.current[0] = el)} className="h-screen">
         <HeroSection />
       </div>

@@ -39,6 +39,7 @@ const WhatWeDo = () => {
         backgroundPosition: 'center',
       }}
     >
+      
       <div className="absolute inset-0 bg-complementary-300/70 z-0"></div>
 
       <div 

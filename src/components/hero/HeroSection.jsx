@@ -18,18 +18,10 @@ const HeroSection = () => {
             color="white"
             className={"animate-jump-in"}
           />
-          <p className="mt-4 text-lg md:text-xl leading-relaxed">
+          <p className="mt-4 text-lg md:text-2xl leading-relaxed font-title">
             Innovación y sostenibilidad se unen para construir el futuro con
             cementos inteligentes y ecológicos.
           </p>
-          <div className="mt-6 space-x-4">
-            <CustomButton type="primary" className="mt-6">
-              VER FICHA TÉCNICA
-            </CustomButton>
-            <CustomButton type="secondary" className="mt-4">
-              SOLICITAR MUESTRAS
-            </CustomButton>
-          </div>
         </div>
       </div>
     </div>
