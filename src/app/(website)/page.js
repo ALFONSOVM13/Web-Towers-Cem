@@ -2,6 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
+import NewsSection from "@/components/news/NewsSection";
+
+
+
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
@@ -56,6 +60,13 @@ const HomePage = () => {
       </div>
       <div ref={(el) => (sectionRefs.current[1] = el)} className="h-screen">
         <WhatWeDo />
+      </div>
+
+
+
+      
+      <div ref={(el) => (sectionRefs.current[1] = el)} className="h-screen">
+        <NewsSection />
       </div>
     </div>
   );
