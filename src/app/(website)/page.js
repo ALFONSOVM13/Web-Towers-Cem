@@ -71,7 +71,7 @@ const HomePage = () => {
       <div ref={(el) => (sectionRefs.current[1] = el)} className="h-screen">
         <WhatWeDo />
       </div>
-      <div ref={(el) => (sectionRefs.current[2] = el)} className="h-screen bg-complementary-200">
+      <div ref={(el) => (sectionRefs.current[2] = el)} className="min-h-screen bg-complementary-200">
         <Products />
       </div>
       <div ref={(el) => (sectionRefs.current[3] = el)} className="h-screen bg-complementary-100">

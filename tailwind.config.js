@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+      'customMd': '860px'
+    },
       colors: {
         primary: {
           100: "#302c57",
@@ -29,4 +32,4 @@ export default {
   plugins: [
     require('tailwindcss-animated')
   ],
-};
+}
