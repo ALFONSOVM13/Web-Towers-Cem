@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Menu from "@/components/menu/Menu";
 import "./main-layout.scss";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/footer";
 
 const RootLayout = ({ children }) => {
   const [active, setActive] = useState(false);
@@ -14,6 +15,7 @@ const RootLayout = ({ children }) => {
   };
 
   return (
+    <>
     <div className={`container_sass ${active  ? "active"  : ""} ` }>
       <Header active={active} setActive={setActive} />
       <div className="main-container">
@@ -25,6 +27,8 @@ const RootLayout = ({ children }) => {
       </div>
       <Menu active={active} setActive={setActive} />
     </div>
+    </>
+
   );
 };
 

@@ -5,7 +5,8 @@ import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
 import NewsSection from "@/components/news/NewsSection";
 import Products from "@/components/products/Products";
 import NewsletterSection from "@/components/newsletter/NewsletterSection";
-import Tecnologies from  "@/components/tecnologies/Tecnologies"
+import Tecnologies from "@/components/tecnologies/Tecnologies";
+import Footer from "@/components/footer/footer";
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
@@ -60,7 +61,7 @@ const HomePage = () => {
 
     setTimeout(() => {
       isScrolling.current = false;
-    }, 900); 
+    }, 900);
   };
 
   return (
@@ -71,17 +72,32 @@ const HomePage = () => {
       <div ref={(el) => (sectionRefs.current[1] = el)} className="min-h-screen">
         <WhatWeDo />
       </div>
-      <div ref={(el) => (sectionRefs.current[2] = el)} className="min-h-screen bg-complementary-200">
+      <div
+        ref={(el) => (sectionRefs.current[2] = el)}
+        className="min-h-screen bg-complementary-200"
+      >
         <Products />
       </div>
-      <div ref={(el) => (sectionRefs.current[3] = el)} className="min-h-screen bg-complementary-100">
+      <div
+        ref={(el) => (sectionRefs.current[3] = el)}
+        className="min-h-screen bg-complementary-100"
+      >
         <Tecnologies />
       </div>
-      <div ref={(el) => (sectionRefs.current[4] = el)} className="min-h-screen bg-complementary-200">
+      <div
+        ref={(el) => (sectionRefs.current[4] = el)}
+        className="min-h-screen bg-complementary-200"
+      >
         <NewsSection />
       </div>
-      <div ref={(el) => (sectionRefs.current[5] = el)} className="min-h-screen bg-complementary-200 grid place-content-center">
-        <NewsletterSection />
+      {/* <div ref={(el) => (sectionRefs.current[7] = el)} className="min-h-screen bg-complementary-200 grid place-content-center">
+        
+      </div> */}
+      <div
+        ref={(el) => (sectionRefs.current[5] = el)}
+        className="min-h-screen bg-complementary-200"
+      >
+        <Footer />
       </div>
     </div>
   );
