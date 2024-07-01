@@ -2,7 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
+import NewsSection from "@/components/news/NewsSection";
 import Products from "@/components/products/Products";
+import NewsletterSection from "@/components/newsletter/NewsletterSection";
+
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
@@ -70,6 +73,12 @@ const HomePage = () => {
       </div>
       <div ref={(el) => (sectionRefs.current[2] = el)} className="h-screen bg-complementary-200">
         <Products />
+      </div>
+      <div ref={(el) => (sectionRefs.current[3] = el)} className="min-h-screen bg-complementary-200">
+        <NewsSection />
+      </div>
+      <div ref={(el) => (sectionRefs.current[4] = el)} className="min-h-screen bg-complementary-200 grid place-content-center">
+        <NewsletterSection />
       </div>
     </div>
   );
