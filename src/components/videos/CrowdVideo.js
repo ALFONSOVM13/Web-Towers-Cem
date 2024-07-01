@@ -3,10 +3,10 @@ import ButtonGeneric from '../ui/ButtonGeneric';
 
 const CrowdVideo = ({ videoId, onClickButton }) => {
   return (
-    <div className="relative flex justify-center items-center h-screen">
-      <div className="w-full relative" style={{ maxWidth: '100vw', maxHeight: '70vh' }}>
+    <div className="relative flex justify-center items-center w-full lg:w-2/3">
+      <div className="w-full relative" style={{ height: '35vh' }}>
         <iframe
-          className="w-full h-1/3"
+          className="w-full h-full rounded-lg"
           src={`https://www.youtube.com/embed/${videoId}`}
           title="YouTube video player"
           allowFullScreen
