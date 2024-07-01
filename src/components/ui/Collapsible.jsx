@@ -8,10 +8,10 @@ const Collapsible = ({ title, children }) => {
   };
 
   return (
-    <div className="border border-complementary-100 rounded-md mb-4 bg-white">
+    <div className="border border-gray-300 rounded-md mb-4 bg-white">
       <button
         onClick={toggleCollapse}
-        className="w-full flex justify-between items-center px-4 py-2 text-complementary-300 bg-secondary-300 rounded-t-md focus:outline-none"
+        className="w-full flex justify-between items-center px-4 py-2 text-primary-100 bg-complementary-100 rounded-t-md focus:outline-none"
       >
         <span>{title}</span>
         <svg

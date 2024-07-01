@@ -9,14 +9,14 @@ function CrowdfundingPage() {
   };
 
   return (
-    <div className="bg-complementary-100 min-w-full min-h-full h-screen">
-      <div className="max-w-screen-lg mx-auto mt-8 flex justify-center">
+    <div className="bg-complementary-100 min-w-full min-h-full h-screen flex flex-col items-center">
+      <div className="max-w-screen-lg mx-auto mt-8 flex justify-center w-full">
         <CrowdVideo videoId="VfBlqCjvtOA" onClickButton={handleClick} className="w-full sm:w-1/3" />
       </div>
 
-      <div className="max-w-screen-lg mx-auto mt-8 space-y-4">
-        <h1 className="text-primary-100">Conoce nuestra campaña</h1>
-        <Collapsible title="¿Cómo ganas?">
+      <div className="max-w-screen-lg mx-auto mt-8 space-y-4 w-full bg-white p-4">
+        <h1 className="text-primary-100 text-center">Conoce nuestra campaña</h1>
+        <Collapsible title="¿Qué haremos?">
           <p className="text-complementary-300 bg-secondary-300">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -26,7 +26,7 @@ function CrowdfundingPage() {
           </p>
         </Collapsible>
         
-        <Collapsible title="¿Qué es un crowdfunding?">
+        <Collapsible title="¿Por qué confiar en nuestros proyectos?">
           <p className="text-complementary-300 bg-secondary-300">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -36,7 +36,7 @@ function CrowdfundingPage() {
           </p>
         </Collapsible>
 
-        <Collapsible title="¿Qué es Vaki?">
+        <Collapsible title="¿Cómo lo haremos realidad?">
           <p className="text-complementary-300 bg-secondary-300">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
