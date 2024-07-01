@@ -13,6 +13,18 @@
     transform: translateX(100px);
     transition: 0.5s ease-in-out;
 
+    @media (max-width: 768px) {
+        
+        width: 100%; 
+        background-color: #000000; 
+        transform: translateX(0); 
+        align-items: center; 
+        justify-content: flex-start; 
+        padding-top: 20vh; 
+        opacity: 1;
+        visibility: visible;
+      }
+
     &.active {
         opacity: 1;
         visibility: visible;

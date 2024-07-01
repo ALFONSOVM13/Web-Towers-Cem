@@ -2,8 +2,10 @@
 import React, { useEffect, useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
+import NewsSection from "@/components/news/NewsSection";
 import Products from "@/components/products/Products";
-import Footer from "@/components/footer/footer";
+import NewsletterSection from "@/components/newsletter/NewsletterSection";
+import Tecnologies from  "@/components/tecnologies/Tecnologies"
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
@@ -58,7 +60,7 @@ const HomePage = () => {
 
     setTimeout(() => {
       isScrolling.current = false;
-    }, 200); // Ajusta el tiempo según sea necesario
+    }, 900); 
   };
 
   return (
@@ -72,8 +74,14 @@ const HomePage = () => {
       <div ref={(el) => (sectionRefs.current[2] = el)} className="h-screen bg-complementary-200">
         <Products />
       </div>
-      <div ref={(el) => (sectionRefs.current[3] = el)} className="h-screen">
-        <Footer />
+      <div ref={(el) => (sectionRefs.current[3] = el)} className="h-screen bg-complementary-100">
+        <Tecnologies />
+      </div>
+      <div ref={(el) => (sectionRefs.current[4] = el)} className="min-h-screen bg-complementary-200">
+        <NewsSection />
+      </div>
+      <div ref={(el) => (sectionRefs.current[5] = el)} className="min-h-screen bg-complementary-200 grid place-content-center">
+        <NewsletterSection />
       </div>
     </div>
   );
