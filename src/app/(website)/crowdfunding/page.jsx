@@ -9,7 +9,7 @@ function CrowdfundingPage() {
   };
 
   return (
-    <div className="bg-complementary-100 min-w-full min-h-full h-screen flex flex-col items-center">
+    <div className="bg-white min-w-full min-h-full h-screen flex flex-col items-center">
       
 
       <div className="max-w-screen-lg mx-auto mt-8 space-y-4 w-full bg-white p-4">
