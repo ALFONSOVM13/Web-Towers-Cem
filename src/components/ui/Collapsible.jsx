@@ -11,7 +11,7 @@ const Collapsible = ({ title, children }) => {
     <div className="border border-gray-300 rounded-md mb-4 bg-white">
       <button
         onClick={toggleCollapse}
-        className="w-full flex justify-between items-center px-4 py-2 text-primary-100 bg-complementary-100 rounded-t-md focus:outline-none"
+        className={`w-full flex justify-between items-center px-4 py-2 text-primary-100 bg-secondary-300 rounded-t-md focus:outline-none ${isOpen ? 'border-b-2 border-dotted border-black' : ''}`}
       >
         <span>{title}</span>
         <svg
@@ -27,7 +27,7 @@ const Collapsible = ({ title, children }) => {
         </svg>
       </button>
       {isOpen && (
-        <div className="px-4 py-2 bg-white">
+        <div className="px-4 py-2 bg-secondary-300">
           {children}
         </div>
       )}
