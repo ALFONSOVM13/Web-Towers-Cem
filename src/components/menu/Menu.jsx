@@ -22,6 +22,9 @@ const Menu = ({ active, setActive }) => {
       <li>
         <Link href="/" className="text-complementary-200">Noticias</Link>
       </li>
+      <li>
+        <Link href="/crowdfunding" className="text-complementary-200">Crowdfunding</Link>
+      </li>
     </ul>
   );
 };
