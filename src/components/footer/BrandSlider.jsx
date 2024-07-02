@@ -15,6 +15,7 @@ const logos = [
 ];
 
 const BrandSlider = () => {
+  // Duplica los slides para permitir un desplazamiento continuo
   const duplicatedSlides = logos.concat(logos);
 
   return (
@@ -22,10 +23,13 @@ const BrandSlider = () => {
       <motion.div
         className="flex"
         animate={{
-          x: [0 , "-90%"],
-          transition: { ease: "linear", duration: 15, repeat: Infinity },
+          x: ["0%", "-100%"],
         }}
-        initial={false}
+        transition={{
+          ease: "linear",
+          duration: 30,
+          repeat: Infinity,
+        }}
       >
         {duplicatedSlides.map((slide, index) => (
           <motion.div 
