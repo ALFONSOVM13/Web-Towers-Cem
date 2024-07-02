@@ -5,12 +5,11 @@ import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
 import NewsSection from "@/components/news/NewsSection";
 import Products from "@/components/products/Products";
 import Tecnologies from "@/components/tecnologies/Tecnologies";
-import Footer from "@/components/footer/Footer";
+import FooterSection from "@/components/footer/FooterSection";
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
   const isScrolling = useRef(false);
-  
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -90,14 +89,11 @@ const HomePage = () => {
       >
         <NewsSection />
       </div>
-      {/* <div ref={(el) => (sectionRefs.current[7] = el)} className="min-h-screen bg-complementary-200 grid place-content-center">
-        
-      </div> */}
       <div
         ref={(el) => (sectionRefs.current[5] = el)}
         className="min-h-screen bg-complementary-200"
       >
-        <Footer />
+        <FooterSection />
       </div>
     </div>
   );
