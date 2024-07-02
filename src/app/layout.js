@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Towers Cem",
-  description: "El cemento del futuro",
+  description: "El cemento del futuro"
 };
 
 export default function RootLayout({ children }) {

@@ -1,26 +1,35 @@
-"use client"; 
+"use client";
 import React, { useEffect, useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
-import Products from '@/components/products/Products'
+import NewsSection from "@/components/news/NewsSection";
+import Products from "@/components/products/Products";
+import Tecnologies from "@/components/tecnologies/Tecnologies";
+import Footer from "@/components/footer/Footer";
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
+  const isScrolling = useRef(false);
+  
 
   useEffect(() => {
     const handleScroll = (event) => {
-      if (event.deltaY > 0) {
-        scrollToSection(1);
-      } else if (event.deltaY < 0) {
-        scrollToSection(-1);
+      if (!isScrolling.current) {
+        if (event.deltaY > 0) {
+          scrollToSection(1);
+        } else if (event.deltaY < 0) {
+          scrollToSection(-1);
+        }
       }
     };
 
     const handleKeyDown = (event) => {
-      if (event.key === "ArrowDown") {
-        scrollToSection(1);
-      } else if (event.key === "ArrowUp") {
-        scrollToSection(-1);
+      if (!isScrolling.current) {
+        if (event.key === "ArrowDown") {
+          scrollToSection(1);
+        } else if (event.key === "ArrowUp") {
+          scrollToSection(-1);
+        }
       }
     };
 
@@ -34,6 +43,8 @@ const HomePage = () => {
   }, []);
 
   const scrollToSection = (direction) => {
+    isScrolling.current = true;
+
     const currentSectionIndex = sectionRefs.current.findIndex((section) => {
       const rect = section.getBoundingClientRect();
       return rect.top === 0;
@@ -47,19 +58,46 @@ const HomePage = () => {
     sectionRefs.current[nextSectionIndex].scrollIntoView({
       behavior: "smooth",
     });
+
+    setTimeout(() => {
+      isScrolling.current = false;
+    }, 900);
   };
 
   return (
-    <div className="h-screen w-full overflow-hidden">
-      
-      <div ref={(el) => (sectionRefs.current[0] = el)} className="h-screen">
+    <div className="h-screen w-full sm:overflow-y-auto xl:overflow-hidden">
+      <div ref={(el) => (sectionRefs.current[0] = el)} className="min-h-screen">
         <HeroSection />
       </div>
-      <div ref={(el) => (sectionRefs.current[1] = el)} className="h-screen">
+      <div ref={(el) => (sectionRefs.current[1] = el)} className="min-h-screen">
         <WhatWeDo />
       </div>
-      <div ref={(el) => (sectionRefs.current[2] = el)} className="h-screen bg-complementary-200">
+      <div
+        ref={(el) => (sectionRefs.current[2] = el)}
+        className="min-h-screen bg-complementary-200"
+      >
         <Products />
+      </div>
+      <div
+        ref={(el) => (sectionRefs.current[3] = el)}
+        className="min-h-screen bg-complementary-100"
+      >
+        <Tecnologies />
+      </div>
+      <div
+        ref={(el) => (sectionRefs.current[4] = el)}
+        className="min-h-screen bg-complementary-200"
+      >
+        <NewsSection />
+      </div>
+      {/* <div ref={(el) => (sectionRefs.current[7] = el)} className="min-h-screen bg-complementary-200 grid place-content-center">
+        
+      </div> */}
+      <div
+        ref={(el) => (sectionRefs.current[5] = el)}
+        className="min-h-screen bg-complementary-200"
+      >
+        <Footer />
       </div>
     </div>
   );

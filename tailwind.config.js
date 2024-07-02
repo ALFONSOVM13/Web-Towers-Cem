@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+      'customMd': '860px'
+    },
       colors: {
         primary: {
           100: "#302c57",
@@ -15,13 +18,14 @@ export default {
           300: "#879e66",
         },
         complementary: {
-          100: "#9e9e9e",
+          100: "#dfdfdf",
           200: "#ffffff",
           300: "#000000",
+          400: "#c8c8c8",
         },
       },
       fontFamily: {
-        content: ["Nexa", "sans-serif"],
+        content: ["Chopin", "Chopin"],
         title: ["Chopin", "sans-serif"],
       },
     },
@@ -29,4 +33,4 @@ export default {
   plugins: [
     require('tailwindcss-animated')
   ],
-};
+}

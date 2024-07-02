@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import "./Menu.scss";
+import "./styles.scss"
 
 const Menu = ({ active, setActive }) => {
   const pathname = usePathname();
@@ -21,6 +21,9 @@ const Menu = ({ active, setActive }) => {
       </li>
       <li>
         <Link href="/" className="text-complementary-200">Noticias</Link>
+      </li>
+      <li>
+        <Link href="/crowdfunding" className="text-complementary-200">Crowdfunding</Link>
       </li>
     </ul>
   );
