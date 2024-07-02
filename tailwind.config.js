@@ -18,13 +18,14 @@ export default {
           300: "#879e66",
         },
         complementary: {
-          100: "#9e9e9e",
+          100: "#dfdfdf",
           200: "#ffffff",
           300: "#000000",
+          400: "#c8c8c8",
         },
       },
       fontFamily: {
-        content: ["Nexa", "sans-serif"],
+        content: ["Chopin", "Chopin"],
         title: ["Chopin", "sans-serif"],
       },
     },

@@ -1,16 +1,19 @@
-import React from 'react'
-import CrowdVideo from './CrowdVideo'
-import Collapsable from './Collapsable'
-import Carrusel from './Carrusel'
+import React from "react";
+import CrowdVideo from "./CrowdVideo";
+import Collapsable from "./Collapsable";
+import Carrusel from "./Carrusel";
+import Title from "../ui/Title";
 
 const CrowdfundingSection = () => {
   return (
-    <div>
-        <CrowdVideo />
+    <>
+      <section className="h-screen w-full ">
+        <CrowdVideo className="min-h-screen" />
         <Collapsable />
         <Carrusel />
-    </div>
-  )
-}
+      </section>
+    </>
+  );
+};
 
-export default CrowdfundingSection
+export default CrowdfundingSection;
