@@ -5,8 +5,8 @@ import Collapsible from '../ui/Collapsible';
 
 function Collapsable() {
   return (
-    <div className="min-h-screen flex flex-col items-center overflow-hidden">
-      <div className="max-w-screen-md mx-auto mt-8 w-full p-4">
+    <div className="bg-complementary-200">
+      <div className="container mx-auto py-16">
         <h1 className="text-primary-100 font-title font-semibold text-2xl mb-8">Conoce nuestra campaña</h1>
         
         <div className="space-y-4">

@@ -1,19 +1,22 @@
 // CrowdVideo.jsx
-import React from 'react';
-import CustomButton from '../ui/CustomButton';
+import React from "react";
+import CustomButton from "../ui/CustomButton";
 
 const CrowdVideo = ({ videoId, onClickButton }) => {
   return (
-    <div className="relative flex justify-center items-center w-full lg:w-2/3 mt-16">
-      <div className="w-full relative" style={{ width: '65vh', height: '35vh' }}>
+    <div className="bg-complementary-100 flex items-center justify-center">
+      <div className=" relative h-96 w-1/2">
         <iframe
-          className="w-full h-full rounded-lg"
-          src={`https://www.youtube.com/embed/${videoId}`}
+          className="w-full h-full "
+          src={`https://www.youtube.com/embed/8D6RajGHWyM`}
           title="YouTube video player"
           allowFullScreen
         ></iframe>
-        <div className="absolute bottom-0 right-0 m-4">
-          <CustomButton type='primary' onClick={onClickButton}>
+        <div className=" bg-complementary-200 flex items-center justify-center p-5">
+          <h1 className="text-3xl text-primary-100 font-bold flex-1">
+            Ayúdanos a construir un mundo mejor
+          </h1>
+          <CustomButton type="primary" onClick={onClickButton} >
             Donar
           </CustomButton>
         </div>

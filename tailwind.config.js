@@ -18,7 +18,7 @@ export default {
           300: "#879e66",
         },
         complementary: {
-          100: "#9e9e9e",
+          100: "#dfdfdf",
           200: "#ffffff",
           300: "#000000",
         },

@@ -7,17 +7,17 @@ function Carrusel() {
 
   const slides = [
     {
-      title: "¿QUE ES UN CROWDFUNDING?",
+      title: "¿QUÉ ES UN CROWDFUNDING?",
       content:
         "Es una campaña de donación colaborativa, donde cualquier persona puede aportar a un proyecto o idea de negocio para su crecimiento o lanzamiento al mercado. ",
     },
     {
-      title: "¿Que es Vaki?",
+      title: "¿QUÉ ES VAKI?",
       content:
         "Vaki es una plataforma de crowdfunding que te permite recaudar dinero para tu proyecto o idea de negocio. ",
     },
     {
-      title: "Como ganas",
+      title: "¿COMÓ GANAS?",
       content:
         "Al donar a nuestro proyecto puedes recibir recompensas como productos, servicios o beneficios exclusivos.",
     },
@@ -54,7 +54,7 @@ function Carrusel() {
           ))}
         </div>
 
-        <div className="absolute top-1/2 left-0 right-0 flex justify-between items-center transform -translate-y-1/2">
+        <div className="absolute top-1/2 left-0 right-0 flex justify-between items-center transform -translate-y-1/2 p-10">
           <IoIosArrowBack
             className="text-4xl text-white cursor-pointer"
             onClick={() =>

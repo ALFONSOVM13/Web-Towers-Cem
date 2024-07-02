@@ -6,8 +6,8 @@ import Carrusel from "./Carrusel";
 const CrowdfundingSection = () => {
   return (
     <>
-      <div>
-        <CrowdVideo />
+      <div className="h-screen">
+        <CrowdVideo/>
         <Collapsable />
         <Carrusel />
       </div>
