@@ -4,13 +4,13 @@ import HeroSection from "@/components/hero/HeroSection";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
 import NewsSection from "@/components/news/NewsSection";
 import Products from "@/components/products/Products";
-import NewsletterSection from "@/components/newsletter/NewsletterSection";
 import Tecnologies from "@/components/tecnologies/Tecnologies";
-import Footer from "@/components/footer/footer";
+import Footer from "@/components/footer/Footer";
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
   const isScrolling = useRef(false);
+  
 
   useEffect(() => {
     const handleScroll = (event) => {

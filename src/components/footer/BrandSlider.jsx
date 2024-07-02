@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
 
 const logos = [
   { src: "/51-labs.jpg", alt: "Logo 1" },
@@ -23,7 +22,7 @@ const BrandSlider = () => {
       <motion.div
         className="flex"
         animate={{
-          x: [0 , "-80%"],
+          x: [0 , "-100%"],
           transition: { ease: "linear", duration: 15, repeat: Infinity },
         }}
         initial={false}
@@ -49,8 +48,8 @@ const LogoImage = ({ src, alt }) => (
       src={src} 
       alt={alt} 
       width={150} 
-      height={100} 
-      className="object-contain" 
+      height={100}
+      className="object-cover"
     />
   </div>
 );

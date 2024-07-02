@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Menu from "@/components/menu/Menu";
 import "./main-layout.scss";
 import Header from "@/components/header/Header";
-import Footer from "@/components/footer/footer";
 
 const RootLayout = ({ children }) => {
   const [active, setActive] = useState(false);

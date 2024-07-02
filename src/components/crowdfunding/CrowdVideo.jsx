@@ -1,6 +1,6 @@
 // CrowdVideo.jsx
 import React from 'react';
-import ButtonGeneric from '../ui/ButtonGeneric';
+import CustomButton from '../ui/CustomButton';
 
 const CrowdVideo = ({ videoId, onClickButton }) => {
   return (
@@ -13,7 +13,9 @@ const CrowdVideo = ({ videoId, onClickButton }) => {
           allowFullScreen
         ></iframe>
         <div className="absolute bottom-0 right-0 m-4">
-          <ButtonGeneric onClick={onClickButton} text="Donar" />
+          <CustomButton type='primary' onClick={onClickButton}>
+            Donar
+          </CustomButton>
         </div>
       </div>
     </div>
