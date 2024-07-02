@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const logos = [
-  { src: "/51-labs.jpg", alt: "Logo 1" },
-  { src: "/Cedex-logo.png", alt: "Logo 2" },
-  { src: "/cleantech.png", alt: "Logo 3" },
-  { src: "/collision.png", alt: "Logo 4" },
-  { src: "/instituto-eduardo-torroja.png", alt: "Logo 5" },
-  { src: "/Logo_uni-costa.png", alt: "Logo 6" },
-  { src: "/Logo_uninorte_colombia.jpg", alt: "Logo 7" },
+  { src: "/images/brands/51-labs.jpg", alt: "Logo 1" },
+  { src: "/images/brands/Cedex-logo.png", alt: "Logo 2" },
+  { src: "/images/brands/cleantech.png", alt: "Logo 3" },
+  { src: "/images/brands/collision.png", alt: "Logo 4" },
+  { src: "/images/brands/instituto-eduardo-torroja.png", alt: "Logo 5" },
+  { src: "/images/brands/Logo_uni-costa.png", alt: "Logo 6" },
+  { src: "/images/brands/Logo_uninorte_colombia.jpg", alt: "Logo 7" },
   { src: "/images/brands/madrid-innovation.png", alt: "Logo 8" },
   { src: "/images/brands/secot.jpg", alt: "Logo 9" },
   { src: "/images/brands/uni-nac-colombia.png", alt: "Logo 10" },
@@ -22,7 +22,7 @@ const BrandSlider = () => {
       <motion.div
         className="flex"
         animate={{
-          x: [0 , "-100%"],
+          x: [0 , "-90%"],
           transition: { ease: "linear", duration: 15, repeat: Infinity },
         }}
         initial={false}
