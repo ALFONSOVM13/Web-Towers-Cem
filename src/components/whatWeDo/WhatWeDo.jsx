@@ -1,6 +1,5 @@
 import * as React from "react";
 import Title from "../ui/Title";
-import Card from "../ui/Card";
 import Card2 from "../ui/Card";
 
 function WhatWeDo() {
