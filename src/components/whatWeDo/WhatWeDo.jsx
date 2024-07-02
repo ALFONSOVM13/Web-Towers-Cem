@@ -47,14 +47,13 @@ function WhatWeDo() {
             </div>
           </article>
           <aside className="flex flex-col items-center justify-center ml-44 w-full md:w-6/12 max-md:ml-0 max-md:w-full ">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/a340c6e6820c138dd15cfb5067c78ccbd9ec58a52decb7eba462ded239579926?apiKey=9fe8dc76776646f4a6bc648caa0a3bac&"
-                className="grow mt-2 w-1/2 shadow-lg max-md:mt-10 max-md:max-w-full  rounded-2xl mb-6 md:mr-40"  
-                alt="Descriptive image of our product or service"
-              />
-            </aside>
-
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/a340c6e6820c138dd15cfb5067c78ccbd9ec58a52decb7eba462ded239579926?apiKey=9fe8dc76776646f4a6bc648caa0a3bac&"
+            className="grow mt-2 w-1/2 shadow-lg max-md:mt-10 max-md:max-w-full rounded-2xl mb-6 md:mr-40 hidden md:block"  
+            alt="Descriptive image of our product or service"
+          />
+          </aside>
         </div>
       </section>
     </main>
