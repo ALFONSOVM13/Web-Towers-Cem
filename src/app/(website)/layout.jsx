@@ -15,7 +15,7 @@ const RootLayout = ({ children }) => {
 
   return (
     <>
-    <div className={`container_sass ${active  ? "active"  : ""} ` }>
+    <div className={`container_sass ${active  ? "active overflow-hidden "  : ""} ` }>
       <Header active={active} setActive={setActive} />
       <div className="main-container">
         <div className="main">

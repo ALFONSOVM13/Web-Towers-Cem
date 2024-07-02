@@ -21,10 +21,11 @@ export default {
           100: "#dfdfdf",
           200: "#ffffff",
           300: "#000000",
+          400: "#c8c8c8",
         },
       },
       fontFamily: {
-        content: ["Nexa", "sans-serif"],
+        content: ["Chopin", "Chopin"],
         title: ["Chopin", "sans-serif"],
       },
     },

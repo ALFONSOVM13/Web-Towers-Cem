@@ -9,15 +9,15 @@ function Carrusel() {
     {
       title: "¿QUÉ ES UN CROWDFUNDING?",
       content:
-        "Es una campaña de donación colaborativa, donde cualquier persona puede aportar a un proyecto o idea de negocio para su crecimiento o lanzamiento al mercado. ",
+        "Es una campaña de donación colaborativa, donde cualquier persona puede aportar a un proyecto o idea de negocio para su crecimiento o lanzamiento al mercado.",
     },
     {
       title: "¿QUÉ ES VAKI?",
       content:
-        "Vaki es una plataforma de crowdfunding que te permite recaudar dinero para tu proyecto o idea de negocio. ",
+        "Vaki es una plataforma de crowdfunding que te permite recaudar dinero para tu proyecto o idea de negocio.",
     },
     {
-      title: "¿COMÓ GANAS?",
+      title: "¿CÓMO GANAS?",
       content:
         "Al donar a nuestro proyecto puedes recibir recompensas como productos, servicios o beneficios exclusivos.",
     },
@@ -41,11 +41,11 @@ function Carrusel() {
           {slides.map((slide, index) => (
             <div className="flex-none w-full" key={index}>
               <div className="h-96 flex items-center justify-center">
-                <div className="text-center">
-                  <h3 className="text-3xl text-complementary-200 font-bold mb-4">
+                <div className="text-center w-2/3 sm:w-full md:w-2/3 lg:w-1/2 xl:w-2/3">
+                  <h3 className="text-3xl sm:text-4xl lg:text-5xl text-complementary-200 font-bold mb-4">
                     {slide.title}
                   </h3>
-                  <p className="text-lg text-complementary-200">
+                  <p className="text-lg sm:text-xl lg:text-2xl text-complementary-200">
                     {slide.content}
                   </p>
                 </div>
