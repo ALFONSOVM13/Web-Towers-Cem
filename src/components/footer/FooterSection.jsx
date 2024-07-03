@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BrandSlider from "./BrandSlider";
 import NewsletterSection from "../newsletter/NewsletterSection";
-import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6";
 const LinkSection = ({ section }) => (
   <ul classNameName="flex flex-col space-y-2 mb-4 lg:mb-0">
     {section.links.map((link, linkIdx) => (
@@ -43,32 +43,38 @@ const FooterSection = () => (
         </a>
         <div className="flex items-center gap-4">
           <a
-            href="javascript:;"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/towerscem"
             className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-primary-300 hover:text-white focus-within:outline-0 focus-within:bg-primary-300 focus-within:text-white"
           >
             <FaInstagram size={20} />
           </a>
           <a
-            href="javascript:;"
+            href="https://www.linkedin.com/company/towerscem/"
             className="p-3 rounded-full bg-white text-gray-900 group transition-all duration-500 hover:bg-primary-300 hover:text-white focus-within:outline-0 focus-within:bg-primary-300 focus-within:text-white"
           >
-            <FaFacebookF  size={20} />
+            <FaLinkedinIn size={20} />
           </a>
           <a
-            href="javascript:;"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.tiktok.com/@towerscemento"
             className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-primary-300 hover:text-white focus-within:outline-0 focus-within:bg-primary-300 focus-within:text-white"
           >
             <FaTiktok size={20} />
           </a>
           <a
-            href="javascript:;"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
             className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-primary-300 hover:text-white focus-within:outline-0 focus-within:bg-primary-300 focus-within:text-white"
           >
             <FaYoutube size={20} />
           </a>
         </div>
       </div>
-      <div className="py-14 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500">
+      <div className="py-14 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
         <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-6 md:gap-12 lg:gap-24">
           <div className="">
             <h6 className="text-lg font-bold text-white mb-7 max-lg:text-center font-title">
@@ -149,7 +155,7 @@ const FooterSection = () => (
             </ul>
           </div>
           <div className="">
-            <h6 className="text-lg font-medium text-white mb-7 max-lg:text-center">
+            <h6 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
               Recursos
             </h6>
             <ul className="flex flex-col gap-6 max-lg:items-center">
