@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 
 const page = () => {
   return (
@@ -30,6 +31,7 @@ const page = () => {
             </ul>
           </div>
         </div>
+        
         <div className="card">
           <img src="/images/team/Carlos.png" alt="Carlos Torres" />
           <div className="card-content">
@@ -57,17 +59,18 @@ const page = () => {
             <ul>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-x-twitter"></i>
+                  <FaInstagram id="red" className="fa-brands fa-instagram"/>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fa-brands fa-linkedin-in"></i>
+                  <FaLinkedinIn id="red" className="fa-brands fa-linkedin-in"/>
                 </a>
               </li>
             </ul>
           </div>
         </div>
+        
       </div>
     </section>
   );
