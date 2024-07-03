@@ -65,7 +65,7 @@ const Products = () => {
           <SwiperSlide className="bg-complementary-200" key={product.id}>
             
             <div className="flex flex-col md:flex-col p-6 md:p-14 justify-center items-center min-h-screen">
-            <Title text="NUESTROS PRODUCTOS" size="large" className="text-primary-100 text-center" />
+            <Title text="NUESTROS PRODUCTOS" size="large" className="text-primary-100 text-center my-10" />
 
               <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center">
                 

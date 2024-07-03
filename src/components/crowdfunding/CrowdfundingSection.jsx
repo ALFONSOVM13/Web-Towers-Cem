@@ -7,7 +7,7 @@ import Title from "../ui/Title";
 const CrowdfundingSection = () => {
   return (
     <>
-      <section className="h-screen w-full ">
+      <section className="">
         <CrowdVideo className="min-h-screen" />
         <Collapsable />
         <Carrusel />
