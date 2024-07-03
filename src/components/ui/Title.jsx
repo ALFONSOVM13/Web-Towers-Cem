@@ -1,16 +1,8 @@
 import React from 'react';
 
-const Title = ({ text, size, className }) => {
-  // Determinar el tamaño del texto
-  let textSizeClasses = 'text-3xl'; 
-  if (size === 'large') {
-    textSizeClasses = 'text-5xl'; 
-  } else if (size === 'small') {
-    textSizeClasses = 'text-lg'; 
-  }
-
+const Title = ({ text, className }) => {
   return (
-    <h1 className={`font-chopin font-bold ${textSizeClasses} leading-tight tracking-tight  ${className}`}>
+    <h1 className={`font-chopin font-bold text-center text-3xl md:text-4xl xl:text-5xl ${className}`}>
       {text}
     </h1>
   );
