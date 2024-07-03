@@ -10,7 +10,7 @@ const LinkSection = ({ section }) => (
         <Link href={link.href}>
           <p
             classNameName={`cursor-pointer ${
-              link.extraclassName || "hover:text-primary-300"
+              link.extraclassName || "hover:text-complementary-400"
             }`}
           >
             {link.text}
@@ -46,13 +46,13 @@ const FooterSection = () => (
             rel="noopener noreferrer"
             target="_blank"
             href="https://www.instagram.com/towerscem"
-            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-primary-300 hover:text-white focus-within:outline-0 focus-within:bg-primary-300 focus-within:text-white"
+            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-complementary-400 hover:text-white focus-within:outline-0 focus-within:bg-complementary-400 focus-within:text-white"
           >
             <FaInstagram size={20} />
           </a>
           <a
             href="https://www.linkedin.com/company/towerscem/"
-            className="p-3 rounded-full bg-white text-gray-900 group transition-all duration-500 hover:bg-primary-300 hover:text-white focus-within:outline-0 focus-within:bg-primary-300 focus-within:text-white"
+            className="p-3 rounded-full bg-white text-gray-900 group transition-all duration-500 hover:bg-complementary-400 hover:text-white focus-within:outline-0 focus-within:bg-complementary-400 focus-within:text-white"
           >
             <FaLinkedinIn size={20} />
           </a>
@@ -60,7 +60,7 @@ const FooterSection = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.tiktok.com/@towerscemento"
-            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-primary-300 hover:text-white focus-within:outline-0 focus-within:bg-primary-300 focus-within:text-white"
+            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-complementary-400 hover:text-white focus-within:outline-0 focus-within:bg-complementary-400 focus-within:text-white"
           >
             <FaTiktok size={20} />
           </a>
@@ -68,7 +68,7 @@ const FooterSection = () => (
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
-            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-primary-300 hover:text-white focus-within:outline-0 focus-within:bg-primary-300 focus-within:text-white"
+            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-complementary-400 hover:text-white focus-within:outline-0 focus-within:bg-complementary-400 focus-within:text-white"
           >
             <FaYoutube size={20} />
           </a>
@@ -84,7 +84,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Inicio
                 </a>
@@ -92,7 +92,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Crowdfunding
                 </a>
@@ -100,7 +100,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Nosotros
                 </a>
@@ -108,7 +108,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Nuestro Equipo
                 </a>
@@ -123,7 +123,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Tecnologia X-Cem
                 </a>
@@ -131,7 +131,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Sostenibilidad
                 </a>
@@ -139,7 +139,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Solicitar Muestras
                 </a>
@@ -147,7 +147,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Cotizar
                 </a>
@@ -162,7 +162,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   FAQs
                 </a>
@@ -170,7 +170,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Noticias
                 </a>
@@ -178,7 +178,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Documentación
                 </a>
@@ -186,7 +186,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="javascript:;"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-primary-300 focus-within:outline-0 focus-within:text-primary-300"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Contacto
                 </a>
@@ -236,7 +236,7 @@ const FooterSection = () => (
                 <input
                   type="submit"
                   value="Send"
-                  className="text-white text-base font-semibold py-3 px-7 rounded-full cursor-pointer bg-primary-300 transition-all duration-500 hover:bg-white hover:text-gray-900"
+                  className="text-white text-base font-semibold py-3 px-7 rounded-full cursor-pointer bg-complementary-400 transition-all duration-500 hover:bg-white hover:text-gray-900"
                 />
               </div>
             </form>

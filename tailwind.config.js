@@ -33,7 +33,7 @@ export default {
         },
       },
       fontFamily: {
-        content: ["Chopin", "Chopin"],
+        content: ["Nexa", "Chopin"],
         title: ["Chopin", "sans-serif"],
       },
     },
