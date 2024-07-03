@@ -31,7 +31,7 @@ const SocialLink = ({ href, src, alt, text }) => (
 );
 
 const FooterSection = () => (
-  <footer className="bg-white text-gray-500 py-40 ">
+  <footer className="bg-white text-gray-500 p-6 font-title ">
     {/* Newsletter Section */}
     <NewsletterSection />
     {/* Logo Carousel */}
@@ -40,10 +40,11 @@ const FooterSection = () => (
     {/* Link Sections */}
     <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
       <div className="logo flex items-center justify-center mb-6 lg:mb-0 lg:justify-start">
-        <img
+        <Image
           src="/isologotipo-footer.png"
           alt="Logo"
-          className="w-32 h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 object-contain"
+          width={400}
+          height={200}
         />
       </div>
       <div className="links text-2xl flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8">

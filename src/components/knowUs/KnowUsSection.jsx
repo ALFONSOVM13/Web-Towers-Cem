@@ -22,8 +22,8 @@ const knowUsSection = () => {
     return (
         <section className="min-h-screen py-10 px-5 md:px-10">
             <div className="text-center flex flex-col items-center gap-y-10 mb-10 sm:mb-20">
-                <Title text="¡CONÓCENOS!" size="large" />
-                <p className="md:max-w-[75rem] text-complementary-300 font-title text-xl text-pretty leading-8">¡En <strong>Towers Cem</strong>, desarrollamos cementos inteligentes y sostenibles que purifican el aire eliminando hasta un 23% de CO₂. Nos enfocamos en ofrecer soluciones que no solo son <strong>duraderas y de alta calidad</strong>, sino también amigables con el medio ambiente.!</p>
+                <Title text="¡CONÓCENOS!" size="large" className={"text-primary-100"} />
+                <p className="md:max-w-[75rem] text-complementary-300 font-title text-xl text-pretty leading-8">¡En <strong className="text-primary-100">Towers Cem</strong>, desarrollamos cementos inteligentes y sostenibles que purifican el aire eliminando hasta un 23% de CO₂. Nos enfocamos en ofrecer soluciones que no solo son <strong className="text-primary-100">duraderas y de alta calidad</strong>, sino también amigables con el medio ambiente.!</p>
             </div>
             <div className="grid justify-center grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 place-items-center max-w-[82rem] mx-auto">
                 {

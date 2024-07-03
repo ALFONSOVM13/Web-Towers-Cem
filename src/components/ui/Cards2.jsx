@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Cards3 = ({ title, bgImage }) => {
+const Cards2 = ({ title, bgImage }) => {
   return (
     <div className="relative overflow-hidden w- h-40 rounded-2xl cursor-pointer text-2xl font-bold bg-primary-100 mb-6 shadow-lg">
       <div className="z-10 absolute w-full h-full peer"></div>
@@ -24,4 +24,4 @@ const Cards3 = ({ title, bgImage }) => {
   );
 };
 
-export default Cards3;
+export default Cards2;

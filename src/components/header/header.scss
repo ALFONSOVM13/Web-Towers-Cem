@@ -5,6 +5,7 @@
   width: 100%;
   z-index: 10;
   height: 5rem;
+  z-index: 50
 }
 
 .header__content {
@@ -16,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .logo {
@@ -36,7 +38,7 @@
   width: 2.9rem;
   height: 3px;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: #ffffff;
   transition: 0.5s;
   position: relative;
 }
