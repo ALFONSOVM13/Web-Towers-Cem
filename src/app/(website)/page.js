@@ -6,6 +6,7 @@ import NewsSection from "@/components/news/NewsSection";
 import Products from "@/components/products/Products";
 import Tecnologies from "@/components/tecnologies/Tecnologies";
 import FooterSection from "@/components/footer/FooterSection";
+import KnowUsSection from '@/components/knowUs/KnowUsSection'
 
 const HomePage = () => {
   const sectionRefs = useRef([]);
@@ -68,8 +69,9 @@ const HomePage = () => {
       <div ref={(el) => (sectionRefs.current[0] = el)} className="min-h-screen">
         <HeroSection />
       </div>
-      <div ref={(el) => (sectionRefs.current[1] = el)} className="min-h-screen">
-        <WhatWeDo />
+      <div ref={(el) => (sectionRefs.current[1] = el)} className="min-h-screen bg-complementary-200">
+        {/* <WhatWeDo /> */}
+        <KnowUsSection />
       </div>
       <div
         ref={(el) => (sectionRefs.current[2] = el)}
