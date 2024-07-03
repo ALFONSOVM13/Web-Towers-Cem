@@ -15,10 +15,10 @@ const Tecnologies = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gradient-to-b from-complementary-300 to-primary-100 text-white">
       <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center">
-      <div className="md:w-2/3 p-9">
+      <div className="md:w-2/3 p-0 sm:p-0 md:p-9 xl:p-9">
           <Title
-            text="NUESTRA TECNOLOGIA"
-            className="font-title font-bold text-complementary-200 text-3xl md:text-4xl"
+            text="NUESTRA TECNOLOGÍA"
+            className="font-title font-bold text-complementary-200 text-3xl md:text-4xl mt-5"
             size="large"
           />
           <div className="flex flex-col gap-6 mt-6 bg-white text-black overflow-hidden">
@@ -30,7 +30,7 @@ const Tecnologies = () => {
               className="w-full object-cover"
             />
             <div className="p-8 text-wrap">
-            <p className="text-complementary-300 font-title text-xl px-4 md:px-0 ">
+            <p className="text-complementary-300 font-title text-xl px-0 md:px-0 text-justify">
               Somos una cementera innovadora dedicada a la producción de
               cementos verdes, enfocados en la sostenibilidad y la reducción
               del impacto ambiental. Utilizando tecnologías avanzadas como

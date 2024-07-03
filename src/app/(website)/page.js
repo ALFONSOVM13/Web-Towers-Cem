@@ -6,6 +6,8 @@ import Products from "@/components/products/Products";
 import Tecnologies from "@/components/tecnologies/Tecnologies";
 import FooterSection from "@/components/footer/FooterSection";
 import KnowUsSection from "@/components/knowUs/KnowUsSection";
+import BrandSlider from "@/components/footer/BrandSlider";
+import Title from "@/components/ui/Title";
 
 const HomePage = () => {
   return (
@@ -22,11 +24,12 @@ const HomePage = () => {
       <div className=" bg-complementary-100">
         <Tecnologies />
       </div>
+
       <div className=" bg-complementary-200">
         <NewsSection />
       </div>
       <div className=" bg-complementary-200">
-        <FooterSection />
+        <BrandSlider />
       </div>
     </div>
   );
