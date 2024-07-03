@@ -13,10 +13,10 @@ const Collapsible = ({ title, children }) => {
         onClick={toggleCollapse}
         className={`w-full flex justify-between items-center px-4 py-3 text-primary-100 bg-complementary-100 rounded-t-md focus:outline-none ${isOpen ? 'border-b-2 border-dotted border-black' : ''}`}
       >
-        <h2 className='font-title text-xl font-bold'>{title}</h2>
+        <h2 className='font-title text-lg md:text-xl font-bold text-left'>{title}</h2>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className={`h-5 w-5 transition-transform transform ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+          className={`h-4 w-4 md:h-5 md:w-5 transition-transform transform ${isOpen ? 'rotate-180' : 'rotate-0'}`}
           viewBox="0 0 20 20"
           fill="currentColor"
         >
