@@ -96,7 +96,7 @@ const Products = () => {
                     text={product.subtitle}
                     className="font-title font-bold"
                   />
-                  <p className="text-complementary-300 font-title text-xl px-4 md:px-0 animate-fade-down">
+                  <p className="text-complementary-300 font-title text-xl px-4 md:px-0 animate-fade-down text-justify">
                     {product.description}
                   </p>
 
