@@ -65,7 +65,7 @@ const BrandSlider = () => {
 
       <Marquee direction="left" speed={100} delay={5} pauseOnHover={true}>
         {logos.map((logo, index) => (
-          <div key={index} className="my-10 p-2 md:p-4">
+          <div key={index} className="my-10 p-2 md:p-10">
             <LogoImage
               src={logo.src}
               alt={logo.alt}
