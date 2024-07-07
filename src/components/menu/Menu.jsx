@@ -31,12 +31,12 @@ const Menu = ({ active, setActive }) => {
     <>
       {active && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-10"
+          className="fixed inset-0 bg-black bg-opacity-50 z-30"
           onClick={() => setActive(false)}
         ></div>
       )}
     <ul
-      className={`fixed font-title font-bold text-2xl top-0 right-0 z-10 inset-y-0 w-full sm:w-1/3 bg-black text-white p-4 transform transition-transform ${
+      className={`fixed font-title font-bold text-2xl top-0 right-0 z-40 inset-y-0 w-full sm:w-1/3 bg-black text-white p-4 transform transition-transform ${
         active
           ? "translate-x-0 animate-slide-in-left"
           : "translate-x-full animate-slide-out-left"
