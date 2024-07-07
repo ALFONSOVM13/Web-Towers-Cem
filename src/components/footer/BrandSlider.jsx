@@ -3,55 +3,65 @@ import Marquee from "react-fast-marquee";
 import Title from "../ui/Title";
 
 const logos = [
-  { src: "/images/brands/51-labs.jpg", alt: "Logo 1", width: 110, height: 85 },
+  { src: "/images/brands/51-labs.png", alt: "51/-labs", width: 110, height: 85 },
   {
     src: "/images/brands/Cedex-logo.png",
-    alt: "Logo 2",
-    width: 120,
+    alt: "cedex",
+    width: 170,
     height: 80,
   },
   {
     src: "/images/brands/cleantech.png",
-    alt: "Logo 3",
-    width: 100,
+    alt: "cleantech",
+    width: 220,
     height: 60,
   },
   {
     src: "/images/brands/collision.png",
-    alt: "Logo 4",
-    width: 130,
+    alt: "collision",
+    width: 220,
     height: 90,
   },
   {
     src: "/images/brands/instituto-eduardo-torroja.png",
-    alt: "Logo 5",
-    width: 80,
+    alt: "instituto-eduardo-torroja",
+    width: 100,
     height: 60,
   },
   {
     src: "/images/brands/Logo_uni-costa.png",
-    alt: "Logo 6",
-    width: 140,
+    alt: "unicosta",
+    width: 220,
     height: 95,
   },
   {
     src: "/images/brands/Logo_uninorte_colombia.jpg",
-    alt: "Logo 7",
-    width: 125,
+    alt: "uninorte-colombia",
+    width: 220,
     height: 85,
   },
   {
     src: "/images/brands/madrid-innovation.png",
-    alt: "Logo 8",
-    width: 115,
+    alt: "madrid-innovation",
+    width: 220,
     height: 75,
   },
-  { src: "/images/brands/secot.jpg", alt: "Logo 9", width: 135, height: 88 },
+  { src: "/images/brands/secot.jpg", 
+    alt: "secot",
+    width: 220, 
+    height: 88 
+  },
   {
     src: "/images/brands/uni-nac-colombia.png",
-    alt: "Logo 10",
-    width: 105,
-    height: 65,
+    alt: "uni-nac-colombia",
+    width: 220,
+    height: 125,
+  },
+  {
+    src: "/images/brands/mentor.png",
+    alt: "mentor",
+    width: 220,
+    height: 80,
   },
 ];
 
@@ -63,7 +73,7 @@ const BrandSlider = () => {
         className="text-left text-3xl md:text-4xl xl:text-5xl"
       />
 
-      <Marquee direction="left" speed={100} delay={5} pauseOnHover={true}>
+      <Marquee direction="left" speed={150} delay={5} pauseOnHover={true}>
         {logos.map((logo, index) => (
           <div key={index} className="my-10 p-2 md:p-10">
             <LogoImage
