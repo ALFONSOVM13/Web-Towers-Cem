@@ -15,6 +15,7 @@ const advantages = [
       title: '12,800 Ton',
       content: 'de las emisiones de CO2 anuales provienen de la producción de cemento a nivel mundial.'
    }
+   
 ]
 
 const Advantages = () => {

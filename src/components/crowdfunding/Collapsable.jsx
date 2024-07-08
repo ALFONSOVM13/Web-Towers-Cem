@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Collapsible from "../ui/Collapsible";
 
 function Collapsable() {
