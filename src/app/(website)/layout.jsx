@@ -22,7 +22,7 @@ const RootLayout = ({ children }) => {
       <Header active={active} toggleMenu={toggleMenu} setActive={setActive}/>
       <Menu active={active} setActive={setActive} />
       <div onClick={closeMenu}>{children}</div>
-      <FooterSection />
+      <FooterSection className="min-h-screen"/>
     </div>
   );
 };

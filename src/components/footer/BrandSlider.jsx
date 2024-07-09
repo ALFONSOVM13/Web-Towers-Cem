@@ -3,7 +3,12 @@ import Marquee from "react-fast-marquee";
 import Title from "../ui/Title";
 
 const logos = [
-  { src: "/images/brands/51-labs.png", alt: "51/-labs", width: 110, height: 85 },
+  {
+    src: "/images/brands/51-labs.png",
+    alt: "51/-labs",
+    width: 110,
+    height: 85,
+  },
   {
     src: "/images/brands/Cedex-logo.png",
     alt: "cedex",
@@ -46,11 +51,7 @@ const logos = [
     width: 220,
     height: 75,
   },
-  { src: "/images/brands/secot.jpg", 
-    alt: "secot",
-    width: 220, 
-    height: 88 
-  },
+  { src: "/images/brands/secot.jpg", alt: "secot", width: 220, height: 88 },
   {
     src: "/images/brands/uni-nac-colombia.png",
     alt: "uni-nac-colombia",
@@ -67,15 +68,17 @@ const logos = [
 
 const BrandSlider = () => {
   return (
-    <div flex justify-between items-center mb-10>
+    <section className=" flex flex-col  px-10 h-full">
+      <div className="flex justify-between items-center">
       <Title
-        text="NUESTROS ALIADOS"
+        text="Nuestros Aliados"
         className="text-left text-3xl md:text-4xl xl:text-5xl"
       />
+      </div>
 
-      <Marquee direction="left" speed={150} delay={5} pauseOnHover={true}>
+      <Marquee direction="left" speed={150} delay={5} pauseOnHover={"true"}>
         {logos.map((logo, index) => (
-          <div key={index} className="my-10 p-2 md:p-10">
+          <div key={index} className="mx-4">
             <LogoImage
               src={logo.src}
               alt={logo.alt}
@@ -85,7 +88,7 @@ const BrandSlider = () => {
           </div>
         ))}
       </Marquee>
-    </div>
+    </section>
   );
 };
 

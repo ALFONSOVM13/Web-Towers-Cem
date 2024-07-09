@@ -6,10 +6,10 @@ const Tecnologies = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const menuItems = [
-    "Equipo",
-    "Que Productos Tenemos",
-    "Impacto Ambiental",
-    "Pruebas"
+    "X-CEM",
+    "Sostenibilidad",
+    "Innovación",
+    "Eficiencia",
   ];
 
   return (
@@ -17,7 +17,7 @@ const Tecnologies = () => {
       <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center">
       <div className="md:w-2/3 p-0 sm:p-0 md:p-9 xl:p-9">
           <Title
-            text="NUESTRA TECNOLOGÍA"
+            text="Nuestra Tecnología"
             className="font-title font-bold text-complementary-200 text-3xl md:text-4xl mt-5"
             size="large"
           />
@@ -43,9 +43,8 @@ const Tecnologies = () => {
         </div>
         <div className="md:w-1/3 p-8">
           <Title
-            text="MAS SOBRE NOSOTROS"
+            text="Menú"
             className="font-title font-bold text-complementary-200 text-2xl md:text-3xl"
-            size="small"
           />
           <ul className="space-y-4 mt-6 text-lg md:text-xl">
             {menuItems.map((item, index) => (
@@ -53,7 +52,7 @@ const Tecnologies = () => {
                 key={item}
                 onClick={() => setActiveIndex(index)}
                 className={`relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:bg-gray-300 hover:after:bg-gray-400 ${
-                  activeIndex === index ? "text-gray-300" : "hover:text-gray-300"
+                  activeIndex === index ? "text-gray-300" : "hover:text-slate-100 hover:font-bold"
                 }`}
               >
                 <span

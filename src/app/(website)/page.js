@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import NewsSection from "@/components/news/NewsSection";
 import Products from "@/components/products/Products";
@@ -7,28 +7,38 @@ import Tecnologies from "@/components/tecnologies/Tecnologies";
 import FooterSection from "@/components/footer/FooterSection";
 import KnowUsSection from "@/components/knowUs/KnowUsSection";
 import BrandSlider from "@/components/footer/BrandSlider";
-import Title from "@/components/ui/Title";
 
 const HomePage = () => {
+  const knowUsRef = useRef(null); // Referencia para la sección KnowUsSection
+
+  const scrollToKnowUsSection = () => {
+    if (knowUsRef.current) {
+      window.scrollTo({
+        top: knowUsRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="">
       <div>
-        <HeroSection />
+        <HeroSection scrollToNextSection={scrollToKnowUsSection} />
       </div>
-      <div className=" bg-complementary-200">
+      <div ref={knowUsRef}  className="min-h-screen">
         <KnowUsSection />
       </div>
-      <div className=" bg-complementary-200">
+      <div >
         <Products />
       </div>
-      <div className=" bg-complementary-100">
+      <div>
         <Tecnologies />
       </div>
 
-      <div className=" bg-complementary-200">
+      <div>
         <NewsSection />
       </div>
-      <div className=" bg-complementary-200">
+      <div>
         <BrandSlider />
       </div>
     </div>

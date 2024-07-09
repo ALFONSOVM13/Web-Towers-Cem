@@ -83,7 +83,7 @@ const FooterSection = () => (
             <ul className="flex flex-col max-lg:items-center gap-6">
               <li>
                 <a
-                  href="javascript:;"
+                  href="/"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Inicio
@@ -91,7 +91,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/crowdfunding"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Crowdfunding
@@ -99,7 +99,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/nosotros"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Nosotros
@@ -107,7 +107,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/equipo"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Nuestro Equipo
@@ -115,14 +115,14 @@ const FooterSection = () => (
               </li>
             </ul>
           </div>
-          <div className="">
+          <div className="/productos">
             <h6 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
               Productos
             </h6>
             <ul className="flex flex-col gap-6 max-lg:items-center">
               <li>
                 <a
-                  href="javascript:;"
+                  href="/tecnologia-x-cem"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Tecnologia X-Cem
@@ -130,7 +130,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/sostenibilidad"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Sostenibilidad
@@ -138,7 +138,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/innovacion"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Solicitar Muestras
@@ -146,7 +146,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/cotizar"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Cotizar
@@ -154,14 +154,14 @@ const FooterSection = () => (
               </li>
             </ul>
           </div>
-          <div className="">
+          <div className="/recursos">
             <h6 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
               Recursos
             </h6>
             <ul className="flex flex-col gap-6 max-lg:items-center">
               <li>
                 <a
-                  href="javascript:;"
+                  href="/faq"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   FAQs
@@ -169,7 +169,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/noticias"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Noticias
@@ -177,7 +177,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/documentacion"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Documentación
@@ -185,7 +185,7 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="javascript:;"
+                  href="/contacto"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Contacto
@@ -213,22 +213,22 @@ const FooterSection = () => (
               <div className="flex flex-col min-[540px]:flex-row items-center justify-between gap-3">
                 <div className="flex items-start black">
                   <input
-                    id="checked-checkbox"
                     type="checkbox"
                     value=""
                     className="w-5 h-5 aspect-square appearance-none cursor-pointer border border-gray-600 bg-transparent  rounded-md mr-2 hover:border-complementary-400 hover:bg-gray-900 checked:bg-no-repeat checked:bg-center checked:border-complementary-400 checked:bg-gray-800"
-                    checked=""
+
                   />
                   <label
-                    for="checked-checkbox"
+                    htmlFor="terms"
                     className="text-sm font-normal cursor-pointer text-complementary-400"
                   >
                     Acepto los{" "}
-                    <a href="javascript:;" className="text-complementary-200">
+                    <a href=""
+                     className="text-complementary-200">
                       Terminos y Condiciones
                     </a>{" "}
                     y las{" "}
-                    <a href="javascript:;" className="text-complementary-200">
+                    <a href="" className="text-complementary-200">
                       Politicas de Privacidad
                     </a>
                   </label>

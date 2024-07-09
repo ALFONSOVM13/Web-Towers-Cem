@@ -89,7 +89,7 @@ const Menu = ({ active, setActive }) => {
           href="/"
           className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex items-center"
         >
-          <Image src="/logo.png" alt="Icono de usuario" width={150} height={150} layout="intrinsic" objectFit="contain" />
+          <Image src="/logo.png" alt="Icono de usuario" width={200} height={200} />
         </Link>
       </li>
 
@@ -103,8 +103,6 @@ const Menu = ({ active, setActive }) => {
             alt="Icono de usuario"
             width={44}
             height={44}
-            layout="fixed"
-            objectFit="contain"
           />
         </Link>
         <Link
@@ -116,8 +114,6 @@ const Menu = ({ active, setActive }) => {
             alt="Icono de usuario"
             width={44}
             height={44}
-            layout="fixed"
-            objectFit="cover"
           />
         </Link>
       </div>

@@ -23,12 +23,13 @@ const Advantages = () => {
    return (
       <div className='grid grid-cols-1 md:grid-cols-3 gap-5 bg-complementary-300 text-complementary-200'>
          {advantages.map((advantage) => (
-            <article key={advantages.id} className='text-center px-5 py-10'>
+            <article key={advantage.id} className='text-center px-5 py-10'>
                <h4 className='mb-8 text-2xl font-bold'>{advantage.title}</h4>
                <p>{advantage.content}</p>
             </article>
          ))}
       </div>
+
    )
 }
 export default Advantages

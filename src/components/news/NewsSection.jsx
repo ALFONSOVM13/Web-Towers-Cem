@@ -50,7 +50,7 @@ const NewsSection = () => {
   return (
     <section className="py-20 px-10 bg-white h-full">
       <div className="flex justify-between items-center mb-10">
-        <Title text="NOTICIAS" size="large" />
+        <Title text="Noticias"/>
         <CustomButton
           type="secondary"
           className="flex items-center gap-x-2 rounded-3xl"
