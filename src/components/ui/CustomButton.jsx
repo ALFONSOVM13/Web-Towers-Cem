@@ -22,15 +22,18 @@
 
 import React from 'react';
 
-const CustomButton = ({ type = 'primary', onClick, children, className, bgColor, width,height, textSize,textColor }) => {
+const CustomButton = ({ type = 'primary', onClick, children, className, bgColor, width, height, textSize, textColor }) => {
   const baseClasses = 'px-4 py-2 rounded font-semibold focus:outline-none transition-colors duration-300';
 
-  // Estilos para el botón primario y secundario
+  // Estilos para el botón primario, secundario y ternario
   const primaryClasses = 'bg-primary-100 text-white hover:bg-primary-200';
   const secondaryClasses = 'border border-primary-100 text-primary-100 hover:bg-primary-100 hover:text-white';
+  const ternaryClasses = 'bg-secondary-300 text-white hover:bg-secondary-200';
 
-  // Determinar clases de acuerdo al tipo (primario o secundario)
-  const typeClasses = type === 'primary' ? primaryClasses : secondaryClasses;
+  // Determinar clases de acuerdo al tipo (primario, secundario o ternario)
+  const typeClasses = 
+    type === 'primary' ? primaryClasses :
+    type === 'secondary' ? secondaryClasses : ternaryClasses; 
 
   // Estilos personalizados según las props adicionales
   const customStyles = {

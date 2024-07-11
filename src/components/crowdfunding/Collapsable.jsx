@@ -164,7 +164,7 @@ import Fondo from "../../../public/images/crowdfunding/fondo.jpg";
 function Collapsable() {
   return (
     <div className="relative p-8 h-[50vh] overflow-y-auto" style={{ backgroundImage: `url(${Fondo.src})` }}>
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <h1 className="relative text-white 0 font-title font-bold text-3xl mb-8">
         Conoce nuestra campaña

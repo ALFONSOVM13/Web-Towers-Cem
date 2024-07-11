@@ -26,14 +26,12 @@ const CrowdVideo = ({ onClickButton }) => {
           Ayúdanos a construir un mundo mejor
         </h1>
         <CustomButton
-          type="primary"
+          type="ternary"
           onClick={onClickButton}
-          bgColor="#879e66"
-          width="240px" // Ancho personalizado
-          height="60px" // Alto personalizado
-          textColor="#ffffff" // Color de texto personalizado
-          textSize="1.7rem" // Personalizo tamaño de texto
-          className="hover:bg-secondary-100"
+          width="240px"
+          height="60px"
+          textColor="#ffffff"
+          textSize="1.7rem"
         >
           Donar
         </CustomButton>
