@@ -170,7 +170,7 @@ function Collapsable() {
 
       <div className="relative space-y-4">
         <Collapsible title="¿Qué haremos?">
-          <div className="text-complementary-300 font-medium bg-complementary-100 p-4">
+          <div className="text-complementary-300 font-content bg-complementary-100 p-4">
             <p className="text-justify text-complementary-300">
               Incrementamos nuestra capacidad productiva realizando así la
               producción de nuestro primer lote. Cerraremos intenciones de

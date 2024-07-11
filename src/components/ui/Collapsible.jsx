@@ -12,7 +12,7 @@ const Collapsible = ({ title, children }) => {
     <div className="border border-gray-300 rounded-md mb-4 bg-white">
       <button
         onClick={toggleCollapse}
-        className={`w-full flex justify-between items-center px-4 py-3 text-primary-100 bg-complementary-100 rounded-t-md focus:outline-none ${isOpen ? 'border-b-2 border-dotted border-black' : ''}`}
+        className={`w-full flex justify-between items-center px-4 py-3 text-primary-100 bg-secondary-300 rounded-t-md focus:outline-none ${isOpen ? 'border-b-2 border-dotted border-black' : ''}`}
       >
         <h2 className='font-title text-lg md:text-xl font-bold text-left'>{title}</h2>
         <svg
@@ -28,7 +28,7 @@ const Collapsible = ({ title, children }) => {
         </svg>
       </button>
       {isOpen && (
-        <div className="px-4 py-3 font-content text-primary-100 bg-complementary-100">
+        <div className="px-4 py-3 font-content text-primary-100 bg-secondary-300">
           {children}
         </div>
       )}
