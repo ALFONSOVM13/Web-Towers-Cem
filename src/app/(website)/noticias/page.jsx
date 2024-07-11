@@ -145,7 +145,7 @@ function NewsSection() {
   return (
     <section className="relative flex flex-col justify-center z-0">
       <div className="flex justify-center items-center px-16 py-20 w-full text-white max-md:px-5 max-md:max-w-full">
-        <div className="flex flex-col mt-6 w-full max-w-[1216px] mb-[618px] max-md:mb-10 max-md:max-w-full">
+        <div className="flex flex-col mt-6 w-full max-w-[1216px] mb-[50px] max-md:mb-10 max-md:max-w-full">
           <SectionHeader title="NOTICIAS" />
           <div className="flex flex-col max-md:mt-10 max-md:max-w-full">
             Towers Cem y el Mundo
