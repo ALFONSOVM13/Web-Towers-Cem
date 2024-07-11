@@ -4,6 +4,8 @@ import NewsCard from "@/components/newsPage/NewsCard.jsx";
 import SmallNewsCard from "@/components/newsPage/SmallNewsCard.jsx";
 import ContrastBar from "@/components/header/ContrastBar";
 import "./styles.scss";
+import NewsletterSection from "../../../components/newsletter/NewsletterSection";
+import NewsletterCard from "@/components/newsletter/NewsletterCard";
 
 const newsData = [
   {
@@ -18,7 +20,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/39d80681d84669517f84cbb851651998f553ff9d1f717f29913c63f7849e6405?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "9 min read",
+    readTime: "9 min",
   },
   {
     image:
@@ -31,7 +33,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/0193099e7797da6327ebcd0d2c72d94b3ff59a2a14c5fea98abd3ece166eced6?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "7 min read",
+    readTime: "7 min",
   },
   {
     image:
@@ -44,7 +46,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/dfbfa8193d7de805ef4c60b9b68b2ba476d31bed9c937e4d8032b436262947b8?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "12 min read",
+    readTime: "12 min",
   },
   {
     image:
@@ -57,7 +59,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/8f84238ff75d83ed948761f2c56c0f543727057d3f01233f5f4f96d8b39bf3c8?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "5 min read",
+    readTime: "5 min",
   },
   {
     image:
@@ -70,7 +72,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/0193099e7797da6327ebcd0d2c72d94b3ff59a2a14c5fea98abd3ece166eced6?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "7 min read",
+    readTime: "7 min",
   },
   {
     image:
@@ -83,7 +85,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/dfbfa8193d7de805ef4c60b9b68b2ba476d31bed9c937e4d8032b436262947b8?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "12 min read",
+    readTime: "12 min",
   },
   {
     image:
@@ -96,7 +98,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/8f84238ff75d83ed948761f2c56c0f543727057d3f01233f5f4f96d8b39bf3c8?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "5 min read",
+    readTime: "5 min",
   },
   {
     image:
@@ -109,7 +111,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/0193099e7797da6327ebcd0d2c72d94b3ff59a2a14c5fea98abd3ece166eced6?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "7 min read",
+    readTime: "7 min",
   },
   {
     image:
@@ -122,7 +124,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/dfbfa8193d7de805ef4c60b9b68b2ba476d31bed9c937e4d8032b436262947b8?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "12 min read",
+    readTime: "12 min",
   },
   {
     image:
@@ -135,7 +137,7 @@ const newsData = [
       avatar:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/8f84238ff75d83ed948761f2c56c0f543727057d3f01233f5f4f96d8b39bf3c8?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
-    readTime: "5 min read",
+    readTime: "5 min",
   },
 ];
 
@@ -169,8 +171,14 @@ function NewsSection() {
           <SectionHeader title="NEWSLETTER" className="mt-32 max-md:mt-10" />
           <div className="flex flex-col max-md:max-w-full">
             <div className="flex flex-col max-md:mt-10 max-md:max-w-full">
-              Ejemplo de NewsLetter
+              Nuestros avances
             </div>
+            <div className="mt-12 grid gap-10 grid-cols-2 xl:grid-cols-3  mb-20">
+              {newsData.map((news, index) => (
+                <NewsletterCard {...news} key={index} index={index} />
+              ))}
+            </div>
+            <NewsletterSection />
           </div>
         </div>
       </div>
