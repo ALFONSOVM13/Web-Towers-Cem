@@ -156,22 +156,24 @@
 // }
 
 // export default Collapsable;
+
+
 import Collapsible from "../ui/Collapsible";
 import Fondo from "../../../public/images/crowdfunding/fondo.jpg";
 
 function Collapsable() {
   return (
     <div className="relative p-8 h-[50vh] overflow-y-auto" style={{ backgroundImage: `url(${Fondo.src})` }}>
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
 
-      <h1 className="relative text-complementary-300 font-title font-bold text-3xl mb-8">
+      <h1 className="relative text-white 0 font-title font-bold text-3xl mb-8">
         Conoce nuestra campaña
       </h1>
 
       <div className="relative space-y-4">
         <Collapsible title="¿Qué haremos?">
-          <div className="text-complementary-300 font-content bg-complementary-100 p-4">
-            <p className="text-justify text-complementary-300">
+          <div className="text-complementary-300 font-content bg-black p-4">
+            <p className="text-justify text-white">
               Incrementamos nuestra capacidad productiva realizando así la
               producción de nuestro primer lote. Cerraremos intenciones de
               ventas, nos expandiremos a más productores y puntos de
@@ -186,8 +188,8 @@ function Collapsable() {
           </div>
         </Collapsible>
         <Collapsible title="¿Porqué confiar en nosotros?">
-          <div className="text-complementary-300 font-content bg-complementary-100 p-4">
-            <p className="text-justify ">
+        <div className="text-complementary-300 font-content bg-black p-4">
+            <p className="text-justify text-white">
               Confiar en TOWERS CEM significa apostar por una tecnología
               innovadora que no solo ofrece beneficios ambientales
               significativos, sino que también ventajas en términos de
@@ -201,8 +203,8 @@ function Collapsable() {
           </div>
         </Collapsible>
         <Collapsible title="¿Cómo lo haremos realidad?">
-          <div className="text-complementary-300 font-content bg-complementary-100 p-4">
-            <p className="text-justify">
+        <div className="text-complementary-300 font-content bg-black p-4">
+            <p className="text-justify text-white">
               Esta producción inicial de 500 toneladas nos permitirá tener
               suficiente inventario para satisfacer la demanda inicial de
               nuestros clientes y comenzar a posicionar nuestra marca en el
@@ -216,8 +218,8 @@ function Collapsable() {
           </div>
         </Collapsible>
         <Collapsible title="Algunos riesgos">
-          <div className="text-complementary-300 font-content bg-complementary-100 p-4">
-            <p className="text-justify">
+        <div className="text-white font-content bg-black p-4">
+            <p className="text-justify text-white">
               Aunque TOWERS CEM tiene muchos beneficios, también puede enfrentar
               algunos riesgos potenciales:
             </p>
@@ -246,8 +248,8 @@ function Collapsable() {
           </div>
         </Collapsible>
         <Collapsible title="Algunas ventajas">
-          <div className="text-complementary-300 font-content bg-complementary-100 p-4">
-            <ul className="text-justify">
+        <div className="text-white font-content bg-black p-4">
+            <ul className="text-justify text-white">
               <li>
                 &bull; <strong>Diferencia competitiva:</strong> Nuestra
                 tecnología XCEM ofrece ventajas únicas en términos de
@@ -281,17 +283,17 @@ function Collapsable() {
           </div>
         </Collapsible>
         <Collapsible title="Impacto positivo">
-          <div className="text-complementary-300 font-content bg-complementary-100 p-4">
-            <p className="font-title font-bold">Social</p>
-            <ul className="text-justify">
+        <div className=" font-content text-white bg-black p-4">
+            <p className="font-title font-bold text-white">Social</p>
+            <ul className="text-justify text-white">
               <li className="pl-6">&bull; Generación de empleo</li>
               <li className="pl-6">&bull; Mejora de la salud pública</li>
               <li className="pl-6">
                 &bull; Fomento de la educación y la innovación
               </li>
             </ul>
-            <p className="font-title font-bold">Sostenibilidad</p>
-            <ul className="text-justify">
+            <p className="font-title font-bold text-white">Sostenibilidad</p>
+            <ul className="text-justify text-white">
               <li className="pl-6">&bull; Reducción de emisiones de CO2</li>
               <li className="pl-6">
                 &bull; Construcciones verdes y sostenibles
@@ -299,7 +301,7 @@ function Collapsable() {
               <li className="pl-6">&bull; Conservación de recursos</li>
             </ul>
             <p className="font-title font-bold">Financiero</p>
-            <ul className="text-justify">
+            <ul className="text-justify text-white">
               <li className="pl-6">
                 &bull; Generación de ingresos a nuestro país
               </li>
