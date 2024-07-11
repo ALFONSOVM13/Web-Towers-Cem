@@ -161,9 +161,9 @@ function NewsSection() {
                     <SmallNewsCard key={index} {...news} index={index} />
                   ))}
                   {newsData.slice(1).length > 4 && (
-                    <div className="block mt-[310px] bg-[#1f1f1f]"></div>
+                    <div className="block max-md:hidden mt-[310px] bg-[#1f1f1f]"></div>
                   )}
-                  <div className="absolute h-40 w-full bottom-0 degradado z-[10]"></div>
+                  <div className="absolute h-40 w-full bottom-0 degradado z-[10] max-md:hidden"></div>
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@ function NewsSection() {
             <div className="flex flex-col max-md:mt-10 max-md:max-w-full">
               Nuestros avances
             </div>
-            <div className="mt-12 grid gap-10 grid-cols-2 xl:grid-cols-3  mb-20">
+            <div className="mt-12 grid gap-10 grid-col-1 md:grid-cols-2 xl:grid-cols-3  mb-20">
               {newsData.map((news, index) => (
                 <NewsletterCard {...news} key={index} index={index} />
               ))}

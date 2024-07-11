@@ -3,16 +3,16 @@ import React from "react";
 function SmallNewsCard({ image, title, author, readTime, index }) {
   return (
     <article
-      className={`flex gap-5 max-md:flex-col max-md:gap-0 ${
+      className={`flex gap-5 max-lg:flex-col max-md:gap-0 ${
         index === 0 ? "" : "mt-8"
       } max-md:max-w-full`}
     >
-      <div className="flex flex-col w-[39%] max-md:ml-0 max-md:w-full">
+      <div className="flex flex-col w-[39%] max-md:ml-0 max-lg:w-full">
         <img
           loading="lazy"
           src={image}
           alt={title}
-          className="shrink-0 max-w-full aspect-square w-[177px] max-md:mt-8"
+          className="shrink-0 max-w-full aspect-square  max-md:mt-8"
         />
       </div>
       <div className="flex flex-col ml-5 w-[61%] max-md:ml-0 max-md:w-full">
