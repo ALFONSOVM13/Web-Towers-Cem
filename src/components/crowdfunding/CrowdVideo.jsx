@@ -4,7 +4,7 @@ import Title from "../ui/Title";
 
 const CrowdVideo = ({ onClickButton }) => {
   return (
-    <section className="h-screen flex flex-col items-center justify-center p-4 bg-primary-100">
+    <section className="h-screen flex flex-col items-center justify-center p-4 bg-complementary-300">
       <Title text="NUESTRA CAMPAÑA DE CROWDFUNDING" size="large" className="text-complementary-200 p-10"/>
       
       <div className="w-full md:w-2/3 lg:w-1/2 h-3/4">
@@ -20,11 +20,21 @@ const CrowdVideo = ({ onClickButton }) => {
         ></iframe>
       </div>
       
-      <div className="bg-complementary-200 flex flex-col md:flex-row items-center justify-center p-6 w-full md:w-2/3 lg:w-1/2 ">
-        <h1 className="text-3xl text-primary-100 font-bold text-center md:text-left mr-0 md:mr-4 mb-4 md:mb-0">
+      
+      <div className="bg-complementary-200 flex flex-col md:flex-row items-center justify-center p-6 w-full md:w-2/3 lg:w-1/2 space-y-4 md:space-y-0 md:space-x-10">
+        <h1 className="text-3xl text-primary-100 font-bold text-center md:text-left">
           Ayúdanos a construir un mundo mejor
         </h1>
-        <CustomButton type="primary" onClick={onClickButton}>
+        <CustomButton
+          type="primary"
+          onClick={onClickButton}
+          bgColor="#879e66"
+          width="240px" // Ancho personalizado
+          height="60px" // Alto personalizado
+          textColor="#ffffff" // Color de texto personalizado
+          textSize="1.7rem" // Personalizo tamaño de texto
+          className="hover:bg-secondary-100"
+        >
           Donar
         </CustomButton>
       </div>

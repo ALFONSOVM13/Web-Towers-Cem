@@ -1,16 +1,50 @@
+// import React from 'react';
+
+// const CustomButton = ({ type = 'primary', onClick, children, className }) => {
+//   const baseClasses = 'px-4 py-2 rounded font-semibold focus:outline-none transition-colors duration-300';
+
+//   // Estilos para el botón primario y secundario
+//   const typeClasses = type === 'primary'
+//     ? 'bg-primary-100 text-white hover:bg-primary-200'
+//     : 'border border-primary-100 text-primary-100 hover:bg-primary-100 hover:text-white';
+
+//   return (
+//     <button
+//       className={`${baseClasses} ${typeClasses} ${className} cursor-pointer`}
+//       onClick={onClick}
+//     >
+//       {children}
+//     </button>
+//   );
+// };
+//
+//export default CustomButton;
+
 import React from 'react';
 
-const CustomButton = ({ type = 'primary', onClick, children, className }) => {
+const CustomButton = ({ type = 'primary', onClick, children, className, bgColor, width,height, textSize,textColor }) => {
   const baseClasses = 'px-4 py-2 rounded font-semibold focus:outline-none transition-colors duration-300';
 
   // Estilos para el botón primario y secundario
-  const typeClasses = type === 'primary'
-    ? 'bg-primary-100 text-white hover:bg-primary-200'
-    : 'border border-primary-100 text-primary-100 hover:bg-primary-100 hover:text-white';
+  const primaryClasses = 'bg-primary-100 text-white hover:bg-primary-200';
+  const secondaryClasses = 'border border-primary-100 text-primary-100 hover:bg-primary-100 hover:text-white';
+
+  // Determinar clases de acuerdo al tipo (primario o secundario)
+  const typeClasses = type === 'primary' ? primaryClasses : secondaryClasses;
+
+  // Estilos personalizados según las props adicionales
+  const customStyles = {
+    backgroundColor: bgColor,
+    width: width,
+    color: textColor,
+    height: height,
+    fontSize: textSize,
+  };
 
   return (
     <button
       className={`${baseClasses} ${typeClasses} ${className} cursor-pointer`}
+      style={customStyles} // Aplicar estilos personalizados
       onClick={onClick}
     >
       {children}
