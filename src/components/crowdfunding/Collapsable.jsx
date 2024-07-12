@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Collapsible from "../ui/Collapsible";
 
 function Collapsable() {
@@ -27,7 +24,7 @@ function Collapsable() {
             </p>
           </div>
         </Collapsible>
-        <Collapsible title="¿Porqué confiar en nuestro proyecto?">
+        <Collapsible title="¿Porqué confiar en nosotros?">
           <div className="text-primary-100 font-content bg-complementary-100 p-4">
             <p className="text-justify ">
               Confiar en TOWERS CEM significa apostar por una tecnología
@@ -122,7 +119,7 @@ function Collapsable() {
             </ul>
           </div>
         </Collapsible>
-        <Collapsible title="Impacto positivo de nuestro proyecto ">
+        <Collapsible title="Impacto positivo">
           <div className="text-primary-100 font-content bg-complementary-100 p-4">
             <p className="font-title font-bold">Social</p>
             <ul className="text-justify">

@@ -22,7 +22,7 @@ function WhatWeDo() {
 
   return (
     <main className="flex flex-col px-5 bg-complementary-100 ">
-      <header className="text-complementary-300 font-title text-xl px-4 md:px-0 max-w-7xl mx-auto mt-10">
+      <header className="text-primary-300 font-title text-xl px-4 md:px-0 max-w-7xl mx-auto mt-10">
         ¡En Towers Cem, desarrollamos cementos inteligentes y sostenibles que purifican el aire eliminando hasta un 23% de CO₂. 
         Nos enfocamos en ofrecer soluciones que no solo son duraderas y de alta calidad, sino también amigables con el medio ambiente.!
       </header>
@@ -31,7 +31,7 @@ function WhatWeDo() {
         <div className="flex gap-5 max-md:flex-col max-md:gap-0 "> 
           <article className="flex flex-col w-full md:w-6/12 max-md:ml-0 max-md:w-full ">
             <div className="flex flex-col text-xl text-gray-500 max-md:mt-10 max-md:max-w-full ">
-              <Title text="¡CONÓCENOS!" size="large" className='text-center md:ml-96 text-complementary-200' /> 
+              <Title text="¡CONÓCENOS!" size="large" className='text-center md:ml-96 text-primary-100' /> 
               <div className="gap-8 mt-8 md:ml-72  bg-complementary-100 items-center">
               {cardsData.map((card, index) => (
                   <Card2

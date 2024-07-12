@@ -1,55 +1,105 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
+import Title from "../ui/Title";
 
 const logos = [
-  { src: "/51-labs.jpg", alt: "Logo 1" },
-  { src: "/Cedex-logo.png", alt: "Logo 2" },
-  { src: "/cleantech.png", alt: "Logo 3" },
-  { src: "/collision.png", alt: "Logo 4" },
-  { src: "/instituto-eduardo-torroja.png", alt: "Logo 5" },
-  { src: "/Logo_uni-costa.png", alt: "Logo 6" },
-  { src: "/Logo_uninorte_colombia.jpg", alt: "Logo 7" },
-  { src: "/images/brands/madrid-innovation.png", alt: "Logo 8" },
-  { src: "/images/brands/secot.jpg", alt: "Logo 9" },
-  { src: "/images/brands/uni-nac-colombia.png", alt: "Logo 10" },
+  {
+    src: "/images/brands/51-labs.png",
+    alt: "51/-labs",
+    width: 110,
+    height: 85,
+  },
+  {
+    src: "/images/brands/Cedex-logo.png",
+    alt: "cedex",
+    width: 170,
+    height: 80,
+  },
+  {
+    src: "/images/brands/cleantech.png",
+    alt: "cleantech",
+    width: 220,
+    height: 60,
+  },
+  {
+    src: "/images/brands/collision.png",
+    alt: "collision",
+    width: 220,
+    height: 90,
+  },
+  {
+    src: "/images/brands/instituto-eduardo-torroja.png",
+    alt: "instituto-eduardo-torroja",
+    width: 100,
+    height: 60,
+  },
+  {
+    src: "/images/brands/Logo_uni-costa.png",
+    alt: "unicosta",
+    width: 220,
+    height: 95,
+  },
+  {
+    src: "/images/brands/Logo_uninorte_colombia.jpg",
+    alt: "uninorte-colombia",
+    width: 220,
+    height: 85,
+  },
+  {
+    src: "/images/brands/madrid-innovation.png",
+    alt: "madrid-innovation",
+    width: 220,
+    height: 75,
+  },
+  { src: "/images/brands/secot.jpg", alt: "secot", width: 220, height: 88 },
+  {
+    src: "/images/brands/uni-nac-colombia.png",
+    alt: "uni-nac-colombia",
+    width: 220,
+    height: 125,
+  },
+  {
+    src: "/images/brands/mentor.png",
+    alt: "mentor",
+    width: 220,
+    height: 80,
+  },
 ];
 
 const BrandSlider = () => {
-  const duplicatedSlides = logos.concat(logos);
-
   return (
-    <div className="overflow-hidden w-full py-8">
-      <motion.div
-        className="flex"
-        animate={{
-          x: [0 , "-100%"],
-          transition: { ease: "linear", duration: 15, repeat: Infinity },
-        }}
-        initial={false}
-      >
-        {duplicatedSlides.map((slide, index) => (
-          <motion.div 
-            key={index}
-            className="flex-shrink-0"
-            style={{ width: `${100 / logos.length}%` }}
-            whileHover={{ scale: 1.1 }} 
-          >
-            <LogoImage src={slide.src} alt={slide.alt} />
-          </motion.div>
+    <section className=" flex flex-col  px-10 h-full">
+      <div className="flex justify-between items-center">
+      <Title
+        text="Nuestros Aliados"
+        className="text-left text-3xl md:text-4xl xl:text-5xl"
+      />
+      </div>
+
+      <Marquee direction="left" speed={150} delay={5} pauseOnHover={"true"}>
+        {logos.map((logo, index) => (
+          <div key={index} className="mx-4">
+            <LogoImage
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+            />
+          </div>
         ))}
-      </motion.div>
-    </div>
+      </Marquee>
+    </section>
   );
 };
 
-const LogoImage = ({ src, alt }) => (
-  <div className="flex items-center justify-center h-56 w-12 md:h-52 md:w-52">
-    <Image 
-      src={src} 
-      alt={alt} 
-      width={150} 
-      height={100}
-      className="object-cover"
+const LogoImage = ({ src, alt, width, height }) => (
+  <div className="image_wrapper">
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className="object-contain object-center transform scale-100 hover:scale-110 transition-transform duration-300"
     />
   </div>
 );

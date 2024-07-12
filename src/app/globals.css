@@ -22,16 +22,16 @@
 
 @font-face {
   font-family: 'Nexa';
-  src: url('/fonts/NexaTextDemo-Light.woff2') format('woff2'),
-       url('/fonts/NexaTextDemo-Light.woff') format('woff');
+  src: url('/fonts/NexaBold.otf') format('otf'),
+       url('/fonts/NexaBold.otf') format('otf');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nexa';
-  src: url('/fonts/NexaTextDemo-Bold.woff2') format('woff2'),
-       url('/fonts/NexaTextDemo-Bold.woff') format('woff');
+  src: url('/fonts/NexaBold.otf') format('otf'),
+       url('/fonts/NexaBold.otf') format('otf');
   font-weight: bold;
   font-style: normal;
 }
@@ -56,3 +56,9 @@
   font-family: 'Nexa', sans-serif;
   font-weight: bold;
 }
+
+
+
+
+
+

@@ -3,9 +3,17 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      textShadow: {
+        'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        'md': '3px 3px 6px rgba(0, 0, 0, 0.5)',
+        'lg': '4px 4px 8px rgba(0, 0, 0, 0.5)',
+        'xl': '5px 5px 10px rgba(0, 0, 0, 0.5)',
+        '2xl': '6px 6px 12px rgba(0, 0, 0, 0.5)',
+        'none': 'none',
+      },
       screens: {
-      'customMd': '860px'
-    },
+        'customMd': '860px'
+      },
       colors: {
         primary: {
           100: "#302c57",
@@ -25,12 +33,34 @@ export default {
         },
       },
       fontFamily: {
-        content: ["Chopin", "Chopin"],
+        content: ["Nexa", "sans-serif"],
         title: ["Chopin", "sans-serif"],
       },
     },
   },
   plugins: [
-    require('tailwindcss-animated')
+    require('tailwindcss-animated'),
+    function ({ addUtilities }) {
+      addUtilities({
+        '.text-shadow': {
+          'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-md': {
+          'text-shadow': '3px 3px 6px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-lg': {
+          'text-shadow': '4px 4px 8px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-xl': {
+          'text-shadow': '5px 5px 10px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-2xl': {
+          'text-shadow': '6px 6px 12px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-none': {
+          'text-shadow': 'none',
+        }
+      }, ['responsive', 'hover']);
+    }
   ],
 }

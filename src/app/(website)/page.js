@@ -1,103 +1,45 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
-import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
-import NewsSection from "@/components/news/NewsSection";
+import NewsSection from "@/components/newsPreview/NewsSection";
 import Products from "@/components/products/Products";
 import Tecnologies from "@/components/tecnologies/Tecnologies";
-import Footer from "@/components/footer/Footer";
+import FooterSection from "@/components/footer/FooterSection";
+import KnowUsSection from "@/components/knowUs/KnowUsSection";
+import BrandSlider from "@/components/footer/BrandSlider";
 
 const HomePage = () => {
-  const sectionRefs = useRef([]);
-  const isScrolling = useRef(false);
-  
+  const knowUsRef = useRef(null); // Referencia para la sección KnowUsSection
 
-  useEffect(() => {
-    const handleScroll = (event) => {
-      if (!isScrolling.current) {
-        if (event.deltaY > 0) {
-          scrollToSection(1);
-        } else if (event.deltaY < 0) {
-          scrollToSection(-1);
-        }
-      }
-    };
-
-    const handleKeyDown = (event) => {
-      if (!isScrolling.current) {
-        if (event.key === "ArrowDown") {
-          scrollToSection(1);
-        } else if (event.key === "ArrowUp") {
-          scrollToSection(-1);
-        }
-      }
-    };
-
-    window.addEventListener("wheel", handleScroll);
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
-  const scrollToSection = (direction) => {
-    isScrolling.current = true;
-
-    const currentSectionIndex = sectionRefs.current.findIndex((section) => {
-      const rect = section.getBoundingClientRect();
-      return rect.top === 0;
-    });
-
-    let nextSectionIndex = currentSectionIndex + direction;
-    if (nextSectionIndex < 0) nextSectionIndex = 0;
-    if (nextSectionIndex >= sectionRefs.current.length)
-      nextSectionIndex = sectionRefs.current.length - 1;
-
-    sectionRefs.current[nextSectionIndex].scrollIntoView({
-      behavior: "smooth",
-    });
-
-    setTimeout(() => {
-      isScrolling.current = false;
-    }, 900);
+  const scrollToKnowUsSection = () => {
+    if (knowUsRef.current) {
+      window.scrollTo({
+        top: knowUsRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
-    <div className="h-screen w-full sm:overflow-y-auto xl:overflow-hidden">
-      <div ref={(el) => (sectionRefs.current[0] = el)} className="min-h-screen">
-        <HeroSection />
+    <div className="">
+      <div>
+        <HeroSection scrollToNextSection={scrollToKnowUsSection} />
       </div>
-      <div ref={(el) => (sectionRefs.current[1] = el)} className="min-h-screen">
-        <WhatWeDo />
+      <div ref={knowUsRef}  className="min-h-screen">
+        <KnowUsSection />
       </div>
-      <div
-        ref={(el) => (sectionRefs.current[2] = el)}
-        className="min-h-screen bg-complementary-200"
-      >
+      <div >
         <Products />
       </div>
-      <div
-        ref={(el) => (sectionRefs.current[3] = el)}
-        className="min-h-screen bg-complementary-100"
-      >
+      <div>
         <Tecnologies />
       </div>
-      <div
-        ref={(el) => (sectionRefs.current[4] = el)}
-        className="min-h-screen bg-complementary-200"
-      >
+
+      <div>
         <NewsSection />
       </div>
-      {/* <div ref={(el) => (sectionRefs.current[7] = el)} className="min-h-screen bg-complementary-200 grid place-content-center">
-        
-      </div> */}
-      <div
-        ref={(el) => (sectionRefs.current[5] = el)}
-        className="min-h-screen bg-complementary-200"
-      >
-        <Footer />
+      <div>
+        <BrandSlider />
       </div>
     </div>
   );
