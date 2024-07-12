@@ -17,7 +17,7 @@ const NewsletterCard = ({ image, title, readTime, index }) => {
         } transition-all duration-500`}
         style={{ backgroundImage: `url('${image}')` }}
       ></div>
-      <div className="flex flex-col p-5 absolute bottom-0 gap-2 font-bold bg-black/30 w-full backdrop-blur-sm">
+      <div className="flex flex-col p-5 absolute bottom-0 gap-2 font-bold bg-black/30 w-full backdrop-blur-sm text-white">
         <span className="font-bold text-2xl tracking-wide">{title}</span>
 
         <span className="self-end font-light">{readTime}</span>
