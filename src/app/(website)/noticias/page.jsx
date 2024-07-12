@@ -21,6 +21,7 @@ const newsData = [
         "https://cdn.builder.io/api/v1/image/assets/TEMP/39d80681d84669517f84cbb851651998f553ff9d1f717f29913c63f7849e6405?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
     readTime: "9 min",
+    slug: "towers-cem-ganador-emprende",
   },
   {
     image:
@@ -34,6 +35,7 @@ const newsData = [
         "https://cdn.builder.io/api/v1/image/assets/TEMP/0193099e7797da6327ebcd0d2c72d94b3ff59a2a14c5fea98abd3ece166eced6?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
     readTime: "7 min",
+    slug: "estudiante-unicosta-ganador-prix",
   },
   {
     image:
@@ -47,6 +49,7 @@ const newsData = [
         "https://cdn.builder.io/api/v1/image/assets/TEMP/dfbfa8193d7de805ef4c60b9b68b2ba476d31bed9c937e4d8032b436262947b8?apiKey=a388e25d634c4683ada4dcefcdb81b2e&",
     },
     readTime: "12 min",
+    slug: "clausura-iii-edicion-puentes",
   },
   {
     image:
@@ -147,7 +150,7 @@ function NewsSection() {
       <div className="flex justify-center items-center px-16 py-20 w-full text-white max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col mt-6 w-full max-w-[1216px] mb-[50px] max-md:mb-10 max-md:max-w-full">
           <SectionHeader title="NOTICIAS" />
-          <div className="flex flex-col max-md:mt-10 max-md:max-w-full">
+          <div className="flex flex-col max-md:mt-10 max-md:max-w-full text-left mt-2">
             Towers Cem y el Mundo
           </div>
           <div className="mt-16 max-md:mt-10 max-md:max-w-full">
@@ -170,8 +173,8 @@ function NewsSection() {
           </div>
           <SectionHeader title="NEWSLETTER" className="mt-32 max-md:mt-10" />
           <div className="flex flex-col max-md:max-w-full">
-            <div className="flex flex-col max-md:mt-10 max-md:max-w-full">
-              Nuestros avances
+            <div className="flex flex-col max-md:mt-10 max-md:max-w-full text-left mt-2">
+              Nuestros Avances
             </div>
             <div className="mt-12 grid gap-10 grid-col-1 md:grid-cols-2 xl:grid-cols-3  mb-20">
               {newsData.map((news, index) => (

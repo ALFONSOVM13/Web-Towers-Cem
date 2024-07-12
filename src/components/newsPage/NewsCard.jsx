@@ -1,6 +1,15 @@
+import Link from "next/link";
 import React from "react";
 
-function NewsCard({ image, tags, title, content, author, readTime }) {
+function NewsCard({
+  image,
+  tags,
+  title,
+  content,
+  author,
+  readTime,
+  slug = "",
+}) {
   return (
     <article className="relative flex flex-col grow text-sm font-bold tracking-normal leading-5 text-zinc-100 max-md:mt-8 max-md:max-w-full">
       <img
@@ -37,9 +46,11 @@ function NewsCard({ image, tags, title, content, author, readTime }) {
         </div>
         <span className="my-auto">{readTime}</span>
       </div>
-      <button className="absolute bottom-0 right-7 text-md font-medium text-zinc-100 hover:text-zinc-300 hover:border-zinc-300/50 border rounded-3xl border-zinc-200/50 h-12 w-36">
-        Leer Más {"->"}
-      </button>
+      <Link href={"/noticias/" + slug} alt={slug}>
+        <button className="absolute bottom-0 right-7 text-md font-medium text-zinc-100 hover:text-zinc-300 hover:border-zinc-300/50 border rounded-3xl border-zinc-200/50 h-12 w-36">
+          Leer Más {"->"}
+        </button>
+      </Link>
     </article>
   );
 }
