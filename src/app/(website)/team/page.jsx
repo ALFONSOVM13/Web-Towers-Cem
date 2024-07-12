@@ -8,7 +8,11 @@ const page = () => {
       <span>CONOCENOS</span>
       <h2 className="font-title">Nuestro Equipo</h2>
       <p>
-        Somos un grupo de trabajo interdisciplinario comprometido con la creación de un futuro mucho más verde para nuestras próximas generaciones, apuntándoles a los objetivos de desarrollo sostenible, innovación e infraestructura, creación de ciudades sostenibles y acción por el clima.
+        Somos un grupo de trabajo interdisciplinario comprometido con la
+        creación de un futuro mucho más verde para nuestras próximas
+        generaciones, apuntándoles a los objetivos de desarrollo sostenible,
+        innovación e infraestructura, creación de ciudades sostenibles y acción
+        por el clima.
       </p>
       <span className="bg-watermark">Equipo</span>
       <div className="cards">
@@ -31,7 +35,7 @@ const page = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="card">
           <img src="/images/team/Carlos.png" alt="Carlos Torres" />
           <div className="card-content">
@@ -59,18 +63,17 @@ const page = () => {
             <ul>
               <li>
                 <a href="#">
-                  <FaInstagram id="red" className="fa-brands fa-instagram"/>
+                  <FaInstagram id="red" className="fa-brands fa-instagram" />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <FaLinkedinIn id="red" className="fa-brands fa-linkedin-in"/>
+                  <FaLinkedinIn id="red" className="fa-brands fa-linkedin-in" />
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        
       </div>
     </section>
   );
