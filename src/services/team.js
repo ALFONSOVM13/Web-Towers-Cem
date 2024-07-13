@@ -38,7 +38,7 @@ export const team = [
     {
         id: 4,
         name: 'Santiago Reano',
-        photo: '/images/team/Ivan.png',
+        photo: '/images/team/Santi.png',
         position: 'Dir. de proyectos',
         social: {
             instagram: '',
@@ -50,7 +50,7 @@ export const team = [
     {
         id: 5,
         name: 'Jose Torres',
-        photo: '/images/team/Ivan.png',
+        photo: '/images/team/Jose.png',
         position: 'Dir. de proyectos',
         social: {
             instagram: '',
