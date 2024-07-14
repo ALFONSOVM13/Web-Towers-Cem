@@ -1,6 +1,6 @@
 import React from "react";
 
-function SectionHeader({ title, className = "" }) {
+function NewsHeader({ title, className = "" }) {
   return (
     <header
       className={`flex gap-5 justify-between text-zinc-900 max-md:flex-wrap max-md:max-w-full ${className}`}
@@ -23,4 +23,4 @@ function SectionHeader({ title, className = "" }) {
   );
 }
 
-export default SectionHeader;
+export default NewsHeader;
