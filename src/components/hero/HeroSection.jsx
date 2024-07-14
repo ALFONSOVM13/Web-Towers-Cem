@@ -1,45 +1,58 @@
-import React, { useRef } from "react";
+import React from "react";
 import Title from "../ui/Title";
 import { PiMouseSimple } from "react-icons/pi";
 import { FaAnglesDown } from "react-icons/fa6";
 
 const HeroSection = ({ scrollToNextSection }) => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
+      {/* Video Background */}
       <video
         autoPlay
         loop
         muted
-        className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute object-cover w-full h-full"
       >
         <source src="/videos/hero-background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-90"></div>
+      {/* Dimmer Overlay */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="absolute inset-0 flex items-center justify-center text-center">
-        <div className="max-w-5xl px-10 md:px-10 md:max-w-6xl lg:max-w-7xl xl:max-w-8xl">
+      {/* Gradient Overlay & Content Container */}
+      <div className="absolute inset-0 flex flex-col items-center justify-end mb-10">
+        <div className="max-w-5xl px-4 text-center">
+          {" "}
+          {/* Added container for text */}
+          {/* Main Title */}
           <Title
-            text="Construyendo ciudades que respiran"
-            className="animate-jump-in text-shadow-smooth mb-6 text-complementary-200 sm:text-4xl md:text-5xl lg:text-6xl text-5xl"
+            text="Somos Towers Cem"
+            className="animate-jump-in text-shadow-xl mb-4 text-complementary-200 sm:text-4xl md:text-5xl lg:text-6xl"
           />
-          <p className="text-2xl md:text-4xl leading-relaxed font-content font-light text-white mb-8">
-            Innovación y sostenibilidad se unen para construir el futuro con
-            cementos inteligentes y ecológicos.
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl leading-relaxed font-content font-light italic text-complementary-200 mb-8">
+            Construyendo ciudades que respiran
           </p>
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-            <button
-              className="flex items-center flex-col justify-center animate-bounce animate-infinite animate-ease-in-out"
-              onClick={scrollToNextSection}
-            >
-              <PiMouseSimple className="text-white text-5xl" />
-              <FaAnglesDown className="text-white text-3xl mt-4" />
-            </button>
+          <div className="mb-8">
+            <p className="text-xl md:text-2xl leading-relaxed font-content font-light text-complementary-200 mb-8">
+              ¿Estás listo para descubrir cómo el cemento puede cambiar el
+              mundo?
+            </p>
           </div>
         </div>
+
+        {/* Scroll Down Button */}
+        <button
+          className="group mt-12 animate-bounce animate-infinite animate-ease-in-out"
+          onClick={scrollToNextSection}
+          aria-label="Scroll down"
+        >
+          <PiMouseSimple className="text-complementary-100 text-5xl group-hover:text-secondary-200 transition duration-300" />
+          {/* <FaAnglesDown className="text-complementary-100 text-3xl mt-4 group-hover:text-secondary-200 transition duration-300" /> */}
+        </button>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -28,7 +28,7 @@ const HomePage = () => {
       {/* <div ref={knowUsRef}  className="min-h-screen">
         <KnowUsSection />
       </div> */}
-      <div >
+      <div ref={knowUsRef}>
         <Products />
       </div>
       <div>
