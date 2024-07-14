@@ -1,11 +1,11 @@
 import React from 'react';
-
+import CustomButton from "../ui/CustomButton"
 
 function ContactForm() {
 
   return (
 
-    <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full bg-complementary-300">
+    <div className="flex flex-col w-7/12 max-md:ml-0 max-md:w-full bg-complementary-300">
       <div className="flex flex-col grow p-10 max-md:px-5 max-md:mt-10 max-md:max-w-full bg">
         <div className="flex flex-col text-white max-md:max-w-full ">
           <h2 className="text-3xl font-semibold tracking-tight max-md:max-w-full">
@@ -52,13 +52,20 @@ function ContactForm() {
             className="flex justify-center items-center px-2.5 py-3 mt-3.5 text-white whitespace-nowrap rounded-md max-md:px-5 max-md:max-w-full"
           >
             <div className="flex gap-2.5">
-              <span>Enviar</span>
-              <img
+               <div className="flex flex-col lg:flex-row ">
+                    <CustomButton
+                      type="primary"
+                      className="rounded-2xl"
+                    >
+                      ENVIAR
+                    </CustomButton>
+                  </div>
+              {/* <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e431d5f6afb77cc244f6efb04c30e5d135322d95fb295b5e1edbe81cc2a825f?apiKey=9fe8dc76776646f4a6bc648caa0a3bac&"
                 className="shrink-0 my-auto mix-blend-screen aspect-[2.08] w-[25px]"
                 alt=""
-              />
+              /> */}
             </div>
           </button>
         </form>
