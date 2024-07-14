@@ -11,7 +11,7 @@ function NewsCard({
   slug = "",
 }) {
   return (
-    <article className="relative flex flex-col grow text-sm font-bold tracking-normal leading-5 text-zinc-100 max-md:mt-8 max-md:max-w-full">
+    <article className="relative flex flex-col grow text-sm font-normal tracking-normal leading-5 text-zinc-100 max-md:mt-8 max-md:max-w-full">
       <img
         loading="lazy"
         src={image}

@@ -2,8 +2,6 @@
 .degradado {
   background-image: linear-gradient(to bottom, transparent, #171717);
 }
-
-/* globals.css */
 body {
   background: #171717;
   .noticias::-webkit-scrollbar {
@@ -13,6 +11,9 @@ body {
     h2,
     span {
       color: #f1f1f1;
+    }
+    h2 {
+      font-size: 5rem;
     }
     .tag {
       color: #1f1f1f;
