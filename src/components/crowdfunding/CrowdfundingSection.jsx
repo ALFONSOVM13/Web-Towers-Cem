@@ -8,7 +8,7 @@ const CrowdfundingSection = () => {
   return (
     <>
       <section className="">
-        <CrowdVideo className="min-h-screen" />
+        <CrowdVideo/>
         <Collapsable />
         <Carrusel />
       </section>

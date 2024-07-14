@@ -2,12 +2,12 @@ import Collapsible from "../ui/Collapsible";
 
 function Collapsable() {
   return (
-    <div className="bg-complementary-200 p-8">
+    <div className="bg-complementary-200 px-12 py-12 sm:px-4 sm:py-4 md:px-8 md:py-8 lg:px-12 lg:py-12 xl:px-32 xl:py-16">
       <h1 className="text-primary-100 font-title font-semibold text-2xl mb-8">
         Conoce nuestra campaña
       </h1>
 
-      <div className="space-y-4">
+      <div className="w-full">
         <Collapsible title="¿Qué haremos?">
           <div className="text-primary-100 font-content bg-complementary-100 p-4">
             <p className="text-justify text-complementary-300">
