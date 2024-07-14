@@ -24,7 +24,7 @@ function NewsSection() {
                 <NewsCard {...newsData[0]} />
               </div>
               <div className="relative flex flex-col ml-5 w-[41%] max-md:ml-0 max-md:w-full z-[0]">
-                <div className="noticias flex flex-col max-md:mt-8 max-md:max-w-full max-h-[800px] overflow-y-scroll pr-5">
+                <div className="noticias flex flex-col max-md:mt-8 max-md:max-w-full max-h-[800px] overflow-y-auto pr-5">
                   {newsData.slice(1).map((news, index) => (
                     <SmallNewsCard key={index} {...news} index={index} />
                   ))}

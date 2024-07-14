@@ -5,7 +5,7 @@ function NewsHeader({ title, className = "" }) {
     <header
       className={`flex gap-5 justify-between text-zinc-900 max-md:flex-wrap max-md:max-w-full ${className}`}
     >
-      <h2 className="text-4xl font-normal tracking-wide leading-[68.2px] max-md:text-4xl text-white">
+      <h2 className="text-6xl font-normal tracking-wide leading-[68.2px] max-md:text-4xl text-white">
         {title}
       </h2>
       {/* <button className="flex flex-col justify-center px-6 py-4 my-auto text-lg tracking-normal leading-6 border border-solid border-emerald-950 rounded-[200px] max-md:px-5">
