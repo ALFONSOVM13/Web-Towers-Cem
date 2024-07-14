@@ -3,14 +3,14 @@
 .snap-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100vh;
-  scrollbar-width: none; /* Ocultar barra de desplazamiento en Firefox */
+  height: 90vh;
+  //scrollbar-width: none; /* Ocultar barra de desplazamiento en Firefox */
 }
 
 .snap-container::-webkit-scrollbar {
-  display: none; /* Ocultar barra de desplazamiento en WebKit */
+  display: list-item; /* Ocultar barra de desplazamiento en WebKit */
 }
 
 .snap-start {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }

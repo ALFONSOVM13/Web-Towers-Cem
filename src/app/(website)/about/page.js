@@ -64,13 +64,12 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="bg-slate-100 min-h-screen py-10 snap-container">
+    <div className="bg-slate-100 snap-container">
       <div className="mt-20 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold text-center mb-20 text-blue-300">Mustafa Kemal Atatürk</h1>
         <div className="relative">
           {/* Timeline line */}
-          <div className="border-r-4 border-blue-200 absolute h-full top-0" style={{ left: '50%' }}></div>
-
+          <h1 className="mt-32 text-4xl font-bold text-center text-blue-300">Mustafa Kemal Atatürk</h1>
+          <div className="border-r-4 border-blue-200 absolute h-full" style={{ left: '50%' }}></div>
           {timelineItems.map((item, index) => (
             <div
               key={index}
@@ -78,9 +77,9 @@ const Timeline = () => {
               ref={(el) => (sectionsRef.current[index] = el)}
               className={`mb-16 flex justify-between items-center w-full snap-start ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}
             >
-              <div className="order-1 w-1/4"></div>
+              <div className="order-1 w-2/5"></div>
               <div
-                className={`order-1 w-3/4 px-4 py-8 mt-8 ${index % 2 === 0 ? 'text-left' : 'text-right'} ${
+                className={`order-1 w-2/5 px-4 py-8 mt-8 ml-4 ${index % 2 === 0 ? 'text-left' : 'text-right'} ${
                   focusedIndex === index ? 'opacity-100' : 'opacity-40'
                 } transition-opacity duration-300`}
               >
