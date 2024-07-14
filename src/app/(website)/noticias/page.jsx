@@ -181,7 +181,6 @@ function NewsSection() {
                 <NewsletterCard {...news} key={index} index={index} />
               ))}
             </div>
-            <NewsletterSection />
           </div>
         </div>
       </div>

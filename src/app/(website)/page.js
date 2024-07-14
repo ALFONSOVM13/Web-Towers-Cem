@@ -25,9 +25,9 @@ const HomePage = () => {
       <div>
         <HeroSection scrollToNextSection={scrollToKnowUsSection} />
       </div>
-      <div ref={knowUsRef}  className="min-h-screen">
+      {/* <div ref={knowUsRef}  className="min-h-screen">
         <KnowUsSection />
-      </div>
+      </div> */}
       <div >
         <Products />
       </div>

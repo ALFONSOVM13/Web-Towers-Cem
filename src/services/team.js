@@ -3,7 +3,7 @@ export const team = [
         id: 1,
         name: 'Miley Velásquez',
         photo: '/images/team/Miley.png',
-        position: 'Dir. Operaciones',
+        position: 'Dir. Ejecutivo',
         social: {
             instagram: 'https://www.instagram.com/mileyvelasquezm',
             linkedin : 'https://www.linkedin.com/in/mileyvelasquez'
@@ -39,7 +39,7 @@ export const team = [
         id: 4,
         name: 'Santiago Reano',
         photo: '/images/team/Santi.png',
-        position: 'Dir. de proyectos',
+        position: 'Dir. de Comercial',
         social: {
             instagram: '',
             linkedin : 'https://www.linkedin.com/in/santiago-reano'
@@ -51,7 +51,7 @@ export const team = [
         id: 5,
         name: 'Jose Torres',
         photo: '/images/team/Jose.png',
-        position: 'Dir. de proyectos',
+        position: 'Dir. de Marketing',
         social: {
             instagram: '',
             linkedin : 'https://www.linkedin.com/in/josetorres-gonzalez'
