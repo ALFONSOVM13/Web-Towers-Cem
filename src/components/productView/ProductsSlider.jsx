@@ -22,7 +22,7 @@ const ProductsSlider = ({ title, name, description, image, nextCem, previousCem,
 
 
    return (
-      <section className='flex justify-center pt-40 pb-20 px-40'>
+      <section className='flex justify-center pt-20 pb-4 px-40'>
          <div className='flex-1'>
             <Title
                text={title}
@@ -47,8 +47,8 @@ const ProductsSlider = ({ title, name, description, image, nextCem, previousCem,
 
 
          <div className='flex-1 border-l-complementary-400 border-l'>
-            <div className='relative w-[550px] ml-auto pl-16' onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
-               <figure className={`relative h-[400px] w-[300px] ${isHover ? 'animate-fade-left' : 'animate-fade-right'}`}>
+            <div className='relative w-[550px] ml-auto pl-16'>
+               <figure className={`relative h-[400px] w-[300px] ${isHover ? 'animate-fade-left' : 'animate-fade-right'}`} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
                   {
                      isHover ? (
                         <img src={image.back} alt="cemento" className='object-cover h-full cursor-pointer object-center' />
