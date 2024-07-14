@@ -5,9 +5,9 @@ function ContactForm() {
 
   return (
 
-    <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-      <div className="flex flex-col grow p-10 max-md:px-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-col text-white max-md:max-w-full">
+    <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full bg-complementary-300">
+      <div className="flex flex-col grow p-10 max-md:px-5 max-md:mt-10 max-md:max-w-full bg">
+        <div className="flex flex-col text-white max-md:max-w-full ">
           <h2 className="text-3xl font-semibold tracking-tight max-md:max-w-full">
             Contactanos
           </h2>
