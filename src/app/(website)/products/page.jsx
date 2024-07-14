@@ -1,12 +1,14 @@
-import DescriptionProduct from '@/components/productView/DescriptionProduct'
-import ProductsSlider from '@/components/productView/ProductsSlider'
+import ProductSection from '@/components/products/ProductSection'
+import { products } from '@/services/products'
+
+
 
 const page = () => {
+
    return (
-    <>
-      <ProductsSlider/>
-      <DescriptionProduct/>
-    </>
+     <ProductSection
+     products={products}
+     />
    )
 }
 export default page
