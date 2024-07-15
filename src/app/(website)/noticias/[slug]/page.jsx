@@ -1,7 +1,4 @@
-"use client";
-import React from "react";
 import "../styles.scss";
-import { useParams } from "next/navigation";
 import newsJson from "@/../public/tempData/news.json";
 import NewsHeader from "@/components/newsPage/NewsHeader";
 import SmallNewsCard from "@/components/newsPage/SmallNewsCard";
@@ -9,17 +6,11 @@ import { formatearFecha } from "@/utils/fechaFormateada";
 import { timeSince } from "@/utils/timeSince";
 import { IoIosTime } from "react-icons/io";
 
-const Page = () => {
-  const { slug } = useParams();
+const Page = ({ params }) => {
+  const { slug } = params;
   const { news } = newsJson;
   const newData = news.find((n) => n.slug === slug);
   const relatedNews = news.filter((n) => {
-    console.log(
-      "first",
-      n.slug &&
-        n.slug !== slug &&
-        newData.tags?.find((tag) => n.tags?.includes(tag) !== undefined)
-    );
     if (n.slug !== undefined)
       return (
         n.slug &&
