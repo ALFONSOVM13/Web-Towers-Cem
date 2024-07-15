@@ -26,9 +26,6 @@ const previousCem = () => {
 }
 }
 
-
-
-
    return (
       <>
          <ProductsSlider
@@ -40,7 +37,6 @@ const previousCem = () => {
             previousCem={previousCem}
             counter={counter}
          />
-
 
          <DescriptionProduct
             cards={product.cards}

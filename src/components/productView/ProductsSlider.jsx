@@ -3,7 +3,6 @@ import CirclePlayButton from '@/components/products/CirclePlayButton'
 import CustomButton from '@/components/ui/CustomButton'
 import SliderButton from '@/components/ui/SliderButton'
 import Title from '@/components/ui/Title'
-import Image from 'next/image'
 import { MdOutlineArrowRightAlt } from "react-icons/md"
 import "./styles.scss"
 import { useEffect, useRef, useState } from 'react'
@@ -23,12 +22,12 @@ const ProductsSlider = ({ title, name, description, image, nextCem, previousCem,
 
    return (
       <section className='flex justify-center pt-20 pb-4 px-40'>
-         <div className='flex-1'>
+         <div className='flex-1 pr-7'>
             <Title
                text={title}
-               className={'text-complementary-300 !text-left'}
+               className={'text-primary-100 !text-left'}
             />
-            <h2 className='text-primary-100 font-title text-4xl font-bold pl-2 mb-10'>{name}</h2>
+            <h2 className='text-customGreen font-title text-4xl font-bold pl-2 mb-10'>{name}</h2>
             <hr className='bg-complementary-300 h-1 max-w-56 mb-10 ml-2' />
             <p className='font-content mb-12 animate-fade-right animate-duration-[2000ms]' ref={descriptionRef}>{description}</p>
             <div className='flex gap-8 items-center'>
