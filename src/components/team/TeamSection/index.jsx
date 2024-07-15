@@ -1,9 +1,12 @@
-import { team } from "@/services/team";
+import { getTeam } from "@/services/team";
 import { TeamCard } from "../TeamCard";
 import "./styles.scss";
 
 
-export const TeamSection = () => {
+export const TeamSection = async() => {
+
+    const team = await getTeam()
+
     return (
         <section>
             <span>CONOCENOS</span>
