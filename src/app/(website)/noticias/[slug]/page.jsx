@@ -5,6 +5,9 @@ import { useParams } from "next/navigation";
 import newsJson from "@/../public/tempData/news.json";
 import NewsHeader from "@/components/newsPage/NewsHeader";
 import SmallNewsCard from "@/components/newsPage/SmallNewsCard";
+import { formatearFecha } from "@/utils/fechaFormateada";
+import { timeSince } from "@/utils/timeSince";
+import { IoIosTime } from "react-icons/io";
 
 const Page = () => {
   const { slug } = useParams();
@@ -30,13 +33,33 @@ const Page = () => {
       !n.slug ||
       (n.slug !== slug && !relatedNews.find((n2) => n.slug === n2.slug))
   );
+  const tiempoDesde = timeSince(newData.publishedAt);
+  const fechaFormateada = formatearFecha(newData.publishedAt);
+
   return (
     <section className="relative flex flex-col justify-center z-0">
       <div className="flex justify-center items-center px-16 py-28 w-full text-white max-md:px-5 ">
         <div className="flex flex-col space-y-10 py-5">
           <div className="w-full flex flex-col lg:flex-row gap-10">
             <div className="flex flex-col max-md:justify-center max-md:items-center gap-5 md:gap-10 w-full lg:w-2/3">
-              <NewsHeader title={newData.title} className="w-full text-left" />
+              <NewsHeader
+                title={newData.title}
+                className="w-full text-left px-12"
+              />
+              <div className="flex justify-between px-12">
+                <span className="flex self-end items-center gap-2">
+                  Escrito por{" "}
+                  <img
+                    src={newData.author.avatar}
+                    className="rounded-full aspect-square w-8"
+                  />
+                  {newData.author.name}
+                </span>
+                <span className="flex self-end items-center gap-2">
+                  <IoIosTime className="w-8 h-8" />
+                  Publicado hace {tiempoDesde + " (" + fechaFormateada + ")"}
+                </span>
+              </div>
               <div
                 className="mx-auto overflow-hidden rounded-md border h-[500px] md:h-[600px] border-zinc-200/50 w-[90%] bg-no-repeat bg-center bg-cover"
                 style={{ backgroundImage: `url('${newData.image}')` }}

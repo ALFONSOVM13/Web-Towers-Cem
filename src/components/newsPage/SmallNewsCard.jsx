@@ -14,7 +14,7 @@ function SmallNewsCard({ image, title, author, readTime, index, slug = "" }) {
             loading="lazy"
             src={image}
             alt={title}
-            className="shrink-0 max-w-full aspect-square  max-md:mt-8"
+            className="shrink-0 max-w-full aspect-square  max-md:mt-8 rounded-md border border-zinc-200/70"
           />
         </div>
         <div className="flex flex-col ml-5 w-[61%] max-md:ml-0 max-md:w-full">
