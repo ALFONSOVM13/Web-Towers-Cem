@@ -11,7 +11,7 @@ const CrowdfundingSection = () => {
       <div className="flex flex-col items-center gap-8 p-8 bg-gray-100">
 
         <Title
-          text="La Vaki TOWERS CEM: Lanzamiento"
+          text="La Vaki TOWERS CEM"
           className="text-center text-3xl md:text-4xl lg:text-5xl"
         />
         <p className="text-center text-lg md:text-xl lg:text-2xl">

@@ -35,15 +35,17 @@ const Header = ({ active, setActive }) => {
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo flex items-center">
-          <img
-            src={hideLogo ? "/logoContraido.svg" : "/logo.png"}
-            alt="Logo"
-            className={`
+          <a href="/">
+            <img
+              src={hideLogo ? "/logoContraido.svg" : "/logo.png"}
+              alt="Logo"
+              className={`
               w-32 
               transition-all duration-300
               ${hideLogo ? "mt-0" : "mt-0"} 
             `}
-          />
+            />
+          </a>
         </div>
 
         <div className="p-2 ">
