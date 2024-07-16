@@ -5,7 +5,6 @@
   width: 100%;
   z-index: 10;
   height: 5rem;
-  z-index: 50
 }
 
 .header__content {
@@ -41,6 +40,7 @@
   background-color: #ffffff;
   transition: 0.5s;
   position: relative;
+
 }
 
 .bar:before,
@@ -67,6 +67,7 @@
 
 .hamburger-menu.active .bar:before {
   transform: translateY(0) rotate(45deg);
+  
 }
 
 .hamburger-menu.active .bar:after {

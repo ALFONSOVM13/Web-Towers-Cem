@@ -28,13 +28,13 @@ const Header = ({ active, setActive }) => {
   return (
     <header
       className={`
-        fixed top-0 left-0 w-full z-50
+        fixed top-0 left-0 w-full z-40
         bg-opacity-90  transition-all duration-300 
         ${hideLogo ? "bg-black shadow-md py-1" : "bg-none py-0"} 
       `}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="logo flex items-center">
+        <div className="logo flex items-center pl-10">
           <a href="/">
             <img
               src={hideLogo ? "/logoContraido.svg" : "/logo.png"}
@@ -48,7 +48,7 @@ const Header = ({ active, setActive }) => {
           </a>
         </div>
 
-        <div className="p-2 ">
+        <div className="pr-10 ">
           <div
             className={`hamburger-menu  ${active ? "active" : ""}`}
             onClick={toggleMenu}
