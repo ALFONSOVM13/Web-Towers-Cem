@@ -21,20 +21,20 @@ const ProductsSlider = ({ title, name, description, image, nextCem, previousCem,
 
 
    return (
-      <section className='flex justify-center pt-20 pb-4 px-40'>
-         <div className='flex-1 pr-7'>
+      <section className='flex justify-center pt-2 md:pt-20 pb-4 p-4 md:px-40 flex-col md:flex-row'>
+         <div className='flex-1 pr-7 '>
             <Title
                text={title}
                className={'text-primary-100 !text-left'}
             />
-            <h2 className='text-customGreen font-title text-4xl font-bold pl-2 mb-10'>{name}</h2>
-            <hr className='bg-complementary-300 h-1 max-w-56 mb-10 ml-2' />
-            <p className='font-content mb-12 animate-fade-right animate-duration-[2000ms]' ref={descriptionRef}>{description}</p>
-            <div className='flex gap-8 items-center'>
+            <h2 className='text-customGreen font-title text-2xl md:text-4xl font-bold md:pl-2 mb-4 md:mb-10'>{name}</h2>
+            <hr className='bg-complementary-300 h-1 max-w-56 mb-4 md:mb-10 md:ml-2' />
+            <p className='font-content mb-4 md:mb-12 animate-fade-right animate-duration-[2000ms]' ref={descriptionRef}>{description}</p>
+            <div className='flex gap-2 md:gap-8 items-center'>
                <div className='flex items-center gap-2 cursor-pointer'>
                   <CustomButton
-                     className={'rounded-sm '}>
-                        SOLICITAR MUESTRA
+                     className={'rounded-sm'}>
+                     SOLICITAR MUESTRA
                      {/* <MdOutlineArrowRightAlt /> */}
                   </CustomButton>
                   {/* <p className='font-content'>Solicitar Muestra</p> */}
@@ -46,9 +46,9 @@ const ProductsSlider = ({ title, name, description, image, nextCem, previousCem,
          </div>
 
 
-         <div className='flex-1 border-l-complementary-400 border-l'>
-            <div className='relative w-[550px] ml-auto pl-16'>
-               <figure className={`relative h-[400px] w-[300px] ${isHover ? 'animate-fade-left' : 'animate-fade-right'}`} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
+         <div className='flex-1 border-l-complementary-400 pl-4 md:border-l'>
+            <div className='relative w-[550px] ml-auto md:pl-16 pt-4'>
+               <figure className={`relative h-[250px] w-[250px] md:h-[400px] md:w-[300px] ${isHover ? 'animate-fade-left' : 'animate-fade-right'}`} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
                   {
                      isHover ? (
                         <img src={image.back} alt="cemento" className='object-cover h-full cursor-pointer object-center' />
@@ -58,9 +58,9 @@ const ProductsSlider = ({ title, name, description, image, nextCem, previousCem,
                      )
                   }
                </figure>
-               <div className='bg-complementary-400 h-96 w-96 rounded-l-[120px] absolute -z-10 top-0 right-0'></div>
+               <div className='bg-complementary-400  h-64 w-96 md:h-96 md:w-96 rounded-l-[120px] absolute -z-10 top-0 right-0'></div>
             </div>
-            <div className='flex justify-end items-center gap-20 font-bold'>
+            <div className='flex justify-around md:justify-end items-center md:gap-20 font-bold'>
                <p className='text-8xl text-transparent borderText'>0{counter + 1}</p>
                <SliderButton
                   onClickLeft={previousCem}

@@ -10,7 +10,7 @@ const Card = ({ description }) => {
 
 const DescriptionProduct = ({ cards }) => {
    return (
-      <div className="flex flex-wrap justify-around gap-4 px-10 py-5 pb-10">
+      <div className="flex overflow-x-scroll md:flex-wrap justify-around gap-4 px-10 py-5 pb-10">
          {cards.map((card) => (
             <Card key={card.id} description={card.description} />
          ))}
