@@ -1,4 +1,16 @@
 import React from 'react';
+import Image from "next/image"
+
+const photoTestimonial = [
+  {
+    id: 1,
+    image: "/images/contact.png",
+    title: "Card Testimonial",
+    subtitle: "USO GENERAL",
+    description:
+      "arboles"
+  }
+]
 
 function TestimonialCard() {
   return (
@@ -13,9 +25,11 @@ function TestimonialCard() {
         <div className="flex overflow-hidden relative flex-col px-7 pt-20 pb-8 w-full min-h-[536px] max-md:px-5 max-md:max-w-full">
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/71fccaaad4b289f5ca75dd1a6971b2872e48439c77c47967fe51a12840f2ad9f?apiKey=9fe8dc76776646f4a6bc648caa0a3bac&"
+            src={photoTestimonial[0].image}
             className="object-cover absolute inset-0 size-full"
             alt="Overlay image"
+            width={500}
+            height={300}
           />
           <figcaption className="flex relative flex-col mt-80 max-md:mt-10 max-md:max-w-full">
             <blockquote className="text-white max-md:max-w-full">
