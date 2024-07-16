@@ -11,7 +11,19 @@ function NewsCard({
   slug = "",
 }) {
   return (
-    <article className="relative flex flex-col grow text-sm font-normal tracking-normal leading-5 text-zinc-100 max-md:mt-8 max-md:max-w-full">
+    <article className="relative flex flex-col grow text-sm font-normal tracking-normal leading-5 text-zinc-100 max-md:mt-3 max-md:max-w-full">
+      <div className="flex gap-4 justify-between self-start my-5 font-medium">
+        <div className="flex gap-4">
+          <img
+            loading="lazy"
+            src={author.avatar}
+            alt={author.name}
+            className="shrink-0 w-10 rounded-full aspect-square"
+          />
+          <span className="my-auto">{author.name}</span>
+        </div>
+        <span className="my-auto">{readTime}</span>
+      </div>
       <img
         loading="lazy"
         src={image}
@@ -34,20 +46,8 @@ function NewsCard({
       <p className="mt-4 text-lg tracking-normal font-light leading-7 text-ellipsis text-neutral-100 max-md:max-w-full">
         {content}
       </p>
-      <div className="flex gap-4 justify-between self-start mt-6 font-medium">
-        <div className="flex gap-4">
-          <img
-            loading="lazy"
-            src={author.avatar}
-            alt={author.name}
-            className="shrink-0 w-10 rounded-full aspect-square"
-          />
-          <span className="my-auto">{author.name}</span>
-        </div>
-        <span className="my-auto">{readTime}</span>
-      </div>
-      <Link href={"/noticias/" + slug} alt={slug}>
-        <button className="absolute bottom-0 right-7 text-md font-medium text-zinc-100 hover:text-zinc-300 hover:border-zinc-300/50 border rounded-3xl border-zinc-200/50 h-12 w-36">
+      <Link href={"/noticias/" + slug} alt={slug} className="mt-10 self-end">
+        <button className=" bottom-0 right-7 text-md font-medium text-zinc-100 hover:text-zinc-300 hover:border-zinc-300/50 border rounded-3xl border-zinc-200/50 h-12 w-36">
           Leer Más {"->"}
         </button>
       </Link>
