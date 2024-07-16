@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import DescriptionProduct from '../productView/DescriptionProduct'
 import ProductsSlider from '../productView/ProductsSlider'
+import BenefitsProduct from '../productView/BenefitsProduct'
 
 
 
@@ -41,6 +42,8 @@ const previousCem = () => {
          <DescriptionProduct
             cards={product.cards}
          />
+
+         <BenefitsProduct/>
       </>
    )
 }
