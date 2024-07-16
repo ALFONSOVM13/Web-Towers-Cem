@@ -33,12 +33,13 @@ const ProductsSlider = ({ title, name, description, image, nextCem, previousCem,
             <div className='flex gap-8 items-center'>
                <div className='flex items-center gap-2 cursor-pointer'>
                   <CustomButton
-                     className={'rounded-sm'}>
-                     <MdOutlineArrowRightAlt />
+                     className={'rounded-sm '}>
+                        SOLICITAR MUESTRA
+                     {/* <MdOutlineArrowRightAlt /> */}
                   </CustomButton>
-                  <p className='font-content'>Solicitar Muestra</p>
+                  {/* <p className='font-content'>Solicitar Muestra</p> */}
                </div>
-               <p className='w-24 text-sm font-content'>mira nuestro video como funciona</p>
+               <p className='w-24 text-sm font-title'>mira nuestro video como funciona</p>
                <CirclePlayButton
                />
             </div>
