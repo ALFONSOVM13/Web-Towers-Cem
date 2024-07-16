@@ -11,6 +11,9 @@ export default {
         '2xl': '6px 6px 12px rgba(0, 0, 0, 0.5)',
         'none': 'none',
       },
+      padding: {
+        '9/16': '56.25%', // 16:9 aspect ratio
+      },
       screens: {
         'customMd': '860px'
       },

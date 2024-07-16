@@ -36,7 +36,7 @@ const SocialLink = ({ href, src, alt, text }) => (
 
 const FooterSection = () => (
   <section className="pt-16 pb-7 bg-complementary-300">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col sm:flex-row items-center justify-between pb-14 border-b border-gray-500 gap-8">
         <a href="/" className="">
           <Image src="/logo.png" alt="Pagedone" width={150} height={150} />

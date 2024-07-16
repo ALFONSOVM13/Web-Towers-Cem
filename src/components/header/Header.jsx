@@ -10,32 +10,43 @@ const Header = ({ active, setActive }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition > 100) {
+      if (window.scrollY > 10) {
         setHideLogo(true);
       } else {
         setHideLogo(false);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
 
+    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); 
+  }, []);
 
   return (
-    <div className={`header ${hideLogo ? "header--hide-logo" : ""}`}>
-      <div className="header__content">
-        <div className="logo flex items-center justify-center">
+    <header
+      className={`
+        fixed top-0 left-0 w-full z-50
+        bg-opacity-90  transition-all duration-300 
+        ${hideLogo ? "bg-black shadow-md py-1" : "bg-none py-0"} 
+      `}
+    >
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="logo flex items-center">
           <img
-            src="/logo.png"
+            src={hideLogo ? "/logoContraido.svg" : "/logo.png"}
             alt="Logo"
-            className={`w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain mt-12 ${hideLogo ? "hidden" : ""}`}
+            className={`
+              w-32 
+              transition-all duration-300
+              ${hideLogo ? "mt-0" : "mt-0"} 
+            `}
           />
         </div>
-        <div className="p-0.1 ">
+
+        <div className="p-2 ">
           <div
             className={`hamburger-menu  ${active ? "active" : ""}`}
             onClick={toggleMenu}
@@ -44,7 +55,7 @@ const Header = ({ active, setActive }) => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
