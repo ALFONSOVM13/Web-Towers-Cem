@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const photoTestimonial = [
   {
@@ -6,10 +6,9 @@ const photoTestimonial = [
     image: "/images/contact.png",
     title: "Card Testimonial",
     subtitle: "USO GENERAL",
-    description:
-      "arboles"
-  }
-]
+    description: "arboles",
+  },
+];
 
 function TestimonialCard() {
   return (
@@ -26,7 +25,8 @@ function TestimonialCard() {
           />
           <figcaption className="flex relative flex-col mt-80 max-md:mt-10 max-md:max-w-full">
             <blockquote className="text-white max-md:max-w-full">
-              "Desarrollamos cementos inteligentes y sostenibles que purifican el aire eliminando hasta un 23% de CO₂."
+              &quot;Desarrollamos cementos inteligentes y sostenibles que
+              purifican el aire eliminando hasta un 23% de CO₂.&quot;
             </blockquote>
             <cite className="mt-1.5 font-semibold text-white max-md:max-w-full">
               Carlos Torres
