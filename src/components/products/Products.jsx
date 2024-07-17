@@ -7,12 +7,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import Advantages from "./Advantages";
 
 const products = [
   {
     id: 1,
-    image: "/images/cemento.png",
+    image: "/images/products/cemento.png",
     title: "X-CEM",
     subtitle: "USO GENERAL",
     description:
@@ -20,7 +19,7 @@ const products = [
   },
   {
     id: 2,
-    image: "/images/bolsa-blanca.png",
+    image: "/images/products/1TC_PACK_BLANCO_FRONTAL.png",
     title: "X-CEM",
     subtitle: "USO ESTRUCTURAL",
     fichaTecnica: "/files/FICHA_TECNICA.pdf",

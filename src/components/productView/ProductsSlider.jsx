@@ -3,7 +3,6 @@ import CirclePlayButton from '@/components/products/CirclePlayButton'
 import CustomButton from '@/components/ui/CustomButton'
 import SliderButton from '@/components/ui/SliderButton'
 import Title from '@/components/ui/Title'
-import { MdOutlineArrowRightAlt } from "react-icons/md"
 import "./styles.scss"
 import { useEffect, useRef, useState } from 'react'
 

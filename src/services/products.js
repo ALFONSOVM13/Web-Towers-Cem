@@ -7,7 +7,7 @@ export const products = [
 
       name: 'Cemento uso general',
 
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, earum? Magni repellendus, porro earum impedit autem vero quam aspernatur quis, nulla, ea corporis placeat consectetur mollitia soluta harum in doloremque?',
+        description: 'Nuestro producto ofrece propiedades inteligentes y descontaminantes. Al contar con nuevos materiales de fabricación, nuestro cemento se excita con la radiación solar, reaccionando con los gases contaminantes suspendidos en la atmósfera,  siendo capaces de eliminar gran parte de los NOx. SOx, partículas volátiles y material particulado. ',
 
         
       image: {
