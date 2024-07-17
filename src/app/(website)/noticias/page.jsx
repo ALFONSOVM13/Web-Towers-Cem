@@ -2,9 +2,7 @@ import React from "react";
 import SectionHeader from "@/components/newsPage/SectionHeader.jsx";
 import NewsCard from "@/components/newsPage/NewsCard.jsx";
 import SmallNewsCard from "@/components/newsPage/SmallNewsCard.jsx";
-import ContrastBar from "@/components/header/ContrastBar";
 import "./styles.scss";
-import NewsletterSection from "../../../components/newsletter/NewsletterSection";
 import NewsletterCard from "@/components/newsletter/NewsletterCard";
 import newsJson from "@/../public/tempData/news.json";
 
