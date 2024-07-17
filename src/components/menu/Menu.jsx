@@ -54,6 +54,14 @@ const Menu = ({ active, setActive }) => {
       </li>
       <li className="mb-4">
         <Link
+          href="/products"
+          className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+        >
+          Nuestro Cemento
+        </Link>
+      </li>
+      <li className="mb-4">
+        <Link
           href="/team"
           className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
         >

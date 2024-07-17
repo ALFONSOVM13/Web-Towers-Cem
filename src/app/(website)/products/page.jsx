@@ -4,7 +4,6 @@ import { products } from '@/services/products'
 
 
 const page = () => {
-
    return (
      <ProductSection
      products={products}

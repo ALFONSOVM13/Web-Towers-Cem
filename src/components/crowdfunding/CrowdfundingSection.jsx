@@ -21,7 +21,7 @@ const CrowdfundingSection = () => {
         id="vakiIframe"
         title="Construyendo el Futuro con X-Cem: Ayúdanos a Hacerlo Realidad"
         src="https://vaki.co/iframe/Oz8xpMtjZTxmk1b25kYJ"
-        className="w-full max-w-3xl h-96 border-none rounded-lg shadow-lg md:w-4/5 lg:w-3/5"
+        className="w-full max-w-3xl h-[600px] border-none rounded-lg shadow-lg md:w-4/5 lg:w-3/5"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>

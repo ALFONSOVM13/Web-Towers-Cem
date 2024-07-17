@@ -21,7 +21,7 @@ const ProductsSlider = ({ title, name, description, image, nextCem, previousCem,
 
 
    return (
-      <section className='flex justify-center pt-2 md:pt-20 pb-4 p-4 md:px-40 flex-col md:flex-row'>
+      <section className='flex justify-center pt-40  md:pt-28 pb-4 p-4 md:px-40 flex-col md:flex-row bg-slate-300 '>
          <div className='flex-1 pr-7 '>
             <Title
                text={title}

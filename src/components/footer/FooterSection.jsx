@@ -196,7 +196,7 @@ const FooterSection = () => (
         </div>
         <div className="w-full lg:max-w-md max-lg:mx-auto ">
           <h6 className="text-lg font-medium text-white mb-7">Newsletter</h6>
-          <div className="bg-zinc-800 rounded-3xl p-5">
+          <div className="bg-zinc-800 rounded-sm p-5">
             <form action="#" className="flex flex-col gap-5">
               <div className="relative">
                 <label className="flex  items-center mb-2 text-complementary-400 text-base font-medium">
@@ -205,7 +205,7 @@ const FooterSection = () => (
                 <input
                   type="text"
                   id="default-search"
-                  className="block w-full px-5 py-3 text-lg font-normal shadow-xs text-white bg-transparent border border-complementary-400 rounded-full placeholder-complementary-400 focus:outline-none leading-relaxed focus-within:border-gray-300"
+                  className="block w-full px-5 py-3 text-lg font-normal shadow-xs text-white bg-transparent border border-complementary-400 rounded-sm placeholder-complementary-400 focus:outline-none leading-relaxed focus-within:border-gray-300"
                   placeholder="Ingrese su correo electronico"
                   required=""
                 />
@@ -215,7 +215,7 @@ const FooterSection = () => (
                   <input
                     type="checkbox"
                     value=""
-                    className="w-5 h-5 aspect-square appearance-none cursor-pointer border border-gray-600 bg-transparent  rounded-md mr-2 hover:border-complementary-400 hover:bg-gray-900 checked:bg-no-repeat checked:bg-center checked:border-complementary-400 checked:bg-gray-800"
+                    className="w-5 h-5 aspect-square appearance-none cursor-pointer border border-gray-600 bg-transparent  rounded-sm mr-2 hover:border-complementary-400 hover:bg-gray-900 checked:bg-no-repeat checked:bg-center checked:border-complementary-400 checked:bg-gray-800"
 
                   />
                   <label
@@ -236,7 +236,7 @@ const FooterSection = () => (
                 <input
                   type="submit"
                   value="Send"
-                  className="text-white text-base font-semibold py-3 px-7 rounded-full cursor-pointer bg-complementary-400 transition-all duration-500 hover:bg-white hover:text-gray-900"
+                  className="text-white text-base font-semibold py-3 px-7 rounded-md cursor-pointer bg-complementary-400 transition-all duration-500 hover:bg-white hover:text-gray-900"
                 />
               </div>
             </form>
@@ -268,7 +268,7 @@ const FooterSection = () => (
           <button
             type="button"
             id="default-search"
-            className="block w-full lg:min-w-[448px] pr-12 pl-6 py-3 text-base font-normal shadow-xs text-gray-50 bg-transparent border border-gray-700 rounded-full placeholder-complementary-400 focus:outline-none leading-relaxed transition-all duration-500 "
+            className="block w-full lg:min-w-[448px] pr-12 pl-6 py-3 text-base font-normal shadow-xs text-gray-50 bg-transparent border border-gray-700 rounded-sm placeholder-complementary-400 focus:outline-none leading-relaxed transition-all duration-500 "
           >
             Tiene alguna pregunta? Contactenos
           </button>
