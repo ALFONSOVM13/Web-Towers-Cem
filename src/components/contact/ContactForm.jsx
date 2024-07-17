@@ -60,12 +60,6 @@ function ContactForm() {
                       ENVIAR
                     </CustomButton>
                   </div>
-              {/* <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e431d5f6afb77cc244f6efb04c30e5d135322d95fb295b5e1edbe81cc2a825f?apiKey=9fe8dc76776646f4a6bc648caa0a3bac&"
-                className="shrink-0 my-auto mix-blend-screen aspect-[2.08] w-[25px]"
-                alt=""
-              /> */}
             </div>
           </button>
         </form>

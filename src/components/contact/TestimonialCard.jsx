@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image"
 
 const photoTestimonial = [
   {
@@ -16,12 +15,6 @@ function TestimonialCard() {
   return (
     <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
       <figure className="flex overflow-hidden relative flex-col justify-center self-stretch my-auto text-base tracking-normal min-h-[536px] max-md:mt-10 max-md:max-w-full">
-        {/* <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/13f4270d931b42fff86eaf8247891e4359aad8162c9bb267fac16b27c3df1f91?apiKey=9fe8dc76776646f4a6bc648caa0a3bac&"
-          className="object-cover absolute inset-0 size-full"
-          alt="Background image"
-        /> */}
         <div className="flex overflow-hidden relative flex-col px-7 pt-20 pb-8 w-full min-h-[536px] max-md:px-5 max-md:max-w-full">
           <img
             loading="lazy"
