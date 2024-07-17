@@ -34,6 +34,7 @@ export default {
           300: "#000000",
           400: "#c8c8c8",
         },
+        customGreen: '#5F9428',
       },
       fontFamily: {
         content: ["Nexa", "sans-serif"],
