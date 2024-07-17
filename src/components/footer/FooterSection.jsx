@@ -35,7 +35,7 @@ const SocialLink = ({ href, src, alt, text }) => (
 }
 
 const FooterSection = () => (
-  <section className="pt-16 pb-7 bg-complementary-300">
+  <section className="pt-16 pb-7 bg-complementary-300 px-20">
     <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col sm:flex-row items-center justify-between pb-14 border-b border-gray-500 gap-8">
         <a href="/" className="">
