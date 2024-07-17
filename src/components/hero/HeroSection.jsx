@@ -1,7 +1,6 @@
 import React from "react";
 import Title from "../ui/Title";
 import { PiMouseSimple } from "react-icons/pi";
-import { FaAnglesDown } from "react-icons/fa6";
 
 const HeroSection = ({ scrollToNextSection }) => {
   return (
