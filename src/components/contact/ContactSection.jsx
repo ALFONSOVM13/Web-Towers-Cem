@@ -4,7 +4,7 @@ import TestimonialCard from './TestimonialCard';
 
 function ContactSection() {
   return (
-    <section className="flex flex-col items-center justify-center w-full max-md:max-w-full py-40 md:py-20 bg-complementary-300">
+    <section className="flex flex-col items-center justify-center w-full max-md:max-w-full pt-40 md:pt-20 bg-complementary-300">
       <div className="flex flex-col w-full max-w-[1092px] max-md:max-w-full  border-opacity-10">
         <header className="flex flex-col self-center max-md:max-w-full">
           <h1 className="text-7xl font-bold tracking-tighter text-complementary-200 max-md:max-w-full max-md:text-4xl mx-auto">
