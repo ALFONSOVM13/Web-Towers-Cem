@@ -31,97 +31,102 @@ const Menu = ({ active, setActive }) => {
     <>
       {active && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={() => setActive(false)}
         ></div>
       )}
       <ul
-        className={`fixed font-title font-bold text-2xl top-0 right-0 z-50 inset-y-0 w-full sm:w-1/3 bg-black text-white p-4 transform transition-transform ${
-          active ? "translate-x-0 animate-slide-in-left" : "translate-x-full animate-slide-out-left"
-        } duration-500 ease-in-out ${active ? "visible" : "invisible"} flex flex-col justify-center items-center`}
+        className={`fixed font-title font-bold top-0 right-0 z-40 py-28 inset-y-0 w-full sm:w-1/3 bg-black text-white p-4 transform transition-transform duration-500 ease-in-out ${
+          active ? "translate-x-0" : "translate-x-full"
+        } ${active ? "visible" : "invisible"} flex flex-col items-center`} // Removed justify-center as we're now using flex-col
       >
-      <li className="mb-4">
-        <Link
-          href="/"
-          className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-        >
-          Inicio
-        </Link>
-      </li>
-      <li className="mb-4">
-        <Link
-          href="/products"
-          className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-        >
-          Nuestro Cemento
-        </Link>
-      </li>
-      <li className="mb-4">
-        <Link
-          href="/team"
-          className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-        >
-          Nuestro Equipo
-        </Link>
-      </li>
-      <li className="mb-4">
-        <Link
-          href="/contacto"
-          className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-        >
-          Contacto
-        </Link>
-      </li>
-      <li className="mb-4">
-        <Link
-          href="/noticias"
-          className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-        >
-          Noticias
-        </Link>
-      </li>
-      <li className="mb-4">
-        <Link
-          href="/crowdfunding"
-          className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-        >
-          Crowdfunding
-        </Link>
-      </li>
-      <li className="mb-4">
-        <Link
-          href="/"
-          className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex items-center"
-        >
-          <Image src="/logo.png" alt="Icono de usuario" width={200} height={200} />
-        </Link>
-      </li>
+        <li className="mb-4">
+          <Link
+            href="/"
+            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+          >
+            Inicio
+          </Link>
+        </li>
+        <li className="mb-4">
+          <Link
+            href="/products"
+            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+          >
+            Nuestro Cemento
+          </Link>
+        </li>
+        <li className="mb-4">
+          <Link
+            href="/team"
+            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+          >
+            Nuestro Equipo
+          </Link>
+        </li>
+        <li className="mb-4">
+          <Link
+            href="/contacto"
+            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+          >
+            Contacto
+          </Link>
+        </li>
+        <li className="mb-4">
+          <Link
+            href="/noticias"
+            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+          >
+            Noticias
+          </Link>
+        </li>
+        <li className="mb-4">
+          <Link
+            href="/crowdfunding"
+            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+          >
+            Crowdfunding
+          </Link>
+        </li>
+        <li className="mb-4">
+          <Link
+            href="/"
+            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex items-center"
+          >
+            <Image
+              src="/logo.png"
+              alt="Icono de usuario"
+              width={150}
+              height={150}
+            />
+          </Link>
+        </li>
 
-      <div className="flex-row flex gap-4">
-        <Link
-          href="/login"
-          className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"
-        >
-          <Image
-            src="/IconoUsa.png"
-            alt="Icono de usuario"
-            width={44}
-            height={44}
-          />
-        </Link>
-        <Link
-          href="/login"
-          className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"
-        >
-          <Image
-            src="/IconoSpain.png"
-            alt="Icono de usuario"
-            width={44}
-            height={44}
-          />
-        </Link>
-      </div>
-    </ul>
+        <div className="flex gap-4">
+          <Link
+            href="/login"
+            className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"
+          >
+            <Image
+              src="/IconoUsa.png"
+              alt="Icono de usuario"
+              width={44}
+              height={44}
+            />
+          </Link>
+          <Link
+            href="/login"
+            className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"
+          >
+            <Image
+              src="/IconoSpain.png"
+              alt="Icono de usuario"
+              width={44}
+              height={44}
+            />
+          </Link>
+        </div>
+      </ul>
     </>
   );
 };

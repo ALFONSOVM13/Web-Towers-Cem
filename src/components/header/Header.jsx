@@ -40,7 +40,7 @@ const Header = ({ active, setActive }) => {
               src={hideLogo ? "/logoContraido.svg" : "/logo.png"}
               alt="Logo"
               className={`
-              w-32 
+              w-28
               transition-all duration-300
               ${hideLogo ? "mt-0" : "mt-0"} 
             `}
