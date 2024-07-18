@@ -28,7 +28,7 @@ const Header = ({ active, setActive }) => {
   return (
     <header
       className={`
-        fixed top-0 left-0 w-full z-40
+        fixed top-0 left-0 w-full z-50
         bg-opacity-90  transition-all duration-300 
         ${hideLogo ? "bg-black shadow-md py-1" : "bg-none py-0"} 
       `}
@@ -37,7 +37,7 @@ const Header = ({ active, setActive }) => {
         <div className="logo flex items-center pl-10">
           <a href="/">
             <img
-              src={hideLogo ? "/logoContraido.svg" : "/logo2.png"}
+              src={hideLogo ? "/logoContraido.svg" : "/logo.png"}
               alt="Logo"
               className={`
               w-32 
@@ -48,7 +48,7 @@ const Header = ({ active, setActive }) => {
           </a>
         </div>
 
-        <div className="pr-10 ">
+        <div className="pr-10">
           <div
             className={`hamburger-menu  ${active ? "active" : ""}`}
             onClick={toggleMenu}
