@@ -11,6 +11,9 @@ export default {
         '2xl': '6px 6px 12px rgba(0, 0, 0, 0.5)',
         'none': 'none',
       },
+      padding: {
+        '9/16': '56.25%', // 16:9 aspect ratio
+      },
       screens: {
         'customMd': '860px'
       },
@@ -31,6 +34,7 @@ export default {
           300: "#000000",
           400: "#c8c8c8",
         },
+        customGreen: '#5F9428',
       },
       fontFamily: {
         content: ["Nexa", "sans-serif"],

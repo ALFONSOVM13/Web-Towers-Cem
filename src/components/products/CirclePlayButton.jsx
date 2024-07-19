@@ -7,14 +7,14 @@ const CirclePlayButton = () => {
 
   return (
     <button className="spinning-text-wrapper">
-      <div className="spinning-text font-title font-bold">
+      <div className="spinning-text font-content font-bold">
         {title.map((char, index) => (
           <span key={index} style={{ transform: `rotate(${index * (360 / title.length)}deg)` }}>
             {char}
           </span>
         ))}
       </div>
-      <IoMdPlay className='w-6 h-6 text-complementary-300 opacity-70' />
+      <IoMdPlay className='w-4 h-4 text-complementary-300 opacity-70' />
     </button>
   );
 };

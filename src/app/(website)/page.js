@@ -4,9 +4,9 @@ import HeroSection from "@/components/hero/HeroSection";
 import NewsSection from "@/components/newsPreview/NewsSection";
 import Products from "@/components/products/Products";
 import Tecnologies from "@/components/tecnologies/Tecnologies";
-import FooterSection from "@/components/footer/FooterSection";
-import KnowUsSection from "@/components/knowUs/KnowUsSection";
 import BrandSlider from "@/components/footer/BrandSlider";
+import SolutionsSection from "@/components/solutions/SolutionsSection";
+import Advantages from "@/components/products/Advantages";
 
 const HomePage = () => {
   const knowUsRef = useRef(null); // Referencia para la sección KnowUsSection
@@ -25,11 +25,12 @@ const HomePage = () => {
       <div>
         <HeroSection scrollToNextSection={scrollToKnowUsSection} />
       </div>
-      {/* <div ref={knowUsRef}  className="min-h-screen">
-        <KnowUsSection />
-      </div> */}
       <div ref={knowUsRef}>
         <Products />
+        <Advantages />
+      </div>
+      <div>
+        <SolutionsSection />
       </div>
       <div>
         <Tecnologies />

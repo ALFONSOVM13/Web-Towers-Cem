@@ -65,3 +65,7 @@ export const team = [
 export const getMemberBySlug = async( slug ) => {
     return team.find( member => member.slug === slug )
 }
+
+export const getTeam = async() => {
+    return team
+}

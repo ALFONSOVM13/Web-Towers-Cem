@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CustomButton = ({ type = 'primary', onClick, children, className }) => {
-  const baseClasses = 'px-4 py-2 rounded font-semibold focus:outline-none transition-colors duration-300';
+  const baseClasses = 'px-4 py-2 rounded-sm font-semibold focus:outline-none transition-colors duration-300';
 
   // Estilos para el botón primario y secundario
   const typeClasses = type === 'primary'
