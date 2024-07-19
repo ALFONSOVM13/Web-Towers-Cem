@@ -19,7 +19,7 @@ function NewsSection() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row mt-6 w-full max-w-[1216px] mb-5 max-md:mb-5 max-md:max-w-full gap-10">
-          <div className="w-2/3 flex gap-10 flex-col">
+          <div className="max-lg:w-full w-2/3 flex gap-10 flex-col">
             <NewsletterFrame {...newsletter[0]} index={0} />
             <NewsletterSection />
           </div>
