@@ -2,10 +2,7 @@ import React from "react";
 import SectionHeader from "@/components/newsPage/SectionHeader.jsx";
 import NewsCard from "@/components/newsPage/NewsCard.jsx";
 import SmallNewsCard from "@/components/newsPage/SmallNewsCard.jsx";
-import ContrastBar from "@/components/header/ContrastBar";
 import "./styles.scss";
-import NewsletterSection from "../../../components/newsletter/NewsletterSection";
-import NewsletterCard from "@/components/newsletter/NewsletterCard";
 import newsJson from "@/../public/tempData/news.json";
 
 function NewsSection() {
@@ -34,17 +31,6 @@ function NewsSection() {
                   <div className="absolute h-40 w-full bottom-0 degradado z-[10] max-md:hidden"></div>
                 </div>
               </div>
-            </div>
-          </div>
-          <SectionHeader title="NEWSLETTER" className="mt-32 max-md:mt-10" />
-          <div className="flex flex-col max-md:max-w-full">
-            <div className="flex flex-col max-md:mt-10 max-md:max-w-full text-left mt-2">
-              Nuestros Avances
-            </div>
-            <div className="mt-12 grid gap-10 grid-col-1 md:grid-cols-2 xl:grid-cols-3  mb-20">
-              {newsData.map((news, index) => (
-                <NewsletterCard {...news} key={index} index={index} />
-              ))}
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 
-const NewsletterCard = ({ image, title, readTime, index }) => {
+const NewsletterCard = ({ image, title, readTime }) => {
   const [isOvered, setIsOvered] = useState(false);
 
   return (

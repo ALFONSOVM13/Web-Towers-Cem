@@ -5,9 +5,9 @@ function SmallNewsCard({ image, title, author, readTime, index, slug = "" }) {
   return (
     <Link href={"/noticias/" + slug} alt={slug}>
       <article
-        className={`flex gap-5 max-lg:flex-col max-md:gap-0 ${
-          index === 0 ? "" : "mt-8"
-        } max-md:max-w-full`}
+        className={`flex p-2 gap-5 rounded-md max-lg:flex-col max-md:gap-0 mb-4 ${
+          index === 0 ? "" : "mt-4"
+        } max-md:max-w-full transition-all duration-200 border-transparent hover:border-white  border-b`}
       >
         <div className="flex flex-col w-[39%] max-md:ml-0 max-lg:w-full">
           <img
