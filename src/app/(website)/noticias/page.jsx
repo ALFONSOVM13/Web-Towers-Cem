@@ -3,12 +3,12 @@ import SectionHeader from "@/components/newsPage/SectionHeader.jsx";
 import NewsCard from "@/components/newsPage/NewsCard.jsx";
 import SmallNewsCard from "@/components/newsPage/SmallNewsCard.jsx";
 import "./styles.scss";
-import NewsletterCard from "@/components/newsletter/NewsletterCard";
 import newsJson from "@/../public/tempData/news.json";
 
 export const metadata = {
   title: "Noticias - Towers Cem",
-  description: "Somos una cementera innovadora dedicada a la producción de cementos verdes, enfocados en la sostenibilidad y la reducción del impacto ambiental. Utilizando tecnologías avanzadas como X-CEM, donde incorporamos materiales reciclados y propiedades inteligentes en nuestros productos, permitiendo la absorción de CO₂ y contribuyendo a la lucha contra el cambio climático.",
+  description:
+    "Somos una cementera innovadora dedicada a la producción de cementos verdes, enfocados en la sostenibilidad y la reducción del impacto ambiental. Utilizando tecnologías avanzadas como X-CEM, donde incorporamos materiales reciclados y propiedades inteligentes en nuestros productos, permitiendo la absorción de CO₂ y contribuyendo a la lucha contra el cambio climático.",
   image: "/logo.png",
   favicon: "/src/app/icon.ico",
   color: "#000000",
@@ -16,7 +16,8 @@ export const metadata = {
   type: "website",
   url: "https://towerscem.com",
   siteName: "Towers Cem",
-  keywords: "towerscem, noticias, cemento, construcción, infraestructuras, sostenibilidad, calidad",
+  keywords:
+    "towerscem, noticias, cemento, construcción, infraestructuras, sostenibilidad, calidad",
 };
 
 function NewsSection() {
@@ -45,17 +46,6 @@ function NewsSection() {
                   <div className="absolute h-40 w-full bottom-0 degradado z-[10] max-md:hidden"></div>
                 </div>
               </div>
-            </div>
-          </div>
-          <SectionHeader title="NEWSLETTER" className="mt-32 max-md:mt-10" />
-          <div className="flex flex-col max-md:max-w-full">
-            <div className="flex flex-col max-md:mt-10 max-md:max-w-full text-left mt-2">
-              Nuestros Avances
-            </div>
-            <div className="mt-12 grid gap-10 grid-col-1 md:grid-cols-2 xl:grid-cols-3  mb-20">
-              {newsData.map((news, index) => (
-                <NewsletterCard {...news} key={index} index={index} />
-              ))}
             </div>
           </div>
         </div>

@@ -37,9 +37,12 @@ const Page = ({ params }) => {
                 title={newData.title}
                 className="w-full text-left px-12"
               />
-              <div className="flex justify-between px-12">
-                <span className="flex self-end items-center gap-2">
-                  Escrito por{" "}
+              <div
+                className="mx-auto overflow-hidden rounded-md border h-[500px] md:h-[600px] border-zinc-200/50 w-[90%] bg-no-repeat bg-center bg-cover"
+                style={{ backgroundImage: `url('${newData.image}')` }}
+              ></div>{" "}
+              <div className="flex justify-between gap-3 md:px-12  w-full px-8">
+                <span className="flex self-end max-md:self-start items-center gap-2">
                   <img
                     src={newData.author.avatar}
                     className="rounded-full aspect-square w-8"
@@ -48,13 +51,9 @@ const Page = ({ params }) => {
                 </span>
                 <span className="flex self-end items-center gap-2">
                   <IoIosTime className="w-8 h-8" />
-                  Publicado hace {tiempoDesde + " (" + fechaFormateada + ")"}
+                  Publicado hace {tiempoDesde} <br /> {fechaFormateada}
                 </span>
               </div>
-              <div
-                className="mx-auto overflow-hidden rounded-md border h-[500px] md:h-[600px] border-zinc-200/50 w-[90%] bg-no-repeat bg-center bg-cover"
-                style={{ backgroundImage: `url('${newData.image}')` }}
-              ></div>
               <div className="pl-5 flex gap-3 font-bold items-center">
                 Tags:{" "}
                 {newData.tags?.map((tag, index) => (

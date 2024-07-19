@@ -23,10 +23,10 @@ export const formatearFecha = (date) => {
     domingo: "Domingo",
     lunes: "Lunes",
     martes: "Martes",
-    miercoles: "Miércoles",
+    miércoles: "Miércoles",
     jueves: "Jueves",
     viernes: "Viernes",
-    sabado: "Sábado",
+    sábado: "Sábado",
   };
   for (const palabra in palabras) {
     fecha = fecha.replace(palabra, palabras[palabra]);
