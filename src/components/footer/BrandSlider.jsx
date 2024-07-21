@@ -68,7 +68,7 @@ const logos = [
 
 const BrandSlider = () => {
   return (
-    <section className=" flex flex-col  px-10 h-full">
+    <section className=" flex flex-col  px-10 h-full bg-complementary-200">
       <div className="flex justify-between items-center">
       <Title
         text="Nuestros Aliados"
