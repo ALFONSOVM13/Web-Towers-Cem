@@ -12,7 +12,7 @@ function NewsSection() {
   return (
     <section className="relative flex flex-col justify-center z-0 pt-32">
       <div className="flex flex-col justify-center items-center px-16 w-full text-white max-md:px-5 max-md:max-w-full">
-        <div className="flex flex-col max-md:max-w-full self-start">
+        <div className="flex flex-col mt-6 w-full max-w-[1216px] mb-5 max-md:mb-5 max-md:max-w-full">
           <SectionHeader title="NEWSLETTER" />
           <div className="flex flex-col max-md:mt-10 mb-10 max-md:max-w-full text-left">
             Nuestros Avances
@@ -29,8 +29,9 @@ function NewsSection() {
                 href={"/newsletter/" + newsletter.slug}
                 alt={newsletter.slug}
                 className={`${index === 0 ? "" : "mt-10"} self-end`}
+                key={newsletter.slug}
               >
-                <NewsletterCard {...newsletter} key={index} />
+                <NewsletterCard {...newsletter}  />
               </Link>
             ))}
           </div>
