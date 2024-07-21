@@ -26,18 +26,18 @@ function NewsSection() {
   return (
     <section className="relative flex flex-col justify-center z-0">
       <div className="flex justify-center items-center px-16 py-20 w-full text-white max-md:px-5 max-md:max-w-full">
-        <div className="flex flex-col mt-6 w-full max-w-[1216px] mb-5 max-md:mb-5 max-md:max-w-full">
+        <div className="flex flex-col mt-6 w-full mb-5 max-md:mb-5 max-md:max-w-full">
           <SectionHeader title="NOTICIAS" />
           <div className="flex flex-col  max-md:max-w-full text-left mt-2">
             Towers Cem y el Mundo
           </div>
-          <div className="mt-16 max-md:mt-10 max-md:max-w-full">
+          <div className="mt-10 max-md:max-w-full">
             <div className="flex gap-10 max-md:flex-col max-md:gap-0">
-              <div className="flex flex-col w-[59%] max-md:ml-0 max-md:w-full">
+              <div className="flex flex-col w-2/3 max-md:ml-0 max-md:w-full">
                 <NewsCard {...newsData[0]} />
               </div>
-              <div className="relative flex flex-col ml-5 w-[41%] max-md:ml-0 max-md:w-full z-[0]">
-                <div className="noticias flex flex-col max-md:mt-8 max-md:max-w-full max-h-[800px] overflow-y-auto pr-5">
+              <div className="relative flex flex-col ml-5 w-1/3 max-md:ml-0 max-md:w-full z-[0]">
+                <div className="noticias flex flex-col max-md:mt-8 max-md:max-w-full max-h-[800px] overflow-y-auto pr-5 w-full">
                   {newsData.slice(1).map((news, index) => (
                     <SmallNewsCard key={index} {...news} index={index} />
                   ))}

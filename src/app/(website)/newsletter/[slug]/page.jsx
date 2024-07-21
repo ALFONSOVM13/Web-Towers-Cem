@@ -21,10 +21,9 @@ const Page = ({ params }) => {
             Nuestros Avances
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row mt-6 w-full max-w-[1216px] mb-5 max-md:mb-5 max-md:max-w-full gap-10">
-          <div className="w-2/3 flex gap-10 flex-col">
+        <div className="flex flex-col lg:flex-row mt-6 w-full mb-5 max-md:mb-5 max-md:max-w-full gap-10">
+          <div className="max-lg:w-full w-2/3 flex gap-10 flex-col">
             <NewsletterFrame {...newsletter[0]} index={0} />
-            <NewsletterSection />
           </div>
           <div className="max-lg:mt-12 lg:w-1/3 grid gap-10 grid-col-1 max-md:grid-cols-2 lg:grid-col-1  mb-20 ">
             {otherNewsletters.map((newsletter, index) => (
@@ -38,6 +37,7 @@ const Page = ({ params }) => {
             ))}
           </div>
         </div>
+        <NewsletterSection />
       </div>
     </section>
   );
