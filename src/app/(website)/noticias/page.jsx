@@ -3,7 +3,6 @@ import SectionHeader from "@/components/newsPage/SectionHeader.jsx";
 import NewsCard from "@/components/newsPage/NewsCard.jsx";
 import SmallNewsCard from "@/components/newsPage/SmallNewsCard.jsx";
 import "./styles.scss";
-import NewsletterCard from "@/components/newsletter/NewsletterCard";
 import newsJson from "@/../public/tempData/news.json";
 
 export const metadata = {
@@ -39,7 +38,7 @@ function NewsSection() {
               <div className="relative flex flex-col ml-5 w-1/3 max-md:ml-0 max-md:w-full z-[0]">
                 <div className="noticias flex flex-col max-md:mt-8 max-md:max-w-full max-h-[800px] overflow-y-auto pr-5 w-full">
                   {newsData.slice(1).map((news, index) => (
-                    <SmallNewsCard key={index} {...news} index={index} />
+                    <SmallNewsCard key={news.slug} {...news} index={index} />
                   ))}
                   {newsData.slice(1).length > 4 && (
                     <div className="block max-md:hidden mt-[310px] bg-[#1f1f1f]"></div>

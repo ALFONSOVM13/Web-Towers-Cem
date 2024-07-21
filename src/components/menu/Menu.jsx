@@ -31,18 +31,14 @@ const Menu = ({ active, setActive }) => {
     <>
       {active && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-50"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={() => setActive(false)}
         ></div>
       )}
       <ul
-        className={`fixed font-title font-bold text-2xl top-0 right-0 z-50 inset-y-0 w-full sm:w-1/3 bg-black text-white p-4 transform transition-transform ${
-          active
-            ? "translate-x-0 animate-slide-in-left"
-            : "translate-x-full animate-slide-out-left"
-        } duration-500 ease-in-out ${
-          active ? "visible" : "invisible"
-        } flex flex-col justify-center items-center`}
+        className={`fixed font-title font-bold top-0 right-0 z-40 py-28 inset-y-0 w-full sm:w-1/3 bg-black text-white p-4 transform transition-transform duration-500 ease-in-out ${
+          active ? "translate-x-0" : "translate-x-full"
+        } ${active ? "visible" : "invisible"} flex flex-col items-center`} // Removed justify-center as we're now using flex-col
       >
         <li className="mb-4">
           <Link
@@ -108,13 +104,13 @@ const Menu = ({ active, setActive }) => {
             <Image
               src="/logo.png"
               alt="Icono de usuario"
-              width={200}
-              height={200}
+              width={150}
+              height={150}
             />
           </Link>
         </li>
 
-        <div className="flex-row flex gap-4">
+        <div className="flex gap-4">
           <Link
             href="/login"
             className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"

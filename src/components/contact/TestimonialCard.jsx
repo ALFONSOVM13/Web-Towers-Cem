@@ -12,7 +12,7 @@ const photoTestimonial = [
 
 function TestimonialCard() {
   return (
-    <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full max-md:items-center">
+    <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full max-md:items-center ">
       <figure className="flex overflow-hidden relative flex-col justify-center items-center self-stretch my-auto text-base tracking-normal min-h-[536px] max-md:mt-10 max-md:max-w-full">
         <div className="flex overflow-hidden relative flex-col px-7 pt-20 pb-8 w-full min-h-[536px] max-md:px-5 max-md:max-w-full">
           <img
