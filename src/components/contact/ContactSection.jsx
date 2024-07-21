@@ -4,13 +4,13 @@ import TestimonialCard from './TestimonialCard';
 
 function ContactSection() {
   return (
-    <section className="flex justify-center items-center px-16 py-14 bg-complementary-200 max-md:px-5 lg:h-screen">
-      <div className="flex flex-col w-full max-w-[1092px] max-md:max-w-full">
+    <section className="flex flex-col items-center justify-center w-full max-md:max-w-full pt-40 md:pt-20 bg-complementary-300">
+      <div className="flex flex-col w-full max-w-[1092px] max-md:max-w-full  border-opacity-10">
         <header className="flex flex-col self-center max-md:max-w-full">
-          <h1 className="text-7xl font-bold tracking-tighter text-complementary-300 max-md:max-w-full max-md:text-4xl mx-auto">
+          <h1 className="text-7xl font-bold tracking-tighter text-complementary-200 max-md:max-w-full max-md:text-4xl mx-auto">
             Establece conexión
           </h1>
-          <p className="mx-auto mt-2 text-2xl justify-center items-center font-medium tracking-tight text-slate-800 max-md:mr-2.5 max-md:max-w-full">
+          <p className="mt-5 text-2xl font-normal tracking-normal text-center text-complementary-200 max-md:max-w-full max-md:text-lg">
             Nuestra misión es más que construir; es construir con conciencia.
           </p>
         </header>
