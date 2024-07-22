@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./header.scss";
 
 const Header = ({ active, setActive }) => {
-  const [hideLogo, setHideLogo] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setActive(!active);
@@ -10,18 +10,16 @@ const Header = ({ active, setActive }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setHideLogo(true);
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
       } else {
-        setHideLogo(false);
+        setIsScrolled(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener on component unmount
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -29,20 +27,20 @@ const Header = ({ active, setActive }) => {
     <header
       className={`
         fixed top-0 left-0 w-full z-50
-        bg-opacity-90  transition-all duration-300 
-        ${hideLogo ? "bg-black shadow-md py-1" : "bg-none py-0"} 
+        bg-opacity-90 transition-all duration-300 
+        ${isScrolled ? 'bg-black shadow-md py-0.5' : 'bg-transparent py-0.5'}
       `}
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo flex items-center pl-10">
           <a href="/">
             <img
-              src={hideLogo ? "/logoContraido.svg" : "/logo.png"}
+              src={"/logoContraido.svg"}
               alt="Logo"
               className={`
-              w-28
+              w-32
               transition-all duration-300
-              ${hideLogo ? "mt-0" : "mt-0"} 
+              ${isScrolled ? 'w-24' : 'w-32'}
             `}
             />
           </a>

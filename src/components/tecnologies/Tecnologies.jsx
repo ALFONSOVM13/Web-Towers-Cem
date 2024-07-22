@@ -13,7 +13,7 @@ const Tecnologies = () => {
         src="/images/hero-background.jpg"
         alt="Fondo Tecnologías"
         layout="fill" 
-        objectFit="cover" 
+        object-Fit="cover" 
         className="absolute z-0" 
       />
       <div className="absolute z-10 w-full h-full bg-black opacity-70"></div>
