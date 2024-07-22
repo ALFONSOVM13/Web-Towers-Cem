@@ -37,10 +37,10 @@ const Header = ({ active, setActive }) => {
         <div className="logo flex items-center pl-10">
           <a href="/">
             <img
-              src={hideLogo ? "/logoContraido.svg" : "/logo.png"}
+              src={hideLogo ? "/logoContraido.svg" : "/logoContraido.svg"}
               alt="Logo"
               className={`
-              w-28
+              w-32
               transition-all duration-300
               ${hideLogo ? "mt-0" : "mt-0"} 
             `}

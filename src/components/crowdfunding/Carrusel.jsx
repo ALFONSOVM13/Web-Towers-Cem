@@ -52,7 +52,7 @@ function Carrusel() {
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                   backgroundImage: `url(${slide.backgroundImage})`,
-                  opacity: 0.6,
+                  opacity: 0.3,
                 }}
               ></div>
               <div className="absolute inset-0 flex items-center justify-center">

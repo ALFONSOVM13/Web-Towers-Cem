@@ -1,80 +1,50 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-import BrandSlider from "./BrandSlider";
-import NewsletterSection from "../newsletter/NewsletterSection";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6";
-const LinkSection = ({ section }) => (
-  <ul classNameName="flex flex-col space-y-2 mb-4 lg:mb-0">
-    {section.links.map((link, linkIdx) => (
-      <li key={linkIdx}>
-        <Link href={link.href}>
-          <p
-            classNameName={`cursor-pointer ${
-              link.extraclassName || "hover:text-complementary-400"
-            }`}
-          >
-            {link.text}
-          </p>
-        </Link>
-      </li>
-    ))}
-  </ul>
-);
-
-const SocialLink = ({ href, src, alt, text }) => (
-  <Link href={href} passHref>
-    <div classNameName="flex items-center space-x-2 cursor-pointer hover:text-complementary-400">
-      <Image src={src} alt={alt} width={34} height={34} priority />
-      <span>{text}</span>
-    </div>
-  </Link>
-);
-{
-  /* <BrandSlider />
-<NewsletterSection /> */
-}
+import React from "react";
+import { FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 const FooterSection = () => (
-  <section className="pt-16 pb-7 bg-complementary-300 px-20">
+  <section className="pt-16 pb-7 bg-complementary-300 px-2 sm:px-20">
     <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col sm:flex-row items-center justify-between pb-14 border-b border-gray-500 gap-8">
+      <div className="flex flex-col sm:flex-row items-center justify-between pb-6 border-b border-gray-500 gap-8">
         <a href="/" className="">
           <Image src="/logo.png" alt="Pagedone" width={150} height={150} />
         </a>
         <div className="flex items-center gap-4">
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://www.instagram.com/towerscem"
-            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-complementary-400 hover:text-white focus-within:outline-0 focus-within:bg-complementary-400 focus-within:text-white"
-          >
-            <FaInstagram size={20} />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/towerscem/"
-            className="p-3 rounded-full bg-white text-gray-900 group transition-all duration-500 hover:bg-complementary-400 hover:text-white focus-within:outline-0 focus-within:bg-complementary-400 focus-within:text-white"
-          >
-            <FaLinkedinIn size={20} />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.tiktok.com/@towerscemento"
-            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-complementary-400 hover:text-white focus-within:outline-0 focus-within:bg-complementary-400 focus-within:text-white"
-          >
-            <FaTiktok size={20} />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
-            className="p-3 rounded-full bg-white text-gray-700 group transition-all duration-500 hover:bg-complementary-400 hover:text-white focus-within:outline-0 focus-within:bg-complementary-400 focus-within:text-white"
-          >
-            <FaYoutube size={20} />
-          </a>
-        </div>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.instagram.com/towerscem"
+        className="p-3 rounded-full bg-pink-500 text-white group transition-all duration-500 hover:bg-pink-700 focus-within:outline-0 focus-within:bg-pink-700"
+      >
+        <FaInstagram size={20} />
+      </a>
+      <a
+        href="https://www.linkedin.com/company/towerscem/"
+        className="p-3 rounded-full bg-blue-700 text-white group transition-all duration-500 hover:bg-blue-900 focus-within:outline-0 focus-within:bg-blue-900"
+      >
+        <FaLinkedinIn size={20} />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.tiktok.com/@towerscemento"
+        className="p-3 rounded-full bg-white text-black group transition-all duration-500 hover:bg-slate-300 focus-within:outline-0 focus-within:bg-gray-800"
+      >
+        <FaTiktok size={20} />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
+        className="p-3 rounded-full bg-red-600 text-white group transition-all duration-500 hover:bg-red-800 focus-within:outline-0 focus-within:bg-red-800"
+      >
+        <FaYoutube size={20} />
+      </a>
+    </div>
       </div>
-      <div className="py-14 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
+      <div className="py-10 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
         <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-6 md:gap-12 lg:gap-24">
           <div className="">
             <h6 className="text-lg font-bold text-white mb-7 max-lg:text-center font-title">
@@ -84,7 +54,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/"
-                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Inicio
                 </a>
@@ -92,7 +62,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/crowdfunding"
-                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Crowdfunding
                 </a>
@@ -100,7 +70,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/nosotros"
-                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Nosotros
                 </a>
@@ -108,7 +78,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/equipo"
-                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Nuestro Equipo
                 </a>
@@ -123,7 +93,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/tecnologia-x-cem"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Tecnologia X-Cem
                 </a>
@@ -131,7 +101,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/sostenibilidad"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Sostenibilidad
                 </a>
@@ -139,7 +109,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/innovacion"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Solicitar Muestras
                 </a>
@@ -147,7 +117,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/cotizar"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Cotizar
                 </a>
@@ -162,7 +132,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/faq"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   FAQs
                 </a>
@@ -170,7 +140,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/noticias"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Noticias
                 </a>
@@ -178,7 +148,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/documentacion"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Documentación
                 </a>
@@ -186,7 +156,7 @@ const FooterSection = () => (
               <li>
                 <a
                   href="/contacto"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-complementary-400 focus-within:outline-0 focus-within:text-complementary-400"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Contacto
                 </a>
@@ -235,8 +205,8 @@ const FooterSection = () => (
                 </div>
                 <input
                   type="submit"
-                  value="Send"
-                  className="text-white text-base font-semibold py-3 px-7 rounded-md cursor-pointer bg-complementary-400 transition-all duration-500 hover:bg-white hover:text-gray-900"
+                  value="Suscribirse"
+                  className="text-white text-base font-semibold py-3 px-7 rounded-md cursor-pointer bg-secondary-200 hover:bg-secondary-300 focus-within:outline-none focus-within:bg-secondary-300"
                 />
               </div>
             </form>
@@ -245,7 +215,7 @@ const FooterSection = () => (
       </div>
       <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-5 pt-7">
         <span className="text-sm font-normal text-complementary-400">
-          <a href="https://pagedone.io/" className="">
+          <a href="/" className="">
             ©Towers Cem
           </a>{" "}
           2024, Todos los derechos reservados.
@@ -268,6 +238,7 @@ const FooterSection = () => (
           <button
             type="button"
             id="default-search"
+            onClick={() => window.location.href = "/contacto"}
             className="block w-full lg:min-w-[448px] pr-12 pl-6 py-3 text-base font-normal shadow-xs text-gray-50 bg-transparent border border-gray-700 rounded-sm placeholder-complementary-400 focus:outline-none leading-relaxed transition-all duration-500 "
           >
             Tiene alguna pregunta? Contactenos
