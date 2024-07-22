@@ -31,10 +31,17 @@ const HeroSection = ({ scrollToNextSection }) => {
             Construyendo ciudades que respiran
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2">
-            <Button>
+            <Button onClick={() => (window.location.href = "/products")}>
               Nuestro Cemento
             </Button>
-            <Button >
+            <Button
+              onClick={() =>
+                window.open(
+                  "https://calendly.com/miley-velasquez/reunion-towers-cem?month=2024-07",
+                  "_blank"
+                )
+              }
+            >
               Asesoria Técnica
             </Button>
           </div>
