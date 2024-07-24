@@ -1,4 +1,4 @@
-import ProductSection from '@/components/products/ProductSection'
+import ProductSection from '@/components/productView/ProductSection';
 import { products } from '@/services/products'
 
 export const metadata = {

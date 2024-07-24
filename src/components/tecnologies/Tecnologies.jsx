@@ -26,7 +26,7 @@ const Tecnologies = () => {
           />
           <div className="flex flex-col gap-6 mt-6 bg-white text-black overflow-hidden">
             <Image
-              src="/images/fondo-cementos.png"
+              src="/images/fondo-cementos2.png"
               width={400}
               height={400}
               alt="Tecnologia"
@@ -34,12 +34,7 @@ const Tecnologies = () => {
             />
             <div className="p-8 text-wrap">
               <p className="text-complementary-300 font-title text-xl px-0 md:px-0 text-justify">
-                Somos una cementera innovadora dedicada a la producción de
-                cementos verdes, enfocados en la sostenibilidad y la reducción
-                del impacto ambiental. Utilizando tecnologías avanzadas como
-                X-CEM, donde incorporamos materiales reciclados y propiedades
-                inteligentes en nuestros productos, permitiendo la absorción de
-                CO₂ y contribuyendo a la lucha contra el cambio climático.
+              Towers Cem está comprometido con la sostenibilidad. Nuestro cemento X-Cem ayuda a reducir las emisiones de CO₂, promoviendo un futuro más limpio y verde.
               </p>
             </div>
           </div>
