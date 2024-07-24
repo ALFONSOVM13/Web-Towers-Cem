@@ -1,5 +1,4 @@
 import React from "react";
-import Title from "../ui/Title";
 import { PiMouseSimple } from "react-icons/pi";
 import Button from "../ui/Button";
 import H1 from "../ui/H1";

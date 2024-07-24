@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import H3 from "../ui/H3";
 
 const products = [
   {
@@ -59,14 +60,13 @@ const Products = () => {
         ref={mainSliderRef}
         effect={"fade"}
         modules={[FreeMode, EffectFade]}
-        className="h-full"
+        className="h-full cursor-grab active:cursor-grabbing"
       >
         {products.map((product) => (
           <SwiperSlide className="bg-complementary-200" key={product.id}>
             <div className="flex flex-col md:flex-col p-6 md:p-14 justify-center items-center min-h-screen">
               <Title
-                text="NUESTROS PRODUCTOS"
-                size="large"
+                text="Nuestros Productos"
                 className="text-primary-100 text-center my-10"
               />
 
@@ -93,7 +93,7 @@ const Products = () => {
                     className="font-title font-bold text-primary-100"
                     size="large"
                   />
-                  <Title
+                  <H3
                     text={product.subtitle}
                     className="font-title font-bold"
                   />
