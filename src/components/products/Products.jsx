@@ -17,7 +17,7 @@ export default function Products() {
             className="transition-transform duration-300 group-hover:scale-125"
           />
         </div>
-        <div className="flex flex-col items-center gap-5 justify-center bg-complementary-300 bg-opacity-40 text-white h-full absolute top-0 left-0 w-full  group-hover:bg-opacity-85">
+        <div className="flex flex-col items-center gap-5 justify-center bg-primary-100 bg-opacity-40 text-white h-full absolute top-0 left-0 w-full  group-hover:bg-opacity-85">
           <p>
             <span className="text-2xl md:text-3xl xl:text-3xl font-title">
               Nuestros cementos
@@ -48,7 +48,7 @@ export default function Products() {
             className="transition-transform duration-300 group-hover:scale-125"
           />
         </div>
-        <div className="flex flex-col items-center gap-5 justify-center bg-complementary-300 bg-opacity-40 text-white h-full absolute top-0 left-0 w-full  group-hover:bg-opacity-85">
+        <div className="flex flex-col items-center gap-5 justify-center bg-primary-100 bg-opacity-40 text-white h-full absolute top-0 left-0 w-full  group-hover:bg-opacity-85">
           <p>
             <span className="text-2xl md:text-3xl xl:text-3xl font-title">
               Nuestros cementos
