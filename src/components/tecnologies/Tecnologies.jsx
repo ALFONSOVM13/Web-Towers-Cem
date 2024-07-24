@@ -8,14 +8,14 @@ const Tecnologies = () => {
   const menuItems = ["Roadmap", "News", "Nuestros Proyectos", "Pruebas"];
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen text-white relative">
-      <Image
-        src="/images/hero-background.jpg"
+    <div className="flex flex-col md:flex-row min-h-screen text-white relative"style={{backgroundImage:"url(/images/hero-background.jpg)", backgroundSize:"cover", backgroundPosition:"center"}}>
+      {/* <Image
+        src=""
         alt="Fondo Tecnologías"
         layout="fill" 
         object-Fit="cover" 
-        className="absolute z-0" 
-      />
+        className="absolute z-0 object-fill" 
+      /> */}
       <div className="absolute z-10 w-full h-full bg-black opacity-70"></div>
       <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center z-10">
         <div className="md:w-2/3 p-0 sm:p-0 md:p-9 xl:p-9">

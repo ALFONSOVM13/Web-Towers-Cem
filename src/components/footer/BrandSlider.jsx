@@ -78,7 +78,7 @@ const BrandSlider = () => {
 
       <Marquee direction="left" speed={150} delay={5} pauseOnHover={"true"}>
         {logos.map((logo, index) => (
-          <div key={index} className="mx-4">
+          <div key={index} className="mx-4 overflow-hidden">
             <LogoImage
               src={logo.src}
               alt={logo.alt}
@@ -99,7 +99,7 @@ const LogoImage = ({ src, alt, width, height }) => (
       alt={alt}
       width={width}
       height={height}
-      className="object-contain object-center transform scale-100 hover:scale-110 transition-transform duration-300"
+      className="object-contain object-center transform scale-100 hover:scale-105 transition-transform duration-300"
     />
   </div>
 );

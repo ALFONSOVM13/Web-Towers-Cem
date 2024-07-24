@@ -47,9 +47,9 @@ const FooterSection = () => (
       <div className="py-10 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
         <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-6 md:gap-12 lg:gap-24">
           <div className="">
-            <h6 className="text-lg font-bold text-white mb-7 max-lg:text-center font-title">
+            <h2 className="text-lg font-bold text-white mb-7 max-lg:text-center font-title">
               Towers Cem
-            </h6>
+            </h2>
             <ul className="flex flex-col max-lg:items-center gap-6">
               <li>
                 <a
@@ -86,9 +86,9 @@ const FooterSection = () => (
             </ul>
           </div>
           <div className="/productos">
-            <h6 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
+            <h2 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
               Productos
-            </h6>
+            </h2>
             <ul className="flex flex-col gap-6 max-lg:items-center">
               <li>
                 <a
@@ -125,9 +125,9 @@ const FooterSection = () => (
             </ul>
           </div>
           <div className="/recursos">
-            <h6 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
+            <h2 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
               Recursos
-            </h6>
+            </h2>
             <ul className="flex flex-col gap-6 max-lg:items-center">
               <li>
                 <a
@@ -165,7 +165,7 @@ const FooterSection = () => (
           </div>
         </div>
         <div className="w-full lg:max-w-md max-lg:mx-auto ">
-          <h6 className="text-lg font-medium text-white mb-7">Newsletter</h6>
+          <h2 className="text-lg font-medium text-white mb-7">Newsletter</h2>
           <div className="bg-zinc-800 rounded-sm p-5">
             <form action="#" className="flex flex-col gap-5">
               <div className="relative">
@@ -181,11 +181,11 @@ const FooterSection = () => (
                 />
               </div>
               <div className="flex flex-col min-[540px]:flex-row items-center justify-between gap-3">
-                <div className="flex items-start black">
+                <div className="flex  black items-center gap-2">
                   <input
                     type="checkbox"
                     value=""
-                    className="w-5 h-5 aspect-square appearance-none cursor-pointer border border-gray-600 bg-transparent  rounded-sm mr-2 hover:border-complementary-400 hover:bg-gray-900 checked:bg-no-repeat checked:bg-center checked:border-complementary-400 checked:bg-gray-800"
+                    className="w-8 aspect-square appearance-none cursor-pointer border border-gray-600 bg-transparent  rounded-sm mr-2 hover:border-complementary-400 hover:bg-gray-900 checked:bg-no-repeat checked:bg-center checked:border-complementary-400 checked:bg-gray-800"
 
                   />
                   <label
@@ -206,7 +206,7 @@ const FooterSection = () => (
                 <input
                   type="submit"
                   value="Suscribirse"
-                  className="text-white text-base font-semibold py-3 px-7 rounded-md cursor-pointer bg-secondary-200 hover:bg-secondary-300 focus-within:outline-none focus-within:bg-secondary-300"
+                  className="text-white text-base font-semibold py-3 px-7  cursor-pointer bg-secondary-200 hover:bg-secondary-300 focus-within:outline-none focus-within:bg-secondary-300"
                 />
               </div>
             </form>
