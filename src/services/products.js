@@ -55,6 +55,11 @@ export const products = [
          back: '/images/products/1TC_PACK_BLANCO_ESPALDA.png'
       },
 
+      beneficios :{
+
+
+      },
+      
       cards: [
          {
             id: '01',
