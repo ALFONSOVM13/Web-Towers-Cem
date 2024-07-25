@@ -1,6 +1,6 @@
 'use client'
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
-import "./styles.scss";
+import "./TeamCard.scss";
 import { useRouter } from "next/navigation";
 
 export const TeamCard = ({ name, photo, position, social, slug }) => {

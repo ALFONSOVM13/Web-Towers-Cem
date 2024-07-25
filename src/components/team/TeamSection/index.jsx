@@ -1,11 +1,11 @@
 import { team } from "@/services/team";
 import { TeamCard } from "../TeamCard";
-import "./styles.scss";
+import "./TeamSection.scss";
 
 
 export const TeamSection = () => {
     return (
-        <section>
+        <section className="team-section bg-[#171717]">
             <span>CONOCENOS</span>
             <h2 className="font-title">Nuestro Equipo</h2>
             <p>
