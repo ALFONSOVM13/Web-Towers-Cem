@@ -34,7 +34,7 @@ export const metadata = {
   },
   siteName: "Towers Cem",
   keywords:
-    "cemento, construcción, infraestructuras, sostenibilidad, calidad, innovación, tecnología, X-CEM, Towers Cem",
+    "cemento, construcción, cemento colombia, sostenibilidad, calidad, innovación, tecnología, X-CEM, Towers Cem",
 };
 
 export default function RootLayout({ children }) {

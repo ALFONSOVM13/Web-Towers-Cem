@@ -41,10 +41,10 @@ const Advantages = () => {
               />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-xl md:text-2xl font-title">{advantage.header}</h3>
-              <h2 className="text-2xl md:text-3xl font-title font-bold mt-2">
+              <h2 className="text-xl md:text-2xl font-title">{advantage.header}</h2>
+              <h3 className="text-2xl md:text-3xl font-title font-bold mt-2">
                 {advantage.title}
-              </h2>
+              </h3>
               <p className="mt-5 w-full  text-xl md:text-2xl font-title text-justify leading-6 md:leading-8">
                 {advantage.content}
               </p>

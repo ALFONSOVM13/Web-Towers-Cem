@@ -24,7 +24,7 @@ const Header = ({ active, setActive }) => {
   }, []);
 
   return (
-    <header
+    <div
       className={`
         fixed top-0 left-0 w-full z-50
         bg-opacity-90 transition-all duration-300 
@@ -55,7 +55,7 @@ const Header = ({ active, setActive }) => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
