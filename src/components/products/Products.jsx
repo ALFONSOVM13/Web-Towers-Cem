@@ -33,7 +33,7 @@ export default function Products() {
           <Button
             text="Ver más"
             className="mt-4 opacity-0 group-hover:opacity-100"
-            onClick={() => (window.location.href = "/products")}
+            onClick={() => (window.location.href = "/productos/uso-general")}
           >
             Ver producto
           </Button>
@@ -65,7 +65,7 @@ export default function Products() {
           <Button
             text="Ver más"
             className="mt-4 opacity-0 group-hover:opacity-100"
-            onClick={() => (window.location.href = "/products")}
+            onClick={() => (window.location.href = "/productos/uso-estructural")}
           >
             Ver producto
           </Button>

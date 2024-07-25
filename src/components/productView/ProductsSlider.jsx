@@ -6,22 +6,14 @@ import "./styles.scss";
 import { useEffect, useRef, useState } from "react";
 import CirclePlayButton from "../ui/CirclePlayButton";
 
-const ProductsSlider = ({
-  title,
-  name,
-  description,
-  image,
-  nextCem,
-  previousCem,
-  counter,
-}) => {
+const ProductsSlider = ({title,name,description,image}) => {
   const [isHover, setIsHover] = useState(false);
   const descriptionRef = useRef(null);
 
   useEffect(() => {
     descriptionRef.current.classList.remove("animate-fade-right");
     descriptionRef.current.classList.add("animate-fade-right");
-  }, [counter]);
+  }, []);
 
   return (
     <section className="flex justify-center pt-40  md:pt-28 pb-4 p-4 md:px-40 flex-col md:flex-row bg-slate-300 ">
@@ -78,9 +70,9 @@ const ProductsSlider = ({
 
         <div className="flex flex-col items-center gap-2 mt-4 md:flex-row md:justify-end md:mt-0 md:gap-24 font-bold">
           <p className="text-5xl sm:text-6xl md:text-8xl hidden sm:block text-transparent borderText">
-            0{counter + 1}
+            0{ 1}
           </p>
-          <SliderButton onClickLeft={previousCem} onClickRight={nextCem} />
+          <SliderButton onClickLeft={()=>{}} onClickRight={()=>{}} />
         </div>
       </div>
     </section>

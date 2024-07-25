@@ -13,7 +13,7 @@ export const products = [
     },
 
     videos: {
-      
+
     },
 
     fichaTechnica: "/files/FICHA_TECNICA.pdf",
@@ -44,7 +44,40 @@ export const products = [
         description: "Menor tasa de mantenimiento",
       },
     ],
+    benefits: [
+      {
+        id: 1,
+        title: 'Propiedades inteligentes',
+      },
+      {
+        id: 2,
+        title: 'Alta resistencia en menor tiempo',
+      },
+      {
+        id: 3,
+        title: 'Nuevos materiales de fabricación',
+      },
+      {
+        id: 4,
+        title: 'Cuenta con propiedades auto limpiantes',
+      },
+      {
+        id: 5,
+        title: 'Altos niveles de durabilidad y sostenibilidad',
+      },
+      {
+        id: 6,
+        title: 'Ayuda a reducir las emisiones de CO₂',
+      },
+    ],
+
+    slug: 'uso-general',
+    
+    dataSheet:'/files/FICHA_TECNICA.pdf'
   },
+
+
+
 
   {
     title: "Cemento X",
@@ -57,7 +90,7 @@ export const products = [
     image: {
       front: "/images/products/1TC_PACK_BLANCO_FRONTAL.png",
       back: "/images/products/1TC_PACK_BLANCO_ESPALDA.png",
-      left : "/images/products/1TC_PACK_BLANCO_BORDE_IZQUIERDO.png",
+      left: "/images/products/1TC_PACK_BLANCO_BORDE_IZQUIERDO.png",
       right: "/images/products/1TC_PACK_BLANCO_BORDE_DERECHO.png",
     },
     fichaTechnica: "/files/FICHA_TECNICA.pdf",
@@ -90,13 +123,51 @@ export const products = [
         description: "Mayor durabilidad",
       },
     ],
+
+    benefits: [
+      {
+        id: 1,
+        title: 'Propiedades inteligentes',
+        // icon: (
+        //   <Image
+        //     src="/images/products/iconos/LISTO.png"
+        //     height={30}
+        //     width={30}
+        //     alt="check"
+        //   />
+        // ),
+      },
+      {
+        id: 2,
+        title: 'Alta resistencia en menor tiempo',
+      },
+      {
+        id: 3,
+        title: 'Nuevos materiales de fabricación',
+      },
+      {
+        id: 4,
+        title: 'Cuenta con propiedades auto limpiantes',
+      },
+      {
+        id: 5,
+        title: 'Altos niveles de durabilidad y sostenibilidad',
+      },
+      {
+        id: 6,
+        title: 'Ayuda a reducir las emisiones de CO₂',
+      },
+    ],
+    slug: 'uso-estructural',
+
+    dataSheet: '/files/FICHA_TECNICA.pdf'
   },
-];
+]
 
 export const getProductBySlug = async (slug) => {
-  return products.find((product) => product.slug === slug);
-};
+  return products.find((product) => product.slug === slug)
+}
 
 export const getProducts = async () => {
-  return products;
-};
+  return products
+}
