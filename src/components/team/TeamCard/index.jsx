@@ -2,6 +2,7 @@
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import "./TeamCard.scss";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export const TeamCard = ({ name, photo, position, social, slug }) => {
     
@@ -12,7 +13,12 @@ export const TeamCard = ({ name, photo, position, social, slug }) => {
             onClick={()=>router.push(`/team/${slug}`)} 
             className="card"
         >
-            <img src={ photo } alt={ name } />
+            <Image
+                src={photo}
+                alt={ name }
+                width={500}
+                height={500}
+            />
             <div className="card-content">
                 <h3>{ name }</h3>
                 <p>{ position }</p>
