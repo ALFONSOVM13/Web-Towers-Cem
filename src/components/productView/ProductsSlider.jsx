@@ -1,10 +1,10 @@
 "use client";
-import CirclePlayButton from "@/components/products/CirclePlayButton";
 import CustomButton from "@/components/ui/CustomButton";
 import SliderButton from "@/components/ui/SliderButton";
 import Title from "@/components/ui/Title";
 import "./styles.scss";
 import { useEffect, useRef, useState } from "react";
+import CirclePlayButton from "../ui/CirclePlayButton";
 
 const ProductsSlider = ({
   title,
@@ -41,9 +41,7 @@ const ProductsSlider = ({
           <div className="flex items-center gap-2 cursor-pointer">
             <CustomButton className={"rounded-sm"}>
               SOLICITAR MUESTRA
-              {/* <MdOutlineArrowRightAlt /> */}
             </CustomButton>
-            {/* <p className='font-content'>Solicitar Muestra</p> */}
           </div>
           <p className="w-24 text-sm font-title">
             mira nuestro video como funciona

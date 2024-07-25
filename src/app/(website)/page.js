@@ -7,7 +7,7 @@ import Tecnologies from "@/components/tecnologies/Tecnologies";
 import BrandSlider from "@/components/footer/BrandSlider";
 import SolutionsSection from "@/components/solutions/SolutionsSection";
 import Advantages from "@/components/products/Advantages";
-
+import KnowUsSection from "@/components/knowUs/KnowUsSection";
 const HomePage = () => {
   const knowUsRef = useRef(null); // Referencia para la sección KnowUsSection
 
@@ -25,11 +25,15 @@ const HomePage = () => {
       <div>
         <HeroSection scrollToNextSection={scrollToKnowUsSection} />
       </div>
-      
-      <div ref={knowUsRef}>
-        <Products />
-        <Advantages />
+
+      <div >
+      <KnowUsSection />
       </div>
+      
+      <div className="min-h-screen" ref={knowUsRef}>
+        <Products />
+      </div>
+        <Advantages />
       <div>
         <SolutionsSection />
       </div>

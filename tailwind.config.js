@@ -43,7 +43,7 @@ export default {
     },
   },
   plugins: [
-    require('tailwindcss-animated'),
+      
     function ({ addUtilities }) {
       addUtilities({
         '.text-shadow': {
