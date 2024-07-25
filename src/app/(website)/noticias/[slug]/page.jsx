@@ -28,7 +28,7 @@ const Page = ({ params }) => {
   const fechaFormateada = formatearFecha(newData.publishedAt);
 
   return (
-    <section className="relative flex flex-col justify-center z-0">
+    <section className="noticias-section relative flex flex-col justify-center z-0">
       <div className="flex justify-center items-center px-16 py-28 w-full text-white max-md:px-5 ">
         <div className="flex flex-col space-y-10 py-5">
           <div className="w-full flex flex-col lg:flex-row gap-10">
