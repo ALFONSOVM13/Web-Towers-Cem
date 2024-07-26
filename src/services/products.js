@@ -10,13 +10,13 @@ export const products = [
     image: {
       front: "/images/products/cemento.svg",
       back: "/images/products/cemento.svg",
+      left: "/images/products/cemento.svg",
+      right: "/images/products/cemento.svg"
     },
 
     videos: {
 
     },
-
-    fichaTechnica: "/files/FICHA_TECNICA.pdf",
 
     cards: [
       {

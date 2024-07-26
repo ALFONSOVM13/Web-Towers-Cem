@@ -27,9 +27,9 @@ const BenefitsProduct = ({ benefits, image, dataSheet }) => {
         </div>
         <div className="w-full md:w-1/2 md:pl-10">
           <ul className="flex flex-col list-inside font-title text-primary-100 md:text-xl list-none gap-4 md:gap-8">
-            {benefits.map((benefit) => (
+            {benefits?.map((benefit) => (
               <li
-                key={benefit.id}
+                key={benefit?.id}
                 className="flex items-center gap-2 md:gap-4 text-primary-100"
               >
                 <Image
@@ -38,7 +38,7 @@ const BenefitsProduct = ({ benefits, image, dataSheet }) => {
                   width={30}
                   alt="check"
                 />
-                {benefit.title}
+                {benefit?.title}
               </li>
             ))}
           </ul>
