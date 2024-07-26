@@ -18,21 +18,22 @@ export default function Products() {
           />
         </div>
         <div className="flex flex-col items-center gap-5 justify-center bg-primary-100 bg-opacity-40 text-white h-full absolute top-0 left-0 w-full  group-hover:bg-opacity-85">
-          <p>
+          <h2>
             <span className="text-2xl md:text-3xl xl:text-3xl font-title">
               Nuestros cementos
             </span>
+          </h2>
+          <H3 text="Cemento Uso General" className={"!text-5xl"} />
+          <p
+            className="!text-xl md:text-xl xl:text-2xl italic w-2/4 opacity-0 group-hover:opacity-100 text-center"
+          >
+            Explora los beneficios y usos que tiene de nuestro cemento X-cem Tipo 1.
           </p>
-          <Title text="Cemento Uso General" className={"!text-5xl"} />
-          <H3
-            text="Explora los beneficios y usos que tiene de nuestro cemento X-cem Tipo 1."
-            className="!text-xl md:text-xl xl:text-2xl italic w-2/4 opacity-0 group-hover:opacity-100"
-          />
 
           <Button
             text="Ver más"
             className="mt-4 opacity-0 group-hover:opacity-100"
-            onClick={() => (window.location.href = "/products")}
+            onClick={() => (window.location.href = "/productos/uso-general")}
           >
             Ver producto
           </Button>
@@ -49,21 +50,22 @@ export default function Products() {
           />
         </div>
         <div className="flex flex-col items-center gap-5 justify-center bg-primary-100 bg-opacity-40 text-white h-full absolute top-0 left-0 w-full  group-hover:bg-opacity-85">
-          <p>
+          <span>
             <span className="text-2xl md:text-3xl xl:text-3xl font-title">
               Nuestros cementos
             </span>
+          </span>
+          <H3 text="Cemento Uso Estructural" className={"!text-5xl"} />
+          <p
+            className="!text-xl md:text-xl xl:text-2xl italic  w-2/4 opacity-0 group-hover:opacity-100 text-center"
+          >
+            Explora los usos y agregados para tus obras de nuestro cemento X-CEM Tipo 3.
           </p>
-          <Title text="Cemento Uso Estructural" className={"!text-5xl"} />
-          <H3
-            text="Explora los usos y agregados para tus obras de nuestro cemento X-CEM Tipo 3."
-            className="!text-xl md:text-xl xl:text-2xl italic  w-2/4 opacity-0 group-hover:opacity-100"
-          />
 
           <Button
             text="Ver más"
             className="mt-4 opacity-0 group-hover:opacity-100"
-            onClick={() => (window.location.href = "/products")}
+            onClick={() => (window.location.href = "/productos/uso-estructural")}
           >
             Ver producto
           </Button>

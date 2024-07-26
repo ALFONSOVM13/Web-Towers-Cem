@@ -16,8 +16,8 @@ export const TeamCard = ({ name, photo, position, social, slug }) => {
             <Image
                 src={photo}
                 alt={ name }
-                width={500}
-                height={500}
+                width={600}
+                height={600}
             />
             <div className="card-content">
                 <h3>{ name }</h3>

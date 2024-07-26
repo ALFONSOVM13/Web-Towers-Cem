@@ -3,9 +3,9 @@ import H3 from "../ui/H3";
 
 function WhatWeDo() {
   const cardsData = [
-    { title: "Constructoras", bgImage: "/images/constructoras.jpg" },
     { title: "Prefabricados", bgImage: "/images/prefabricados.jpg" },
-    { title: "Bloqueras", bgImage: "/images/bloqueras.webp" },
+    { title: "Bloqueras", bgImage: "/images/bloqueras.jpg" },
+    { title: "Constructoras", bgImage: "/images/constructoras.jpg" },
   ];
 
   return (
