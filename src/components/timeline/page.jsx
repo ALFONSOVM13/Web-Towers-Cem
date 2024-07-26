@@ -108,8 +108,8 @@ const Timeline = () => {
             <p className="timeline__content-desc">
               In 1905, Mustafa Kemal graduated from the War Academy in Istanbul
               with the rank of Staff Captain. Posted in Damascus, he started
-              with several colleagues, a clandestine society called "Homeland
-              and Freedom" to fight against the Sultan's despotism.
+              with several colleagues, a clandestine society called &quot;Homeland
+              and Freedom&quot; to fight against the Sultan&apos;s despotism.
             </p>
           </div>
         </div>
