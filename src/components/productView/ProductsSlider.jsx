@@ -21,33 +21,33 @@ const ProductsSlider = ({ title, name, description, image }) => {
   }
 
   return (
-    <section className="flex justify-center pt-40  md:pt-28 pb-4 p-4 md:px-40 flex-col md:flex-row bg-slate-300 ">
+    <section className="flex justify-center pt-40  md:pt-28 pb-4 p-4 md:px-40 flex-col md:flex-row bg-slate-200 ">
       <div className="flex-1 pr-7 ">
         <Title text={title} className={"text-primary-100 !text-left"} />
         <h2 className="text-customGreen font-title text-2xl md:text-4xl font-bold md:pl-2 mb-4 md:mb-10">
           {name}
         </h2>
-        <hr className="bg-complementary-300 h-1 max-w-56 mb-4 md:mb-10 md:ml-2" />
+        <hr className="bg-primary-100 h-1 max-w-56 mb-4 md:mb-10 md:ml-2" />
         <p
           className="font-content mb-4 md:mb-12 animate-fade-right animate-duration-[2000ms]"
           ref={descriptionRef}
         >
           {description}
         </p>
-        <div className="flex gap-2 md:gap-8 items-center">
+        <div className="flex  md:gap-8 items-center justify-around ">
           <div className="flex items-center gap-2 cursor-pointer">
             <Button className={"rounded-sm"}>
               SOLICITAR MUESTRA
             </Button>
           </div>
-          <p className="w-24 text-sm font-title">
+          <p className="w-24 text-sm font-title hidden sm:block">
             mira nuestro video como funciona
           </p>
           <CirclePlayButton />
         </div>
       </div>
 
-      <div className="flex-1 border-l-complementary-400 pl-4 md:border-l flex flex-col items-center">
+      <div className="flex-1 border-l-slate-600 pl-4 md:border-l flex flex-col items-center">
         <div className="relative flex justify-center items-center w-full">
           <figure
             className="relative h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] md:h-[400px] md:w-[300px] animate-fade-right" >

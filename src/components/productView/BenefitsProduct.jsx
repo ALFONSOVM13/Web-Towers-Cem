@@ -26,11 +26,11 @@ const BenefitsProduct = ({ benefits, image, dataSheet }) => {
           </figure>
         </div>
         <div className="w-full md:w-1/2 md:pl-10">
-          <ul className="flex flex-col list-inside font-title text-primary-100 md:text-xl list-none gap-4 md:gap-8">
+          <ul className="flex flex-col list-inside font-title text-primary-100 md:text-xl list-none gap-4 md:gap-8 pl-16 sm:pl-44 md:pl-4">
             {benefits?.map((benefit) => (
               <li
                 key={benefit?.id}
-                className="flex items-center gap-2 md:gap-4 text-primary-100"
+                 className="flex items-center gap-2 md:gap-4 text-primary-100"
               >
                 <Image
                   src="/images/products/iconos/LISTO.png"

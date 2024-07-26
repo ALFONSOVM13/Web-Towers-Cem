@@ -1,8 +1,21 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import "./header.scss";
+import { usePathname } from "next/navigation";
 
 const Header = ({ active, setActive }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [logo, setLogo] = useState("/logoContraido.svg")
+  const pathname = usePathname();
+  console.log(pathname);
+
+  useEffect(() => {
+    if (!isScrolled && (pathname === "/productos/uso-general" || pathname === "/productos/uso-estructural")) {
+      setLogo("/logoContraido2.svg");
+    } else {
+      setLogo("/logoContraido.svg");
+    }
+  }, [isScrolled, pathname]);
 
   const toggleMenu = () => {
     setActive(!active);
@@ -35,12 +48,12 @@ const Header = ({ active, setActive }) => {
         <div className="logo flex items-center pl-10">
           <a href="/">
             <img
-              src={"/logoContraido.svg"}
+              src={logo}
               alt="Logo"
               className={`
               w-32
               transition-all duration-300
-              ${isScrolled ? 'w-24' : 'w-32'}
+              ${isScrolled ? 'w-24' : 'w-32 '}
             `}
             />
           </a>

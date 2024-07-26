@@ -1,6 +1,6 @@
 const Card = ({ description }) => {
   return (
-    <div className="bg-complementary-400 text-primary-100 rounded-md p-4 m-2 shadow-lg text-center flex-1 max-w-[200px] min-h-[120px] flex items-center justify-center transition-transform transform hover:scale-105 font-title">
+    <div className="bg-complementary-400 text-primary-100 rounded-md p-4 m-2 shadow-xl text-center flex-1 max-w-[200px] min-h-[120px] flex items-center justify-center transition-transform transform hover:scale-105 font-title">
       <p className="text-lg font-bold">{description}</p>
     </div>
   );
