@@ -106,10 +106,10 @@ const Timeline = () => {
             />
             <h2 className="timeline__content-title">2020</h2>
             <p className="timeline__content-desc">
-              In 1905, Mustafa Kemal graduated from the War Academy in Istanbul
-              with the rank of Staff Captain. Posted in Damascus, he started
-              with several colleagues, a clandestine society called &quot;Homeland
-              and Freedom&quot; to fight against the Sultan&apos;s despotism.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+              reprehenderit nisi iure omnis rem, ratione obcaecati sed sit
+              debitis laudantium nulla aliquid. Expedita repellat, deleniti
+              necessitatibus voluptates earum doloremque quo?
             </p>
           </div>
         </div>
@@ -136,7 +136,8 @@ const Timeline = () => {
 
 export default Timeline;
 
-{/* <div className="demo-footer">
+{
+  /* <div className="demo-footer">
   <a
     href="http://www.turkishnews.com/Ataturk/life.htm"
     target="_blank"
@@ -144,9 +145,10 @@ export default Timeline;
   >
     Source/Kaynak
   </a>
-</div> */}
+</div> */
+}
 {
-    /* <div className="timeline-item" data-text="FATHER OF THE TURKS">
+  /* <div className="timeline-item" data-text="FATHER OF THE TURKS">
     <div className="timeline__content">
             <img className="timeline__img" src="http://ataturk.istanbul.gov.tr/GalleryLibrary/12.jpg" alt="1915" />
             <h2 className="timeline__content-title">1915</h2>
