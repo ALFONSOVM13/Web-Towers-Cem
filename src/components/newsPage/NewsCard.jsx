@@ -46,7 +46,7 @@ function NewsCard({
       <p className="mt-4 text-lg tracking-normal font-light leading-7 text-ellipsis text-neutral-100 max-md:max-w-full">
         {content}
       </p>
-      <Link href={"/noticias/" + slug} alt={slug} className="mt-10 self-end">
+      <Link href={slug} alt={slug} className="mt-10 self-end">
         <button className=" bottom-0 right-7 text-md font-medium text-zinc-100 hover:text-zinc-300 hover:border-zinc-300/50 border rounded-3xl border-zinc-200/50 h-12 w-36">
           Leer Más {"->"}
         </button>

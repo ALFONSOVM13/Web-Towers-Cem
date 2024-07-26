@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function SmallNewsCard({ image, title, author, readTime, index, slug = "" }) {
   return (
-    <Link href={"/noticias/" + slug} alt={slug}>
+    <Link href={slug} alt={slug}>
       <article
         className={`flex w-full p-2 gap-2 rounded-md flex-col max-md:gap-0 mb-4 ${
           index === 0 ? "" : "mt-4"
@@ -22,12 +22,12 @@ function SmallNewsCard({ image, title, author, readTime, index, slug = "" }) {
         </div>
         <div className="flex flex-col w-full max-md:ml-0 max-md:w-full">
           <div className="flex gap-4 justify-between mt-6 text-md font-medium tracking-normal leading-5 items-center">
-            <div className="flex gap-2 justify-start items-center">
+            <div className="flex gap-4">
               <img
                 loading="lazy"
                 src={author.avatar}
                 alt={author.name}
-                className="shrink-0 w-8 rounded-full aspect-square"
+                className="shrink-0 w-10 rounded-full aspect-square"
               />
               <span className=" text-sm capitalize text-left">
                 {author.name}
