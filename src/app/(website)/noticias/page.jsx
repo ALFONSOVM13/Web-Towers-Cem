@@ -21,7 +21,7 @@ export const metadata = {
 };
 
 function NewsSection() {
-  const { news: newsData } = newsJson;
+  const newsData = newsJson;
   return (
     <section className="relative flex flex-col justify-center z-0">
       <div className="flex justify-center items-center px-16 py-20 w-full text-white max-md:px-5 max-md:max-w-full">

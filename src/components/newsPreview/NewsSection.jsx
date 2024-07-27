@@ -3,10 +3,9 @@ import CustomButton from "../ui/CustomButton";
 import Title from "../ui/Title";
 import Link from "next/link";
 import NewsGrid from "./NewsGrid";
-import newsJson from "../../../public/tempData/news.json";
+import news from "../../../public/tempData/news.json";
 
 const NewsSection = () => {
-  const { news } = newsJson;
   return (
     <section className="py-20 px-10 bg-white h-full">
       <div className="flex justify-between items-center mb-10">
