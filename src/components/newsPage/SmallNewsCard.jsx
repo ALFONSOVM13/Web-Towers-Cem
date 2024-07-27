@@ -2,18 +2,18 @@ import Link from "next/link";
 import Avatar from "../ui/Avatar";
 import Image from "next/image";
 
-function SmallNewsCard({ image, title, author, readTime, slug = "" }) {
+function SmallNewsCard({ image, title, author, readTime, slug, className="", imageClassName="" }) {
   return (
 
     <article
-      className={"flex flex-col xl:flex-row gap-4"}
+      className={`flex flex-col xl:flex-row gap-4 ${className}`}
     >
       <Link 
         href={`/noticias/${slug}`} 
         alt={slug}
         className="group"
       >
-        <figure className="relative aspect-video xl:aspect-square xl:w-40 overflow-hidden rounded-md border border-zinc-200/70">
+        <figure className={`relative aspect-video xl:aspect-square xl:w-40 overflow-hidden rounded-md border border-zinc-200/70 ${ imageClassName }`}>
           <Image
             src={image}
             alt={title}

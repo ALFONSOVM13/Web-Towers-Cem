@@ -20,7 +20,7 @@ export const metadata = {
 };
 
 function NewsSection() {
-  const { news: newsData } = newsJson;
+  const newsData = newsJson;
   return (
     <section className="noticias-section py-20 md:py-24 xl:py-28">
       <div className="container mx-auto px-5 text-complementary-200">
