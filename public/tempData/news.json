@@ -6,11 +6,12 @@
       "publishedAt": "2024-06-03",
       "author": {
         "name": "Mentor Unal",
-        "photo": "/images/channels4_profile.jpg",
-        "avatar": "/images/channels4_profile.jpg"
+        "photo": "/images/news/channels4_profile.jpg",
+        "avatar": "/images/news/channels4_profile.jpg"
       },
       "tags": ["Premios", "Cemento", "Tecnología"],
-      "slug": "ganadores-tecnologia-del-ano-mentor-towers-cem",
+      "slug": "https://www.youtube.com/watch?v=JeuEBtn_fpI",
+      "link": "https://www.youtube.com/watch?v=JeuEBtn_fpI",
       "content": [
         "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023.",
         "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023."
@@ -20,34 +21,34 @@
     {
       "title": "Estudiante UniCosta ganador de Prix French Tech",
       "image": "/images/new_01.jpg",
-      "publishedAt": "2024-06-27",
+      "publishedAt": "2023-10-25",
       "author": {
-        "name": "Wade Warre",
-        "photo": "/images/wade-warren.jpg",
-        "avatar": "/images/wade-warren.jpg"
+        "name": "Universidad de la Costa",
+        "photo": "/images/news/cuc.png",
+        "avatar": "/images/news/cuc.png"
       },
-      "slug": "estudiante-unicosta-ganador-de-prix-french-tech",
-      "tags": ["Premios"],
+      "slug": "https://www.cuc.edu.co/noticias-principales/estudiante-unicosta-ganador-de-prix-french-tech#:~:text=Desde%20la%20Universidad%20de%20la,pasado%20martes%203%20de%20octubre.",
+      "tags": ["Premios", "Cemento", "Tecnología"],
       "content": [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam aperiam commodi incidunt culpa molestiae eveniet obcaecati aspernatur, exercitationem earum dolore blanditiis voluptatem, eaque cupiditate possimus ipsam repellat harum dolor!"
+        "El Prix French Tech Bogotá se crea a partir del 2020 con el ánimo de premiar aquellos emprendimientos de base tecnológica orientados a mejorar la calidad de vida de las personas o aquellos basados en principios de sostenibilidad.Este año quisieron llegar a más emprendimientos, más start-ups y más proyectos con el ánimo de tener una visión más global de los desarrollos que se están haciendo en el país y darles así la visibilidad que estos merecen. En la versión del Prix French Tech 2023 hacen una convocatoria abierta a un público mucho más amplio que en versiones pasadas.Desde la Universidad de la Costa participó el estudiante de séptimo semestre de Ingeniería Eléctrica, Carlos Andrés Torres Cuello, en la categoría de Nuevos Talentos con su Startup “Towers Cem” con el cual resultó ganador en la gala celebrada en Bogotá D.C. el pasado martes 3 de octubre. Carlos Torres ha desarrollado una tecnología de cemento inteligente el cual ya cuenta con una solicitud de patente ante la SIC."
       ],
       "readTime": "7 min"
     },
     {
       "title": "Acto de clausura de la III edicion de Puentes de Talento",
       "image": "/images/new_02.jpg",
-      "publishedAt": "2024-06-16",
+      "publishedAt": "2024-04-25",
       "content": [
         "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023.",
         "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023."
       ],
       "author": {
-        "name": "Jenny Wilson",
-        "photo": "/images/leslie-alexander.jpg",
-        "avatar": "/images/leslie-alexander.jpg"
+        "name": "Madrid Innovation",
+        "photo": "/images/news/madrid-innovation.jpg",
+        "avatar": "/images/news/madrid-innovation.jpg"
       },
-      "slug": "acto-de-clausura-de-la-iii-edicion-de-puentes-de-talento",
-      "tags": ["Puentes de Talento", "Premios"],
+      "slug": "https://www.madridinnovation.es/iniciativas-agente/acto-de-clausura-de-la-iii-edicion-de-puentes-de-talento/",
+      "tags": ["Puentes de Talento", "Premios", "Cemento", "madrid innovation"],
       "readTime": "12 min"
     },
     {
@@ -55,15 +56,15 @@
       "image": "/images/new_03.jpg",
       "publishedAt": "2024-05-26",
       "content": [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam aperiam commodi incidunt culpa molestiae eveniet obcaecati aspernatur, exercitationem earum dolore blanditiis voluptatem, eaque cupiditate possimus ipsam repellat harum dolor!"
+        "El Genera Summit es el encuentro de una comunidad que anualmente se reúne para conectarse con los principales líderes que están movilizando las tendencias tecnológicas en el mundo y generando un impacto positivo en la sociedad."
       ],
       "author": {
-        "name": "Leslie Alexander",
-        "photo": "/images/jenny-wilson.jpg",
-        "avatar": "/images/jenny-wilson.jpg"
+        "name": "Mente X",
+        "photo": "/images/news/mente-x.jpg",
+        "avatar": "/images/news/mente-x.jpg"
       },
-      "slug": "genera-summit-2024-acompananos-del-28-al-30-de-agosto",
-      "tags": ["Eventos", "Cemento"],
+      "slug": "https://mentex.co/summit24/",
+      "tags": ["Eventos", "Cemento", "Tecnología" ,"genera summit"],
       "readTime": "5 min"
     }
   ]

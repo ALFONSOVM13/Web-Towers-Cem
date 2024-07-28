@@ -7,7 +7,7 @@ const KnowUsSection = () => {
       <div className="flex flex-col md:flex-row items-center gap-10">
         <div className="flex-1 text-center md:text-left flex gap-5 flex-col">
           <Title text="¿Qué hacemos?" size="large" className="text-primary-100" />
-          <p className="md:max-w-[75rem] text-complementary-300 font-title text-2xl text-justify leading-8">
+          <p className="md:max-w-[75rem] text-complementary-300 font-title text-2xl text-left leading-8">
             Somos una cementera innovadora dedicada a la producción de cementos
             verdes, enfocados en la sostenibilidad y la reducción del impacto
             ambiental. Utilizando tecnologías avanzadas como{" "}
