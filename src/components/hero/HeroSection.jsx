@@ -30,8 +30,8 @@ const HeroSection = ({ scrollToNextSection }) => {
             Construyendo ciudades que respiran
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2">
-            <Button onClick={() => (window.location.href = "/products")}>
-              Nuestro Cemento
+            <Button onClick={() => scrollToNextSection()} className="mr-4">
+              Nuestros Cementos
             </Button>
             <Button
               onClick={() =>
