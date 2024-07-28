@@ -9,7 +9,7 @@ function WhatWeDo() {
   ];
 
   return (
-    <section className="w-full py-20 bg-neutral-50">
+    <section className="w-full py-20 bg-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-neutral-800 mb-12 text-3xl sm:text-4xl lg:text-5xl font-bold">
           Ofrecemos soluciones sostenibles para:
