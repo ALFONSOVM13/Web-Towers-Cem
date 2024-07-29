@@ -7,14 +7,16 @@ import CirclePlayButton from "../ui/CirclePlayButton"
 import Button from '../ui/Button'
 import ModalVideo from '../ui/ModalVideo'
 
-const ProductsSlider = ({ title, name, description, image }) => {
+const ProductsSlider = ({ title, name, description, image, video}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [imageCounter, setImageCounter] = useState(1)
   const [isModalOpen, setModalOpen] = useState(false);
   const descriptionRef = useRef(null)
 
   const images = [image.front, image.back, image.left, image.right]
-  const videoSrc = "/videos/hero-background.mp4"
+
+  console.log(video)
+
 
   const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) => {
@@ -83,7 +85,7 @@ const ProductsSlider = ({ title, name, description, image }) => {
     </section>
     
      <ModalVideo 
-     videoSrc={videoSrc}
+     videoSrc={video}
      modalView={isModalOpen}
      onClose={() => setModalOpen(false)}
      />

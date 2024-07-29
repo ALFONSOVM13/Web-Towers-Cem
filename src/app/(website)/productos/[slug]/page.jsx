@@ -21,6 +21,7 @@ const ProductPage = async ({params}) => {
         name={product.name}
         description={product.description}
         image={product.image}
+        video={product.video}
       />
       <DescriptionProduct 
       cards={product.cards} />
