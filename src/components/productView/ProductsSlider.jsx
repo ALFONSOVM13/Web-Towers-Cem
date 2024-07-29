@@ -5,13 +5,16 @@ import "./styles.scss"
 import { useRef, useState } from "react"
 import CirclePlayButton from "../ui/CirclePlayButton"
 import Button from '../ui/Button'
+import ModalVideo from '../ui/ModalVideo'
 
 const ProductsSlider = ({ title, name, description, image }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [imageCounter, setImageCounter] = useState(1)
+  const [isModalOpen, setModalOpen] = useState(false);
   const descriptionRef = useRef(null)
 
   const images = [image.front, image.back, image.left, image.right]
+  const videoSrc = "/videos/hero-background.mp4"
 
   const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) => {
@@ -30,6 +33,7 @@ const ProductsSlider = ({ title, name, description, image }) => {
   }
 
   return (
+    <>
     <section className="flex justify-center pt-40  md:pt-28 pb-4 p-4 md:px-40 flex-col md:flex-row bg-slate-200 ">
       <div className="flex-1 pr-7 ">
         <Title text={title} className={"text-primary-100 !text-left"} />
@@ -52,7 +56,7 @@ const ProductsSlider = ({ title, name, description, image }) => {
           <p className="w-24 text-sm font-title hidden sm:block">
             mira nuestro video como funciona
           </p>
-          <CirclePlayButton />
+          <CirclePlayButton onClick={()=>{setModalOpen(true)}}/>
         </div>
       </div>
 
@@ -77,6 +81,13 @@ const ProductsSlider = ({ title, name, description, image }) => {
         </div>
       </div>
     </section>
+    
+     <ModalVideo 
+     videoSrc={videoSrc}
+     modalView={isModalOpen}
+     onClose={() => setModalOpen(false)}
+     />
+     </>
   )
 }
 export default ProductsSlider
