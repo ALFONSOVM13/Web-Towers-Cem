@@ -81,7 +81,7 @@ const BentoGrid = () => {
         <div
           className="relative col-span-6 sm:col-span-1 sm:row-span-4 rounded-lg shadow-md flex items-center justify-center hover:scale-105 transition-transform duration-300 cursor-pointer"
           style={{
-            backgroundImage: "url(/images/BG.png)",
+            backgroundImage: "url(/images/bg.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "grayscale(100%)",
