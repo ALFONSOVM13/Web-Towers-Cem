@@ -10,7 +10,7 @@ import NewsletterFrame from "@/components/newsletter/NewsletterFrame";
 function NewsSection() {
   const { newsletter } = newsletterJson;
   return (
-    <section className="relative flex flex-col justify-center z-0 pt-32">
+    <section className="newsletter-section relative flex flex-col justify-center z-0 pt-32">
       <div className="flex flex-col justify-center items-center px-16 w-full text-white max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col mt-6 w-full max-w-[1216px] mb-5 max-md:mb-5 max-md:max-w-full">
           <SectionHeader title="NEWSLETTER" />

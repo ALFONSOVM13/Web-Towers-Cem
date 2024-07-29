@@ -38,7 +38,7 @@ const Page = ({ params }) => {
             alt={currentNew.title}
             width={1200}
             height={1200}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-contain object-center"
           />
         </figure>
         <div className="relative flex flex-col xl:flex-row items-start gap-14 mt-8 px-5 xl:px-10 2xl:px-16">

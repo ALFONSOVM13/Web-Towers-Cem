@@ -14,13 +14,13 @@ function NewsCard({
   return (
     <article className="relative flex flex-col grow text-sm font-normal tracking-normal leading-5 max-md:mt-3 max-md:max-w-full">
       <Link href={`/noticias/${slug}`} className="group">
-        <figure className="relative rounded-md overflow-hidden">
+        <figure className="h-[600px] relative rounded-lg overflow-hidden">
           <Image
             src={image}
             alt={title}
-            width={980}
+            width={1200}
             height={650}
-            className="w-full aspect-[1.52] max-md:max-w-full transition-all duration-500 group-hover:scale-105 group-hover:opacity-90"
+            className="object-contain  h-full group-hover:scale-105 transition duration-500"
           />
         </figure>
       </Link>
