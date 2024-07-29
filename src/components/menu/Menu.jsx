@@ -81,14 +81,14 @@ const Menu = ({ active, setActive }) => {
             Contacto
           </Link>
         </li>
-        {/* <li className="mb-4">
+        <li className="mb-4">
           <Link
             href="/noticias"
             className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
           >
             Noticias
           </Link>
-        </li> */}
+        </li>
         {/* <li className="mb-4">
           <Link
             href="/newsletter"
