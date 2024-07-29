@@ -8,16 +8,25 @@ import Button from '../ui/Button'
 
 const ProductsSlider = ({ title, name, description, image }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [imageCounter, setImageCounter] = useState(1)
   const descriptionRef = useRef(null)
 
   const images = [image.front, image.back, image.left, image.right]
 
   const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = (prevIndex + 1) % images.length
+      setImageCounter(newIndex + 1)
+      return newIndex
+    })
   }
 
   const handlePreviousImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = (prevIndex - 1 + images.length) % images.length
+      setImageCounter(newIndex + 1)
+      return newIndex
+    })
   }
 
   return (
@@ -61,9 +70,9 @@ const ProductsSlider = ({ title, name, description, image }) => {
         </div>
 
         <div className="flex flex-col items-center gap-2 mt-4 md:flex-row md:justify-end md:mt-0 md:gap-24 font-bold">
-          {/* <p className="text-5xl sm:text-6xl md:text-8xl hidden sm:block text-transparent borderText">
-            0{ 1}
-          </p> */}
+          <p className="text-5xl sm:text-6xl md:text-8xl hidden sm:block text-transparent borderText font-content g">
+            {imageCounter.toString().padStart(2, '0')}
+          </p>
           <SliderButton onClickLeft={handlePreviousImage} onClickRight={handleNextImage} />
         </div>
       </div>

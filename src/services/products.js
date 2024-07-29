@@ -70,13 +70,25 @@ export const products = [
         title: 'Ayuda a reducir las emisiones de CO₂',
       },
     ],
+    usesAndApplications:[
+      {
+        id: 1,
+        content: "Elaboración de morteros y concretos"
+      },
+      {
+        id: 2,
+        content: "Construcción de cimientos, muros, columnas, vigas y losas"
+      },
+      {
+        id: 3,
+        content: "Elementos de prefabricados"
+        },
+    ],
 
     slug: 'uso-general',
-    
-    dataSheet:'/files/FICHA_TECNICA.pdf'
+
+    dataSheet: '/files/FICHA_TECNICA.pdf'
   },
-
-
 
 
   {
@@ -93,6 +105,11 @@ export const products = [
       left: "/images/products/1TC_PACK_BLANCO_BORDE_IZQUIERDO.png",
       right: "/images/products/1TC_PACK_BLANCO_BORDE_DERECHO.png",
     },
+
+    videos: {
+
+    },
+
     fichaTechnica: "/files/FICHA_TECNICA.pdf",
 
     beneficios: {},
@@ -128,14 +145,6 @@ export const products = [
       {
         id: 1,
         title: 'Propiedades inteligentes',
-        // icon: (
-        //   <Image
-        //     src="/images/products/iconos/LISTO.png"
-        //     height={30}
-        //     width={30}
-        //     alt="check"
-        //   />
-        // ),
       },
       {
         id: 2,
@@ -157,6 +166,21 @@ export const products = [
         id: 6,
         title: 'Ayuda a reducir las emisiones de CO₂',
       },
+    ],
+
+    usesAndApplications:[
+      {
+        id: 1,
+        content: "Elaboración de morteros y concretos"
+      },
+      {
+        id: 2,
+        content: "Construcción de cimientos, muros, columnas, vigas y losas"
+      },
+      {
+        id: 3,
+        content: "Elementos de prefabricados"
+        },
     ],
     slug: 'uso-estructural',
 
