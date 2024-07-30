@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
+import Image from "next/image";
+import "./style.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,7 @@ export const metadata = {
     "@type": "Organization",
     name: "Towers Cem",
     url: "https://towerscem.com",
-    logo: "https://towerscem.com/logo.png",
+    logo: "/logo.png",
     description:
       "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Contribuimos a un futuro más verde, construyendo un mundo mejor.",
     sameAs: [
@@ -38,11 +40,37 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const isMaintenanceMode = true; // Cambia esto a `false` cuando salgas del modo de mantenimiento
+
   return (
     <html lang="es">
       <body className={inter.className}>
         <Analytics />
-        {children}
+        {isMaintenanceMode ? (
+          <div className="relative h-screen bg-cover bg-center">
+            <Image
+              src="/images/coming-soon.png"
+              alt="Descripción de la imagen"
+              layout="fill"
+              objectFit="cover"
+              priority
+              className="w-full h-full"
+            />
+            <div className="absolute inset-0 flex flex-col items-center justify-end bg-black bg-opacity-50 pb-24">
+              <div className="loader">
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+              </div>
+              <h1 className="text-3xl font-title font-bold text-white text-center md:text-3xl lg:text-4xl mb-4">
+                ¡Estamos creando contenido valioso para ti, espéralo pronto!
+              </h1>
+            </div>
+          </div>
+        ) : (
+          children
+        )}
       </body>
     </html>
   );
