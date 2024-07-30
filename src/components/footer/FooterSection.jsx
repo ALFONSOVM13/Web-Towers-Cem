@@ -1,8 +1,8 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import React from "react";
-import { FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6";
+"use client"
+import Link from "next/link"
+import Image from "next/image"
+import React from "react"
+import { FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6"
 
 const FooterSection = () => (
   <section className="pt-16 pb-7 bg-complementary-300 px-2 sm:px-20">
@@ -12,37 +12,37 @@ const FooterSection = () => (
           <Image src="/logo.png" alt="Pagedone" width={150} height={150} />
         </a>
         <div className="flex items-center gap-4">
-      <a
-        rel="noopener noreferrer"
-        target="_blank"
-        href="https://www.instagram.com/towerscem"
-        className="p-3 rounded-full bg-pink-500 text-white group transition-all duration-500 hover:bg-pink-700 focus-within:outline-0 focus-within:bg-pink-700"
-      >
-        <FaInstagram size={20} />
-      </a>
-      <a
-        href="https://www.linkedin.com/company/towerscem/"
-        className="p-3 rounded-full bg-blue-700 text-white group transition-all duration-500 hover:bg-blue-900 focus-within:outline-0 focus-within:bg-blue-900"
-      >
-        <FaLinkedinIn size={20} />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.tiktok.com/@towerscemento"
-        className="p-3 rounded-full bg-white text-black group transition-all duration-500 hover:bg-slate-300 focus-within:outline-0 focus-within:bg-gray-800"
-      >
-        <FaTiktok size={20} />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
-        className="p-3 rounded-full bg-red-600 text-white group transition-all duration-500 hover:bg-red-800 focus-within:outline-0 focus-within:bg-red-800"
-      >
-        <FaYoutube size={20} />
-      </a>
-    </div>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/towerscem"
+            className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-instagram-gradient before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
+          >
+            <FaInstagram size={20} className='text-[#ee2a7b] text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200' />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/towerscem/"
+            className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#0077b5] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
+          >
+            <FaLinkedinIn size={20} className='text-primary-200 text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200' />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.tiktok.com/@towerscemento"
+            className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#333] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
+          >
+            <FaTiktok size={20} className='text-complementary-300 text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200' />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
+            className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#ff0000] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
+          >
+            <FaYoutube size={20} className='text-[#ff0000] text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200' />
+          </a>
+        </div>
       </div>
       <div className="py-10 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
         <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-6 md:gap-12 lg:gap-24">
@@ -194,7 +194,7 @@ const FooterSection = () => (
                   >
                     Acepto los{" "}
                     <a href=""
-                     className="text-complementary-200">
+                      className="text-complementary-200">
                       Terminos y Condiciones
                     </a>{" "}
                     y las{" "}
@@ -247,6 +247,6 @@ const FooterSection = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default FooterSection;
+export default FooterSection
