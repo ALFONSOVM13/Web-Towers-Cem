@@ -76,7 +76,7 @@ const Menu = ({ active, setActive }) => {
     className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex justify-between items-center w-full"
   >
     Nuestro Cemento
-    <i className={`ml-2 transition-transform duration-300 text-[#db8400] ${dropdownOpen ? "rotate-180" : ""}`}><TiArrowSortedDown /> <HiOutlineArrowSmDown /> <BiSolidDownArrowSquare /></i>
+    <i className={`ml-2 transition-transform duration-300 text-complementary-200 ${dropdownOpen ? "rotate-180" : ""}`}><TiArrowSortedDown /> <HiOutlineArrowSmDown /> <BiSolidDownArrowSquare /></i>
   </button>
   <ul
     className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-primary-100 overflow-hidden rounded-lg shadow-lg transition-opacity duration-300 ease-in-out ${

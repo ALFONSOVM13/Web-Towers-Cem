@@ -40,7 +40,7 @@ const Header = ({ active, setActive }) => {
     <div
       className={`
         fixed top-0 left-0 w-full z-50
-        bg-opacity-90 transition-all duration-300 
+        bg-opacity-90 transition-all duration-300
         ${isScrolled ? 'bg-black shadow-md py-0.5' : 'bg-transparent py-0.5'}
       `}
     >
