@@ -2,34 +2,42 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { TiArrowSortedDown } from "react-icons/ti";
+import { HiOutlineArrowSmDown } from "react-icons/hi";
+import { BiSolidDownArrowSquare } from "react-icons/bi";
 
 const Menu = ({ active, setActive }) => {
   const pathname = usePathname();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  // Close menu when pathname changes
+  useEffect(() => {
+    if (!active) {
+      setDropdownOpen(false);
+    }
+  }, [active]);
+
   useEffect(() => {
     setActive(false);
   }, [pathname]);
 
   useEffect(() => {
-    // Toggle body overflow based on active state
     if (active) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
 
-      // Ensure smooth closing animation
       const timeout = setTimeout(() => {
         document.body.classList.remove("overflow-hidden");
-      }, 500); // Adjust timeout to match transition duration
+      }, 500);
 
       return () => clearTimeout(timeout);
     }
   }, [active]);
 
   const handleDropdownToggle = () => {
-    setDropdownOpen(!dropdownOpen);
+    if (active) {
+      setDropdownOpen(!dropdownOpen);
+    }
   };
 
   return (
@@ -43,7 +51,7 @@ const Menu = ({ active, setActive }) => {
       <ul
         className={`fixed font-title font-bold top-0 right-0 z-40 py-28 inset-y-0 w-full sm:w-1/3 bg-black text-white p-4 transform transition-transform duration-500 ease-in-out ${
           active ? "translate-x-0" : "translate-x-full"
-        } ${active ? "visible" : "invisible"} flex flex-col items-center`} // Removed justify-center as we're now using flex-col
+        } ${active ? "visible" : "invisible"} flex flex-col items-center`} 
       >
         <li className="mb-4">
           <Link
@@ -68,7 +76,7 @@ const Menu = ({ active, setActive }) => {
     className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex justify-between items-center w-full"
   >
     Nuestro Cemento
-    <i className={`ml-2 transition-transform duration-300 ${dropdownOpen ? "rotate-180" : ""}`}>▼</i>
+    <i className={`ml-2 transition-transform duration-300 text-[#db8400] ${dropdownOpen ? "rotate-180" : ""}`}><TiArrowSortedDown /> <HiOutlineArrowSmDown /> <BiSolidDownArrowSquare /></i>
   </button>
   <ul
     className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-primary-100 overflow-hidden rounded-lg shadow-lg transition-opacity duration-300 ease-in-out ${
