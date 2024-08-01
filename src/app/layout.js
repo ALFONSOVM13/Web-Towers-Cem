@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 import "./globals.css";
 import Image from "next/image";
 import "./style.css";
@@ -45,6 +46,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={inter.className}>
+      <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-431529618`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-431529618', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
         <Analytics />
         {isMaintenanceMode ? (
           <div className="relative h-screen bg-cover bg-center">
