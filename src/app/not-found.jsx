@@ -13,10 +13,10 @@ const NotFound = () => {
       <Image
         src="/images/coming-soon.png"
         alt="Descripción de la imagen"
-        layout="fill"
-        objectFit="cover"
+        width={1920}
+        height={1080}
         priority
-        className="w-full h-full"
+        className="w-full h-full object-fill object-center"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-end bg-black bg-opacity-50 pb-8 md:pb-12 lg:pb-24">
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-title font-bold text-white text-center mb-4 px-4">

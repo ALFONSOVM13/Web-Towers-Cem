@@ -10,9 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Towers Cem | Construyendo ciudades que respiran",
   description:
-    "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Contribuimos a un futuro más verde, construyendo un mundo mejor.",
-  image: "/logo.png",
-  favicon: "/icon.ico",
+    "Somos una cementera innovadora líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Contribuimos a un futuro más verde, construyendo un mundo mejor.",
   color: "#000000",
   lang: "es",
   type: "website",
@@ -24,7 +22,7 @@ export const metadata = {
     "@type": "Organization",
     name: "Towers Cem",
     url: "https://towerscem.com",
-    logo: "/logo.png",
+    logo: "/images/OG.PNG",
     description:
       "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Contribuimos a un futuro más verde, construyendo un mundo mejor.",
     sameAs: [
@@ -44,12 +42,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/icon.ico" />
         <meta
           name="description"
           content="Líderes en innovación sostenible, fabricamos cementos verdes..."
         />
-        <meta property="og:image" content="/logo.png" />
+        <meta property="og:image" content="/images/OG.PNG" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </head>
 
       <body className={inter.className}>
