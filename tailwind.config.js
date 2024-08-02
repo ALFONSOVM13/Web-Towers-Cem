@@ -19,7 +19,7 @@ export default {
       },
       colors: {
         primary: {
-          100: "#302c57",
+          100: "#2C2E63",
           200: "#42599d",
           300: "#7d80b0",
         },
@@ -37,8 +37,8 @@ export default {
         customGreen: '#5F9428',
       },
       fontFamily: {
-        content: ["Nexa", "sans-serif"],
-        title: ["Chopin", "sans-serif"],
+        content: ["popins", "sans-serif"],
+        title: ["popins", "sans-serif"],
       },
     },
   },

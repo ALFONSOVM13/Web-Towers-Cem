@@ -14,7 +14,7 @@ export const products = [
       right: "/images/products/cemento.svg"
     },
 
-    video: "/videos/hero-background.mp4",
+    video: "/videos/videoCemento.mp4",
 
     cards: [
       {
@@ -104,7 +104,7 @@ export const products = [
       right: "/images/products/1TC_PACK_BLANCO_BORDE_DERECHO.png",
     },
 
-    video: "/videos/hero-background.mp4",
+    video: "/videos/videoCemento.mp4",
 
     fichaTechnica: "/files/FICHA_TECNICA.pdf",
 

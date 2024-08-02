@@ -24,13 +24,16 @@ const HeroSection = ({ scrollToNextSection }) => {
             text="Somos Towers Cem"
             className=" mb-4 text-complementary-200 sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            Somos Towers Cem
+            En Towers Cem
           </H1>
           <p className="text-xl md:text-3xl leading-relaxed font-content font-light italic text-complementary-200 mb-8">
-            Construyendo ciudades que respiran
+            Construimos ciudades que respiran
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2">
-            <Button onClick={() => scrollToNextSection()} className="mr-4">
+            <Button
+              onClick={() => scrollToNextSection()}
+              className="flex-1 sm:mr-4"
+            >
               Nuestros Cementos
             </Button>
             <Button
@@ -40,8 +43,9 @@ const HeroSection = ({ scrollToNextSection }) => {
                   "_blank"
                 )
               }
+              className="flex-1"
             >
-              Asesoria Técnica
+              Asesoría Técnica
             </Button>
           </div>
         </div>

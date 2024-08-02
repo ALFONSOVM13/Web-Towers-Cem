@@ -55,8 +55,8 @@ const ProductsSlider = ({ title, name, description, image, video}) => {
               SOLICITAR MUESTRA
             </Button>
           </div>
-          <p className="w-24 text-sm font-title hidden sm:block">
-            mira nuestro video como funciona
+          <p className="w-28 text-sm font-title hidden sm:block">
+          Mira el video de presentación del producto
           </p>
           <CirclePlayButton onClick={()=>{setModalOpen(true)}}/>
         </div>
