@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import "./globals.css";
 import Image from "next/image";
+import "./globals.css";
 import "./style.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Contribuimos a un futuro más verde, construyendo un mundo mejor.",
   image: "/logo.png",
-  favicon: "/src/app/icon.ico",
+  favicon: "/icon.ico",
   color: "#000000",
   lang: "es",
   type: "website",
@@ -28,11 +28,9 @@ export const metadata = {
     description:
       "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Contribuimos a un futuro más verde, construyendo un mundo mejor.",
     sameAs: [
-      "https://www.facebook.com/towerscem",
       "https://www.instagram.com/towerscem",
       "https://www.linkedin.com/company/towerscem",
-      "https://twitter.com/towerscem",
-      "https://www.youtube.com/channel/UCvzWZ8H1p5gZ3eY2QJv8j8Q",
+      "https://www.youtube.com/@towerscemento",
     ],
   },
   siteName: "Towers Cem",
@@ -45,8 +43,17 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="es">
+      <head>
+        <link rel="icon" href="/icon.ico" />
+        <meta
+          name="description"
+          content="Líderes en innovación sostenible, fabricamos cementos verdes..."
+        />
+        <meta property="og:image" content="/logo.png" />
+      </head>
+
       <body className={inter.className}>
-      <Script
+        <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-9866W71ET0`}
         />

@@ -18,12 +18,12 @@ const NotFound = () => {
         priority
         className="w-full h-full"
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-end bg-black bg-opacity-50 pb-24">
-        <h1 className="text-3xl font-title font-bold text-white text-center md:text-3xl lg:text-4xl mb-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-end bg-black bg-opacity-50 pb-8 md:pb-12 lg:pb-24">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-title font-bold text-white text-center mb-4 px-4">
           ¡Estamos creando contenido valioso para ti, espéralo pronto!
         </h1>
         
-        <Button className="mt-4" onClick={handleClick}>Volver al inicio</Button>
+        {/* <Button className="mt-4 px-6 py-2 text-sm md:text-base" onClick={handleClick}>Volver al inicio</Button> */}
       </div>
     </div>
   );

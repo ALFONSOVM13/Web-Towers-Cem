@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import HeroSection from "@/components/hero/HeroSection";
 import NewsSection from "@/components/newsPreview/NewsSection";
 import Products from "@/components/products/Products";
-import Tecnologies from "@/components/tecnologies/Tecnologies";
+import Tecnologies from "../../../public/images/icons/Tecnologies";
 import BrandSlider from "@/components/footer/BrandSlider";
 import SolutionsSection from "@/components/solutions/SolutionsSection";
 import Advantages from "@/components/products/Advantages";
