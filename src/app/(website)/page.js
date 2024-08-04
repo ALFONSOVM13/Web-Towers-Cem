@@ -9,6 +9,9 @@ import SolutionsSection from "@/components/solutions/SolutionsSection";
 import Advantages from "@/components/products/Advantages";
 import KnowUsSection from "@/components/knowUs/KnowUsSection";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
+import KnowMore from "@/components/knowMore/KnowMore";
+import ServicesSection from "@/components/knowMore/ServiceSection";
+import Events from "@/components/sectionEvents/Events";
 const HomePage = () => {
   const knowUsRef = useRef(null); // Referencia para la sección KnowUsSection
 
@@ -29,10 +32,12 @@ const HomePage = () => {
       <div className="min-h-screen" ref={knowUsRef}>
         <Products />
       </div>
-{/* 
+      {/* 
       <Advantages /> */}
-
-      <SolutionsSection />
+      <div className="flex flex-col ">
+        <ServicesSection />
+      </div>
+      <Events />
 
       <Tecnologies />
 

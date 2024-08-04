@@ -21,7 +21,7 @@ export default {
         primary: {
           100: "#2C2E63",
           200: "#42599d",
-          300: "#7d80b0",
+          300: "#7B80B0",
         },
         secondary: {
           100: "#587526",
@@ -32,12 +32,12 @@ export default {
           100: "#dfdfdf",
           200: "#ffffff",
           300: "#000000",
-          400: "#c8c8c8",
+          400: "#F3F3F3",
         },
         customGreen: '#5F9428',
       },
       fontFamily: {
-        content: ["popins", "sans-serif"],
+        content: ["poppins", "sans-serif"],
         title: ["popins", "sans-serif"],
       },
     },

@@ -1,10 +1,10 @@
 import React from 'react'
-import WhatWeDo from '../whatWeDo/WhatWeDo'
+import Events from '../sectionEvents/Events'
 
 const SolutionsSection = () => {
   return (
     <div>
-        <WhatWeDo />
+        
     </div>
   )
 }

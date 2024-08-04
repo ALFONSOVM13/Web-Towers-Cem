@@ -74,7 +74,7 @@ const logos = [
 const BrandSlider = () => {
   return (
     <section className="flex flex-col h-full bg-complementary-200 my-8">
-      <div className="flex justify-between items-center mx-4 sm:mx-8 my-2 sm:my-8">
+      <div className="flex justify-between items-center mx-4 sm:mx-20 my-2 sm:my-8">
         <Title
           text="Nuestros aliados"
           className="text-left text-3xl md:text-4xl xl:text-5xl"
