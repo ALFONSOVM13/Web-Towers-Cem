@@ -29,8 +29,8 @@ const HomePage = () => {
       <div className="min-h-screen" ref={knowUsRef}>
         <Products />
       </div>
-
-      <Advantages />
+{/* 
+      <Advantages /> */}
 
       <SolutionsSection />
 

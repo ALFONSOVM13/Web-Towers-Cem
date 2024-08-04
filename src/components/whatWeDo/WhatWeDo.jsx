@@ -13,7 +13,7 @@ function WhatWeDo() {
     <section className="w-full py-20 bg-complementary-200">
       <div className="flex justify-between items-center mx-4 sm:mx-8 my-2 sm:my-8">
         <Title
-          text="Ofrecemos soluciones para:"
+          text="Nuestras Soluciones"
           className="text-left text-3xl md:text-4xl xl:text-5xl"
         />
       </div>

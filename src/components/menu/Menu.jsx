@@ -73,22 +73,24 @@ const Menu = ({ active, setActive }) => {
         </li>
         <div className="flex gap-4">
           <Link
-            href="/login"
+            href="/"
+           
             className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"
           >
             <Image
-              src="/IconoUsa.png"
+              src="/images/icons/IconoUSA.png"
               alt="Icono USA"
               width={44}
               height={44}
             />
           </Link>
           <Link
-            href="/login"
+            href="/"
+         
             className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"
           >
             <Image
-              src="/IconoSpain.png"
+              src="/images/icons/IconoSpain.png"
               alt="Icono Spain"
               width={44}
               height={44}

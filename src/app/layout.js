@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Towers Cem | Construyendo ciudades que respiran",
   description:
-    "Somos una cementera innovadora líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Contribuimos a un futuro más verde, construyendo un mundo mejor.",
+    "Somos una cementera innovadora líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
   color: "#000000",
   lang: "es",
   type: "website",
@@ -24,7 +24,7 @@ export const metadata = {
     url: "https://towerscem.com",
     logo: "/images/OG.PNG",
     description:
-      "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Contribuimos a un futuro más verde, construyendo un mundo mejor.",
+      "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
     sameAs: [
       "https://www.instagram.com/towerscem",
       "https://www.linkedin.com/company/towerscem",
@@ -37,7 +37,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const isMaintenanceMode = true; // Cambia esto a `false` cuando salgas del modo de mantenimiento
+  const isMaintenanceMode = false; // Cambia esto a `false` cuando salgas del modo de mantenimiento
 
   return (
     <html lang="es">

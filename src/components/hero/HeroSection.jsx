@@ -18,7 +18,7 @@ const HeroSection = ({ scrollToNextSection }) => {
 
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-end mx-10">
+      <div className="absolute inset-12 flex flex-col items-center justify-end mx-10">
         <div className="max-w-5xl px-4 text-center">
           <H1
             text="Somos Towers Cem"
@@ -26,7 +26,7 @@ const HeroSection = ({ scrollToNextSection }) => {
           >
             En Towers Cem
           </H1>
-          <p className="text-xl md:text-3xl leading-relaxed font-content font-light italic text-complementary-200 mb-8">
+          <p className="text-xl md:text-4xl leading-relaxed font-content font-light italic text-complementary-200 mb-8">
             Construimos ciudades que respiran
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2">
