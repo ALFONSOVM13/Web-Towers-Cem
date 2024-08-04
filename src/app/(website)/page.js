@@ -8,6 +8,7 @@ import BrandSlider from "@/components/footer/BrandSlider";
 import SolutionsSection from "@/components/solutions/SolutionsSection";
 import Advantages from "@/components/products/Advantages";
 import KnowUsSection from "@/components/knowUs/KnowUsSection";
+import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
 const HomePage = () => {
   const knowUsRef = useRef(null); // Referencia para la sección KnowUsSection
 
@@ -22,31 +23,22 @@ const HomePage = () => {
 
   return (
     <div className="">
-      <div>
-        <HeroSection scrollToNextSection={scrollToKnowUsSection} />
-      </div>
+      <HeroSection scrollToNextSection={scrollToKnowUsSection} />
 
-      <div >
       <KnowUsSection />
-      </div>
-      
       <div className="min-h-screen" ref={knowUsRef}>
         <Products />
       </div>
-        <Advantages />
-      <div>
-        <SolutionsSection />
-      </div>
-      <div>
-        <Tecnologies />
-      </div>
 
-      <div>
-        <NewsSection />
-      </div>
-      <div>
-        <BrandSlider />
-      </div>
+      <Advantages />
+
+      <SolutionsSection />
+
+      <Tecnologies />
+
+      <NewsSection />
+
+      <BrandSlider />
     </div>
   );
 };

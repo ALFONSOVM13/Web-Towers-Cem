@@ -1,43 +1,47 @@
-import React from "react";
 import Link from "next/link";
+import Avatar from "../ui/Avatar";
+import Image from "next/image";
 
-function SmallNewsCard({ image, title, author, readTime, index, slug = "" }) {
+function SmallNewsCard({ image, title, author, readTime, slug, className="", imageClassName="" }) {
   return (
-    <Link href={slug} alt={slug}>
-      <article
-        className={`flex w-full p-2 gap-2 rounded-md flex-col max-md:gap-0 mb-4 ${
-          index === 0 ? "" : "mt-4"
-        } max-md:max-w-full transition-all duration-200 border-transparent hover:border-white border-b`}
+
+    <article
+      className={`flex flex-col xl:flex-row gap-4 ${className}`}
+    >
+      <Link 
+        href={`/noticias/${slug}`} 
+        alt={slug}
+        className="group"
       >
-        <div className="flex w-full max-md:ml-0 max-lg:w-full gap-4 items-center">
-          <img
-            loading="lazy"
+        <figure className={`relative aspect-video xl:aspect-square xl:w-40 overflow-hidden rounded-md border border-zinc-200/70 ${ imageClassName }`}>
+          <Image
             src={image}
             alt={title}
-            className="aspect-square max-md:mt-8 rounded-md border border-zinc-200/70 w-2/5 h-[100px]"
+            width={400}
+            height={400}
+            className="rounded-md object-cover object-center h-full w-full transition-all duration-500 group-hover:scale-110 group-hover:opacity-90"
           />
-          <h3 className="text-lg font-normal tracking-tight leading-9 text-left">
+        </figure>
+      </Link>
+      <div className="flex-1 flex flex-col gap-4">
+        <Link
+          href={`/noticias/${slug}`}
+          alt={slug}
+          className=""
+        >
+          <h3 className="text-lg lg:text-[1.3rem] font-content tracking-tight lg:leading-8 text-left text-pretty">
             {title}
           </h3>
-        </div>
-        <div className="flex flex-col w-full max-md:ml-0 max-md:w-full">
-          <div className="flex gap-4 justify-between mt-6 text-md font-medium tracking-normal leading-5 items-center">
-            <div className="flex gap-4">
-              <img
-                loading="lazy"
-                src={author.avatar}
-                alt={author.name}
-                className="shrink-0 w-10 rounded-full aspect-square"
-              />
-              <span className=" text-sm capitalize text-left">
-                {author.name}
-              </span>
-            </div>
-            <span className="">{readTime}</span>
+        </Link>
+        <div className="mt-auto flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <Avatar image={author.avatar} title={author.name} />
+            <p className="font-semibold text-sm">{author.name}</p>
           </div>
+          <span>{readTime}</span>
         </div>
-      </article>
-    </Link>
+      </div>
+    </article>
   );
 }
 

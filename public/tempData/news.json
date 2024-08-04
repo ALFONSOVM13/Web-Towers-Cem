@@ -1,71 +1,77 @@
-{
-  "news": [
-    {
-      "title": "Ganadores Tecnología del año Méntor: Towers CEM",
-      "image": "/images/new_04.png",
-      "publishedAt": "2024-06-03",
-      "author": {
-        "name": "Mentor Unal",
-        "photo": "/images/news/channels4_profile.jpg",
-        "avatar": "/images/news/channels4_profile.jpg"
-      },
-      "tags": ["Premios", "Cemento", "Tecnología"],
-      "slug": "https://www.youtube.com/watch?v=JeuEBtn_fpI",
-      "link": "https://www.youtube.com/watch?v=JeuEBtn_fpI",
-      "content": [
-        "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023.",
-        "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023."
-      ],
-      "readTime": "9 min"
-    },
-    {
-      "title": "Estudiante UniCosta ganador de Prix French Tech",
-      "image": "/images/new_01.jpg",
-      "publishedAt": "2023-10-25",
-      "author": {
-        "name": "Universidad de la Costa",
-        "photo": "/images/news/cuc.png",
-        "avatar": "/images/news/cuc.png"
-      },
-      "slug": "https://www.cuc.edu.co/noticias-principales/estudiante-unicosta-ganador-de-prix-french-tech#:~:text=Desde%20la%20Universidad%20de%20la,pasado%20martes%203%20de%20octubre.",
-      "tags": ["Premios", "Cemento", "Tecnología"],
-      "content": [
-        "El Prix French Tech Bogotá se crea a partir del 2020 con el ánimo de premiar aquellos emprendimientos de base tecnológica orientados a mejorar la calidad de vida de las personas o aquellos basados en principios de sostenibilidad.Este año quisieron llegar a más emprendimientos, más start-ups y más proyectos con el ánimo de tener una visión más global de los desarrollos que se están haciendo en el país y darles así la visibilidad que estos merecen. En la versión del Prix French Tech 2023 hacen una convocatoria abierta a un público mucho más amplio que en versiones pasadas.Desde la Universidad de la Costa participó el estudiante de séptimo semestre de Ingeniería Eléctrica, Carlos Andrés Torres Cuello, en la categoría de Nuevos Talentos con su Startup “Towers Cem” con el cual resultó ganador en la gala celebrada en Bogotá D.C. el pasado martes 3 de octubre. Carlos Torres ha desarrollado una tecnología de cemento inteligente el cual ya cuenta con una solicitud de patente ante la SIC."
-      ],
-      "readTime": "7 min"
-    },
-    {
-      "title": "Acto de clausura de la III edicion de Puentes de Talento",
-      "image": "/images/new_02.jpg",
-      "publishedAt": "2024-04-25",
-      "content": [
-        "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023.",
-        "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023."
-      ],
-      "author": {
-        "name": "Madrid Innovation",
-        "photo": "/images/news/madrid-innovation.jpg",
-        "avatar": "/images/news/madrid-innovation.jpg"
-      },
-      "slug": "https://www.madridinnovation.es/iniciativas-agente/acto-de-clausura-de-la-iii-edicion-de-puentes-de-talento/",
-      "tags": ["Puentes de Talento", "Premios", "Cemento", "madrid innovation"],
-      "readTime": "12 min"
-    },
-    {
-      "title": "Genera Summit 2024: Acompananos del 28 al 30 de agosto",
-      "image": "/images/new_03.jpg",
-      "publishedAt": "2024-05-26",
-      "content": [
-        "El Genera Summit es el encuentro de una comunidad que anualmente se reúne para conectarse con los principales líderes que están movilizando las tendencias tecnológicas en el mundo y generando un impacto positivo en la sociedad."
-      ],
+[
+  {
+    "title": "Genera Summit 2024: Acompañanos del 28 al 30 de agosto",
+    "image": "/images/new_03.jpg",
+    "publishedAt": "2024-05-26",
+    "summary":"<p>El Genera Summit es el encuentro de una comunidad que anualmente se re&uacute;ne para conectarse con los principales l&iacute;deres que est&aacute;n movilizando las tendencias tecnol&oacute;gicas en el mundo y generando un impacto positivo en la sociedad.&nbsp;</p><p>Tres d&iacute;as llenos de conferencias &uacute;nicas, experiencias pr&aacute;cticas y oportunidades de networking.</p>",
+    "content": "<p>El Genera Summit es el encuentro de una comunidad que anualmente se re&uacute;ne para conectarse con los principales l&iacute;deres que est&aacute;n movilizando las tendencias tecnol&oacute;gicas en el mundo y generando un impacto positivo en la sociedad.&nbsp;</p><p>Tres d&iacute;as llenos de conferencias &uacute;nicas, experiencias pr&aacute;cticas y oportunidades de networking.</p><h2>&iquest;POR QU&Eacute; ASISTIR AL GENERA SUMMIT?</h2><ul><li>Con&eacute;ctate con l&iacute;deres e innovadores de la industria.</li><li>Explora tecnolog&iacute;as de vanguardia.</li><li>Participa en las actividades del GoFest.</li><li>Vive la Experiencia del Summit a otro nivel.</li><li>Haz networking con&nbsp;posibles socios e inversionistas.</li></ul>",
       "author": {
         "name": "Mente X",
         "photo": "/images/news/mente-x.jpg",
         "avatar": "/images/news/mente-x.jpg"
       },
-      "slug": "https://mentex.co/summit24/",
-      "tags": ["Eventos", "Cemento", "Tecnología" ,"genera summit"],
-      "readTime": "5 min"
-    }
-  ]
-}
+    "slug": "genera-summit-2024-acompananos-del-28-al-30-de-agosto",
+    "tags": [
+      "Eventos",
+      "Cemento",
+      "Genera Summit"
+    ],
+    "readTime": "5 min"
+  },
+  {
+    "title": "Ganadores Tecnología del año Méntor: Towers CEM",
+    "image": "/images/new_04.png",
+    "publishedAt": "2024-06-03",
+    "author": {
+      "name": "Mentor Unal",
+      "photo": "/images/news/channels4_profile.jpg",
+      "avatar": "/images/news/channels4_profile.jpg"
+    },
+    "tags": [
+      "Premios",
+      "Cemento",
+      "Tecnología"
+    ],
+    "slug": "ganadores-tecnologia-del-ano-mentor-towers-cem",
+    "summary":"<p>Una cementera que produce soluciones tecnol&oacute;gicas para la industria de las construcciones sostenibles, cuya primera l&iacute;nea de negocio presenta un cemento que se excita con la radiaci&oacute;n solar para descontaminar gases suspendidos en la atm&oacute;sfera, fue la gran idea de negocio ganadora del&nbsp;<strong>Emprende Uninorte Startup Competition 2023</strong>, evento anual organizado por el Centro de Emprendimiento, que busca estimular y visibilizar el potencial emprendedor de los estudiantes y egresados de la Universidad del Norte, para idear proyectos empresariales din&aacute;micos e innovadores.&nbsp;</p>",
+    "content": "<p>Una cementera que produce soluciones tecnol&oacute;gicas para la industria de las construcciones sostenibles, cuya primera l&iacute;nea de negocio presenta un cemento que se excita con la radiaci&oacute;n solar para descontaminar gases suspendidos en la atm&oacute;sfera, fue la gran idea de negocio ganadora del&nbsp;<strong>Emprende Uninorte Startup Competition 2023</strong>, evento anual organizado por el Centro de Emprendimiento, que busca estimular y visibilizar el potencial emprendedor de los estudiantes y egresados de la Universidad del Norte, para idear proyectos empresariales din&aacute;micos e innovadores.&nbsp;</p><p>La premiaci&oacute;n se llev&oacute; a cabo el 10 de noviembre en el Restaurante 1966, al t&eacute;rmino de la jornada del&nbsp;<strong>Startup Day</strong>, la primera gran feria de emprendimiento de la instituci&oacute;n, donde la comunidad universitaria y el p&uacute;blico externo conoci&oacute; y eligi&oacute; los emprendimientos m&aacute;s destacados de la competici&oacute;n, en el Coliseo Los Fundadores. &nbsp;</p><p>&ldquo;Nuestra primera l&iacute;nea de cemento elimina hasta un 23 % de emisiones de carbono, haciendo que las constructoras generen ingresos pasivos por cada tonelada de carbono removido. Este premio son muchos sentimientos encontrados, es una alegr&iacute;a indescriptible saber que levantamos un capital semilla para impulsar nuestra idea&rdquo;, expres&oacute; Carlos Andr&eacute;s Torres Cuello, de 23 a&ntilde;os, estudiante de s&eacute;ptimo semestre del programa de Ingenier&iacute;a El&eacute;ctrica y miembro del equipo ganador del concurso, luego de realizar un pitch de tres minutos, contando su emprendimiento y ser evaluado por el jurado conformado por inversionistas.&nbsp;</p><p><img src='https://www.uninorte.edu.co/documents/13400067/42243883/Emprende+Uninorte+2023.jpg/0d68fb5d-2f0e-8e4c-7cd2-7d1e7d050a8e'></p><p>Tower&nbsp;Cem gan&oacute; un capital semilla de $10 millones, un cupo para el Concurso Global de Ideas Verdes de Climate Launch Pad y ser&aacute; acompa&ntilde;ado por el Centro de Emprendimiento&nbsp;en la planeaci&oacute;n y uso efectivo de los recursos para dar el siguiente salto con su empresa. Carlos Torres fue el creador de la idea de negocio, la cual llev&oacute; al bootcamp de emprendimiento que realiz&oacute; a mediados de a&ntilde;o el Centro de Emprendimiento. All&iacute; el joven identific&oacute; falencias en su propuesta y busc&oacute;&nbsp;aliados que permitieran conformar un equipo interdisciplinar que reforzara los puntos d&eacute;biles, con la integraci&oacute;n de estudiantes de Negocios Internacionales.&nbsp;</p><p>&ldquo;Tower Cem ayuda a mitigar el cambio clim&aacute;tico y este premio demuestra que el trayecto que hemos realizado en este proyecto ha valido la pena. Hemos trabajado duro, estamos avanzando y eso es importante para cualquier emprendedor&rdquo;, afirm&oacute; Jos&eacute; David Torres Gonz&aacute;lez, estudiante de quinto semestre de Negocios Internacionales y miembro del equipo. Tower Cem adem&aacute;s gan&oacute; hace un mes el Prix French Tech Bogot&aacute;, en la categor&iacute;a Nuevos Talentos, adquiriendo un tiquete para viajar el pr&oacute;ximo a&ntilde;o al Viva Tech, conferencia tecnol&oacute;gica anual, dedicada a la innovaci&oacute;n y las startups, que se lleva a cabo en Par&iacute;s, Francia.&nbsp;</p><p>Durante el Startup Day se presentaron 50 proyectos, escogidos dentro de los 75 inscritos para la competencia, en los que participaron equipos conformados por estudiantes y egresados Uninorte, en las categor&iacute;as: Ideaci&oacute;n (sin ventas, pero con idea clara o con ventas de menos de 6 meses), Incubaci&oacute;n (operando entre 6 meses a 2 a&ntilde;os y con ventas anuales de menos de $ 20 Mio COP), Consolidaci&oacute;n (menos de 5 a&ntilde;os operando, registrados en c&aacute;mara de comercio, con ventas anuales mayores a $ 20 Mio. COP) y De la ciencia al mercado (proyectos de investigaci&oacute;n con potencial para comercializar). Todos los equipos completaron un proceso de capacitaciones y asesor&iacute;as para reforzar los detalles de sus emprendimientos.&nbsp;</p><p>&ldquo;Con este concurso y el Startup Day quisimos darles visibilidad a nuestros emprendedores dentro del ecosistema de la regi&oacute;n y la universidad. Realmente emprender es una forma de ganarse la vida, por eso queremos despertar ese inter&eacute;s dentro de los estudiantes, que sepan que en la universidad tenemos un Centro de emprendimiento que les acompa&ntilde;a a ellos y los egresados en su camino de emprender&rdquo;, manifest&oacute; Jana Schmutzler, directora del Centro de Emprendimiento Uninorte.&nbsp;</p><p><img src='https://www.uninorte.edu.co/documents/13400067/42243883/Emprende+Uninorte+2023-ganadores-2.jpg/f1551e0f-780b-4f83-4403-84b248430aab?t=1699891177250'></p><p><strong>Una celebraci&oacute;n de la creatividad y el esp&iacute;ritu emprendedor&nbsp;</strong></p><p>Durante el Startup Day Uninorte se desarrollaron en el coliseo diferentes charlas sobre emprendimiento, innovaci&oacute;n, marketing digital y m&aacute;s, con empresarios, docentes y emprendedores de la regi&oacute;n, como el ingeniero Gabriel Olier, CEO de Deer; la psic&oacute;loga Eileen Palomino, CEO de MOD Nutrition, o Bernardo Mancini, CEO de Grupo Niania.&nbsp;</p><p>&ldquo;&iquest;En generaci&oacute;n de contenido qu&eacute; pasa cuando te quedas sin ideas?, te empiezas a frustrar. Pero si contextualizas de manera diferente, desde otro punto de vista, el contenido, teniendo la misma base, vas a lograr grandes cosas y realmente nunca te vas a quedar sin ideas&rdquo;, se&ntilde;al&oacute; el creador de contenido Alberto Del Castillo, mejor conocido como El Gatales.&nbsp;</p><p>Juan Diego &Aacute;ngulo, creador de Trivalente, idea de negocio de paneles solares que busca combatir los altos precios de energ&iacute;a el&eacute;ctrica y diversificar el mercado, y gan&oacute; asesoramiento empresarial, expres&oacute; que este tipo de espacios son valiosos para hacer marketing y conocer el network de emprendimiento de la universidad. &nbsp;</p><p>&ldquo;El impacto de los ODS es claro con el tema de las energ&iacute;as renovables, porque es lo que manda la parada hasta, por lo menos, los pr&oacute;ximos 30 a&ntilde;os. Por eso le apuesto a Trivalente. Gracias al Centro por darme a conocer y desarrolla mi idea&rdquo;, agreg&oacute; Juan Diego.&nbsp;</p><h2><strong>Proyectos ganadores del Startup Day &nbsp;</strong></h2><p><strong>Ganadores de diagn&oacute;stico Endeavor y capacitaci&oacute;n en asuntos legales:&nbsp;</strong>Sporter &nbsp;IQ, Helpyhub, Paretomed, U Lover, Aurora, Legalmatch, Happners, Speakmario, Quchara, Trivalente, Mols, Viora, De la Voz Lab, Exos, Agricultura Org&aacute;nica, Dr. Flight&nbsp;</p><p><strong>Ganadores de un cupo al concurso global e Ideas Verdes Climate Launch Pad:&nbsp;</strong>Mols, Exos, &nbsp;</p><p><strong>Ganadores de asesor&iacute;a Technoserv:</strong>&nbsp;Viora Cosmetics, Helpyhub y Agricultura Org&aacute;nica, &nbsp;</p><p><strong>Ganador de $1 mill&oacute;n para capital semilla por Equinorte:</strong>&nbsp;Sirius&nbsp;</p><p><strong>Ganador de $2 millones para capital semilla por Equinorte:</strong>&nbsp;Dr. Flight&nbsp;</p><p><strong>Ganador de $2 millones para capital semilla por Homeoffice:</strong>&nbsp;Exos&nbsp;</p><p><strong>Ganador de $2 millones para capital semilla por MUTA:&nbsp;</strong>Agricultura Org&aacute;nica.&nbsp;</p><p><strong>Ganador de $2 millones para capital semilla por Carlos Acevedo:&nbsp;</strong>Viora&nbsp;</p><p>&nbsp;</p>",
+    "readTime": "9 min"
+  },
+  {
+    "title": "Estudiante UniCosta ganador de Prix French Tech",
+    "image": "/images/new_01.jpg",
+    "publishedAt": "2023-10-25",
+    "author": {
+      "name": "Universidad de la Costa",
+      "photo": "/images/news/cuc.png",
+      "avatar": "/images/news/cuc.png"
+    },
+    "slug": "estudiante-unicosta-ganador-de-prix-french-tech",
+    "tags": [
+      "Premios"
+    ],
+    "summary":"<p>El Prix French Tech Bogot&aacute; se crea a partir del 2020 con el &aacute;nimo de premiar aquellos emprendimientos de base tecnol&oacute;gica orientados a mejorar la calidad de vida de las personas o aquellos basados en principios de sostenibilidad.</p><p>Este a&ntilde;o quisieron llegar a m&aacute;s emprendimientos, m&aacute;s start-ups y m&aacute;s proyectos con el &aacute;nimo de tener una visi&oacute;n m&aacute;s global de los desarrollos que se est&aacute;n haciendo en el pa&iacute;s y darles as&iacute; la visibilidad que estos merecen. En la versi&oacute;n del Prix French Tech 2023 hacen una convocatoria abierta a un p&uacute;blico mucho m&aacute;s amplio que en versiones pasadas.</p>",
+    "content": "<p>El Prix French Tech Bogot&aacute; se crea a partir del 2020 con el &aacute;nimo de premiar aquellos emprendimientos de base tecnol&oacute;gica orientados a mejorar la calidad de vida de las personas o aquellos basados en principios de sostenibilidad.</p><p>Este a&ntilde;o quisieron llegar a m&aacute;s emprendimientos, m&aacute;s start-ups y m&aacute;s proyectos con el &aacute;nimo de tener una visi&oacute;n m&aacute;s global de los desarrollos que se est&aacute;n haciendo en el pa&iacute;s y darles as&iacute; la visibilidad que estos merecen. En la versi&oacute;n del Prix French Tech 2023 hacen una convocatoria abierta a un p&uacute;blico mucho m&aacute;s amplio que en versiones pasadas.</p><p>Desde la Universidad de la Costa particip&oacute; el estudiante de s&eacute;ptimo semestre de Ingenier&iacute;a El&eacute;ctrica, Carlos Andr&eacute;s Torres Cuello, en la categor&iacute;a de Nuevos Talentos con su Startup &ldquo;Towers Cem&rdquo; con el cual result&oacute; ganador en la gala celebrada en Bogot&aacute; D.C. el pasado martes 3 de octubre. Carlos Torres ha desarrollado una tecnolog&iacute;a de cemento inteligente el cual ya cuenta con una solicitud de patente ante la SIC.</p><p>Carlos fue beneficiado al ser ganador con los siguientes beneficios:</p><ul><li>1 tiquete AirFrance ida y vuelta Bogot&aacute; &ndash; Par&iacute;s, 3 noches de alojamiento para 1 pax, vi&aacute;ticos por 3 d&iacute;as para 1 pax para visitar Viva Tech + Entrada gratis a Viva Tech</li><li>Visita a Station F o al Digital Factory de Thales en Par&iacute;s</li><li>Acceso a 1 sesi&oacute;n de mentor&iacute;a con la C&aacute;mara de Comercio France Colombia</li><li>Participaci&oacute;n como invitado especial en eventos de La French Tech Bogota</li></ul>",
+    "readTime": "7 min"
+  },
+  {
+    "title": "Acto de clausura de la III edicion de Puentes de Talento",
+    "image": "/images/new_02.jpg",
+    "publishedAt": "2024-04-25",
+    "summary":"<p><strong>Esta ma&ntilde;ana ha tenido lugar en Madrid in Game el acto de cierre de la tercera edici&oacute;n del Programa Puentes de Talento desarrollado por el Ayuntamiento de Madrid</strong>. Con esta edici&oacute;n se suman 9 talentos iberoamericanos m&aacute;s a su lista de embajadores de la ciudad de Madrid que tender&aacute;n puentes entre ambos territorios a trav&eacute;s de sus experiencias y aprendizajes de estas 8 semanas de inmersi&oacute;n en la ciudad.</p>",
+    "content": "<p><strong>Esta ma&ntilde;ana ha tenido lugar en Madrid in Game el acto de cierre de la tercera edici&oacute;n del Programa Puentes de Talento desarrollado por el Ayuntamiento de Madrid</strong>. Con esta edici&oacute;n se suman 9 talentos iberoamericanos m&aacute;s a su lista de embajadores de la ciudad de Madrid que tender&aacute;n puentes entre ambos territorios a trav&eacute;s de sus experiencias y aprendizajes de estas 8 semanas de inmersi&oacute;n en la ciudad.</p><p><strong>El evento ha comenzado con una visita guiada a las instalaciones del Campus de videojuego</strong>, proyecto con el que se pretende atraer y retener talento joven, tanto nacional como internacional.</p><p>La&nbsp;<strong>bienvenida al evento ha sido realizada por &Aacute;ngel Ni&ntilde;o Quesada</strong>, Concejal Delegado de Innovaci&oacute;n y Emprendimiento del Ayuntamiento de Madrid, contando tambi&eacute;n con la intervenci&oacute;n de&nbsp;<strong>Fazia Pusterla</strong>, representante en Europa del Banco Interamericano de Desarrollo (BID), colaborador del programa.</p><p><em>&ldquo;En una econom&iacute;a globalizada como la actual es m&aacute;s importante que nunca posicionar a la ciudad de Madrid como puente de talento entre Europa y Am&eacute;rica Latina. Tras ocho semanas de networking y aprendizaje del ecosistema innovador de la capital, habremos cumplido nuestro objetivo si los participantes de esta edici&oacute;n deciden convertirse en embajadores de la ciudad de Madrid en sus pa&iacute;ses de origen situ&aacute;ndola en el mapa como una regi&oacute;n de referencia global en el &aacute;mbito de la innovaci&oacute;n y el emprendimiento&rdquo;</em>,&nbsp; explica &Aacute;ngel Ni&ntilde;o, Concejal Delegado de Innovaci&oacute;n y Emprendimiento del Ayuntamiento de Madrid.</p><p><em>&ldquo;Queremos impulsar desde nuestro laboratorio de innovaci&oacute;n, BID Lab, fortalecer los ecosistemas innovadores y que Iberoam&eacute;rica y Europa tengan oportunidades de intercambio y desarrollo conjunto&rdquo;</em>, comenta Fazia Pusterla, del BID.</p><p>Los 9 participantes en esta edici&oacute;n, procedentes de&nbsp;<strong>M&eacute;xico, Argentina, Costa Rica, Per&uacute;, El Salvador y Colombia</strong>&nbsp;seleccionados entre m&aacute;s de 352 candidaturas, han desarrollado una intensa actividad con una agenda de m&aacute;s de 83 encuentros con los principales actores del ecosistema innovador y emprendedor de Madrid, as&iacute; como 65 h de&nbsp;<strong>formaci&oacute;n impartidas por el Instituto de Empresa (IE), MIDE e Impact Hub.</strong></p><p>En el Programa Puentes de Talento han participando los j&oacute;venes iberoamericanos con mayor proyecci&oacute;n en el mundo de la investigaci&oacute;n y del emprendimiento en&nbsp;<strong>tem&aacute;ticas</strong>&nbsp;tan relevantes como&nbsp;<strong>cambio clim&aacute;tico, acceso a agua limpia, biotecnolog&iacute;a o salud</strong>&nbsp;entre otros, y han tenido la oportunidad de conectarse profesionalmente con el din&aacute;mico ecosistema de innovaci&oacute;n de Madrid.</p><p>Como parte del acto de cierre ha habido una&nbsp;<strong>entrega de diplomas</strong>&nbsp;y ense&ntilde;as a los y las participantes de manos de&nbsp;<strong>Estefan&iacute;a Morales, subdirectora de Innovaci&oacute;n,</strong>&nbsp;con el cual han tenido la oportunidad de hablar de su experiencia en Madrid, as&iacute; como de&nbsp; los avances y conexiones profesionales que han conseguido durante sus encuentros con los actores m&aacute;s relevantes del ecosistema.</p><p><em>&ldquo;He podido hacer un an&aacute;lisis profundo de mis fortalezas y las de Espa&ntilde;a que ha resultado en alianzas con ONGs espa&ntilde;olas para trabajar en M&eacute;xico. He podido concretar algo muy poderoso con mucho impacto.&rdquo;</em>, cuenta Atzel Abad sobre estas 8 semanas de inmersi&oacute;n en Madrid.</p><p>Para Edwin G&oacute;mez est&aacute; claro:<em>&nbsp;&ldquo;Madrid tiene el mejor ecosistema de innovaci&oacute;n. El blockchain y la inteligencia artificial ofrecen much&iacute;simas posibilidades, as&iacute; que hemos venido en el momento oportuno, generando 3 alianzas con un crecimiento exponencial para mi proyecto.&rdquo;</em></p><p><strong>El acto de cierre de Puentes de Talento pone la guinda a esta tercera edici&oacute;n de un Programa que cuenta ya con 29 embajadores y embajadoras de la ciudad en toda Iberoam&eacute;rica que acoger&aacute; en la ciudad a 9 participantes m&aacute;s en el oto&ntilde;o de 2024.</strong></p>",
+    "author": {
+      "name": "Madrid Innovation",
+      "photo": "/images/news/madrid-innovation.jpg",
+      "avatar": "/images/news/madrid-innovation.jpg"
+    },
+    "slug": "acto-de-clausura-de-la-iii-edicion-de-puentes-de-talento",
+    "tags": [
+      "Puentes de Talento",
+      "Premios"
+    ],
+    "readTime": "12 min"
+  }
+
+]
+

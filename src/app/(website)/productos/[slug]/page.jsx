@@ -1,6 +1,7 @@
 import BenefitsProduct from '@/components/productView/BenefitsProduct'
 import DescriptionProduct from '@/components/productView/DescriptionProduct'
 import ProductsSlider from '@/components/productView/ProductsSlider'
+import UsosYAppProducts from '@/components/productView/UsosYAppProducts'
 import { getProductBySlug } from '@/services/products'
 import { notFound } from 'next/navigation'
 
@@ -13,7 +14,6 @@ const ProductPage = async ({params}) => {
    notFound()
   }
 
-
   return (
       <>
       <ProductsSlider
@@ -21,6 +21,7 @@ const ProductPage = async ({params}) => {
         name={product.name}
         description={product.description}
         image={product.image}
+        video={product.video}
       />
       <DescriptionProduct 
       cards={product.cards} />
@@ -29,6 +30,10 @@ const ProductPage = async ({params}) => {
       benefits={product.benefits}
       image={product.image.front}
       dataSheet={product.dataSheet}
+      />
+
+      <UsosYAppProducts
+      usesAndApplications={product.usesAndApplications}
       />
     </>
   )

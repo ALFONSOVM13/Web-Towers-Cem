@@ -2,22 +2,11 @@
 .degradado {
   background-image: linear-gradient(to bottom, transparent, #171717);
 }
-body {
+.noticias-section {
   background: #171717;
+  
   .noticias::-webkit-scrollbar {
-    width: 10px;
-  }
-  section {
-    h2,
-    span {
-      color: #f1f1f1;
-    }
-    h2 {
-      font-size: 5rem;
-    }
-    .tag {
-      color: #1f1f1f;
-    }
+    width: 8px;
   }
 
   .noticias::-webkit-scrollbar-track {

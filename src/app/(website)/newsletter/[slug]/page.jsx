@@ -13,7 +13,7 @@ const Page = ({ params }) => {
   const otherNewsletters = allNewsLetters.filter((n) => n.slug !== slug);
 
   return (
-    <section className="relative flex flex-col justify-center z-0 pt-32">
+    <section className="newsletter-section relative flex flex-col justify-center z-0 pt-32">
       <div className="flex flex-col justify-center items-center px-16 w-full text-white max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col max-md:max-w-full self-start">
           <SectionHeader title="Newsletter" />

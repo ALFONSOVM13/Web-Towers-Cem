@@ -2,11 +2,11 @@ import React from 'react';
 import './CirclePlayButton.scss';
 import { IoMdPlay } from 'react-icons/io';
 
-const CirclePlayButton = () => {
+const CirclePlayButton = ({onClick}) => {
   const title = 'COMO·FUNCIONA·TC·'.split('');
 
   return (
-    <button className="spinning-text-wrapper">
+    <button onClick={onClick} className="spinning-text-wrapper">
       <div className="spinning-text font-content font-bold">
         {title.map((char, index) => (
           <span key={index} style={{ transform: `rotate(${index * (360 / title.length)}deg)` }}>

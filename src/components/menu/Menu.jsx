@@ -28,7 +28,7 @@ const Menu = ({ active, setActive }) => {
   }, [active]);
 
   return (
-    <>
+    <nav>
       {active && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
@@ -38,73 +38,26 @@ const Menu = ({ active, setActive }) => {
       <ul
         className={`fixed font-title font-bold top-0 right-0 z-40 py-28 inset-y-0 w-full sm:w-1/3 bg-black text-white p-4 transform transition-transform duration-500 ease-in-out ${
           active ? "translate-x-0" : "translate-x-full"
-        } ${active ? "visible" : "invisible"} flex flex-col items-center`} // Removed justify-center as we're now using flex-col
+        } ${active ? "visible" : "invisible"} flex flex-col items-center`}
       >
-        <li className="mb-4">
-          <Link
-            href="/"
-            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-          >
-            Inicio
-          </Link>
-        </li>
-        <li className="mb-4">
-          <Link
-            href="/historia"
-            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-          >
-            Quienes Somos
-          </Link>
-        </li>
-
-        <li className="mb-4">
-          <Link
-            href="/products"
-            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-          >
-            Nuestro Cemento
-          </Link>
-        </li>
-        <li className="mb-4">
-          <Link
-            href="/team"
-            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-          >
-            Nuestro Equipo
-          </Link>
-        </li>
-        <li className="mb-4">
-          <Link
-            href="/contacto"
-            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-          >
-            Contacto
-          </Link>
-        </li>
-        {/* <li className="mb-4">
-          <Link
-            href="/noticias"
-            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-          >
-            Noticias
-          </Link>
-        </li> */}
-        {/* <li className="mb-4">
-          <Link
-            href="/newsletter"
-            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-          >
-            Newsletter
-          </Link>
-        </li> */}
-        <li className="mb-4">
-          <Link
-            href="/crowdfunding"
-            className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-          >
-            Crowdfunding
-          </Link>
-        </li>
+        {[
+          { href: "/", label: "Inicio" },
+          { href: "/historia", label: "Quienes Somos" },
+          { href: "/products", label: "Nuestro Cemento" },
+          { href: "/equipo-towers-cem", label: "Nuestro Equipo" },
+          { href: "/contacto", label: "Contacto" },
+          { href: "/noticias", label: "Noticias" },
+          { href: "/crowdfunding", label: "Crowdfunding" },
+        ].map((item, index) => (
+          <li key={index} className="mb-4">
+            <Link
+              href={item.href}
+              className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
         <li className="mb-4">
           <Link
             href="/"
@@ -112,13 +65,12 @@ const Menu = ({ active, setActive }) => {
           >
             <Image
               src="/logo.png"
-              alt="Icono de usuario"
+              alt="Logo"
               width={150}
               height={150}
             />
           </Link>
         </li>
-
         <div className="flex gap-4">
           <Link
             href="/login"
@@ -126,7 +78,7 @@ const Menu = ({ active, setActive }) => {
           >
             <Image
               src="/IconoUsa.png"
-              alt="Icono de usuario"
+              alt="Icono USA"
               width={44}
               height={44}
             />
@@ -137,14 +89,14 @@ const Menu = ({ active, setActive }) => {
           >
             <Image
               src="/IconoSpain.png"
-              alt="Icono de usuario"
+              alt="Icono Spain"
               width={44}
               height={44}
             />
           </Link>
         </div>
       </ul>
-    </>
+    </nav>
   );
 };
 

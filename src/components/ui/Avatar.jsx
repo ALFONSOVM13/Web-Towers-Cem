@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Avatar = ({ image, title="User avatar", className }) => {
   return (
-    <figure className={`rounded-full h-10 w-10 overflow-hidden ${ className }`}>
+    <figure className={`rounded-full h-10 w-10 min-w-10 min-h-10 overflow-hidden ${ className }`}>
         <Image
             src={ image }
             alt={ title }

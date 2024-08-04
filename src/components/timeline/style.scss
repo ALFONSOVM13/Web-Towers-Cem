@@ -56,9 +56,8 @@ $timeline-container-width:100%;
     padding: 40px 0;
     opacity: .3;
     filter: blur(2px);
-    transition: .5s;
     box-sizing: border-box;
-    width: calc(50% - 40px);
+    width: calc(50% - 20px);
     display: flex;
     position: relative;
     transform: translateY(-80px);
@@ -161,6 +160,9 @@ $timeline-container-width:100%;
       margin: 10px 0 0 0;
       font-weight: normal;
     }
+  }
+  .timeline__content {
+    padding-bottom: 50px;
   }
 }
 

@@ -11,7 +11,7 @@ export const metadata = {
   type: "website",
   url: "https://towerscem.com",
   siteName: "Towers Cem",
-  keywords: "towerscem, equipo, cemento, construcción, infraestructuras, sostenibilidad, calidad",
+  keywords: "towerscem, equipo towers cem, cemento, construcción, infraestructuras, sostenibilidad, calidad",
 };
 
 const page = () => {

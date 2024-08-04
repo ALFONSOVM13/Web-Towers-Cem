@@ -1,5 +1,5 @@
 "use client";
-import Button from '@/components/ui/Button';
+// import Button from '@/components/ui/Button';
 import Image from 'next/image';
 import React from 'react';
 
@@ -23,7 +23,7 @@ const NotFound = () => {
           ¡Estamos creando contenido valioso para ti, espéralo pronto!
         </h1>
         
-        {/* <Button className="mt-4 px-6 py-2 text-sm md:text-base" onClick={handleClick}>Volver al inicio</Button> */}
+        {/* <Button className="mt-4" onClick={handleClick}>Volver al inicio</Button> */}
       </div>
     </div>
   );

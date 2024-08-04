@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import $ from "jquery";
 import "./style.scss";
+import Image from "next/image";
 
 const Timeline = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const Timeline = () => {
         var itemLength = selectors.item.length;
         $(window).scroll(function () {
           var max, min;
-          var pos = $(this).scrollTop();
+          var pos = $(this).scrollTop() + 250;
           selectors.item.each(function (i) {
             min = $(this).offset().top;
             max = $(this).height() + $(this).offset().top;
@@ -30,8 +31,8 @@ const Timeline = () => {
               selectors.id.css(
                 "background-image",
                 "url(" +
-                  selectors.item.last().find(selectors.img).attr("src") +
-                  ")"
+                selectors.item.last().find(selectors.img).attr("src") +
+                ")"
               );
               selectors.item.last().addClass(selectors.activeClass);
             } else if (pos <= max - 40 && pos >= min) {
@@ -67,10 +68,12 @@ const Timeline = () => {
       <div className="timeline">
         <div className="timeline-item" data-text="NUESTROS INICIOS">
           <div className="timeline__content">
-            <img
-              className="timeline__img filter"
+            <Image
               src="/images/team/carlos.svg"
               alt="1881"
+              width={400}
+              height={185}
+              className="timeline__img filter"
             />
             <h2 className="timeline__content-title">2018</h2>
             <p className="timeline__content-desc">
@@ -83,10 +86,12 @@ const Timeline = () => {
         </div>
         <div className="timeline-item" data-text="QUIENES SOMOS">
           <div className="timeline__content">
-            <img
-              className="timeline__img"
+            <Image
               src="/images/team/2022.svg"
               alt="1893"
+              width={400}
+              height={185}
+              className="timeline__img filter"
             />
             <h2 className="timeline__content-title">2019</h2>
             <p className="timeline__content-desc">
@@ -99,10 +104,12 @@ const Timeline = () => {
         </div>
         <div className="timeline-item" data-text="NUESTRO ADN">
           <div className="timeline__content">
-            <img
-              className="timeline__img"
+            <Image
               src="/images/team/2022.svg"
               alt="1905"
+              width={400}
+              height={185}
+              className="timeline__img filter"
             />
             <h2 className="timeline__content-title">2020</h2>
             <p className="timeline__content-desc">
@@ -115,10 +122,12 @@ const Timeline = () => {
         </div>
         <div className="timeline-item" data-text="X-CEM">
           <div className="timeline__content">
-            <img
-              className="timeline__img"
+            <Image
               src="/images/team/2019.svg"
               alt="1908"
+              width={400}
+              height={185}
+              className="timeline__img filter"
             />
             <h2 className="timeline__content-title">2021</h2>
             <p className="timeline__content-desc">
