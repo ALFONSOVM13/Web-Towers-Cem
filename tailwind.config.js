@@ -67,7 +67,4 @@ export default {
       }, ['responsive', 'hover']);
     }
   ],
-  "rules": {
-    "import/no-anonymous-default-export": "off" 
-  }
 }
