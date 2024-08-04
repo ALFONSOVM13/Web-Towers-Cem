@@ -21,7 +21,7 @@ const RootLayout = ({ children }) => {
 
   return (
     <div className={`${styles.rootContainer}`}>
-      <Header active={active} toggleMenu={toggleMenu}/>
+      <Header active={active} toggleMenu={toggleMenu} setActive={setActive} />
       <Menu active={active} setActive={setActive} />
       <RightSideButton />
       <div onClick={closeMenu}>{children}</div>
