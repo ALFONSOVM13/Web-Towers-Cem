@@ -8,8 +8,8 @@ const RightSideButton = () => {
     window.open(whatsappUrl, "_blank"); // Abre el enlace en una nueva pestaña
   };
   return (
-    <button class="sticky-container" onClick={handleClick}>
-      <ul class="sticky">
+    <button className="sticky-container" onClick={handleClick}>
+      <ul className="sticky">
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +20,8 @@ const RightSideButton = () => {
             stroke-width="1.5"
             stroke="#ffffff"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
