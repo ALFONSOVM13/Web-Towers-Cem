@@ -13,12 +13,12 @@ function WhatWeDo() {
     <section className="w-full py-20 bg-complementary-200">
       <div className="flex justify-between items-center mx-4 sm:mx-8 my-2 sm:my-8">
         <Title
-          text="Nuestras Soluciones"
+          text="Ofrecemos soluciones para:"
           className="text-left text-3xl md:text-4xl xl:text-5xl"
         />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"> 
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {cardsData.map((card, index) => (
             <div
               key={index}

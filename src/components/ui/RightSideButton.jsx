@@ -17,7 +17,7 @@ const RightSideButton = () => {
             width="32"
             height="32"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="#ffffff"
             fill="none"
             strokeLinecap="round"
