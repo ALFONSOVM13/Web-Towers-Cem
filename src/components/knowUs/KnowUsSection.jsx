@@ -3,7 +3,7 @@ import Title from "../ui/Title";
 
 const KnowUsSection = () => {
   return (
-    <section className="min-h-screen bg-complementary-200 text-white py-20 px-5 flex items-center">
+    <section className="min-h-screen bg-complementary-200 text-white pb-20 px-5 flex items-center">
       <div className="container mx-auto grid grid-cols-1 grid-rows-2 gap-3 lg:gap-10 lg:grid-cols-2 lg:grid-rows-1 items-center justify-items-center h-auto md:min-h-[500px] w-full">
         <div className="relative flex flex-col gap-5">
           <Title
@@ -26,7 +26,7 @@ const KnowUsSection = () => {
                 className="object-cover object-center w-full h-full shadow-lg"
               />
             </figure>
-            <figure className="w-20 h-20 absolute -top-36 -right-5 sm:-top-10 sm:-right-10 ">
+            <figure className="w-20 h-20 absolute -top-36 -right-5 sm:-top-5 sm:-right-5 ">
               <Image
                   src="/images/about-us/towerscem_icon-round.png"
                   alt="TowerCem logo"
@@ -43,9 +43,9 @@ const KnowUsSection = () => {
                 height={250}
                 className="rounded-[35px] overflow-hidden object-cover object-center"
               />
-              <figcaption className="text-primary-200 absolute -bottom-12 text-xl lg:text-2xl font-content  text-center w-full font-bold italic">#towerevolution</figcaption>
+              <figcaption className="text-primary-200 absolute -bottom-9 text-xl lg:text-2xl font-content  text-center w-full font-bold italic">#towerevolution</figcaption>
             </figure>
-            <div className="absolute -bottom-[160px] sm:-bottom-20 sm:-left-20 bg-secondary-100 rounded-[24px] sm:rounded-[40px] px-6 py-4 xl:px-8 lg:py-5">
+            <div className="absolute -bottom-[160px] sm:-bottom-20 sm:-left-40 bg-secondary-100 rounded-[24px] sm:rounded-[40px] px-6 py-4 xl:px-8 lg:py-5">
               <div className="flex gap-2 sm:gap-0 sm:flex-col">
                 <span className="text-2xl md:text-3xl xl:text-5xl font-bold">173KG</span>
                 <span className="text-lg md:text-xl xl:text-3xl font-bold">de CO2</span>

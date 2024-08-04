@@ -25,9 +25,9 @@ const Advantages = () => {
             <Image
               src={advantage.background}
               alt="Imagen de fondo"
-              layout="fill"
-              objectFit="cover" // Usa 'cover' para cubrir todo el contenedor o 'contain' para ajustar sin recortar
-              className="object-cover"
+              width={1920}
+              height={1080}
+              className=" object-center object-fill"
             />
           </div>
 
