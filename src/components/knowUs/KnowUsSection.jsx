@@ -47,7 +47,7 @@ const KnowUsSection = () => {
                 className="w-full h-full object-cover object-center"
               />
             </figure>
-            <figure className="absolute bottom-0 left-[50%] -translate-x-[50%] right-auto sm:translate-x-0 sm:left-auto sm:-right-[40%] xl:-right-[32%] 2xl:-right-[25%] border-8 border-y-complementary-400 rounded-[45px] w-[200px] lg:w-[250px]">
+            <figure className="absolute bottom-0 left-[50%] -translate-x-[50%] right-auto sm:translate-x-0 sm:left-auto sm:-right-[20%] md:-right-[20%] xl:-right-[32%] 2xl:-right-[25%] border-8 border-y-complementary-400 rounded-[45px] w-[200px] lg:w-[250px]">
               <Image
                 src="/images/about-us/TC-CREATIVOS-1.png"
                 alt="TowerCem creativos"
