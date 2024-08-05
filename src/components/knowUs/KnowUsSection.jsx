@@ -10,7 +10,7 @@ const KnowUsSection = () => {
   });
 
   return (
-    <section className="min-h-screen bg-complementary-200 text-white py-20 px-20 flex items-center">
+    <section className="min-h-screen bg-complementary-200 text-white py-20 px-8 sm:px-20 flex items-center">
       <div className="container mx-auto grid grid-cols-1 grid-rows-2 gap-3 lg:gap-10 lg:grid-cols-2 lg:grid-rows-1 items-center justify-items-center h-auto md:min-h-[500px] w-full">
         <div className="relative flex flex-col gap-5">
           <Title
