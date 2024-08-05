@@ -52,7 +52,7 @@ const servicesData = [
 const ServicesSection = () => {
   return (
     <>
-      <div className="flex justify-between mx-4 sm:mx-20 mt-12 sm:my-8">
+      <div className="flex justify-between mx-12 sm:mx-20 mt-12 sm:my-8">
         <Title
           text="Más sobre nosotros"
           className="text-left text-3xl md:text-4xl xl:text-5xl"
