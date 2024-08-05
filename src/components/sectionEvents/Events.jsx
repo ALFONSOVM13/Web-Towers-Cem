@@ -4,6 +4,18 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 const Slider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,13 +45,12 @@ const Slider = ({ images }) => {
             className="flex-shrink-0 w-full h-[auto] md:h-[auto] flex items-center justify-center relative"
           >
             <Image
-              src={image.src}
+              src={isMobile ? image.srcMobile : image.src}
               alt={image.title}
               width={4100}
               height={400}
               className="object-contain object-center"
             />
-            {/* Botón abajo del todo centrado */}
           </div>
         ))}
       </div>
@@ -65,12 +76,14 @@ const Events = () => {
       id: 1,
       title: "Estaremos en",
       src: "/images/events/GeneraSummit.svg",
+      srcMobile: "/images/events/GeneraSummitMobile.svg",
       Link: "https://mentex.co/summit24/",
     },
     {
       id: 2,
       title: "Próximo Evento",
       src: "/images/events/LaVaki.svg",
+      srcMobile: "/images/events/LaVakiMobile.svg",
       Link: "https://vaki.co/es/vaki/Oz8xpMtjZTxmk1b25kYJ",
     },
   ];
