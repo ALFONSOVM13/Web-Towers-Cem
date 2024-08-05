@@ -59,7 +59,7 @@ const Header = ({ active, setActive }) => {
           </a>
         </div>
 
-        <div className="mr-20">
+        <div className="mr-12 sm:mr-20 md:mr-32 lg:mr-32 xl:mr-28">
           <div
             className={`hamburger-menu  ${active ? "active" : ""}`}
             onClick={toggleMenu}

@@ -63,7 +63,7 @@ const KnowUsSection = () => {
               ref={ref}
               className="absolute -bottom-[160px] sm:-bottom-20 sm:-left-40 bg-secondary-100 rounded-[24px] sm:rounded-[40px] px-6 py-4 xl:px-8 lg:py-5"
             >
-              <div className="flex gap-2 sm:gap-0 sm:flex-col">
+              <div className="flex gap-2 sm:gap-2 sm:flex-col">
                 <span className="text-2xl md:text-3xl xl:text-5xl font-bold">
                   {inView && (
                     <CountUp
