@@ -14,9 +14,9 @@ const ProductCard = ({ imageSrc, title, description, link }) => (
         className="transition-transform w-full h-full duration-300 group-hover:scale-125 object-cover object-center"
       />
     </div>
-    <div className="flex flex-col items-center gap-5 justify-center bg-primary-100 bg-opacity-40 text-white h-full absolute top-0 left-0 w-full group-hover:bg-opacity-85 p-4">
-      <H3 text={title} className="!text-2xl md:!text-5xl" />
-      <p className="!text-base md:!text-xl xl:!text-2xl italic w-full md:w-3/4 lg:w-7/12 opacity-0 group-hover:opacity-100 text-center">
+    <div className="flex flex-col items-center justify-self-stretch gap-5 justify-center bg-primary-100 bg-opacity-40 text-white h-full absolute top-0 left-0 w-full group-hover:bg-opacity-85 p-4">
+      <H3 text={title} />
+      <p className="italic w-full text-xl sm:w-9/12 md:w-11/12 xl:md:w-8/12 2xl:w-7/12 opacity-0 group-hover:opacity-100 text-center">
         {description}
       </p>
       <Link href={link}>

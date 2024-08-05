@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Title from "../ui/Title";
 import CountUp from "react-countup";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 
 const KnowUsSection = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true,  // El contador solo se activa una vez
-    threshold: 0.1,     // Ajusta el umbral de visibilidad según sea necesario
+    triggerOnce: true, // El contador solo se activa una vez
+    threshold: 0.1, // Ajusta el umbral de visibilidad según sea necesario
   });
 
   return (
@@ -21,10 +21,10 @@ const KnowUsSection = () => {
           <p className="text-complementary-300 font-title text-lg md:text-xl lg:text-2xl text-left leading-8 md:max-w-[85%]">
             Somos una cementera innovadora dedicada a la producción de cementos
             verdes. Utilizando tecnologías avanzadas como{" "}
-            <span className="font-bold">X-CEM</span>, incorporamos materiales
+            <span className="font-bold">X-CEM</span>,{" "}incorporamos materiales
             reciclados y propiedades inteligentes en nuestros productos,
-            permitiendo la absorción de CO₂ y contribuyendo a la lucha contra el
-            cambio climático.
+            <span className="font-bold">{" "}permitiendo la absorción de CO₂</span> y
+            contribuyendo a la lucha contra el cambio climático.
           </p>
         </div>
         <div className="min-h-[400px] h-full flex items-center justify-center px-4 w-full">
@@ -59,7 +59,10 @@ const KnowUsSection = () => {
                 #towerevolution
               </figcaption>
             </figure>
-            <div ref={ref} className="absolute -bottom-[160px] sm:-bottom-20 sm:-left-40 bg-secondary-100 rounded-[24px] sm:rounded-[40px] px-6 py-4 xl:px-8 lg:py-5">
+            <div
+              ref={ref}
+              className="absolute -bottom-[160px] sm:-bottom-20 sm:-left-40 bg-secondary-100 rounded-[24px] sm:rounded-[40px] px-6 py-4 xl:px-8 lg:py-5"
+            >
               <div className="flex gap-2 sm:gap-0 sm:flex-col">
                 <span className="text-2xl md:text-3xl xl:text-5xl font-bold">
                   {inView && (

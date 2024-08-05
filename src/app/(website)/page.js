@@ -5,11 +5,7 @@ import NewsSection from "@/components/newsPreview/NewsSection";
 import Products from "@/components/products/Products";
 import Tecnologies from "../../../public/images/icons/Tecnologies";
 import BrandSlider from "@/components/footer/BrandSlider";
-import SolutionsSection from "@/components/solutions/SolutionsSection";
-import Advantages from "@/components/products/Advantages";
 import KnowUsSection from "@/components/knowUs/KnowUsSection";
-import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
-import KnowMore from "@/components/knowMore/KnowMore";
 import ServicesSection from "@/components/knowMore/ServiceSection";
 import Events from "@/components/sectionEvents/Events";
 const HomePage = () => {

@@ -2,7 +2,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6";
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaTiktok,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const FooterSection = () => (
   <section className="pt-16 pb-7 bg-complementary-300 px-2 sm:px-20">
@@ -12,59 +17,59 @@ const FooterSection = () => (
           <Image src="/logo.png" alt="Pagedone" width={150} height={150} />
         </a>
         <div className="flex items-center gap-4">
-      <a
-        rel="noopener noreferrer"
-        target="_blank"
-        href="https://www.instagram.com/towerscem"
-        className="p-3 rounded-full bg-pink-500 text-white group transition-all duration-500 hover:bg-pink-700 focus-within:outline-0 focus-within:bg-pink-700"
-      >
-        <FaInstagram size={20} />
-      </a>
-      <a
-        href="https://www.linkedin.com/company/towerscem/"
-        className="p-3 rounded-full bg-blue-700 text-white group transition-all duration-500 hover:bg-blue-900 focus-within:outline-0 focus-within:bg-blue-900"
-      >
-        <FaLinkedinIn size={20} />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.tiktok.com/@towerscemento"
-        className="p-3 rounded-full bg-white text-black group transition-all duration-500 hover:bg-slate-300 focus-within:outline-0 focus-within:bg-gray-800"
-      >
-        <FaTiktok size={20} />
-      </a>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
-        className="p-3 rounded-full bg-red-600 text-white group transition-all duration-500 hover:bg-red-800 focus-within:outline-0 focus-within:bg-red-800"
-      >
-        <FaYoutube size={20} />
-      </a>
-    </div>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/towerscem"
+            className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
+          >
+            <FaInstagram size={20} />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/towerscem/"
+            className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
+          >
+            <FaLinkedinIn size={20} />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.tiktok.com/@towerscemento"
+            className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
+          >
+            <FaTiktok size={20} />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
+            className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
+          >
+            <FaYoutube size={20} />
+          </a>
+        </div>
       </div>
       <div className="py-10 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
         <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-6 md:gap-12 lg:gap-24">
           <div className="">
             <h2 className="text-lg font-bold text-white mb-7 max-lg:text-center font-title">
-              Towers Cem
+              Sobre Towers Cem
             </h2>
             <ul className="flex flex-col max-lg:items-center gap-6">
               <li>
                 <a
-                  href="/"
+                  href="/historia"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
-                  Inicio
+                  Quienes somos
                 </a>
               </li>
               <li>
                 <a
-                  href="/crowdfunding"
+                  href="/equipo-towers-cem"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
-                  Crowdfunding
+                  Nuestro Equipo
                 </a>
               </li>
               <li>
@@ -77,25 +82,49 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="/equipo"
+                  href="/crowdfunding"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
-                  Nuestro Equipo
+                  Crowdfunding
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/terminos-y-condiciones"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
+                >
+                  Terminos y Condiciones
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/politicas-de-privacidad"
+                  className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
+                >
+                  Politicas de privacidad
                 </a>
               </li>
             </ul>
           </div>
           <div className="/productos">
             <h2 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
-              Productos
+              Soluciones TC
             </h2>
             <ul className="flex flex-col gap-6 max-lg:items-center">
               <li>
                 <a
-                  href="/tecnologia-x-cem"
+                  href="/productos/uso-general"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
-                  Tecnologia X-Cem
+                  Cemento uso general
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/productos/uso-estructural"
+                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
+                >
+                  Cemento uso estructural
                 </a>
               </li>
               <li>
@@ -108,25 +137,17 @@ const FooterSection = () => (
               </li>
               <li>
                 <a
-                  href="/innovacion"
+                  href="/contacto"
                   className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
-                  Solicitar Muestras
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/cotizar"
-                  className="text-base font-normal text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
-                >
-                  Cotizar
+                  Contactenos
                 </a>
               </li>
             </ul>
           </div>
           <div className="/recursos">
             <h2 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
-              Recursos
+              Medios
             </h2>
             <ul className="flex flex-col gap-6 max-lg:items-center">
               <li>
@@ -186,15 +207,13 @@ const FooterSection = () => (
                     type="checkbox"
                     value=""
                     className="w-8 aspect-square appearance-none cursor-pointer border border-gray-600 bg-transparent  rounded-sm mr-2 hover:border-complementary-400 hover:bg-gray-900 checked:bg-no-repeat checked:bg-center checked:border-complementary-400 checked:bg-gray-800"
-
                   />
                   <label
                     htmlFor="terms"
                     className="text-sm font-normal cursor-pointer text-complementary-400"
                   >
                     Acepto los{" "}
-                    <a href=""
-                     className="text-complementary-200">
+                    <a href="" className="text-complementary-200">
                       Terminos y Condiciones
                     </a>{" "}
                     y las{" "}
@@ -238,7 +257,7 @@ const FooterSection = () => (
           <button
             type="button"
             id="default-search"
-            onClick={() => window.location.href = "/contacto"}
+            onClick={() => (window.location.href = "/contacto")}
             className="block w-full lg:min-w-[448px] pr-12 pl-6 py-3 text-base font-normal shadow-xs text-gray-50 bg-transparent border border-gray-700 rounded-sm placeholder-complementary-400 focus:outline-none leading-relaxed transition-all duration-500 "
           >
             Tiene alguna pregunta? Contactenos
