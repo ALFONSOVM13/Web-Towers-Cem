@@ -5,12 +5,16 @@ import { usePathname } from "next/navigation";
 
 const Header = ({ active, setActive }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logo, setLogo] = useState("/logoContraido.svg")
+  const [logo, setLogo] = useState("/logoContraido.svg");
   const pathname = usePathname();
   console.log(pathname);
 
   useEffect(() => {
-    if (!isScrolled && (pathname === "/productos/uso-general" || pathname === "/productos/uso-estructural")) {
+    if (
+      !isScrolled &&
+      (pathname === "/productos/uso-general" ||
+        pathname === "/productos/uso-estructural")
+    ) {
       setLogo("/logoContraido2.svg");
     } else {
       setLogo("/logoContraido.svg");
@@ -30,9 +34,9 @@ const Header = ({ active, setActive }) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -41,11 +45,11 @@ const Header = ({ active, setActive }) => {
       className={`
         fixed top-0 left-0 w-full z-50
         bg-opacity-90 transition-all duration-300 
-        ${isScrolled ? 'bg-black shadow-md py-0.5' : 'bg-transparent py-0.5'}
+        ${isScrolled ? "bg-black shadow-md py-0.5" : "bg-transparent py-0.5"}
       `}
     >
-      <div className="container mx-4 sm:mx-20  flex justify-between items-center">
-        <div className="logo flex items-center">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="logo flex items-center pl-8 sm:pl-20">
           <a href="/">
             <img
               src={logo}
@@ -53,13 +57,13 @@ const Header = ({ active, setActive }) => {
               className={`
               w-32
               transition-all duration-300
-              ${isScrolled ? 'w-24' : 'w-32 '}
+              ${isScrolled ? "w-24" : "w-32 "}
             `}
             />
           </a>
         </div>
 
-        <div className="mr-12 sm:mr-20 md:mr-32 lg:mr-32 xl:mr-28">
+        <div className="pr-10">
           <div
             className={`hamburger-menu  ${active ? "active" : ""}`}
             onClick={toggleMenu}
