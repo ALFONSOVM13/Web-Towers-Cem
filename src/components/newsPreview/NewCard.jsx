@@ -10,7 +10,7 @@ const NewCard = ({ newItem }) => {
 
     return (
         <div className="flex flex-col">
-            <Link href={`${slug}`}>
+            <Link href={`noticias/${slug}`}>
                 <figure className="group h-52 lg:h-64 rounded-lg overflow-hidden mb-2">
                     <Image
                         src={image}

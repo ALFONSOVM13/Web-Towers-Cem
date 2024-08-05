@@ -33,7 +33,7 @@ const ServiceCard = ({
           <img
             src={imageSrc}
             alt="service"
-            className="w-full h-auto object-cover rounded-lg shadow-sm transition-transform transform hover:scale-105"
+            className="w-full h-full object-cover rounded-lg shadow-sm transition-transform transform hover:scale-105"
           />
         </div>
       </div>

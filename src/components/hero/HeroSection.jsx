@@ -18,18 +18,18 @@ const HeroSection = ({ scrollToNextSection }) => {
 
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="absolute inset-12 flex flex-col items-center justify-end mx-10">
-        <div className="max-w-5xl px-4 text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-end mx-10">
+        <div className="max-w-5xl px-2 text-center">
           <H1
             text="Somos Towers Cem"
-            className=" mb-4 text-complementary-200 sm:text-4xl md:text-5xl lg:text-6xl"
+            className=" mb-2 text-complementary-200 sm:text-4xl md:text-5xl lg:text-6xl"
           >
             En Towers Cem
           </H1>
           <p className="text-xl md:text-4xl leading-relaxed font-content font-light italic text-complementary-200 mb-8">
             Construimos ciudades que respiran
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-1 sm:gap-2">
+          <div className="flex flex-col sm:flex-row justify-center gap-0 sm:gap-2">
             <Button
               onClick={() => scrollToNextSection()}
               className="flex-1 sm:mr-4"
@@ -51,7 +51,7 @@ const HeroSection = ({ scrollToNextSection }) => {
         </div>
 
         <button
-          className="group mt-12 animate-bounce animate-infinite animate-ease-in-out"
+          className="group mt-2 animate-bounce animate-infinite animate-ease-in-out"
           onClick={scrollToNextSection}
           aria-label="Scroll down"
         >
