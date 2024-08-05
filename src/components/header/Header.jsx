@@ -44,8 +44,8 @@ const Header = ({ active, setActive }) => {
         ${isScrolled ? 'bg-black shadow-md py-0.5' : 'bg-transparent py-0.5'}
       `}
     >
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="logo flex items-center pl-10">
+      <div className="container mx-4 sm:mx-20  flex justify-between items-center">
+        <div className="logo flex items-center">
           <a href="/">
             <img
               src={logo}
@@ -59,7 +59,7 @@ const Header = ({ active, setActive }) => {
           </a>
         </div>
 
-        <div className="pr-10">
+        <div className="mr-20">
           <div
             className={`hamburger-menu  ${active ? "active" : ""}`}
             onClick={toggleMenu}

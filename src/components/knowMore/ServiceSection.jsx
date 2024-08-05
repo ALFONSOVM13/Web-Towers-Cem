@@ -51,21 +51,21 @@ const servicesData = [
 
 const ServicesSection = () => {
   return (
-    <>
-      <div className="flex justify-between mx-12 sm:mx-20 mt-12 sm:my-8">
+    <div className="mx-12 sm:mx-20 mb-12">
+      <div className="flex justify-between my-4 mb-8 sm:my-12">
         <Title
           text="Más sobre nosotros"
           className="text-left text-3xl md:text-4xl xl:text-5xl"
         />
       </div>
-      <section className="flex flex-col items-center justify-center w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 sm:gap-12 p-4">
+      <section className="flex flex-col w-full ">
+        <div className="grid grid-cols-1 sm:grid-cols-2  gap-8 sm:gap-8 ">
           {servicesData.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

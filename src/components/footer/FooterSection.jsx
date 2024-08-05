@@ -11,7 +11,7 @@ import {
 
 const FooterSection = () => (
   <section className="pt-16 pb-7 bg-complementary-300 px-2 sm:px-20">
-    <div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-full ">
       <div className="flex flex-col sm:flex-row items-center justify-between pb-6 border-b border-gray-500 gap-8">
         <a href="/" className="">
           <Image src="/logo.png" alt="Pagedone" width={150} height={150} />
@@ -49,13 +49,13 @@ const FooterSection = () => (
           </a>
         </div>
       </div>
-      <div className="py-10 flex flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
-        <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-6 md:gap-12 lg:gap-24">
-          <div className="">
+      <div className="py-10 flex flex-col md:flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
+        <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-4 md:gap-8 lg:gap-8 xl:gap-32">
+          <div className="/sobre-towers-cem">
             <h2 className="text-lg font-bold text-white mb-7 max-lg:text-center font-title">
               Sobre Towers Cem
             </h2>
-            <ul className="flex flex-col max-lg:items-center gap-6">
+            <ul className="flex flex-col max-lg:items-center gap-4">
               <li>
                 <a
                   href="/historia"
@@ -110,7 +110,7 @@ const FooterSection = () => (
             <h2 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
               Soluciones TC
             </h2>
-            <ul className="flex flex-col gap-6 max-lg:items-center">
+            <ul className="flex flex-col gap-4 max-lg:items-center">
               <li>
                 <a
                   href="/productos/uso-general"
@@ -185,28 +185,28 @@ const FooterSection = () => (
             </ul>
           </div>
         </div>
-        <div className="w-full lg:max-w-md max-lg:mx-auto ">
+        <div className="w-full lg:max-w-md mx-auto">
           <h2 className="text-lg font-medium text-white mb-7">Newsletter</h2>
           <div className="bg-zinc-800 rounded-sm p-5">
             <form action="#" className="flex flex-col gap-5">
               <div className="relative">
-                <label className="flex  items-center mb-2 text-complementary-400 text-base font-medium">
-                  Correo Electronico
+                <label className="flex items-center mb-2 text-complementary-400 text-base font-medium">
+                  Correo Electrónico
                 </label>
                 <input
                   type="text"
                   id="default-search"
-                  className="block w-full px-5 py-3 text-lg font-normal shadow-xs text-white bg-transparent border border-complementary-400 rounded-sm placeholder-complementary-400 focus:outline-none leading-relaxed focus-within:border-gray-300"
-                  placeholder="Ingrese su correo electronico"
-                  required=""
+                  className="block w-full px-5 py-3 text-lg font-normal shadow-xs text-white bg-transparent border border-complementary-400 rounded-sm placeholder-complementary-400 focus:outline-none leading-relaxed focus:border-gray-300"
+                  placeholder="Ingrese su correo electrónico"
+                  required
                 />
               </div>
               <div className="flex flex-col min-[540px]:flex-row items-center justify-between gap-3">
-                <div className="flex  black items-center gap-2">
+                <div className="flex items-center gap-2">
                   <input
                     type="checkbox"
                     value=""
-                    className="w-8 aspect-square appearance-none cursor-pointer border border-gray-600 bg-transparent  rounded-sm mr-2 hover:border-complementary-400 hover:bg-gray-900 checked:bg-no-repeat checked:bg-center checked:border-complementary-400 checked:bg-gray-800"
+                    className="w-8 aspect-square appearance-none cursor-pointer border border-gray-600 bg-transparent rounded-sm hover:border-complementary-400 hover:bg-gray-900 checked:bg-no-repeat checked:bg-center checked:border-complementary-400 checked:bg-gray-800"
                   />
                   <label
                     htmlFor="terms"
@@ -214,18 +214,18 @@ const FooterSection = () => (
                   >
                     Acepto los{" "}
                     <a href="" className="text-complementary-200">
-                      Terminos y Condiciones
+                      Términos y Condiciones
                     </a>{" "}
                     y las{" "}
                     <a href="" className="text-complementary-200">
-                      Politicas de Privacidad
+                      Políticas de Privacidad
                     </a>
                   </label>
                 </div>
                 <input
                   type="submit"
                   value="Suscribirse"
-                  className="text-white text-base font-semibold py-3 px-7  cursor-pointer bg-secondary-200 hover:bg-secondary-300 focus-within:outline-none focus-within:bg-secondary-300"
+                  className="text-white text-base font-semibold py-3 px-7 cursor-pointer bg-secondary-200 hover:bg-secondary-300 focus:outline-none focus:bg-secondary-300"
                 />
               </div>
             </form>

@@ -10,11 +10,11 @@ const ServiceCard = ({
 }) => {
   return (
     <div
-      className="relative flex justify-center p-4 cursor-pointer"
+      className="relative flex justify-center  cursor-pointer w-full"
       onClick={() => (window.location.href = link)}
     >
       <div
-        className={`relative flex flex-col md:flex-row w-full max-w-[400px] sm:max-w-[500px] md:max-w-[700px] h-auto p-4 ${bgColor} ${textColor} rounded-3xl transition-transform transform hover:scale-105 items-center md:items-stretch`}
+        className={`relative flex flex-col md:flex-row w-full max-w-[300px] sm:max-w-[300px] md:max-w-[750px] h-auto  ${bgColor} ${textColor} rounded-3xl transition-transform transform hover:scale-105 items-center md:items-stretch`}
         style={{
           boxShadow: "inset 0px -4px 0px 1.6px rgba(0, 0, 0, 1)",
         }}
@@ -24,7 +24,7 @@ const ServiceCard = ({
             {title}
           </h2>
           <div className="flex-grow"></div>
-          <button className="hidden md:flex items-center mb-2">
+          <button className="hidden md:flex items-center mb-8 ">
             <img src={iconSrc} alt="icon" className="w-8 h-8 sm:w-12 sm:h-12 mr-2" />
             <p className="text-xl font-medium">Ver más</p>
           </button>
@@ -37,7 +37,7 @@ const ServiceCard = ({
           />
         </div>
         {/* Botón "Ver más" para dispositivos móviles */}
-        <button className="flex md:hidden items-center mt-auto">
+        <button className="flex md:hidden items-center mb-4">
           <img src={iconSrc} alt="icon" className="w-8 h-8 sm:w-12 sm:h-12 mr-2" />
           <p className="text-xl font-medium">Ver más</p>
         </button>

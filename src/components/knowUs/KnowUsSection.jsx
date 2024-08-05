@@ -5,8 +5,8 @@ import { useInView } from "react-intersection-observer";
 
 const KnowUsSection = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // El contador solo se activa una vez
-    threshold: 0.1, // Ajusta el umbral de visibilidad según sea necesario
+    triggerOnce: true, 
+    threshold: 0.1, 
   });
 
   return (
