@@ -1,17 +1,18 @@
 // pages/sitemap.xml.js
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-const baseUrl = 'https://www.towerscem.com'; 
+const baseUrl = "https://www.towerscem.com";
 
 export async function GET() {
   const pages = [
-    { url: '/', lastModified: new Date() },
-    { url: '/historia', lastModified: new Date() },
-    { url: '/products', lastModified: new Date() },
-    { url: '/team', lastModified: new Date() },
-    { url: '/contacto', lastModified: new Date() },
-    { url: '/noticias', lastModified: new Date() },
-    { url: '/crowdfunding', lastModified: new Date() },
+    { url: "/", lastModified: new Date() },
+    { url: "/historia", lastModified: new Date() },
+    { url: "/productos/uso-general", lastModified: new Date() },
+    { url: "/productos/uso-estructural", lastModified: new Date() },
+    { url: "/equipo-towers-cem", lastModified: new Date() },
+    { url: "/contacto", lastModified: new Date() },
+    { url: "/noticias", lastModified: new Date() },
+    { url: "/crowdfunding", lastModified: new Date() },
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -25,12 +26,12 @@ export async function GET() {
           </url>
         `;
       })
-      .join('')}
+      .join("")}
   </urlset>`;
 
   return NextResponse.json(sitemap, {
     headers: {
-      'Content-Type': 'application/xml',
+      "Content-Type": "application/xml",
     },
   });
 }

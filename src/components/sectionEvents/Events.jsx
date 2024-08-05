@@ -42,7 +42,8 @@ const Slider = ({ images }) => {
         {images.map((image) => (
           <div
             key={image.id}
-            className="flex-shrink-0 w-full h-[auto] md:h-[auto] flex items-center justify-center relative"
+            className="cursor-pointer flex-shrink-0 w-full h-[auto] md:h-[auto] flex items-center justify-center relative"
+            onClick={() => window.open(image.Link, "_blank")}
           >
             <Image
               src={isMobile ? image.srcMobile : image.src}
