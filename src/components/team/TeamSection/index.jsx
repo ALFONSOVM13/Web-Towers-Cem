@@ -6,8 +6,8 @@ import "./TeamSection.scss";
 export const TeamSection = () => {
     return (
         <section className="team-section bg-[#171717]">
-            <span>CONOCENOS</span>
-            <h2 className="font-title">Nuestro Equipo</h2>
+            <span>Conócenos</span>
+            <h2 className="font-title font-bold">Nuestro Equipo</h2>
             <p>
                 Somos un grupo de trabajo interdisciplinario comprometido con la creación de un futuro mucho más verde para nuestras próximas generaciones, apuntándoles a los objetivos de desarrollo sostenible, innovación e infraestructura, creación de ciudades sostenibles y acción por el clima.
             </p>

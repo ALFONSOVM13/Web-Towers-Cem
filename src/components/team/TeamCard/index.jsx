@@ -10,7 +10,7 @@ export const TeamCard = ({ name, photo, position, social, slug }) => {
 
     return (
         <div 
-            onClick={()=>router.push(`/team/${slug}`)} 
+            onClick={()=>router.push(`/equipo-towers-cem/${slug}`)} 
             className="card"
         >
             <Image

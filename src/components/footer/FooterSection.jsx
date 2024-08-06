@@ -56,14 +56,14 @@ const FooterSection = () => (
               Sobre Towers Cem
             </h2>
             <ul className="flex flex-col max-lg:items-center gap-4">
-              <li>
+              {/* <li>
                 <a
                   href="/historia"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Quienes somos
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="/equipo-towers-cem"
@@ -72,14 +72,14 @@ const FooterSection = () => (
                   Nuestro Equipo
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="/nosotros"
                   className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                 >
                   Nosotros
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="/crowdfunding"

@@ -42,12 +42,12 @@ const Menu = ({ active, setActive }) => {
       >
         {[
           { href: "/", label: "Inicio" },
+          { href: "/crowdfunding", label: "Crowdfunding" },
           { href: "/historia", label: "Quienes Somos" },
           { href: "/products", label: "Nuestro Cemento" },
           { href: "/equipo-towers-cem", label: "Nuestro Equipo" },
           { href: "/contacto", label: "Contacto" },
           { href: "/noticias", label: "Noticias" },
-          { href: "/crowdfunding", label: "Crowdfunding" },
         ].map((item, index) => (
           <li key={index} className="mb-4">
             <Link

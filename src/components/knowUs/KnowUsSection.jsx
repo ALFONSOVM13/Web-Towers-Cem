@@ -29,7 +29,7 @@ const KnowUsSection = () => {
         </div>
         <div className="min-h-[400px] h-full flex items-center justify-center px-4 w-full">
           <div className="relative w-[260px] h-[200px] sm:w-[350px] lg:w-[420px] 2xl:w-[500px] sm:h-[300px] lg:h-[340px] xl:h-[400px]">
-            <figure className="absolute -top-32 sm:top-0 left-0 w-full h-full rounded-[80px] overflow-hidden">
+            <figure className="absolute -top-32 sm:top-0 left-0 w-full h-full rounded-sm overflow-hidden">
               <Image
                 src="/images/header.png"
                 alt="Imagen de la empresa"
@@ -61,7 +61,7 @@ const KnowUsSection = () => {
             </figure>
             <div
               ref={ref}
-              className="absolute -bottom-[160px] sm:-bottom-20 sm:-left-40 bg-secondary-100 rounded-[24px] sm:rounded-[40px] px-6 py-4 xl:px-8 lg:py-5"
+              className="absolute -bottom-[160px] sm:-bottom-20 sm:-left-40 bg-secondary-100 rounded-xl px-6 py-4 xl:px-8 lg:py-5"
             >
               <div className="flex gap-2 sm:gap-2 sm:flex-col">
                 <span className="text-2xl md:text-3xl xl:text-5xl font-bold">

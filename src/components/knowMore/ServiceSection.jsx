@@ -59,7 +59,7 @@ const ServicesSection = () => {
         />
       </div>
       <section className="flex flex-col w-full ">
-        <div className="grid grid-cols-1 sm:grid-cols-2  gap-8 sm:gap-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-4  gap-8 sm:gap-8 ">
           {servicesData.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
