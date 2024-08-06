@@ -27,6 +27,33 @@ const Menu = ({ active, setActive }) => {
     }
   }, [active]);
 
+
+//   <li className="mb-4 relative">
+//   <button
+//     onClick={handleDropdownToggle}
+//     className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex justify-between items-center w-full"
+//   >
+//     Nuestro Cemento
+//     <i className={ml-2 transition-transform duration-300 text-complementary-200 ${dropdownOpen ? "rotate-180" : ""}}><TiArrowSortedDown /> <HiOutlineArrowSmDown /> <BiSolidDownArrowSquare /></i>
+//   </button>
+//   <ul
+//     className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-primary-100 overflow-hidden rounded-lg shadow-lg transition-opacity duration-300 ease-in-out ${
+//       dropdownOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-2"
+//     }`}
+//   >
+//     <li className="px-4 py-2 hover:bg-complementary-400">
+//       <Link href="/productos/uso-general" className="block">
+//         Uso General
+//       </Link>
+//     </li>
+//     <li className="px-4 py-2 hover:bg-complementary-400">
+//       <Link href="/productos/uso-estructural" className="block">
+//         Uso Estructural
+//       </Link>
+//     </li>
+//   </ul>
+// </li>
+
   return (
     <nav>
       {active && (
@@ -63,22 +90,16 @@ const Menu = ({ active, setActive }) => {
             href="/"
             className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex items-center"
           >
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={150}
-              height={150}
-            />
+            <Image src="/logo.png" alt="Logo" width={150} height={150} />
           </Link>
         </li>
         <div className="flex gap-4">
           <Link
             href="/"
-           
             className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"
           >
             <Image
-              src="/images/icons/IconoUSA.png"
+              src="/images/icons/IconoUsa.png"
               alt="Icono USA"
               width={44}
               height={44}
@@ -86,7 +107,6 @@ const Menu = ({ active, setActive }) => {
           </Link>
           <Link
             href="/"
-         
             className="text-complementary-200 hover:text-complementary-100 transition-colors hover:underline"
           >
             <Image
