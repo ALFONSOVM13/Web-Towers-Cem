@@ -1,13 +1,8 @@
-"use client";
-import Link from "next/link";
-import Image from "next/image";
-import React from "react";
-import {
-  FaInstagram,
-  FaLinkedinIn,
-  FaTiktok,
-  FaYoutube,
-} from "react-icons/fa6";
+"use client"
+import Link from "next/link"
+import Image from "next/image"
+import React from "react"
+import { FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6"
 
 const FooterSection = () => (
   <section className="pt-16 pb-7 bg-complementary-300 px-2 sm:px-20">
@@ -21,31 +16,37 @@ const FooterSection = () => (
             rel="noopener noreferrer"
             target="_blank"
             href="https://www.instagram.com/towerscem"
-            className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
+            className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-instagram-gradient before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
+            title='Instagram'
           >
-            <FaInstagram size={20} />
+            <FaInstagram size={20} className='text-[#ee2a7b] text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200' />
           </a>
+
+
           <a
             href="https://www.linkedin.com/company/towerscem/"
-            className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
+            className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#0077b5] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
+            title='Linkedin'
           >
-            <FaLinkedinIn size={20} />
+            <FaLinkedinIn size={20} className='text-primary-200 text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200' />
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.tiktok.com/@towerscemento"
-            className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
+            className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#333] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
+            title='TikTok'
           >
-            <FaTiktok size={20} />
+            <FaTiktok size={20} className='text-complementary-300 text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200' />
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
-            className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
+            className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#ff0000] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
+            title='YouTube'
           >
-            <FaYoutube size={20} />
+            <FaYoutube size={20} className='text-[#ff0000] text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200' />
           </a>
         </div>
       </div>
@@ -221,17 +222,17 @@ const FooterSection = () => (
                       Políticas de Privacidad
                     </a>
                   </label>
-                </div>
+                </div >
                 <input
                   type="submit"
                   value="Suscribirse"
                   className="text-white text-base font-semibold py-3 px-7 cursor-pointer bg-secondary-200 hover:bg-secondary-300 focus:outline-none focus:bg-secondary-300"
                 />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+              </div >
+            </form >
+          </div >
+        </div >
+      </div >
       <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-5 pt-7">
         <span className="text-sm font-normal text-complementary-400">
           <a href="/" className="">
@@ -264,8 +265,8 @@ const FooterSection = () => (
           </button>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </div >
+  </section >
+)
 
-export default FooterSection;
+export default FooterSection

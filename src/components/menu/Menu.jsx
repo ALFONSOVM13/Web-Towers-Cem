@@ -1,27 +1,34 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { TiArrowSortedDown } from "react-icons/ti";
+import { HiOutlineArrowSmDown } from "react-icons/hi";
+import { BiSolidDownArrowSquare } from "react-icons/bi";
 
 const Menu = ({ active, setActive }) => {
   const pathname = usePathname();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  // Close menu when pathname changes
+  useEffect(() => {
+    if (!active) {
+      setDropdownOpen(false);
+    }
+  }, [active]);
+
   useEffect(() => {
     setActive(false);
   }, [pathname]);
 
   useEffect(() => {
-    // Toggle body overflow based on active state
     if (active) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
 
-      // Ensure smooth closing animation
       const timeout = setTimeout(() => {
         document.body.classList.remove("overflow-hidden");
-      }, 500); // Adjust timeout to match transition duration
+      }, 500);
 
       return () => clearTimeout(timeout);
     }

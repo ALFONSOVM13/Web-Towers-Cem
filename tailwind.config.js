@@ -36,14 +36,35 @@ export default {
         },
         customGreen: '#5F9428',
       },
+       
       fontFamily: {
         content: ["poppins", "sans-serif"],
         title: ["popins", "sans-serif"],
       },
-    },
+
+      backgroundImage: {
+        'instagram-gradient': 'linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7)',
+      },
+
+      keyframes: {
+        slide: {
+          "50%": {
+            left: "10%",
+            top: "-40%"
+          },
+          "100%": {
+            left: "-15%",
+            top: "-15%"
+          }
+        }
+      },
+      animation: {
+        slide: "slide 0.7s forwards",
+      },
+    }
   },
   plugins: [
-      
+
     function ({ addUtilities }) {
       addUtilities({
         '.text-shadow': {
@@ -64,7 +85,7 @@ export default {
         '.text-shadow-none': {
           'text-shadow': 'none',
         }
-      }, ['responsive', 'hover']);
+      }, ['responsive', 'hover'])
     }
   ],
 }
