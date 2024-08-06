@@ -32,9 +32,9 @@ const ProductPage = async ({params}) => {
       dataSheet={product.dataSheet}
       />
 
-      <UsosYAppProducts
+      {/* <UsosYAppProducts
       usesAndApplications={product.usesAndApplications}
-      />
+      /> */}
     </>
   )
 }

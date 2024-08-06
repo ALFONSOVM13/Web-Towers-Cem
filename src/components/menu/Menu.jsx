@@ -3,8 +3,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { TiArrowSortedDown } from "react-icons/ti";
-import { HiOutlineArrowSmDown } from "react-icons/hi";
-import { BiSolidDownArrowSquare } from "react-icons/bi";
 
 const Menu = ({ active, setActive }) => {
   const pathname = usePathname();
@@ -34,32 +32,9 @@ const Menu = ({ active, setActive }) => {
     }
   }, [active]);
 
-
-//   <li className="mb-4 relative">
-//   <button
-//     onClick={handleDropdownToggle}
-//     className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex justify-between items-center w-full"
-//   >
-//     Nuestro Cemento
-//     <i className={ml-2 transition-transform duration-300 text-complementary-200 ${dropdownOpen ? "rotate-180" : ""}}><TiArrowSortedDown /> <HiOutlineArrowSmDown /> <BiSolidDownArrowSquare /></i>
-//   </button>
-//   <ul
-//     className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-primary-100 overflow-hidden rounded-lg shadow-lg transition-opacity duration-300 ease-in-out ${
-//       dropdownOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible translate-y-2"
-//     }`}
-//   >
-//     <li className="px-4 py-2 hover:bg-complementary-400">
-//       <Link href="/productos/uso-general" className="block">
-//         Uso General
-//       </Link>
-//     </li>
-//     <li className="px-4 py-2 hover:bg-complementary-400">
-//       <Link href="/productos/uso-estructural" className="block">
-//         Uso Estructural
-//       </Link>
-//     </li>
-//   </ul>
-// </li>
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
 
   return (
     <nav>
@@ -78,18 +53,52 @@ const Menu = ({ active, setActive }) => {
           { href: "/", label: "Inicio" },
           { href: "/crowdfunding", label: "Crowdfunding" },
           { href: "/historia", label: "Quienes Somos" },
-          { href: "/products", label: "Nuestro Cemento" },
+          { title: "Nuestro Cemento", label: "Nuestros Cementos" },
           { href: "/equipo-towers-cem", label: "Nuestro Equipo" },
           { href: "/contacto", label: "Contacto" },
           { href: "/noticias", label: "Noticias" },
         ].map((item, index) => (
-          <li key={index} className="mb-4">
-            <Link
-              href={item.href}
-              className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
-            >
-              {item.label}
-            </Link>
+          <li key={index} className="mb-4 relative">
+            {item.title ? (
+              <>
+                <button
+                  onClick={handleDropdownToggle}
+                  className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex justify-between items-center w-full"
+                >
+                  {item.label}
+                  <i
+                    className={`ml-2 transition-transform duration-300 text-complementary-200 ${
+                      dropdownOpen ? "rotate-180" : ""
+                    }`}
+                  >
+                    <TiArrowSortedDown />
+                  </i>
+                </button>
+                <ul
+                  className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-primary-100 overflow-hidden rounded-sm shadow-lg transition-opacity duration-300 ease-in-out ${
+                    dropdownOpen ? "opacity-100 visible translate-y-0 z-40" : "opacity-0 invisible translate-y-2"
+                  }`}
+                >
+                  <li className="px-4 py-2 hover:bg-complementary-400">
+                    <Link href="/productos/uso-general" className="block">
+                      Uso General
+                    </Link>
+                  </li>
+                  <li className="px-4 py-2 hover:bg-complementary-400">
+                    <Link href="/productos/uso-estructural" className="block">
+                      Uso Estructural
+                    </Link>
+                  </li>
+                </ul>
+              </>
+            ) : (
+              <Link
+                href={item.href}
+                className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline"
+              >
+                {item.label}
+              </Link>
+            )}
           </li>
         ))}
         <li className="mb-4">
