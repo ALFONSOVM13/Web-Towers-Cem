@@ -1,18 +1,15 @@
 import React from "react";
+import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 
 const ServiceCard = ({
   title,
-  iconSrc,
   imageSrc,
   bgColor,
   textColor,
   link,
 }) => {
   return (
-    <div
-      className="relative flex justify-center w-full"
-      
-    >
+    <div className="relative flex justify-center w-full">
       <div
         className={`relative flex flex-col md:flex-row w-full max-w-[300px] sm:max-w-[300px] md:max-w-[600px] h-auto ${bgColor} ${textColor} rounded-sm transition-transform transform hover:scale-105 items-center md:items-stretch cursor-pointer`}
         onClick={() => (window.location.href = link)}
@@ -26,28 +23,22 @@ const ServiceCard = ({
           </h2>
           <div className="flex-grow"></div>
           <button className="hidden md:flex items-center mb-8 ">
-            <img
-              src={iconSrc}
-              alt="icon"
-              className="w-8 h-8 sm:w-12 sm:h-12 mr-2"
-            />
+            <BsFillArrowUpRightCircleFill className="w-12 h-12 mr-2" />
             <p className="text-xl font-medium">Ver más</p>
           </button>
         </div>
-        <div className="w-full md:w-1/2 flex-shrink-0 mb-4 md:mb-0">
+        <div className="w-full md:w-1/2 flex justify-center items-center">
           <img
             src={imageSrc}
             alt="service"
-            className="w-full h-auto object-cover rounded-lg shadow-sm transition-transform transform hover:scale-105"
+            className="w-10/12 p-8 h-auto object-cover rounded-lg shadow-sm transition-transform transform hover:scale-105"
           />
         </div>
         {/* Botón "Ver más" para dispositivos móviles */}
         <button className="flex md:hidden items-center mb-4">
-          <img
-            src={iconSrc}
-            alt="icon"
+          <BsFillArrowUpRightCircleFill 
             className="w-8 h-8 sm:w-12 sm:h-12 mr-2"
-          />
+           />
           <p className="text-xl font-medium">Ver más</p>
         </button>
       </div>

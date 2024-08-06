@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link"
 import Image from "next/image"
 import React from "react"
 import { FaInstagram, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa6"

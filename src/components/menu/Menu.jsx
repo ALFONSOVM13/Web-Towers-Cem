@@ -53,7 +53,7 @@ const Menu = ({ active, setActive }) => {
           { href: "/", label: "Inicio" },
           { href: "/crowdfunding", label: "Crowdfunding" },
           { href: "/historia", label: "Quienes Somos" },
-          { title: "Nuestro Cemento", label: "Nuestros Cementos" },
+          { title: "Nuestro Cementos", label: "Nuestros Cementos" },
           { href: "/equipo-towers-cem", label: "Nuestro Equipo" },
           { href: "/contacto", label: "Contacto" },
           { href: "/noticias", label: "Noticias" },
