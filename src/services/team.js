@@ -56,7 +56,7 @@ export const team = [
             instagram: '',
             linkedin : 'https://www.linkedin.com/in/josetorres-gonzalez'
         },
-        about: 'Estudiante de negocios internacionales, Universidad del Norte.',
+        about: 'Estudiante de Negocios Internacionales en la Universidad del Norte y Técnico en Contabilización de Operaciones Comerciales y Financieras por el SENA. Lidero el área de Marketing, donde mi objetivo es diseñar campañas innovadoras que nos permitan no solo competir, sino superar a los agentes existentes en el mercado. Con experiencia en incubadoras de negocios y la creación de mi propio emprendimiento, me esfuerzo constantemente por entender y satisfacer las necesidades de los clientes, consumidores y compradores.',
         slug: 'jose-torres'
     },
 ]

@@ -1,5 +1,6 @@
 import React from 'react';
 import CustomButton from "../ui/CustomButton"
+import Button from '../ui/Button';
 
 function ContactForm() {
 
@@ -9,7 +10,7 @@ function ContactForm() {
       <div className="flex flex-col grow p-10 max-md:px-5 max-md:mt-10 max-md:max-w-full bg">
         <div className="flex flex-col text-white max-md:max-w-full ">
           <h2 className="text-3xl font-semibold tracking-tight max-md:max-w-full">
-            Contactanos
+            Contáctanos
           </h2>
           <p className="mt-2 text-base tracking-normal max-md:max-w-full">
             Podemos hacer de cada tonelada de cemento una contribución significativa hacia un mundo más saludable y resiliente.
@@ -39,8 +40,8 @@ function ContactForm() {
           <input
             type="tel"
             className="justify-center items-start px-3.5 py-3 mt-3.5 border border-solid bg-white bg-opacity-10 border-white border-opacity-20 max-md:pr-5 max-md:max-w-full"
-            placeholder="Numero telefonico"
-            aria-label="Numero telefonico"
+            placeholder="Telefono"
+            aria-label="Telefono"
           />
           <textarea
             className="justify-center items-start px-3.5 py-3 mt-3.5 whitespace-nowrap border border-solid bg-white bg-opacity-10 border-white border-opacity-20 max-md:pr-5 max-md:max-w-full"
@@ -53,12 +54,12 @@ function ContactForm() {
           >
             <div className="flex gap-2.5">
                <div className="flex flex-col lg:flex-row ">
-                    <CustomButton
+                    <Button
                       type="primary"
                       className="rounded-2xl"
                     >
                       ENVIAR
-                    </CustomButton>
+                    </Button>
                   </div>
             </div>
           </button>

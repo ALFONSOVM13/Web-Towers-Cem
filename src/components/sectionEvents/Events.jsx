@@ -90,7 +90,7 @@ const Events = () => {
   ];
 
   return (
-    <section className="bg-complementary-300 mb-12 p-0">
+    <section className="bg-complementary-300 mb-12 ">
       <Slider images={images} />
     </section>
   );

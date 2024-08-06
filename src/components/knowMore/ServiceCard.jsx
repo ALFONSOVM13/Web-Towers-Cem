@@ -14,11 +14,11 @@ const ServiceCard = ({
       
     >
       <div
-        className={`relative flex flex-col md:flex-row w-full max-w-[300px] sm:max-w-[300px] md:max-w-full h-auto ${bgColor} ${textColor} rounded-3xl transition-transform transform hover:scale-105 items-center md:items-stretch cursor-pointer`}
+        className={`relative flex flex-col md:flex-row w-full max-w-[300px] sm:max-w-[300px] md:max-w-[600px] h-auto ${bgColor} ${textColor} rounded-sm transition-transform transform hover:scale-105 items-center md:items-stretch cursor-pointer`}
         onClick={() => (window.location.href = link)}
-        style={{
-          boxShadow: "inset 0px -4px 0px 1.6px rgba(0, 0, 0, 1)",
-        }}
+        // style={{
+        //   boxShadow: "inset 0px -4px 0px 1.6px rgba(0, 0, 0, 1)",
+        // }}
       >
         <div className="flex flex-col w-full md:w-1/2 mb-4 md:mb-0 ml-6 mt-4">
           <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-center md:text-left">
