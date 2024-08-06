@@ -51,7 +51,12 @@ const logos = [
     width: 220,
     height: 75,
   },
-  { src: "/images/brands/secot.jpg", alt: "secot", width: 220, height: 88 },
+  {
+    src: "/images/brands/secot.jpg",
+    alt: "secot",
+    width: 220,
+    height: 88,
+  },
   {
     src: "/images/brands/uni-nac-colombia.png",
     alt: "uni-nac-colombia",
@@ -68,17 +73,17 @@ const logos = [
 
 const BrandSlider = () => {
   return (
-    <section className=" flex flex-col  px-10 h-full bg-complementary-200">
-      <div className="flex justify-between items-center">
-      <Title
-        text="Nuestros Aliados"
-        className="text-left text-3xl md:text-4xl xl:text-5xl"
-      />
+    <section className="flex flex-col h-full bg-complementary-200 my-8">
+      <div className="flex justify-between items-center mx-12 sm:mx-20 my-2 sm:my-8">
+        <Title
+          text="Nuestros aliados"
+          className="text-left text-3xl md:text-4xl xl:text-5xl"
+        />
       </div>
 
-      <Marquee direction="left" speed={150} delay={5} pauseOnHover={"true"}>
+      <Marquee direction="left" speed={150} delay={5} pauseOnHover={true}>
         {logos.map((logo, index) => (
-          <div key={index} className="mx-4 overflow-hidden">
+          <div key={index} className="mx-6 overflow-hidden ">
             <LogoImage
               src={logo.src}
               alt={logo.alt}
@@ -99,7 +104,7 @@ const LogoImage = ({ src, alt, width, height }) => (
       alt={alt}
       width={width}
       height={height}
-      className="object-contain object-center transform scale-100 hover:scale-105 transition-transform duration-300"
+      className="object-contain object-center transform scale-100 hover:scale-105 transition-transform duration-300 w-36 h-auto"
     />
   </div>
 );

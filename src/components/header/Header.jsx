@@ -1,51 +1,55 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import "./header.scss";
-import { usePathname } from "next/navigation";
+"use client"
+import React, { useState, useEffect } from "react"
+import "./header.scss"
+import { usePathname } from "next/navigation"
 
 const Header = ({ active, setActive }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
   const [logo, setLogo] = useState("/logoContraido.svg")
-  const pathname = usePathname();
-  console.log(pathname);
+  const pathname = usePathname()
+  console.log(pathname)
 
   useEffect(() => {
-    if (!isScrolled && (pathname === "/productos/uso-general" || pathname === "/productos/uso-estructural")) {
-      setLogo("/logoContraido2.svg");
+    if (
+      !isScrolled &&
+      (pathname === "/productos/uso-general" ||
+        pathname === "/productos/uso-estructural")
+    ) {
+      setLogo("/logoContraido2.svg")
     } else {
-      setLogo("/logoContraido.svg");
+      setLogo("/logoContraido.svg")
     }
-  }, [isScrolled, pathname]);
+  }, [isScrolled, pathname])
 
   const toggleMenu = () => {
-    setActive(!active);
-  };
+    setActive(!active)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setIsScrolled(true);
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <div
       className={`
         fixed top-0 left-0 w-full z-50
-        bg-opacity-90 transition-all duration-300
-        ${isScrolled ? 'bg-black shadow-md py-0.5' : 'bg-transparent py-0.5'}
+        bg-opacity-90 transition-all duration-300 
+        ${isScrolled ? "bg-black shadow-md py-0.5" : "bg-transparent py-0.5"}
       `}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="logo flex items-center pl-10">
+        <div className="logo flex items-center pl-8 sm:pl-20">
           <a href="/">
             <img
               src={logo}
@@ -53,7 +57,7 @@ const Header = ({ active, setActive }) => {
               className={`
               w-32
               transition-all duration-300
-              ${isScrolled ? 'w-24' : 'w-32 '}
+              ${isScrolled ? "w-24" : "w-32 "}
             `}
             />
           </a>
@@ -69,7 +73,7 @@ const Header = ({ active, setActive }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

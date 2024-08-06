@@ -7,7 +7,7 @@ import news from "../../../public/tempData/news.json";
 
 const NewsSection = () => {
   return (
-    <section className="py-20 px-10 bg-white h-full">
+    <section className="mx-12 sm:mx-20  bg-white h-full">
       <div className="flex justify-between items-center mb-10">
         <Title text="Noticias" />
         <Link href="/noticias" alt="Noticias">

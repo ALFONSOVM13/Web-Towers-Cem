@@ -10,7 +10,7 @@ const NewCard = ({ newItem }) => {
 
     return (
         <div className="flex flex-col">
-            <Link href={`${slug}`}>
+            <Link href={`noticias/${slug}`}>
                 <figure className="group h-52 lg:h-64 rounded-lg overflow-hidden mb-2">
                     <Image
                         src={image}
@@ -21,7 +21,7 @@ const NewCard = ({ newItem }) => {
                     />
                 </figure>
             </Link>
-            <Link href={`${slug}`} className="flex-1 hover:text-primary-200 mb-5 md:mb-2">
+            <Link href={`noticias/${slug}`} className="flex-1 hover:text-primary-200 mb-5 md:mb-2">
                 <h3 className="font-bold text-xl sm:text-2xl sm:leading-9">{ title }</h3>
             </Link>
             <div className="flex justify-between items-center gap-2">
