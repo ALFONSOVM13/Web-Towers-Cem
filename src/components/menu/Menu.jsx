@@ -79,13 +79,13 @@ const Menu = ({ active, setActive }) => {
                     dropdownOpen ? "opacity-100 visible translate-y-0 z-40" : "opacity-0 invisible translate-y-2"
                   }`}
                 >
-                  <li className="px-4 py-2 hover:bg-complementary-400">
-                    <Link href="/productos/uso-general" className="block">
+                  <li className="px-4 py-2 font-title hover:bg-complementary-400">
+                    <Link href="/productos/uso-general" className="block font-title">
                       Uso General
                     </Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-complementary-400">
-                    <Link href="/productos/uso-estructural" className="block">
+                  <li className="px-4 py-2 font-title hover:bg-complementary-400">
+                    <Link href="/productos/uso-estructural" className="block font-title">
                       Uso Estructural
                     </Link>
                   </li>
