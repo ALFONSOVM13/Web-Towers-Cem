@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import CustomButton from '../ui/CustomButton'
+import Button from '../ui/Button'
 
 
 const BenefitsProduct = ({ benefits, image, dataSheet }) => {
@@ -45,7 +46,7 @@ const BenefitsProduct = ({ benefits, image, dataSheet }) => {
         </div>
       </div>
       <div className="flex justify-center pt-7 md:pt-10">
-        <CustomButton>
+        <Button>
           <a
             href={dataSheet}
             target="_blank"
@@ -54,7 +55,7 @@ const BenefitsProduct = ({ benefits, image, dataSheet }) => {
           >
             VER FICHA TECNICA
           </a>
-        </CustomButton>
+        </Button>
       </div>
     </section>
   )

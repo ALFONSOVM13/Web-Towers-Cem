@@ -75,7 +75,7 @@ const Menu = ({ active, setActive }) => {
                   </i>
                 </button>
                 <ul
-                  className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-primary-100 overflow-hidden rounded-sm shadow-lg transition-opacity duration-300 ease-in-out ${
+                  className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-complementary-300 overflow-hidden rounded-sm shadow-lg transition-opacity duration-300 ease-in-out ${
                     dropdownOpen ? "opacity-100 visible translate-y-0 z-40" : "opacity-0 invisible translate-y-2"
                   }`}
                 >

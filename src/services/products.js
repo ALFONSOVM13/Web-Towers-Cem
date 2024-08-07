@@ -8,10 +8,10 @@ export const products = [
       "Nuestro producto ofrece propiedades inteligentes y descontaminantes. Al contar con nuevos materiales de fabricación, nuestro cemento se excita con la radiación solar, reaccionando con los gases contaminantes suspendidos en la atmósfera,  siendo capaces de eliminar gran parte de los NOx. SOx, partículas volátiles y material particulado. ",
 
     image: {
-      front: "/images/products/cemento.svg",
-      back: "/images/products/cemento.svg",
-      left: "/images/products/cemento.svg",
-      right: "/images/products/cemento.svg"
+      front: "/images/products/generalF.png",
+      back: "/images/products/Tipo1_espalda.png",
+      left: "/images/products/Tipo1_Lado1.png",
+      right: "/images/products/Tipo1_Lado2.png"
     },
 
     video: "/videos/videoCemento.mp4",

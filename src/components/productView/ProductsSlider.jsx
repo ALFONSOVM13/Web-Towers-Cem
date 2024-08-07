@@ -36,7 +36,7 @@ const ProductsSlider = ({ title, name, description, image, video}) => {
 
   return (
     <>
-    <section className="flex justify-center pt-40  md:pt-28 pb-4 p-4 md:px-20 flex-col md:flex-row bg-slate-200 ">
+    <section className="flex justify-center pt-40  md:pt-28 pb-4 px-20 flex-col md:flex-row bg-slate-200 ">
       <div className="flex-1 pr-7 ">
         <Title text={title} className={"text-primary-100 !text-left"} />
         <h2 className="text-customGreen font-title text-2xl md:text-4xl font-bold py-2 ">

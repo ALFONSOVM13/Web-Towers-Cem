@@ -1,10 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import $ from "jquery";
-import "./style.scss";
 import Image from "next/image";
+import "./style.scss";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa6";
 
 const Timeline = () => {
+  const timelineRef = useRef(null);
+
   useEffect(() => {
     (function ($) {
       $.fn.timeline = function () {
@@ -31,8 +34,8 @@ const Timeline = () => {
               selectors.id.css(
                 "background-image",
                 "url(" +
-                selectors.item.last().find(selectors.img).attr("src") +
-                ")"
+                  selectors.item.last().find(selectors.img).attr("src") +
+                  ")"
               );
               selectors.item.last().addClass(selectors.activeClass);
             } else if (pos <= max - 40 && pos >= min) {
@@ -46,7 +49,7 @@ const Timeline = () => {
           });
         });
       };
-    })($); // Nota el uso de $ aquí en lugar de jQuery
+    })($);
 
     // Inicializa el timeline
     $("#timeline-1").timeline();
@@ -57,85 +60,275 @@ const Timeline = () => {
     };
   }, []);
 
+  const handleYearClick = (index) => {
+    if (timelineRef.current) {
+      const item =
+        timelineRef.current.querySelectorAll(".timeline-item")[index];
+      item.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollTo = (direction) => {
+    if (timelineRef.current) {
+      const items = timelineRef.current.querySelectorAll(".timeline-item");
+      const activeIndex = Array.from(items).findIndex((item) =>
+        item.classList.contains("timeline-item--active")
+      );
+
+      let newIndex = direction === "up" ? activeIndex - 1 : activeIndex + 1;
+      newIndex = Math.max(0, Math.min(newIndex, items.length - 1));
+
+      items[newIndex].scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div id="timeline-1" className="timeline-container">
-      <div className="timeline-header">
-        <h2 className="timeline-header__title">Towers Cem</h2>
-        <h3 className="timeline-header__subtitle">
-          CONSTRUYENDO CIUDADES QUE RESPIRAN
-        </h3>
+    <div className="timeline-page">
+      <div className="fixed inset-y-1/2 left-10 flex flex-col items-center z-50">
+        <button
+          onClick={() => scrollTo("up")}
+          className="mb-2 p-2  text-white rounded-full shadow-md hover:bg-slate-500 focus:outline-none"
+        >
+          <FaArrowUp className="w-6 h-6" />
+        </button>
+        <button
+          onClick={() => scrollTo("down")}
+          className="p-2  text-white rounded-full shadow-md hover:bg-slate-500 focus:outline-none"
+        >
+          <FaArrowDown className="w-6 h-6" />
+        </button>
       </div>
-      <div className="timeline">
-        <div className="timeline-item" data-text="NUESTROS INICIOS">
-          <div className="timeline__content">
-            <Image
-              src="/images/team/carlos.svg"
-              alt="1881"
-              width={400}
-              height={185}
-              className="timeline__img filter"
-            />
-            <h2 className="timeline__content-title">2018</h2>
-            <p className="timeline__content-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              nisi et molestiae, libero, fuga obcaecati a, nesciunt dolores
-              nulla consequuntur perferendis animi! Impedit assumenda aliquam
-              perspiciatis voluptatibus obcaecati, laboriosam dignissimos.
-            </p>
-          </div>
+      <div id="timeline-1" className="timeline-container" ref={timelineRef}>
+        <div className="timeline-header">
+          <h2 className="timeline-header__title">Towers Cem</h2>
+          <h3 className="timeline-header__subtitle text-2xl">
+            CONSTRUYENDO CIUDADES QUE RESPIRAN
+          </h3>
         </div>
-        <div className="timeline-item" data-text="QUIENES SOMOS">
-          <div className="timeline__content">
-            <Image
-              src="/images/team/2022.svg"
-              alt="1893"
-              width={400}
-              height={185}
-              className="timeline__img filter"
-            />
-            <h2 className="timeline__content-title">2019</h2>
-            <p className="timeline__content-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-              sunt amet. Quos, labore maxime deserunt dignissimos praesentium
-              saepe, eos voluptatibus nam corrupti nisi beatae cum fugit aliquam
-              quae recusandae. Maiores!
-            </p>
+        <div className="timeline">
+          <div className="timeline-item" data-text="Un niño soñador">
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/carlosTorres.jpg"
+                alt="1881"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">1999</h2>
+              <p className="timeline__content-desc">
+                En el corazón de Barranquilla, Colombia, nació el 9 de febrero
+                de 1999 un visionario que se convertiría en sinónimo de
+                innovación y sostenibilidad en la construcción: Carlos Torres.
+                Desde joven, mostró una pasión inquebrantable por transformar su
+                entorno y construir un futuro más verde y saludable.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="timeline-item" data-text="NUESTRO ADN">
-          <div className="timeline__content">
-            <Image
-              src="/images/team/2022.svg"
-              alt="1905"
-              width={400}
-              height={185}
-              className="timeline__img filter"
-            />
-            <h2 className="timeline__content-title">2020</h2>
-            <p className="timeline__content-desc">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
-              reprehenderit nisi iure omnis rem, ratione obcaecati sed sit
-              debitis laudantium nulla aliquid. Expedita repellat, deleniti
-              necessitatibus voluptates earum doloremque quo?
-            </p>
+          <div
+            className="timeline-item"
+            data-text="El Nacimiento de una Pasión"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/pruebas.svg"
+
+                alt="1893"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2017</h2>
+              <p className="timeline__content-desc">
+                En 2017, Carlos Torres empezó a explorar su profundo interés por
+                la ciencia y los materiales. Su curiosidad y entusiasmo por
+                entender cómo funcionan los materiales sentaron las bases para
+                lo que más tarde se convertiría en Towers Cem, marcando el
+                comienzo de su camino hacia la innovación en la construcción.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="timeline-item" data-text="X-CEM">
-          <div className="timeline__content">
-            <Image
-              src="/images/team/2019.svg"
-              alt="1908"
-              width={400}
-              height={185}
-              className="timeline__img filter"
-            />
-            <h2 className="timeline__content-title">2021</h2>
-            <p className="timeline__content-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem et
-              exercitationem vitae eligendi soluta. Voluptatem a totam ducimus,
-              rem asperiores nostrum laudantium est, ut, dolorum fugiat
-              veritatis? Vitae, nesciunt temporibus!
-            </p>
+          <div
+            className="timeline-item"
+            data-text="Forjando un perfil científico"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/2017.svg"
+                alt="1905"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2019</h2>
+              <p className="timeline__content-desc">
+                A inicios de este año nuestro fundador participó en un concurso
+                regional gracias a su investigación y su gran desempeño supero
+                la primera fase del concurso hasta llegar a la fase nacional.
+                Pero este mismo año llegó la pandemia y todo tuvo un giro
+                inesperado.
+              </p>
+            </div>
+          </div>
+          <div
+            className="timeline-item"
+            data-text="Un Reto en la Gran Industria del Cemento"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/Historia-del-cemento.webp"
+                alt="1908"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2020</h2>
+              <p className="timeline__content-desc">
+                Durante su paso por una de las principales cementeras de
+                Colombia, nuestro fundador detecta importantes áreas de mejora y
+                sugiere la creación de cementos inteligentes para diferenciarse
+                en el mercado. A pesar del rechazo a su propuesta y la no
+                renovación de su contrato, esta experiencia impulsa su
+                determinación para lanzar su propio proyecto innovador.
+              </p>
+            </div>
+          </div>
+          <div className="timeline-item" data-text="Nacimiento de Towers Cem">
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/xcem.svg"
+                alt="1908"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2021</h2>
+              <p className="timeline__content-desc">
+                Luego de años e investigación nuestro fundador decide seguir a
+                cabo con su idea y formar un equipo para crear una nueva
+                cementera que produzca nuevas tecnologías de cementos. Decidió
+                incorporar nuevas tecnologías y materiales a este mundo del
+                cemento que tenía poca innovación hasta entonces. Decidió formar
+                un equipo que creyera en su visión y que tuvieran habilidades
+                complementarias.
+              </p>
+            </div>
+          </div>
+          <div
+            className="timeline-item"
+            data-text="Un Año de Innovación y Desafíos"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/2021.svg"
+                alt="1908"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2022</h2>
+              <p className="timeline__content-desc">
+                Este año, la idea de negocio recibió un programa intensivo de
+                dos semanas y avanzó a una incubación de tres meses con capital
+                semilla para prototipos. El fundador desarrolló y validó los
+                primeros prototipos con resultados prometedores y comenzó el
+                proceso de patente en Medellín. Lamentablemente, el 9 de
+                octubre, el padre del fundador falleció, afectando
+                emocionalmente el crecimiento de la empresa.
+              </p>
+            </div>
+          </div>
+          <div
+            className="timeline-item"
+            data-text="Ganadores del Prix French Tech"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/2023- Ganadores de la Prix French Tech.svg"
+                alt="1908"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2023</h2>
+              <p className="timeline__content-desc">
+              Este año, Towers Cem ganó el Prix French Tech Bogotá 2023, un premio que reconoce emprendimientos tecnológicos enfocados en mejorar la calidad de vida y la sostenibilidad. En 2023, el premio amplió su alcance para incluir más start-ups y proyectos. 
+
+              </p>
+            </div>
+          </div>
+          <div
+            className="timeline-item"
+            data-text="Embajador Puentes de Talento"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/PuentesTalento.svg"
+                alt="1908"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2023</h2>
+              <p className="timeline__content-desc">
+                Carlos, uno de los fundadores, fue seleccionado como Embajador
+                en el programa Puentes de Talento Madrid, un reconocimiento
+                otorgado a solo 10 jóvenes de toda Latinoamérica. Este
+                prestigioso programa le permitió validar nuestro mercado
+                internacional y expandir nuestras conexiones y oportunidades a
+                nivel global.
+              </p>
+            </div>
+          </div>
+          <div
+            className="timeline-item"
+            data-text="Nuestro Camino hacia la Innovación en Cemento"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/Emprende Uninorte 2023.jpg"
+                alt="1908"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2023</h2>
+              <p className="timeline__content-desc">
+                Ganamos el Emprende Uninorte Startup Competition 2023 por
+                nuestra innovadora tecnología de cemento que utiliza radiación
+                solar para descontaminar gases. El premio nos otorgó capital
+                semilla para avanzar en nuestro proyecto de construcciones
+                sostenibles. También fuimos ganadores de la SUP23 Uninorte,
+                recibiendo capital semilla y mentorías. ¡Llegó Miley, la pieza
+                faltante, y ahora somos un equipo de cinco!
+              </p>
+            </div>
+          </div>
+          <div
+            className="timeline-item"
+            data-text="La mejor tecnologia con Mentor"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/2024.svg"
+                alt="1908"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2024</h2>
+              <p className="timeline__content-desc">
+                En 2024, nuestro equipo fue galardonado con el premio a la Mejor
+                Tecnología en el programa de mentoría de la Universidad
+                Nacional. Este reconocimiento destaca nuestra innovadora
+                tecnología y nos proporcionó valiosa orientación y apoyo de
+                expertos en el campo. En este año, culminamos el proceso de
+                registro de nuestra patente y estamos en el proceso de levantar
+                capital para la puesta en marcha de nuestra primera planta
+                piloto. Este paso es crucial para llevar nuestra tecnología al
+                mercado y avanzar hacia la implementación a gran escala.{" "}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -144,91 +337,3 @@ const Timeline = () => {
 };
 
 export default Timeline;
-
-{
-  /* <div className="demo-footer">
-  <a
-    href="http://www.turkishnews.com/Ataturk/life.htm"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Source/Kaynak
-  </a>
-</div> */
-}
-{
-  /* <div className="timeline-item" data-text="FATHER OF THE TURKS">
-    <div className="timeline__content">
-            <img className="timeline__img" src="http://ataturk.istanbul.gov.tr/GalleryLibrary/12.jpg" alt="1915" />
-            <h2 className="timeline__content-title">1915</h2>
-            <p className="timeline__content-desc">
-              In 1915, when Dardanelles campaign was launched, Colonel Mustafa Kemal became a national hero by winning successive victories and finally repelling the invaders.
-            </p>
-          </div>
-        </div> */
-}
-{
-  /* <div className="timeline-item" data-text="FATHER OF THE TURKS">
-          <div className="timeline__content">
-            <img className="timeline__img" src="https://vision-digital.com.mx/wp-content/uploads/2018/03/foto1-1.jpg" alt="1916" />
-            <h2 className="timeline__content-title">1916</h2>
-            <p className="timeline__content-desc">
-              Promoted to general in 1916, at age 35, he liberated two major provinces in eastern Turkey that year. In the next two years, he served as commander of several Ottoman armies in Palestine, Aleppo, and elsewhere, achieving another major victory by stopping the enemy advance at Aleppo.
-            </p>
-          </div>
-        </div>
-        <div className="timeline-item" data-text="FATHER OF THE TURKS">
-          <div className="timeline__content">
-            <img className="timeline__img" src="https://vision-digital.com.mx/wp-content/uploads/2018/03/foto1-1.jpg" alt="1919" />
-            <h2 className="timeline__content-title">1919</h2>
-            <p className="timeline__content-desc">
-              On May 19, 1919, Mustafa Kemal Pasha landed in the Black Sea port of Samsun to start the War of Independence. In defiance of the Sultan's government, he rallied a liberation army in Anatolia and convened the Congress of Erzurum and Sivas which established the basis for the new national effort under his leadership.
-            </p>
-          </div>
-        </div>
-        <div className="timeline-item" data-text="FATHER OF THE TURKS">
-          <div className="timeline__content">
-            <img className="timeline__img" src="https://vision-digital.com.mx/wp-content/uploads/2018/03/foto1-1.jpg" alt="1920" />
-            <h2 className="timeline__content-title">1920</h2>
-            <p className="timeline__content-desc">
-              On April 23, 1920, the Grand National Assembly was inaugurated. Mustafa Kemal Pasha was elected to its Presidency. Fighting on many fronts, he led his forces to victory against rebels and invading armies. Following the Turkish triumph at the two major battles at Inonu in Western Turkey, the Grand National Assembly conferred on Mustafa Kemal Pasha the title of Commander-in-Chief with the rank of Marshal.
-            </p>
-          </div>
-        </div>
-        <div className="timeline-item" data-text="FATHER OF THE TURKS">
-          <div className="timeline__content">
-            <img className="timeline__img" src="https://vision-digital.com.mx/wp-content/uploads/2018/03/foto1-1.jpg" alt="1922" />
-            <h2 className="timeline__content-title">1922</h2>
-            <p className="timeline__content-desc">
-              At the end of August 1922, the Turkish armies won their ultimate victory. Within a few weeks, the Turkish mainland was completely liberated, the armistice signed, and the rule of the Ottoman dynasty abolished.
-            </p>
-          </div>
-        </div>
-        <div className="timeline-item" data-text="FATHER OF THE TURKS">
-          <div className="timeline__content">
-            <img className="timeline__img" src="https://vision-digital.com.mx/wp-content/uploads/2018/03/foto1-1.jpg" alt="1923" />
-            <h2 className="timeline__content-title">1923</h2>
-            <p className="timeline__content-desc">
-              In July 1923, the national government signed the Lausanne Treaty with Great Britain, France, Greece, Italy, and others. In mid-October, Ankara became the capital of the new Turkish State. On October 29, the Republic was proclaimed and Mustafa Kemal Pasha was unanimously elected President of the Republic.
-            </p>
-          </div>
-        </div>
-        <div className="timeline-item" data-text="FATHER OF THE TURKS">
-          <div className="timeline__content">
-            <img className="timeline__img" src="https://vision-digital.com.mx/wp-content/uploads/2018/03/foto1-1.jpg" alt="1934" />
-            <h2 className="timeline__content-title">1934</h2>
-            <p className="timeline__content-desc">
-              The account of Atatürk's fifteen year Presidency is a saga of dramatic modernization. With indefatigable determination, he created a new political and legal system, abolished the Caliphate and made both government and education secular, gave equal rights to women, changed the alphabet and the attire, and advanced the arts and the sciences, agriculture and industry. In 1934, when the surname law was adopted, the national parliament gave him the name <strong>Atatürk</strong> (Father of the Turks).
-            </p>
-          </div>
-        </div>
-        <div className="timeline-item" data-text="FATHER OF THE TURKS">
-          <div className="timeline__content">
-            <img className="timeline__img" src="https://vision-digital.com.mx/wp-content/uploads/2018/03/foto1-1.jpg" alt="1938" />
-            <h2 className="timeline__content-title">1938</h2>
-            <p className="timeline__content-desc">
-              On November 10, 1938, following an illness of a few months, the national liberator and the Father of modern Turkey died. But his legacy to his people and to the world endures.
-            </p>
-          </div>
-        </div> */
-}
