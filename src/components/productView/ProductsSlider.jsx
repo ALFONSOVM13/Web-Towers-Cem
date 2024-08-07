@@ -36,8 +36,8 @@ const ProductsSlider = ({ title, name, description, image, video}) => {
 
   return (
     <>
-    <section className="flex justify-center pt-40  md:pt-28 pb-4 px-12 sm:px-20 flex-col md:flex-row bg-slate-200 ">
-      <div className="flex-1 pr-7 ">
+    <section className="flex justify-center pt-24  md:pt-28 pb-4 px-12 sm:px-20 flex-col md:flex-row bg-slate-200 ">
+      <div className="flex-1 ">
         <Title text={title} className={"text-primary-100 !text-left"} />
         <h2 className="text-customGreen font-title text-2xl md:text-4xl font-bold py-2 ">
           {name}
@@ -52,7 +52,9 @@ const ProductsSlider = ({ title, name, description, image, video}) => {
         <div className="flex  md:gap-8 items-center justify-around ">
           <div className="flex items-center gap-2 cursor-pointer">
             <Button className={"rounded-sm"}>
-              SOLICITAR MUESTRA
+              <p className=" text-sm">
+                SOLICITAR MUESTRA
+              </p>
             </Button>
           </div>
           <p className="w-28 text-sm font-title hidden sm:block">
