@@ -259,29 +259,6 @@ const Timeline = () => {
           </div>
           <div
             className="timeline-item"
-            data-text="Embajador Puentes de Talento"
-          >
-            <div className="timeline__content">
-              <Image
-                src="/images/timeline/PuentesTalento.svg"
-                alt="1908"
-                width={400}
-                height={185}
-                className="timeline__img filter"
-              />
-              <h2 className="timeline__content-title">2023</h2>
-              <p className="timeline__content-desc">
-                Carlos, uno de los fundadores, fue seleccionado como Embajador
-                en el programa Puentes de Talento Madrid, un reconocimiento
-                otorgado a solo 10 jóvenes de toda Latinoamérica. Este
-                prestigioso programa le permitió validar nuestro mercado
-                internacional y expandir nuestras conexiones y oportunidades a
-                nivel global.
-              </p>
-            </div>
-          </div>
-          <div
-            className="timeline-item"
             data-text="Nuestro Camino hacia la Innovación en Cemento"
           >
             <div className="timeline__content">
@@ -301,6 +278,29 @@ const Timeline = () => {
                 sostenibles. También fuimos ganadores de la SUP23 Uninorte,
                 recibiendo capital semilla y mentorías. ¡Llegó Miley, la pieza
                 faltante, y ahora somos un equipo de cinco!
+              </p>
+            </div>
+          </div>
+          <div
+            className="timeline-item"
+            data-text="Embajador Puentes de Talento"
+          >
+            <div className="timeline__content">
+              <Image
+                src="/images/timeline/PuentesTalento.svg"
+                alt="1908"
+                width={400}
+                height={185}
+                className="timeline__img filter"
+              />
+              <h2 className="timeline__content-title">2024</h2>
+              <p className="timeline__content-desc">
+                Carlos, uno de los fundadores, fue seleccionado como Embajador
+                en el programa Puentes de Talento Madrid, un reconocimiento
+                otorgado a solo 10 jóvenes de toda Latinoamérica. Este
+                prestigioso programa le permitió validar nuestro mercado
+                internacional y expandir nuestras conexiones y oportunidades a
+                nivel global.
               </p>
             </div>
           </div>
