@@ -85,7 +85,7 @@ export const products = [
 
     slug: 'uso-general',
 
-    dataSheet: '/files/FICHA_TECNICA.pdf'
+    dataSheet: '/files/TC_FICHA_TECNICA_GENERAL.pdf'
   },
 
 

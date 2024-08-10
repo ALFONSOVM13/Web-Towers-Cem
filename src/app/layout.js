@@ -17,12 +17,37 @@ export const metadata = {
   url: "https://towerscem.com",
   author: "Equipo Towers Cem",
   robots: "index, follow",
+  siteName: "Towers Cem",
+  keywords:
+    "cemento, construcción, cemento colombia, sostenibilidad, calidad, innovación, tecnología, X-CEM, Towers Cem",
+  openGraph: {
+    title: "Towers Cem | Construyendo ciudades que respiran",
+    description:
+      "Somos una cementera innovadora líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción.",
+    url: "https://towerscem.com",
+    type: "website",
+    images: [
+      {
+        url: "https://towerscem.com/images/OG.PNG", 
+        width: 1200, 
+        height: 630,  
+        alt: "Towers Cem Logo", 
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Towers Cem | Construyendo ciudades que respiran",
+    description:
+      "Somos una cementera innovadora líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción.",
+    images: ["https://towerscem.com/images/OG.PNG"],
+  },
   schema: {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Towers Cem",
     url: "https://towerscem.com",
-    logo: "/images/OG.PNG",
+    logo: "https://towerscem.com/images/OG.PNG", // Asegúrate de que la URL sea absoluta
     description:
       "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
     sameAs: [
@@ -31,10 +56,8 @@ export const metadata = {
       "https://www.youtube.com/@towerscemento",
     ],
   },
-  siteName: "Towers Cem",
-  keywords:
-    "cemento, construcción, cemento colombia, sostenibilidad, calidad, innovación, tecnología, X-CEM, Towers Cem",
 };
+
 
 export default function RootLayout({ children }) {
   const isMaintenanceMode = false; // Cambia esto a `false` cuando salgas del modo de mantenimiento
