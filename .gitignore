@@ -28,6 +28,12 @@ yarn-error.log*
 # local env files
 .env*.local
 .env.local
+.env
+
+# Ignorar archivos .env
+.env
+.env.*
+
 # sendgrid.env (temporarily removed from ignore)
 
 # vercel
