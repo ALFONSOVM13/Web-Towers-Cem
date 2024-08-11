@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import React from "react";
 import {
+  FaCheck,
   FaInstagram,
   FaLinkedinIn,
   FaTiktok,
@@ -10,45 +11,33 @@ import {
 } from "react-icons/fa6";
 import { FiCheckSquare } from "react-icons/fi";
 import { MdOutlineCropSquare } from "react-icons/md";
+import axios from "axios";
 
 const FooterSection = () => {
-  // const [email, setEmail] = useState("");
-  // const [termsAccepted, setTermsAccepted] = useState(false);
-  // const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [message, setMessage] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [animationClass, setAnimationClass] = useState("");
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!termsAccepted) {
+      setMessage("Debe aceptar los términos y condiciones.");
+      return;
+    }
 
-  //   if (!termsAccepted) {
-  //     setMessage(
-  //       "Por favor, acepta los Términos y Condiciones y las Políticas de Privacidad."
-  //     );
-  //     return;
-  //   }
+    try {
+      const response = await axios.post("/api/subscribeNewsletter", { email });
+      setMessage(response.data.message);
 
-  //   const formData = new FormData();
-  //   formData.append("contact_email", email);
-
-  //   try {
-  //     const response = await fetch("URL_DEL_FORMULARIO_ZOHO", {
-  //       method: "POST",
-  //       body: formData,
-  //     });
-
-  //     if (response.ok) {
-  //       setMessage("¡Suscripción exitosa!");
-  //       setEmail("");
-  //       setTermsAccepted(false);
-  //     } else {
-  //       setMessage(
-  //         "Hubo un error al enviar el formulario. Intenta nuevamente."
-  //       );
-  //     }
-  //   } catch (error) {
-  //     setMessage("Hubo un error al enviar el formulario. Intenta nuevamente.");
-  //   }
-  // };
-
+      setEmail("");
+      setIsSubscribed(true); // Cambia el estado del botón a
+      setTermsAccepted(false); // Reinicia el estado del checkbox
+    } catch (error) {
+      setMessage("Error al suscribirse.");
+    }
+  };
   return (
     <section className="pt-16 pb-7 bg-complementary-300 px-2 sm:px-20">
       <div className="mx-auto max-w-full ">
@@ -107,7 +96,7 @@ const FooterSection = () => {
           </div>
         </div>
         <div className="py-10 flex flex-col md:flex-col lg:flex-row justify-between gap-8 border-b border-gray-500 ">
-          <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-4 md:gap-8 lg:gap-8 xl:gap-32">
+          <div className="w-full max-lg:mx-auto flex flex-col sm:flex-row max-lg:items-center max-lg:justify-between gap-4 md:gap-8 lg:gap-8 xl:gap-52">
             <div className="/sobre-towers-cem">
               <h2 className="text-lg font-bold text-white mb-7 max-lg:text-center font-title">
                 Sobre Towers Cem
@@ -190,7 +179,7 @@ const FooterSection = () => {
               <h2 className="text-lg  text-white mb-7 max-lg:text-center font-title font-bold">
                 Medios
               </h2>
-              <ul className="flex flex-col gap-6 max-lg:items-center">
+              <ul className="flex flex-col gap-4 max-lg:items-center">
                 <li>
                   <a
                     href="/faq"
@@ -226,8 +215,8 @@ const FooterSection = () => {
               </ul>
             </div>
           </div>
-          {/* <div className="w-full lg:max-w-md mx-auto">
-            <h2 className="text-lg font-medium text-white mb-7">Newsletter</h2>
+          <div className="w-full lg:max-w-md mx-auto">
+            <h2 className="text-lg text-center md:text-left font-medium text-white mb-7">Newsletter</h2>
             <div className="bg-zinc-800 rounded-sm p-5">
               <form action="#" className="flex flex-col gap-5">
                 <div className="relative">
@@ -274,16 +263,24 @@ const FooterSection = () => {
                       </a>
                     </label>
                   </div>
-                  <input
-                    type="submit"
+                  <button
+                    type="button"
                     onClick={handleSubmit}
-                    value="Suscribirse"
-                    className="text-white text-base font-semibold py-3 px-7 cursor-pointer bg-secondary-200 hover:bg-secondary-300 focus:outline-none focus:bg-secondary-300"
-                  />
+                    className={`w-full text-white text-base font-semibold py-3 px-6 flex items-center justify-center cursor-pointer ${
+                      isSubscribed
+                        ? "bg-primary-200 hover:bg-primary-300"
+                        : "bg-secondary-200 hover:bg-secondary-300"
+                    } focus:outline-none focus:ring-2 focus:ring-primary-100 transition-all duration-300 ${animationClass}`}
+                  >
+                    {isSubscribed && (
+                      <FiCheckSquare className="text-secondary-200 w-7 h-7 mr-2" />
+                    )}{" "}
+                    {isSubscribed ? "Suscrito" : "Suscribirse"}
+                  </button>
                 </div>
               </form>
             </div>
-          </div> */}
+          </div>
         </div>
         <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-5 pt-7">
           <span className="text-sm font-normal text-complementary-400">
