@@ -4,6 +4,8 @@ import { Client } from '@sendgrid/client';
 const client = new Client();
 client.setApiKey(process.env.SENDGRID_API_KEY);
 
+console.log('SENDGRID_API_KEY:', process.env.SENDGRID_API_KEY);
+
 const getListIdByName = async (listName) => {
   try {
     const response = await client.request({
