@@ -1,10 +1,10 @@
-// src/app/api/subscribeNewsletter/route.js
 import { Client } from '@sendgrid/client';
 
+const sendgridApiKey = process.env.SENDGRID_API_KEY;
 const client = new Client();
-client.setApiKey(process.env.SENDGRID_API_KEY);
+client.setApiKey(sendgridApiKey);
 
-console.log('SENDGRID_API_KEY:', process.env.SENDGRID_API_KEY);
+console.log('SENDGRID_API_KEY:', sendgridApiKey);
 
 const getListIdByName = async (listName) => {
   try {
