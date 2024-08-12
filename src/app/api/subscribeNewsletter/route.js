@@ -11,6 +11,22 @@ if (!sendgridApiKey) {
 const client = new Client();
 client.setApiKey(sendgridApiKey);
 
+// Función de prueba para verificar la conexión a SendGrid
+const testSendGridConnection = async () => {
+  try {
+    const response = await client.request({
+      method: 'GET',
+      url: '/v3/marketing/lists',
+    });
+    console.log('Conexión a SendGrid exitosa:', response);
+  } catch (error) {
+    console.error('Error al conectar con SendGrid:', error.response ? error.response.body : error.message);
+  }
+};
+
+// Llamar a la función de prueba
+testSendGridConnection();
+
 const getListIdByName = async (listName) => {
   try {
     const response = await client.request({
