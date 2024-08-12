@@ -1,50 +1,72 @@
-/*Right Side Buttons Start*/
-.sticky-container {
-  padding: 0px;
-  margin: 0px;
-  position: fixed;
-  right: -159px;
-  top: 50%;
-  width: 200px;
-  z-index: 2;
-}
+// .right-side-button {
+//   position: fixed; 
+//   right: 1rem;
+//   bottom: 1rem;
+//   z-index: 1000;
+// }
 
-.sticky li {
-  list-style-type: none;
-  background-color: #25d366;
-  color: #efefef;
-  height: 43px;
-  padding: 0px;
-  margin: 0px 0px 1px 0px;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  cursor: pointer;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
-  filter: rgb(221, 225, 221);
-  -webkit-filter: grayscale(0%);
-}
+// .sticky-container {
+//   background-color: #fff;
+//   border: none;
+//   padding: 10px;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: relative; 
+//   z-index: 1; /* Asegura que esté sobre los otros botones cuando se abre el contenedor */
+// }
 
-.sticky li:hover {
-  margin-left: -115px;
-  background-color: #2c2e63;
+// .icon {
+//   width: 48px;
+//   height: 48px;
+// }
 
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
-  -webkit-filter: grayscale(0%);
-}
+// .container-buttons {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center; /* Centra los botones horizontalmente */
+//   position: absolute;
+//   bottom: 70px; 
+//   right: 0;
+//   z-index: 0;
+// }
 
-.sticky li svg {
-  float: left;
-  margin: 5px 5px;
-  margin-right: 10px;
-}
+// .button-item {
+//   background-color: #fff;
+//   border: none;
+//   padding: 10px;
+//   margin: 5px 0;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center; /* Centra el contenido del botón */
+//   position: relative;
+// }
 
-.sticky li p {
-  float: left;
-  padding: 0px;
-  margin: 0px;
-  text-transform: uppercase;
-  line-height: 43px;
-}
+// .button-content {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center; /* Alinea el contenido del botón centrado */
+// }
+
+// .button-item svg {
+//   width: 48px;
+//   height: 48px;
+// }
+
+// .overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background: rgba(44, 46, 99, 0.95); /* Fondo oscuro semitransparente */
+//   opacity: 0.95; /* Ajusta la opacidad */
+//   z-index: -10; /* Asegura que el overlay esté debajo del contenedor de botones */
+//   backdrop-filter: blur(5px); /* Añade un desenfoque al fondo para un efecto más moderno */
+//   display: flex; /* Centra el contenido si es necesario */
+//   align-items: center; /* Centra el contenido verticalmente */
+//   justify-content: center; /* Centra el contenido horizontalmente */
+// }
 

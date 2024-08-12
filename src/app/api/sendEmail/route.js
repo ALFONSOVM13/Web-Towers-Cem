@@ -17,22 +17,22 @@ export async function POST(request) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "alfonsovengoechea@gmail.com", // Tu dirección de correo electrónico
-        pass: "yjod juez dvac qynu", // Tu contraseña específica de aplicación
+        user: "towercem@gmail.com", // Tu dirección de correo electrónico
+        pass: "lfbx tcok rqeq ydrs", // Tu contraseña específica de aplicación
       },
     });
 
     // Opciones del correo electrónico con formato HTML profesional
     const mailOptions = {
       from: email,
-      to: "alfonsovengoechea@gmail.com", // Dirección de correo a la que se enviará el mensaje
-      subject: `Contacto desde el formulario: ${subject}`,
+      to: "towercem@gmail.com", // Dirección de correo a la que se enviará el mensaje
+      subject: `Nuevo mensaje de ${name} desde Towers Cem: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 10px;">
           <!-- Header -->
           <header style="background-color: #759c32; padding: 20px; border-top-left-radius: 10px; border-top-right-radius: 10px; text-align: center; color: #ffffff;">
             <h1 style="margin: 0; font-size: 24px;">Nuevo mensaje de ${name}</h1>
-            <p style="margin: 0; font-size: 16px;">${subject}</p>
+            <p style="margin: 0; font-size: 16px;">Asunto:${subject}</p>
           </header>
 
           <!-- Body -->

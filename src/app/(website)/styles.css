@@ -1,18 +1,25 @@
 /* globals.css */
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 8px; /* Ancho del scroll vertical */
+  height: 8px; /* Altura del scroll horizontal */
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f1f1; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 0px;
+  background: #888; 
+  border-radius: 10px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background: #555; 
+}
+
+
+.borderText {
+ -webkit-text-stroke-width: 1px;
+ -webkit-text-stroke-color: rgb(0, 0, 0);
 }

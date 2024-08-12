@@ -18,7 +18,7 @@ function ContactSection() {
         <main className="p-5 mt-11 border-2 border-solid backdrop-blur-[190px] bg-complementary-300  border-gray-950 border-opacity-10 max-md:mt-10 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0">
             <ContactForm />
-            <TestimonialCard />
+            {/* <TestimonialCard /> */}
           </div>
         </main>
       </div>

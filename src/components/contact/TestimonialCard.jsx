@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import Image from "next/image";
 
 const photoTestimonial = [
   {
@@ -12,26 +15,23 @@ const photoTestimonial = [
 
 function TestimonialCard() {
   return (
-    <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full max-md:items-center ">
-      <figure className="flex overflow-hidden relative flex-col justify-center items-center self-stretch my-auto text-base tracking-normal min-h-[536px] max-md:mt-10 max-md:max-w-full">
-        <div className="flex overflow-hidden relative flex-col px-7 pt-20 pb-8 w-full min-h-[536px] max-md:px-5 max-md:max-w-full">
-          <img
-            loading="lazy"
-            src={photoTestimonial[0].image}
-            className="object-cover absolute inset-0 size-full"
-            alt="Overlay image"
-            width={500}
-            height={300}
-          />
-          <figcaption className="flex relative flex-col mt-80 max-md:mt-10 max-md:max-w-full">
-            <blockquote className="text-white text-center max-md:max-w-full">
-              <blockquote className="text-white max-md:max-w-full">
-                {
-                  '"Desarrollamos cementos inteligentes y sostenibles que purifican el aire eliminando hasta un 23% de CO₂."'
-                }
-              </blockquote>
+    <div className="flex flex-col w-full max-w-[536px] max-md:max-w-full">
+      <figure className="relative flex flex-col justify-center items-center text-base tracking-normal">
+        <div className="relative flex flex-col w-full min-h-[536px]">
+          <div className="absolute inset-0 overflow-hidden">
+            <Image
+              src={photoTestimonial[0].image}
+              alt="Overlay image"
+              width={536}
+              height={536}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <figcaption className="relative mt-80 text-center text-white">
+            <blockquote className="text-lg font-medium">
+              {`"Desarrollamos cementos inteligentes y sostenibles que purifican el aire eliminando hasta un 23% de CO₂."`}
             </blockquote>
-            <cite className="mt-1.5 font-semibold text-white text-center max-md:max-w-full">
+            <cite className="mt-4 block text-lg font-semibold">
               Carlos Torres
             </cite>
           </figcaption>
