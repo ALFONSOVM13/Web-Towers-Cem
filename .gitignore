@@ -27,12 +27,13 @@ yarn-error.log*
 
 # local env files
 .env*.local
-.env.local
+!.env.local
 .env
 
 # Ignorar archivos .env
 .env
 !.env.local
+
 
 
 # sendgrid.env (temporarily removed from ignore)
