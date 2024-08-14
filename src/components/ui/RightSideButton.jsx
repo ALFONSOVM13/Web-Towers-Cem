@@ -45,7 +45,7 @@ const RightSideButton = () => {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-12 h-12 stroke-[#270089]"
+            className="w-12 h-12 stroke-[#000000]"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             fill="none"
@@ -62,7 +62,7 @@ const RightSideButton = () => {
         <>
           <div
             className={classNames(
-              "fixed top-0 left-0 w-full h-full bg-[#2c2e63] opacity-95 z-[-10] backdrop-blur-md",
+              "fixed top-0 left-0 w-full h-full bg-[#000000] opacity-80 z-[-10] backdrop-blur-md",
               {
                 "animate-fadeIn": isOpenContainer,
                 "animate-fadeOut": !isOpenContainer,
@@ -90,7 +90,7 @@ const RightSideButton = () => {
                 <div className="flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-12 h-12 stroke-[#270089]"
+                    className="w-12 h-12 stroke-[#000000]"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     fill="none"
@@ -120,7 +120,7 @@ const RightSideButton = () => {
                 <div className="flex items-center justify-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-12 h-12 stroke-[#270089]"
+                    className="w-12 h-12 stroke-[#000000]"
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     fill="none"
