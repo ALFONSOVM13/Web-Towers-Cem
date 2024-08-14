@@ -24,7 +24,7 @@ const KnowUsSection = () => {
             <span className="font-bold">X-CEM</span>,{" "}
             incorporamos materiales reciclados y propiedades inteligentes en
             nuestros productos,{" "}
-            <span className="font-bold">permitiendo la absorción de CO₂</span>{" "}
+            <span className="font-bold">permitiendo la descomposición de CO₂</span>{" "}
             y contribuyendo a la lucha contra el cambio climático.
           </p>
         </div>

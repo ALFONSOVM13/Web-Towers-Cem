@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Towers Cem | Construyendo ciudades que respiran",
   description:
-    "Somos una cementera innovadora líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
+    "Somos una cementera innovadora líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la descomposición de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
   color: "#000000",
   lang: "es",
   type: "website",
@@ -49,7 +49,7 @@ export const metadata = {
     url: "https://towerscem.com",
     logo: "https://towerscem.com/images/OG.PNG", // Asegúrate de que la URL sea absoluta
     description:
-      "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la absorción de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
+      "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la descomposición de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
     sameAs: [
       "https://www.instagram.com/towerscem",
       "https://www.linkedin.com/company/towerscem",
