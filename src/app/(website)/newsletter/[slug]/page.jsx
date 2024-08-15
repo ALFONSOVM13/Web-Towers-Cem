@@ -100,7 +100,7 @@ const Page = ({ params }) => {
                   alt={relatedNews.title}
                   width={400}
                   height={250}
-                  objectFit="cover"
+                  style={{ objectFit: 'cover' }}
                   className="w-full h-56 object-cover"
                 />
                 <div className="p-4">

@@ -9,7 +9,7 @@ function FeaturedArticlesSection() {
   const { newsletter } = newsletterJson;
 
   return (
-    <section className="featured-articles-section pt-24 md:pt-28 pb-4 px-12 sm:px-20 bg-white">
+    <section className="featured-articles-section pt-24 md:pt-28 pb-12 px-12 sm:px-20 bg-white">
       <div className="w-full mx-auto">
         <h1 className="text-3xl font-bold mb-8">Artículos Destacados</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-12">
