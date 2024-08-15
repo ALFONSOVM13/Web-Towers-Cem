@@ -33,11 +33,11 @@ const Page = ({ params }) => {
           {newsItem.title}
         </h1>
 
-        <p className="text-lg font-content text-gray-800 mb-8">
+        <p className="text-lg italic font-content text-gray-900 mb-8">
           {newsItem.metadescription}
         </p>
 
-        <div className="prose lg:prose-xl font-content text-gray-800 mb-8">
+        <div className="prose lg:prose-xl font-content text-gray-900 mb-8">
           {newsItem.content.map((section, index) => (
             <div key={index} className="mb-8">
               <h2 className="text-3xl font-title font-bold mb-3">
@@ -57,7 +57,7 @@ const Page = ({ params }) => {
           {newsItem.tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-secondary-200 text-complementary-200 text-sm font-medium mr-2 px-3 py-1 rounded-lg border border-blue-300"
+              className="bg-secondary-200 text-complementary-200 text-sm font-medium mr-2 px-3 py-1 rounded-lg border border-primary-300"
             >
               #{tag}
             </span>
