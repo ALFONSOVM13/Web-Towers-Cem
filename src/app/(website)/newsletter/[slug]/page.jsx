@@ -20,7 +20,7 @@ const Page = ({ params }) => {
   }
 
   return (
-    <section className="max-w-4xl mx-auto p-6 bg-white  rounded-lg">
+    <section className="w-full mx-auto pt-24  md:pt-28 pb-4 px-12 sm:px-20 bg-white  rounded-lg">
       <article>
         <Image
           width={1920}

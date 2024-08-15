@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 const Slider = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentId, setCurrentId] = useState(images[0].id);
+  const [intervalId, setIntervalId] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -17,21 +17,45 @@ const Slider = ({ images }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleCircleClick = () => {
+    // Avanza a la siguiente imagen
+    setCurrentId((prevId) => {
+      const currentIndex = images.findIndex((image) => image.id === prevId);
+      const nextIndex = (currentIndex + 1) % images.length;
+      return images[nextIndex].id;
+    });
+  
+    // Limpia el intervalo anterior y crea uno nuevo
+    if (intervalId) {
+      clearInterval(intervalId);
+    }
+  
+    const newIntervalId = setInterval(() => {
+      setCurrentId((prevId) => {
+        const currentIndex = images.findIndex((image) => image.id === prevId);
+        const nextIndex = (currentIndex + 1) % images.length;
+        return images[nextIndex].id;
+      });
+    }, 5000);
+  
+    setIntervalId(newIntervalId);
+  };
+  
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    const newIntervalId = setInterval(() => {
+      setCurrentId((prevId) => {
+        const currentIndex = images.findIndex((image) => image.id === prevId);
+        const nextIndex = (currentIndex + 1) % images.length;
+        return images[nextIndex].id;
+      });
     }, 5000); // Cambia la imagen cada 5 segundos
+  
+    setIntervalId(newIntervalId);
+  
+    return () => clearInterval(newIntervalId); // Limpia el intervalo al desmontar el componente
+  }, [images]);
 
-    return () => clearInterval(interval); // Limpia el intervalo al desmontar el componente
-  }, [images.length]);
-
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  const currentIndex = images.findIndex((image) => image.id === currentId);
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -50,23 +74,22 @@ const Slider = ({ images }) => {
               alt={image.title}
               width={4100}
               height={400}
-              className="object-contain object-center"
+              className="object-co object-center"
             />
           </div>
         ))}
       </div>
-      <button
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full z-10 md:left-8"
-        onClick={handlePrev}
-      >
-        <FaChevronLeft className="w-6 h-6" />
-      </button>
-      <button
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full z-10 md:right-8"
-        onClick={handleNext}
-      >
-        <FaChevronRight className="w-6 h-6" />
-      </button>
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {images.map((image) => (
+          <button
+            key={image.id}
+            className={`w-3 h-3 rounded-full ${
+              image.id === currentId ? "bg-secondary-200" : "bg-complementary-200"
+            }`}
+            onClick={() => handleCircleClick(image.id)}
+          />
+        ))}
+      </div>
     </div>
   );
 };
