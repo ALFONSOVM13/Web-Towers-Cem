@@ -55,8 +55,9 @@ const Menu = ({ active, setActive }) => {
           { href: "/historia", label: "Quienes Somos" },
           { title: "Nuestro Cementos", label: "Nuestros Cementos" },
           { href: "/equipo-towers-cem", label: "Nuestro Equipo" },
-          { href: "/contacto", label: "Contacto" },
+          { href: "/newsletter", label: "Newsletter" },
           { href: "/noticias", label: "Noticias" },
+          { href: "/contacto", label: "Contacto" },
         ].map((item, index) => (
           <li key={index} className="mb-4 relative">
             {item.title ? (
@@ -76,16 +77,24 @@ const Menu = ({ active, setActive }) => {
                 </button>
                 <ul
                   className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-complementary-300 overflow-hidden rounded-sm shadow-lg transition-opacity duration-300 ease-in-out ${
-                    dropdownOpen ? "opacity-100 visible translate-y-0 z-40" : "opacity-0 invisible translate-y-2"
+                    dropdownOpen
+                      ? "opacity-100 visible translate-y-0 z-40"
+                      : "opacity-0 invisible translate-y-2"
                   }`}
                 >
                   <li className="px-4 py-2 font-title hover:bg-complementary-400">
-                    <Link href="/productos/uso-general" className="block font-title">
+                    <Link
+                      href="/productos/uso-general"
+                      className="block font-title"
+                    >
                       Uso General
                     </Link>
                   </li>
                   <li className="px-4 py-2 font-title hover:bg-complementary-400">
-                    <Link href="/productos/uso-estructural" className="block font-title">
+                    <Link
+                      href="/productos/uso-estructural"
+                      className="block font-title"
+                    >
                       Uso Estructural
                     </Link>
                   </li>

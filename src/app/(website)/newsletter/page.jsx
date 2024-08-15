@@ -1,44 +1,69 @@
 import React from "react";
-import SectionHeader from "@/components/newsPage/SectionHeader.jsx";
-import "./styles.scss";
 import Link from "next/link";
-import NewsletterCard from "@/components/newsletter/NewsletterCard";
 import newsletterJson from "@/../public/tempData/newsletter.json";
-import NewsletterSection from "@/components/newsletter/NewsletterSection";
-import NewsletterFrame from "@/components/newsletter/NewsletterFrame";
+import Image from "next/image";
+import Avatar from "@/components/ui/Avatar";
+import TimeSince from "@/components/ui/TimeSince";
 
-function NewsSection() {
+function FeaturedArticlesSection() {
   const { newsletter } = newsletterJson;
+
   return (
-    <section className="newsletter-section relative flex flex-col justify-center z-0 pt-32">
-      <div className="flex flex-col justify-center items-center px-16 w-full text-white max-md:px-5 max-md:max-w-full">
-        <div className="flex flex-col mt-6 w-full max-w-[1216px] mb-5 max-md:mb-5 max-md:max-w-full">
-          <SectionHeader title="NEWSLETTER" />
-          <div className="flex flex-col max-md:mt-10 mb-10 max-md:max-w-full text-left">
-            Nuestros Avances
-          </div>
-        </div>
-        <div className="flex flex-col lg:flex-row mt-6 w-full mb-5 max-md:mb-5 max-md:max-w-full gap-10">
-          <div className="max-lg:w-full w-2/3 flex gap-10 flex-col">
-            <NewsletterFrame {...newsletter[0]} index={0} />
-            <NewsletterSection />
-          </div>
-          <div className="max-lg:mt-12 lg:w-1/3 grid gap-10 grid-col-1 max-md:grid-cols-2 lg:grid-col-1  mb-20 ">
-            {newsletter.slice(1).map((newsletter, index) => (
-              <Link
-                href={"/newsletter/" + newsletter.slug}
-                alt={newsletter.slug}
-                className={`${index === 0 ? "" : "mt-10"} self-end`}
-                key={newsletter.slug}
-              >
-                <NewsletterCard {...newsletter}  />
-              </Link>
-            ))}
-          </div>
+    <section className="featured-articles-section py-12 px-12 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <h1 className="text-3xl font-bold mb-8">Artículos Destacados</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-12">
+          {newsletter.map((newsItem, index) => (
+            <Link
+              key={newsItem.slug}
+              href={`/newsletter/${newsItem.slug}`}
+              className={`news-item relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105 hover:bg-gray-100 flex flex-col ${
+                index % 2 === 0 ? "lg:col-span-7" : "lg:col-span-5"
+              }`}
+            >
+              <Image
+                src={newsItem.image}
+                alt={newsItem.title}
+                width={1920}
+                height={1080}
+                className="w-full h-auto object-cover news-item-image"
+              />
+              <div className="news-item-content p-6 flex flex-col flex-grow bg-antique-white border-t border-sepia-400">
+                <h2 className="news-item-title text-2xl font-bold font-serif text-sepia-800 mb-4 leading-tight">
+                  {newsItem.title}
+                </h2>
+                <hr className="w-20 border-t-4 border-primary-100 mb-4" />
+                <p className="news-item-text font-title leading-relaxed mb-4">
+                  {newsItem.metadescription}
+                </p>
+                <div className="news-item-meta mt-auto flex flex-col gap-4">
+                  <div className="news-item-author flex items-center gap-3">
+                    {newsItem.author.photo && (
+                      <Avatar
+                        image={newsItem.author.photo}
+                        title={newsItem.author.name}
+                        className="news-item-avatar"
+                      />
+                    )}
+                    <p className="news-item-author-name font-semibold text-sepia-800">
+                      {newsItem.author.name}
+                    </p>
+                  </div>
+                  <TimeSince date={new Date(newsItem.publishedAt)} />
+                  <Link
+                    href={`/newsletter/${newsItem.slug}`}
+                    className="read-more-link text-primary-600 hover:underline mt-4"
+                  >
+                    Leer más
+                  </Link>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-export default NewsSection;
+export default FeaturedArticlesSection;

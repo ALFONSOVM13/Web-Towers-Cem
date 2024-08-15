@@ -7,7 +7,7 @@
   color: #0f1923;
   cursor: pointer;
   position: relative;
-  padding: 8px;
+  padding: 4px;
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: bold;
@@ -120,7 +120,7 @@
 /* Media Queries para hacer el botón más pequeño en dispositivos móviles */
 @media (max-width: 768px) {
   .button {
-    padding: 6px;
+    padding: 4px;
     font-size: 12px;
     margin-bottom: 15px;
   }
