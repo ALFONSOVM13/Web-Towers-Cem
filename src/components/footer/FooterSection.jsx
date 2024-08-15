@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useState } from "react";
 import React from "react";
 import {
-  FaCheck,
   FaInstagram,
   FaLinkedinIn,
   FaTiktok,
