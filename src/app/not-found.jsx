@@ -16,7 +16,7 @@ const NotFound = () => {
         title='Descripción de la imagen'
         width={1920}
         height={1080}
-        priority
+        priority={true}
         className="w-full h-full object-fill object-center"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-end bg-black bg-opacity-50 pb-8 md:pb-12 lg:pb-24">
