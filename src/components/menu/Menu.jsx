@@ -115,7 +115,7 @@ const Menu = ({ active, setActive }) => {
             href="/"
             className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex items-center"
           >
-            <Image src="/logo.png" alt="Logo" width={150} height={150} />
+            <Image src="/logo.png" alt="Logo" title="Towers Cem" width={150} height={150} />
           </Link>
         </li>
         <div className="flex gap-4">
@@ -126,6 +126,7 @@ const Menu = ({ active, setActive }) => {
             <Image
               src="/images/icons/IconoUsa.png"
               alt="Icono USA"
+              title="Icono USA"
               width={44}
               height={44}
             />
@@ -137,6 +138,7 @@ const Menu = ({ active, setActive }) => {
             <Image
               src="/images/icons/IconoSpain.png"
               alt="Icono Spain"
+              title="Icono Spain"
               width={44}
               height={44}
             />

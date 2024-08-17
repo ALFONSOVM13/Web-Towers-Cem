@@ -58,6 +58,7 @@ const Header = ({ active, setActive }) => {
             <img
               src={logo}
               alt="Logo"
+              title="Logo"
               className={`
               transition-all duration-300
               ${isScrolled ? "w-32" : "w-32"}
@@ -77,6 +78,7 @@ const Header = ({ active, setActive }) => {
               <Image
                 src="/images/icons/close.svg"
                 alt="Close"
+                title="Close"
                 width={40}
                 height={40}
                 className="w-10 h-10 mr-3 mt-2 "
@@ -85,6 +87,7 @@ const Header = ({ active, setActive }) => {
               <Image
                 src={menu}
                 alt="Menu"
+                title="Menu"
                 width={45}
                 height={45}
                 className="w-full h-full"

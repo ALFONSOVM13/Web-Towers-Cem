@@ -38,6 +38,7 @@ const RightSideButton = () => {
           <Image
             src="/images/icons/contacto.svg"
             alt="Contacto"
+            title="Contacto"
             width={48}
             height={48}
             className="w-12 h-12"

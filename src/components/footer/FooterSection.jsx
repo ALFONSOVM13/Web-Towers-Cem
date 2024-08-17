@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useState } from "react";
 import React from "react";
 import {
-  FaCheck,
   FaInstagram,
   FaLinkedinIn,
   FaTiktok,
@@ -43,7 +42,13 @@ const FooterSection = () => {
       <div className="mx-auto max-w-full ">
         <div className="flex flex-col sm:flex-row items-center justify-between pb-6 border-b border-gray-500 gap-8">
           <a href="/" className="">
-            <Image src="/logo.png" alt="Pagedone" width={150} height={150} />
+            <Image
+              src="/logo.png"
+              alt="Pagedone"
+              title="Logo de Pagedone"
+              width={150}
+              height={150}
+            />
           </a>
           <div className="flex items-center gap-4">
             <a
@@ -216,7 +221,9 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="w-full lg:max-w-md mx-auto">
-            <h2 className="text-lg text-center md:text-left font-medium text-white mb-7">Newsletter</h2>
+            <h2 className="text-lg text-center md:text-left font-medium text-white mb-7">
+              Newsletter
+            </h2>
             <div className="bg-zinc-800 rounded-sm p-5">
               <form action="#" className="flex flex-col gap-5">
                 <div className="relative">

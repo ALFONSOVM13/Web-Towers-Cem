@@ -48,6 +48,7 @@ const Slider = ({ images }) => {
             <Image
               src={isMobile ? image.srcMobile : image.src}
               alt={image.title}
+              title={image.title}
               width={4100}
               height={400}
               className="object-contain object-center"
@@ -84,7 +85,7 @@ const Events = () => {
       id: 2,
       title: "Próximo Evento",
       src: "/images/events/LaVaki.svg",
-      srcMobile: "/images/events/LaVakiMobile.svg",
+      srcMobile: "/images/events/LaVaki.webp",
       Link: "https://vaki.co/es/vaki/Oz8xpMtjZTxmk1b25kYJ",
     },
   ];

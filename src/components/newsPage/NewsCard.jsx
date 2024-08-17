@@ -18,6 +18,7 @@ function NewsCard({
           <Image
             src={image}
             alt={title}
+            title="Imagen de noticia"
             width={1200}
             height={650}
             className="object-contain  h-full group-hover:scale-105 transition duration-500"

@@ -27,6 +27,7 @@ const Page = ({ params }) => {
           height={1080}
           src={newsItem.image}
           alt={newsItem.title}
+          title="Imagen de artículo"
           className="w-full h-auto object-cover rounded-t-lg mb-6"
         />
 
@@ -93,6 +94,7 @@ const Page = ({ params }) => {
                 <Image
                   src={relatedNews.image}
                   alt={relatedNews.title}
+                  title="Imagen de artículo"
                   width={400}
                   height={250}
                   objectFit="cover"

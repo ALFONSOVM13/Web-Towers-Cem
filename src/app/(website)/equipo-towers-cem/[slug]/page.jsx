@@ -15,6 +15,7 @@ const MemberPage = async ({ params }) => {
                         <Image
                             src={member.photo}
                             alt={member.name}
+                            title="Foto de perfil"
                             width={800}
                             height={800}
                         />

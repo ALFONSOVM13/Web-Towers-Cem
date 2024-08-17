@@ -13,6 +13,7 @@ const NotFound = () => {
       <Image
         src="/images/coming-soon.png"
         alt="Descripción de la imagen"
+        title='Descripción de la imagen'
         width={1920}
         height={1080}
         priority
@@ -23,7 +24,7 @@ const NotFound = () => {
           ¡Estamos creando contenido valioso para ti, espéralo pronto!
         </h1>
         
-        {/* <Button className="mt-4" onClick={handleClick}>Volver al inicio</Button> */}
+        <Button className="mt-4" onClick={handleClick}>Volver al inicio</Button>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ const ProductCard = ({ imageSrc, title, description, link }) => (
         src={imageSrc}
         alt={`Imagen de ${title}`}
         width={1920}
+        title= {`Imagen de ${title}`}
         height={1080}
         className="transition-transform w-full h-full duration-300 group-hover:scale-125 object-cover object-center"
       />

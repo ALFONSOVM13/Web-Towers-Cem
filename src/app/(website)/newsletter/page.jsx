@@ -24,6 +24,7 @@ function FeaturedArticlesSection() {
               <Image
                 src={newsItem.image}
                 alt={newsItem.title}
+                title="Imagen de artículo"
                 width={1920}
                 height={1080}
                 className="w-full h-auto object-cover news-item-image"

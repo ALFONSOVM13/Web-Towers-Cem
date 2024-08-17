@@ -31,6 +31,7 @@ const ServiceCard = ({
           <img
             src={imageSrc}
             alt="service"
+            title="service"
             className="w-10/12 p-8 h-auto object-cover rounded-lg shadow-sm transition-transform transform hover:scale-105"
           />
         </div>
