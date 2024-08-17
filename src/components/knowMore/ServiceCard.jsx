@@ -17,7 +17,7 @@ const ServiceCard = ({
         //   boxShadow: "inset 0px -4px 0px 1.6px rgba(0, 0, 0, 1)",
         // }}
       >
-        <div className="flex flex-col w-full md:w-1/2 mb-4 md:mb-0 ml-6 mt-4">
+        <div className="flex flex-col w-full md:w-1/2 mb-4 md:mb-0 ml-0 sm:ml-6 mt-4">
           <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-center md:text-left">
             {title}
           </h2>
@@ -31,8 +31,7 @@ const ServiceCard = ({
           <img
             src={imageSrc}
             alt="service"
-            title="service"
-            className="w-10/12 p-8 h-auto object-cover rounded-lg shadow-sm transition-transform transform hover:scale-105"
+            className="w-6/12 sm:w-10/12 p-8 h-auto object-cover rounded-lg shadow-sm transition-transform transform hover:scale-105"
           />
         </div>
         {/* Botón "Ver más" para dispositivos móviles */}

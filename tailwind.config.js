@@ -46,6 +46,10 @@ export default {
         "instagram-gradient":
           "linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7)",
       },
+      animation: {
+        "jump-in": "jump-in 0.3s ease-out",
+        "jump-out": "jump-out 0.3s ease-in",
+      },
 
       keyframes: {
         slide: {
