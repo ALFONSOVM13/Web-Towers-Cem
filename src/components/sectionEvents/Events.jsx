@@ -107,8 +107,8 @@ const Events = () => {
     {
       id: 2,
       title: "Próximo Evento",
-      src: "/images/events/LaVaki.svg",
-      srcMobile: "/images/events/LaVaki.webp",
+      src: "/images/events/LaVaki.webp",
+      srcMobile: "/images/events/LaVakiMobile.svg",
       Link: "https://vaki.co/es/vaki/Oz8xpMtjZTxmk1b25kYJ",
     },
   ];
