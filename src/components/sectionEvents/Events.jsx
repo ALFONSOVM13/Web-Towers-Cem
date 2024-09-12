@@ -64,7 +64,7 @@ const Slider = ({ images }) => {
             className={`w-4 h-4 rounded-full ${
               image.id === currentId
                 ? "bg-secondary-200"
-                : "bg-complementary-200"
+                : "bg-complementary-300"
             }`}
             onClick={() => handleCircleClick(image.id)}
           />
