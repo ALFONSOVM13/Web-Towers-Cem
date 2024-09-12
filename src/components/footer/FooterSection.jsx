@@ -50,53 +50,37 @@ const FooterSection = () => {
               height={150}
             />
           </a>
+
           <div className="flex items-center gap-4">
             <a
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.instagram.com/towerscem"
-              className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-instagram-gradient before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
-              title="Instagram"
+              className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
             >
-              <FaInstagram
-                size={20}
-                className="text-[#ee2a7b] text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200"
-              />
+              <FaInstagram size={20} />
             </a>
-
             <a
               href="https://www.linkedin.com/company/towerscem/"
-              className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#0077b5] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
-              title="Linkedin"
+              className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
             >
-              <FaLinkedinIn
-                size={20}
-                className="text-primary-200 text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200"
-              />
+              <FaLinkedinIn size={20} />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.tiktok.com/@towerscemento"
-              className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#333] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
-              title="TikTok"
+              className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
             >
-              <FaTiktok
-                size={20}
-                className="text-complementary-300 text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200"
-              />
+              <FaTiktok size={20} />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
-              className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#ff0000] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
-              title="YouTube"
+              className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
             >
-              <FaYoutube
-                size={20}
-                className="text-[#ff0000] text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200"
-              />
+              <FaYoutube size={20} />
             </a>
           </div>
         </div>

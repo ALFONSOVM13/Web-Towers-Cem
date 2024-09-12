@@ -17,19 +17,11 @@ const Slider = ({ images }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleCircleClick = () => {
-    // Avanza a la siguiente imagen
-    setCurrentId((prevId) => {
-      const currentIndex = images.findIndex((image) => image.id === prevId);
-      const nextIndex = (currentIndex + 1) % images.length;
-      return images[nextIndex].id;
-    });
-  
-    // Limpia el intervalo anterior y crea uno nuevo
+  const handleCircleClick = (id) => {
+    setCurrentId(id);
     if (intervalId) {
       clearInterval(intervalId);
     }
-  
     const newIntervalId = setInterval(() => {
       setCurrentId((prevId) => {
         const currentIndex = images.findIndex((image) => image.id === prevId);
@@ -37,28 +29,13 @@ const Slider = ({ images }) => {
         return images[nextIndex].id;
       });
     }, 5000);
-  
     setIntervalId(newIntervalId);
   };
-  
-  useEffect(() => {
-    const newIntervalId = setInterval(() => {
-      setCurrentId((prevId) => {
-        const currentIndex = images.findIndex((image) => image.id === prevId);
-        const nextIndex = (currentIndex + 1) % images.length;
-        return images[nextIndex].id;
-      });
-    }, 5000); // Cambia la imagen cada 5 segundos
-  
-    setIntervalId(newIntervalId);
-  
-    return () => clearInterval(newIntervalId); // Limpia el intervalo al desmontar el componente
-  }, [images]);
 
   const currentIndex = images.findIndex((image) => image.id === currentId);
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden bg-white">
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -66,16 +43,16 @@ const Slider = ({ images }) => {
         {images.map((image) => (
           <div
             key={image.id}
-            className="cursor-pointer flex-shrink-0 w-full h-[auto] md:h-[auto] flex items-center justify-center relative"
+            className="cursor-pointer flex-shrink-0 w-full h-[300px] md:h-[400px] lg:h-[600px] flex items-center justify-center relative"
             onClick={() => window.open(image.Link, "_blank")}
           >
             <Image
               src={isMobile ? image.srcMobile : image.src}
               alt={image.title}
               title={image.title}
-              width={4100}
-              height={400}
-              className="object-co object-center"
+              width={1000}
+              height={600}
+              className="object-cover"
             />
           </div>
         ))}
@@ -84,8 +61,10 @@ const Slider = ({ images }) => {
         {images.map((image) => (
           <button
             key={image.id}
-            className={`w-3 h-3 rounded-full ${
-              image.id === currentId ? "bg-secondary-200" : "bg-complementary-200"
+            className={`w-4 h-4 rounded-full ${
+              image.id === currentId
+                ? "bg-secondary-200"
+                : "bg-complementary-200"
             }`}
             onClick={() => handleCircleClick(image.id)}
           />
@@ -100,21 +79,21 @@ const Events = () => {
     {
       id: 1,
       title: "Estaremos en",
-      src: "/images/events/GeneraSummit.svg",
-      srcMobile: "/images/events/GeneraSummitMobile.svg",
-      Link: "https://mentex.co/summit24/",
+      src: "/images/events/incubacion.jpeg",
+      srcMobile: "/images/events/incubacionMobile.svg",
+      Link: "https://www.youtube.com/live/zPho-ZVtLHw",
     },
     {
       id: 2,
       title: "Próximo Evento",
-      src: "/images/events/LaVaki.webp",
+      src: "/images/events/LaVaki.png",
       srcMobile: "/images/events/LaVakiMobile.svg",
       Link: "https://vaki.co/es/vaki/Oz8xpMtjZTxmk1b25kYJ",
     },
   ];
 
   return (
-    <section className="bg-complementary-300 mb-12 ">
+    <section className="bg-complementary-200 mb-12">
       <Slider images={images} />
     </section>
   );
