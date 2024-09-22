@@ -18,7 +18,7 @@ const HeroSection = ({ scrollToNextSection }) => {
 
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center relative z-20 text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-end mx-10 mb-16">
         <div className="max-w-5xl px-2 text-center">
           <H1
             text="Somos Towers Cem"
