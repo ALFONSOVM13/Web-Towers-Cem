@@ -77,13 +77,6 @@ const Slider = ({ images }) => {
 const Events = () => {
   const images = [
     {
-      id: 1,
-      title: "Estaremos en",
-      src: "/images/events/incubacion.jpeg",
-      srcMobile: "/images/events/incubacionMobile.svg",
-      Link: "https://www.youtube.com/live/zPho-ZVtLHw",
-    },
-    {
       id: 2,
       title: "Próximo Evento",
       src: "/images/events/LaVaki.png",
