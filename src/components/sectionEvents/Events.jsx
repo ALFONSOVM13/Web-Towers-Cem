@@ -32,7 +32,7 @@ const Slider = ({ images }) => {
         {images.map((image) => (
           <SwiperSlide key={image.id}>
             <div
-              className="cursor-pointer"
+              className="cursor-grab active:cursor-grabbing"
               onClick={() => window.open(image.Link, "_blank")}
             >
               <Image
