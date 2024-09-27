@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import SwiperCore, { Autoplay, Pagination } from 'swiper';
-
-SwiperCore.use([Autoplay, Pagination]);
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
 
 const Slider = ({ images }) => {
   const [isMobile, setIsMobile] = useState(false);
