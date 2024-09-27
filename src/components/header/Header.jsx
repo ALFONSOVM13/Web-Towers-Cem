@@ -13,6 +13,7 @@ const Header = ({ active, setActive }) => {
     if (
       !isScrolled &&
       (pathname === "/productos/uso-general" ||
+        pathname === "/cotizar" ||
         pathname === "/productos/uso-estructural" ||
         pathname.includes("/newsletter"))
     ) {
@@ -20,7 +21,7 @@ const Header = ({ active, setActive }) => {
       setMenu("/images/icons/menú2.svg");
     } else {
       setLogo("/logoContraido.svg");
-      setMenu("/images/icons/menú.svg"); // Cambia el menú a la imagen inicial
+      setMenu("/images/icons/menú.svg");
     }
   }, [isScrolled, pathname]);
 
