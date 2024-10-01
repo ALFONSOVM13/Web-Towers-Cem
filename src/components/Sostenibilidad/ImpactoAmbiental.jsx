@@ -90,7 +90,9 @@ export default function ImpactoAmbiental() {
           key={index}
           className={`relative flex flex-col md:flex-row ${
             index % 2 === 1 ? "md:flex-row-reverse" : ""
-          } items-center justify-center py-12 md:py-16 ${section.backgroundColor} ${section.textColor}`}
+          } items-center justify-center py-12 md:py-16 ${
+            section.backgroundColor
+          } ${section.textColor}`}
         >
           <div className="relative md:w-1/2 px-12 sm:px-6 md:px-8 max-w-screen-md mx-auto">
             <div
@@ -110,13 +112,30 @@ export default function ImpactoAmbiental() {
               {section.description}
             </p>
             {section.list && (
-              <ul className="mt-4 font-title list-disc list-inside text-sm md:text-base">
+              <ul className="mt-4 font-title list-none text-sm md:text-base space-y-3">
                 {/* Muestra solo las primeras 3 entradas o toda la lista si se pulsa "Ver más" */}
-                {section.list.slice(0, showMore[section.id] ? section.list.length : 3).map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
+                {section.list
+                  .slice(0, showMore[section.id] ? section.list.length : 3)
+                  .map((item, idx) => (
+                    <li key={idx} className="flex items-start space-x-2">
+                      {/* Ícono de lista personalizado */}
+                      <span className="flex-shrink-0 text-[#759c32]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          width="20"
+                          height="20"
+                        >
+                          <path d="M10 18l-6-6 1.41-1.41L10 15.17l8.59-8.58L20 8l-10 10z" />
+                        </svg>
+                      </span>
+                      <span className="text-white">{item}</span>
+                    </li>
+                  ))}
               </ul>
             )}
+
             {/* Mostrar el botón "Ver más" solo si hay más de 3 elementos en la lista */}
             {section.list && section.list.length > 3 && (
               <button
