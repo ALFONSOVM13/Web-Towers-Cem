@@ -1,7 +1,12 @@
+"use client"; // Asegúrate de que esto esté en la primera línea del archivo
+
 import Image from "next/image";
+import { useState } from "react";
 import { PiMouseSimple } from "react-icons/pi";
 
 export default function ImpactoAmbiental() {
+  const [showMore, setShowMore] = useState({}); // Estado para controlar "Ver más" para cada sección
+
   const sections = [
     {
       id: "01",
@@ -23,6 +28,9 @@ export default function ImpactoAmbiental() {
         "ODS 9 (Industria, Innovación e Infraestructura)",
         "ODS 11 (Ciudades y Comunidades Sostenibles)",
         "ODS 13 (Acción por el Clima)",
+        "ODS 9: Fomentamos la innovación en la industria del cemento, desarrollando productos que mejoran la infraestructura y son más sostenibles.",
+        "ODS 11: Contribuimos a la creación de ciudades y comunidades más sostenibles mediante la reducción de la contaminación y la mejora de la calidad del aire.",
+        "ODS 13: Actuamos contra el cambio climático mediante la reducción de nuestra huella de carbono y la promoción de tecnologías que limpian el aire.",
       ],
       imageSrc: "/images/sostenibilidad/section2.jpg",
       altText: "Objetivos de Desarrollo Sostenible",
@@ -42,6 +50,13 @@ export default function ImpactoAmbiental() {
       numberColor: "text-white",
     },
   ];
+
+  const toggleShowMore = (id) => {
+    setShowMore((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id], // Alterna el estado de la sección específica
+    }));
+  };
 
   return (
     <div className="relative w-full h-full">
@@ -75,9 +90,7 @@ export default function ImpactoAmbiental() {
           key={index}
           className={`relative flex flex-col md:flex-row ${
             index % 2 === 1 ? "md:flex-row-reverse" : ""
-          } items-center justify-center py-12 md:py-16 ${
-            section.backgroundColor
-          } ${section.textColor}`}
+          } items-center justify-center py-12 md:py-16 ${section.backgroundColor} ${section.textColor}`}
         >
           <div className="relative md:w-1/2 px-12 sm:px-6 md:px-8 max-w-screen-md mx-auto">
             <div
@@ -93,13 +106,25 @@ export default function ImpactoAmbiental() {
             <h2 className="text-2xl font-title md:text-3xl font-bold relative z-10">
               {section.title}
             </h2>
-            <p className="mt-4 font-title text-sm md:text-base">{section.description}</p>
+            <p className="mt-4 font-title text-sm md:text-base">
+              {section.description}
+            </p>
             {section.list && (
               <ul className="mt-4 font-title list-disc list-inside text-sm md:text-base">
-                {section.list.map((item, idx) => (
+                {/* Muestra solo las primeras 3 entradas o toda la lista si se pulsa "Ver más" */}
+                {section.list.slice(0, showMore[section.id] ? section.list.length : 3).map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
+            )}
+            {/* Mostrar el botón "Ver más" solo si hay más de 3 elementos en la lista */}
+            {section.list && section.list.length > 3 && (
+              <button
+                onClick={() => toggleShowMore(section.id)}
+                className="mt-4 text-[#759c32] underline"
+              >
+                {showMore[section.id] ? "Ver menos" : "Ver más"}
+              </button>
             )}
           </div>
           <div className="w-full px-12 sm:px-6 md:px-8 mt-8 md:mt-0 max-w-full sm:max-w-lg md:max-w-xl mx-auto">
