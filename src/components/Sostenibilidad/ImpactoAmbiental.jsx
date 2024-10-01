@@ -51,11 +51,11 @@ export default function ImpactoAmbiental() {
         style={{ backgroundImage: "url(/images/sostenibilidad/hero.jpg)" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center px-4 sm:px-6">
-          <h2 className="text-md md:text-2xl text-left uppercase tracking-widest font-semibold text-white relative z-10 flex items-center">
+          <h2 className="text-md font-title md:text-2xl text-left uppercase tracking-widest font-semibold text-white relative z-10 flex items-center">
             <span className="block w-12 h-[2px] bg-white mr-4"></span>
             IMPACTO AMBIENTAL
           </h2>
-          <h1 className="text-white text-3xl md:text-5xl font-bold">
+          <h1 className="text-white font-title text-3xl md:text-5xl font-bold">
             Estamos Comprometidos Con El Medio Ambiente
           </h1>
         </div>
@@ -85,17 +85,17 @@ export default function ImpactoAmbiental() {
             >
               {section.id}
             </div>
-            <h3 className="text-sm md:text-base uppercase tracking-widest font-semibold text-[#759c32] relative z-10 flex items-center">
+            <h3 className=" font-title text-sm md:text-base uppercase tracking-widest font-semibold text-[#759c32] relative z-10 flex items-center">
               <span className="block w-12 h-[2px] bg-[#759c32] mr-4"></span>
               {section.subtitle}
             </h3>
 
-            <h2 className="text-2xl md:text-3xl font-bold relative z-10">
+            <h2 className="text-2xl font-title md:text-3xl font-bold relative z-10">
               {section.title}
             </h2>
-            <p className="mt-4 text-sm md:text-base">{section.description}</p>
+            <p className="mt-4 font-title text-sm md:text-base">{section.description}</p>
             {section.list && (
-              <ul className="mt-4 list-disc list-inside text-sm md:text-base">
+              <ul className="mt-4 font-title list-disc list-inside text-sm md:text-base">
                 {section.list.map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
