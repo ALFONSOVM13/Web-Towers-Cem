@@ -54,6 +54,7 @@ const Menu = ({ active, setActive }) => {
           { href: "/crowdfunding", label: "Crowdfunding" },
           { href: "/historia", label: "Quienes Somos" },
           { title: "Nuestro Cementos", label: "Nuestros Cementos" },
+          { href: "/sostenibilidad", label: "Sostenibilidad" },
           { href: "/equipo-towers-cem", label: "Nuestro Equipo" },
           { href: "/newsletter", label: "Newsletter" },
           { href: "/noticias", label: "Noticias" },
@@ -115,7 +116,13 @@ const Menu = ({ active, setActive }) => {
             href="/"
             className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex items-center"
           >
-            <Image src="/logo.png" alt="Logo" title="Towers Cem" width={150} height={150} />
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              title="Towers Cem"
+              width={150}
+              height={150}
+            />
           </Link>
         </li>
         <div className="flex gap-4">
