@@ -3,60 +3,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Definición de fuentes */
-@font-face {
-  font-family: 'Chopin';
-  src: url('/fonts/Chopin-Trial-Regular.woff2') format('woff2'),
-       url('/fonts/Chopin-Trial-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Chopin';
-  src: url('/fonts/Chopin-Trial-Bold.woff2') format('woff2'),
-       url('/fonts/Chopin-Trial-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa';
-  src: url('/fonts/NexaBold.otf') format('otf'),
-       url('/fonts/NexaBold.otf') format('otf');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nexa';
-  src: url('/fonts/NexaBold.otf') format('otf'),
-       url('/fonts/NexaBold.otf') format('otf');
-  font-weight: bold;
-  font-style: normal;
-}
-
-/* Agrega las clases personalizadas para las fuentes */
-.font-chopin-regular {
-  font-family: 'Chopin', sans-serif;
-  font-weight: normal;
-}
-
-.font-chopin-bold {
-  font-family: 'Chopin', sans-serif;
-  font-weight: bold;
-}
-
-.font-nexa-light {
-  font-family: 'Nexa', sans-serif;
-  font-weight: 300;
-}
-
-.font-nexa-bold {
-  font-family: 'Nexa', sans-serif;
-  font-weight: bold;
-}
-
 
 
 

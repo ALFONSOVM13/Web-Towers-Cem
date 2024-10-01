@@ -34,6 +34,7 @@ const KnowUsSection = () => {
               <Image
                 src="/images/header.png"
                 alt="Imagen de la empresa"
+                title="Imagen de la empresa"
                 width={450}
                 height={450}
                 className="object-cover object-center w-full h-full shadow-lg"
@@ -43,6 +44,7 @@ const KnowUsSection = () => {
               <Image
                 src="/images/about-us/towerscem_icon-round.png"
                 alt="TowerCem logo"
+                title="TowerCem logo"
                 width={140}
                 height={140}
                 className="w-full h-full object-cover object-center"
@@ -52,6 +54,7 @@ const KnowUsSection = () => {
               <Image
                 src="/images/about-us/TC-CREATIVOS-1.png"
                 alt="TowerCem creativos"
+                title="TowerCem creativos"
                 width={250}
                 height={250}
                 className="rounded-[35px] overflow-hidden object-cover object-center"

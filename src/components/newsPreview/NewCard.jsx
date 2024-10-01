@@ -15,6 +15,7 @@ const NewCard = ({ newItem }) => {
                     <Image
                         src={image}
                         alt={title}
+                        title="Imagen de noticia"
                         width={400}
                         height={400}
                         className="h-full w-full object-cover object-center group-hover:scale-110 transition duration-500"

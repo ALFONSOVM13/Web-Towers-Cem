@@ -1,70 +1,196 @@
 {
   "newsletter": [
     {
-      "title": "Ejemplo de Newsletter 1",
-      "image": "/images/new_04.png",
+      "title": "El Cemento: Pilar del Progreso y la Innovación en Construcción",
+      "image": "/images/newsletter/El Cemento pilar del Progreso.png",
       "publishedAt": "2024-06-03",
       "author": {
-        "name": "Escritor 1",
-        "photo": "/images/channels4_profile.jpg",
-        "avatar": "/images/channels4_profile.jpg"
+        "name": "Carlos Torres",
+        "photo": "/images/team/Carlos.png",
+        "avatar": "/images/team/Carlos.png"
       },
-      "tags": ["Premios", "Cemento", "Tecnología"],
-      "slug": "ganadores-tecnologia-del-ano-mentor-towers-cem",
+      "tags": [
+        "Cemento sostenible",
+        "Tecnología en construcción",
+        "Cementos inteligentes",
+        "Reducción de CO₂",
+        "Green Buildings"
+      ],
+      "slug": "el-cemento-pilar-del-progreso-y-la-innovacion-en-construccion",
+      "metadescription": "Descubre cómo TOWERS CEM está revolucionando la industria del cemento con tecnología que purifica el aire y promueve la sostenibilidad.",
+      "opportunityKeywords": [
+        "Cemento sostenible",
+        "Tecnología en construcción",
+        "Cementos inteligentes",
+        "Reducción de CO₂",
+        "Green Buildings"
+      ],
       "content": [
-        "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023.",
-        "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023."
+        {
+          "title": "Revolucionando la Industria con Tecnología y Sostenibilidad",
+          "paragraph": "El cemento ha sido uno de nuestros mayores aliados en el avance de la infraestructura y la sociedad. Considerado por muchos investigadores como el material más importante fabricado por el hombre, su producción anual y acumulada a lo largo de la historia es insuperable. Según la Editorial SALVAT, un referente mundial, el progreso de muchos países depende en gran medida de la capacidad productiva de sus empresas cementeras locales."
+        },
+        {
+          "title": "La Problemática del CO₂ en la Industria del Cemento",
+          "paragraph": "El mercado del cemento, con orígenes a principios del siglo XIX, ha crecido exponencialmente desde entonces. Sin embargo, esta industria es también una de las principales emisoras de CO₂, agravando el cambio climático. En respuesta a esta problemática, se han investigado y desarrollado nuevas tecnologías de cemento, como los cementos fotocatalíticos producidos por TOWERS CEM."
+        },
+        {
+          "title": "Propiedades y Beneficios del Cemento Inteligente",
+          "paragraph": "El cemento es un conglomerante hidráulico, un material artificial de naturaleza inorgánica y mineral, que al ser finamente molido y mezclado con agua, forma pastas que fraguan y endurecen debido a reacciones de hidrólisis e hidratación. Estas reacciones producen silicatos cálcicos hidratados y aluminatos hidratados, resultando en productos mecánicamente resistentes y estables tanto al aire como al agua. Esta propiedad lo convierte en un material básico e imprescindible para la construcción y la infraestructura."
+        },
+        {
+          "title": "Innovación y Sostenibilidad en TOWERS CEM",
+          "paragraph": "En TOWERS CEM, estamos revolucionando el sector con nuestras nuevas tecnologías de cementos inteligentes que reaccionan a estímulos externos. No solo ofrecemos un material de calidad, sino que también incorporamos sostenibilidad e innovación en nuestras tecnologías, creando un cemento capaz de eliminar CO₂ del ambiente."
+        },
+        {
+          "title": "¡Lo Que Viene!",
+          "paragraph": "Próximamente, lanzaremos al mercado nuestra nueva línea de productos. Estas innovaciones no solo mejorarán la calidad de las construcciones, sino que también contribuirán significativamente a la sostenibilidad ambiental. Con nuestra tecnología, tus proyectos pueden obtener certificaciones Green Buildings y acceder al mercado de los bonos de carbono."
+        },
+        {
+          "paragraph": "¿Estás listo para incorporar la sostenibilidad e innovación en tus obras? Únete a nosotros y descubre cómo TOWERS CEM puede transformar tus proyectos constructivos. Sigue nuestra página para estar al tanto de las últimas novedades y ser el primero en conocer nuestros productos revolucionarios."
+        },
+        {
+          "note": "No te pierdas nuestras próximas publicaciones, donde profundizaremos en los beneficios de nuestros cementos inteligentes y cómo pueden impactar positivamente en tus proyectos. ¡Construyamos juntos un futuro más verde y sostenible!"
+        }
+      ],
+      "relatedNewsletters": [
+        {
+          "title": "Nuevas Tendencias en Cementos Inteligentes",
+          "url": "https://www.towerscem.com/articulos/nuevas-tendencias-cementos-inteligentes"
+        },
+        {
+          "title": "Cómo el Cemento Fotocatalítico Está Cambiando la Industria",
+          "url": "https://www.towerscem.com/articulos/cemento-fotocatalitico-cambiando-industria"
+        },
+        {
+          "title": "Innovación en Materiales de Construcción Sostenibles",
+          "url": "https://www.towerscem.com/articulos/innovacion-materiales-construccion-sostenibles"
+        }
       ],
       "readTime": "9 min"
     },
     {
-      "title": "Estudiante UniCosta ganador de Prix French Tech",
-      "image": "/images/new_01.jpg",
-      "publishedAt": "2024-06-27",
+      "title": "Los cementos del futuro: Introduciendo nuevas tecnologías y procesos",
+      "mark":"Introduciendo nuevas tecnologías y procesos",
+      "image": "/images/newsletter/Los Cementos del futuro.png",
+      "publishedAt": "2024-06-12",
       "author": {
-        "name": "Wade Warre",
-        "photo": "/images/wade-warren.jpg",
-        "avatar": "/images/wade-warren.jpg"
+        "name": "Carlos Torres",
+        "photo": "/images/team/Carlos.png",
+        "avatar": "/images/team/Carlos.png"
       },
-      "slug": "estudiante-unicosta-ganador-de-prix-french-tech",
-      "tags": ["Premios"],
+      "tags": [
+        "Cemento sostenible",
+        "Tecnología en construcción",
+        "Cementos inteligentes",
+        "Reducción de CO₂",
+        "Cementos del futuro"
+      ],
+      "slug": "los-cementos-del-futuro-de-towers-cem",
+      "metadescription": "Descubre cómo Towers Cem está transformando la industria con sus cementos innovadores del futuro. Explora cómo estamos liderando el camino hacia una construcción más ecológica y eficiente.",
+      "opportunityKeywords": [
+        "Cemento sostenible",
+        "Tecnología en construcción",
+        "Cementos inteligentes",
+        "Reducción de CO₂",
+        "Cementos del futuro"
+      ],
       "content": [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam aperiam commodi incidunt culpa molestiae eveniet obcaecati aspernatur, exercitationem earum dolore blanditiis voluptatem, eaque cupiditate possimus ipsam repellat harum dolor!"
+        {
+          "paragraph": "El cemento es el producto de una serie de reacciones químicas que se llevan a cabo a muy altas temperaturas. Para su proceso de fabricación se requieren de 3 materias primas fundamentales que son: clínker, caliza y yeso, así es como comúnmente se ha diseñado el cemento Portland desde el siglo XIX, pero ¿es esta la única manera de hacer cemento? TOWERS CEM no está de acuerdo con esta teoría."
+        },
+        {
+          "paragraph": "Nuestros cementos están hechos con nuevas tecnologías de materiales que aportan nuevos valores y características a la industria cementera."
+        },
+        {
+          "paragraph": "¿Cómo lo hacemos? Hemos desarrollado nuevos procesos de fabricación que nos permiten obtener las concentraciones óptimas para nuestro material. Adicional a esto, gracias a nuestro equipo de investigación y desarrollo hemos implementado la economía circular en nuestros procesos, dándole un segundo uso a los materiales con alto contenido de hierro, disminuyendo el relleno sanitario y el impacto ambiental."
+        },
+        {
+          "paragraph": "¿Pero qué es lo que hace que este cemento sea distinto a los demás? Gracias a nuestros nuevos procesos y materiales de fabricación, nuestro cemento no solo cuenta con propiedades mecánicas mejoradas, sino que cuenta con propiedades descontaminantes, dándole mayor facilidad al sector constructor a que implemente la sostenibilidad en cualquiera de sus proyectos."
+        },
+        {
+          "paragraph": "¿Cómo descontamina nuestro cemento? Nuestro material cuenta con fotocatalizadores y óxidos semiconductores que, al entrar en contacto con el sol, reaccionan con los gases contaminantes suspendidos en la atmósfera, ayudando a purificar el aire de nuestras ciudades. Nuestro principio de funcionamiento se llama fotocatálisis."
+        },
+        {
+          "paragraph": "¿Deseas saber más sobre el principio técnico de nuestro cemento? No te pierdas nuestra próxima publicación donde profundizaremos sobre el funcionamiento técnico de nuestro cemento y cómo puede impactar positivamente en todos tus proyectos."
+        },
+        {
+          "paragraph": "¡Construyamos juntos un futuro más verde y sostenible!"
+        }
+      ],
+      "relatedNewsletters": [
+        {
+          "title": "Nuevas Tendencias en Cementos Inteligentes",
+          "url": "https://www.towerscem.com/articulos/nuevas-tendencias-cementos-inteligentes"
+        },
+        {
+          "title": "Cómo el Cemento Fotocatalítico Está Cambiando la Industria",
+          "url": "https://www.towerscem.com/articulos/cemento-fotocatalitico-cambiando-industria"
+        },
+        {
+          "title": "Innovación en Materiales de Construcción Sostenibles",
+          "url": "https://www.towerscem.com/articulos/innovacion-materiales-construccion-sostenibles"
+        }
+      ],
+      "readTime": "8 min"
+    },
+    {
+      "title": "Construyendo ciudades que respiran",
+      "image": "/images/newsletter/Construyendo ciudades que respiran.png",
+      "publishedAt": "2024-06-20",
+      "author": {
+        "name": "Carlos Torres",
+        "photo": "/images/team/Carlos.png",
+        "avatar": "/images/team/Carlos.png"
+      },
+      "tags": [
+        "Cemento sostenible",
+        "Tecnología en construcción",
+        "Cementos inteligentes",
+        "Reducción de CO₂",
+        "Cementos del futuro"
+      ],
+      "slug": "construyendo-ciudades-que-respiran",
+      "metadescription": "Descubre cómo los cementos inteligentes de Towers Cem están ayudando a construir ciudades más limpias y saludables. Aprende sobre la tecnología detrás de nuestra solución innovadora.",
+      "opportunityKeywords": [
+        "Cemento sostenible",
+        "Tecnología en construcción",
+        "Cementos inteligentes",
+        "Reducción de CO₂",
+        "Cementos del futuro"
+      ],
+      "content": [
+        {
+          "paragraph": "Estamos en un punto crítico de nuestra historia, donde el cambio climático y la contaminación se han convertido en problemas prioritarios. En Towers Cem, estamos comprometidos con la construcción de un futuro más limpio y saludable, utilizando nuestras tecnologías de cemento inteligente."
+        },
+        {
+          "paragraph": "Nuestro cemento inteligente es capaz de reducir significativamente la contaminación del aire gracias a su capacidad para eliminar gases nocivos mediante la fotocatálisis. Esto no solo mejora la calidad del aire, sino que también contribuye a la sostenibilidad de nuestras ciudades."
+        },
+        {
+          "paragraph": "Además de nuestras soluciones innovadoras en cemento, estamos trabajando en nuevas formas de integrar nuestras tecnologías en la construcción de edificios y proyectos de infraestructura. Nuestro objetivo es construir ciudades que respiran, donde el aire es más limpio y la vida más saludable."
+        },
+        {
+          "paragraph": "Con nuestros cementos inteligentes, podemos ofrecer soluciones que no solo cumplen con los más altos estándares de calidad, sino que también ayudan a reducir la huella de carbono de la construcción. A través de nuestras iniciativas, esperamos inspirar a otros a seguir nuestro ejemplo y contribuir a un futuro más verde."
+        },
+        {
+          "paragraph": "¿Te gustaría saber más sobre nuestras iniciativas y cómo podemos ayudarte a construir ciudades más limpias? Síguenos en nuestras redes sociales y suscríbete a nuestro boletín para recibir las últimas actualizaciones y novedades sobre nuestras soluciones innovadoras."
+        }
+      ],
+      "relatedNewsletters": [
+        {
+          "title": "Nuevas Tendencias en Cementos Inteligentes",
+          "url": "https://www.towerscem.com/articulos/nuevas-tendencias-cementos-inteligentes"
+        },
+        {
+          "title": "Cómo el Cemento Fotocatalítico Está Cambiando la Industria",
+          "url": "https://www.towerscem.com/articulos/cemento-fotocatalitico-cambiando-industria"
+        },
+        {
+          "title": "Innovación en Materiales de Construcción Sostenibles",
+          "url": "https://www.towerscem.com/articulos/innovacion-materiales-construccion-sostenibles"
+        }
       ],
       "readTime": "7 min"
-    },
-    {
-      "title": "Acto de clausura de la III edicion de Puentes de Talento",
-      "image": "/images/new_02.jpg",
-      "publishedAt": "2024-06-16",
-      "content": [
-        "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023.",
-        "Con el propósito de promover el espíritu emprendedor y la creación de empresas en estudiantes y egresados de Uninorte, a través del desarrollo de competencias, el Centro de Emprendimiento concluyó el concurso con el Startup Day Uninorte 2023."
-      ],
-      "author": {
-        "name": "Jenny Wilson",
-        "photo": "/images/leslie-alexander.jpg",
-        "avatar": "/images/leslie-alexander.jpg"
-      },
-      "slug": "acto-de-clausura-de-la-iii-edicion-de-puentes-de-talento",
-      "tags": ["Puentes de Talento", "Premios"],
-      "readTime": "12 min"
-    },
-    {
-      "title": "Genera Summit 2024: Acompananos del 28 al 30 de agosto",
-      "image": "/images/new_03.jpg",
-      "publishedAt": "2024-05-26",
-      "content": [
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nam aperiam commodi incidunt culpa molestiae eveniet obcaecati aspernatur, exercitationem earum dolore blanditiis voluptatem, eaque cupiditate possimus ipsam repellat harum dolor!"
-      ],
-      "author": {
-        "name": "Leslie Alexander",
-        "photo": "/images/jenny-wilson.jpg",
-        "avatar": "/images/jenny-wilson.jpg"
-      },
-      "slug": "genera-summit-2024-acompananos-del-28-al-30-de-agosto",
-      "tags": ["Eventos", "Cemento"],
-      "readTime": "5 min"
     }
   ]
 }

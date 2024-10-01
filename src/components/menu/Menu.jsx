@@ -54,9 +54,11 @@ const Menu = ({ active, setActive }) => {
           { href: "/crowdfunding", label: "Crowdfunding" },
           { href: "/historia", label: "Quienes Somos" },
           { title: "Nuestro Cementos", label: "Nuestros Cementos" },
+          { href: "/sostenibilidad", label: "Sostenibilidad" },
           { href: "/equipo-towers-cem", label: "Nuestro Equipo" },
-          { href: "/contacto", label: "Contacto" },
+          { href: "/newsletter", label: "Newsletter" },
           { href: "/noticias", label: "Noticias" },
+          { href: "/contacto", label: "Contacto" },
         ].map((item, index) => (
           <li key={index} className="mb-4 relative">
             {item.title ? (
@@ -76,16 +78,24 @@ const Menu = ({ active, setActive }) => {
                 </button>
                 <ul
                   className={`absolute left-0 top-full mt-2 w-full bg-complementary-100 text-complementary-300 overflow-hidden rounded-sm shadow-lg transition-opacity duration-300 ease-in-out ${
-                    dropdownOpen ? "opacity-100 visible translate-y-0 z-40" : "opacity-0 invisible translate-y-2"
+                    dropdownOpen
+                      ? "opacity-100 visible translate-y-0 z-40"
+                      : "opacity-0 invisible translate-y-2"
                   }`}
                 >
                   <li className="px-4 py-2 font-title hover:bg-complementary-400">
-                    <Link href="/productos/uso-general" className="block font-title">
+                    <Link
+                      href="/productos/uso-general"
+                      className="block font-title"
+                    >
                       Uso General
                     </Link>
                   </li>
                   <li className="px-4 py-2 font-title hover:bg-complementary-400">
-                    <Link href="/productos/uso-estructural" className="block font-title">
+                    <Link
+                      href="/productos/uso-estructural"
+                      className="block font-title"
+                    >
                       Uso Estructural
                     </Link>
                   </li>
@@ -106,7 +116,13 @@ const Menu = ({ active, setActive }) => {
             href="/"
             className="text-complementary-200 hover:text-complementary-400 transition-colors hover:underline flex items-center"
           >
-            <Image src="/logo.png" alt="Logo" width={150} height={150} />
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              title="Towers Cem"
+              width={150}
+              height={150}
+            />
           </Link>
         </li>
         <div className="flex gap-4">
@@ -117,6 +133,7 @@ const Menu = ({ active, setActive }) => {
             <Image
               src="/images/icons/IconoUsa.png"
               alt="Icono USA"
+              title="Icono USA"
               width={44}
               height={44}
             />
@@ -128,6 +145,7 @@ const Menu = ({ active, setActive }) => {
             <Image
               src="/images/icons/IconoSpain.png"
               alt="Icono Spain"
+              title="Icono Spain"
               width={44}
               height={44}
             />

@@ -4,18 +4,18 @@ export default {
   theme: {
     extend: {
       textShadow: {
-        'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
-        'md': '3px 3px 6px rgba(0, 0, 0, 0.5)',
-        'lg': '4px 4px 8px rgba(0, 0, 0, 0.5)',
-        'xl': '5px 5px 10px rgba(0, 0, 0, 0.5)',
-        '2xl': '6px 6px 12px rgba(0, 0, 0, 0.5)',
-        'none': 'none',
+        default: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+        md: "3px 3px 6px rgba(0, 0, 0, 0.5)",
+        lg: "4px 4px 8px rgba(0, 0, 0, 0.5)",
+        xl: "5px 5px 10px rgba(0, 0, 0, 0.5)",
+        "2xl": "6px 6px 12px rgba(0, 0, 0, 0.5)",
+        none: "none",
       },
       padding: {
-        '9/16': '56.25%', // 16:9 aspect ratio
+        "9/16": "56.25%", // 16:9 aspect ratio
       },
       screens: {
-        'customMd': '860px'
+        customMd: "860px",
       },
       colors: {
         primary: {
@@ -34,58 +34,64 @@ export default {
           300: "#000000",
           400: "#F3F3F3",
         },
-        customGreen: '#5F9428',
+        customGreen: "#5F9428",
       },
-       
+
       fontFamily: {
         content: ["poppins", "sans-serif"],
         title: ["popins", "sans-serif"],
       },
 
       backgroundImage: {
-        'instagram-gradient': 'linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7)',
+        "instagram-gradient":
+          "linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7)",
+      },
+      animation: {
+        "jump-in": "jump-in 0.3s ease-out",
+        "jump-out": "jump-out 0.3s ease-in",
       },
 
       keyframes: {
         slide: {
           "50%": {
             left: "10%",
-            top: "-40%"
+            top: "-40%",
           },
           "100%": {
             left: "-15%",
-            top: "-15%"
-          }
-        }
+            top: "-15%",
+          },
+        },
       },
-      animation: {
-        slide: "slide 0.7s forwards",
-      },
-    }
+    },
   },
   plugins: [
+    require("tailwindcss-animated"),
 
     function ({ addUtilities }) {
-      addUtilities({
-        '.text-shadow': {
-          'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      addUtilities(
+        {
+          ".text-shadow": {
+            "text-shadow": "2px 2px 4px rgba(0, 0, 0, 0.5)",
+          },
+          ".text-shadow-md": {
+            "text-shadow": "3px 3px 6px rgba(0, 0, 0, 0.5)",
+          },
+          ".text-shadow-lg": {
+            "text-shadow": "4px 4px 8px rgba(0, 0, 0, 0.5)",
+          },
+          ".text-shadow-xl": {
+            "text-shadow": "5px 5px 10px rgba(0, 0, 0, 0.5)",
+          },
+          ".text-shadow-2xl": {
+            "text-shadow": "6px 6px 12px rgba(0, 0, 0, 0.5)",
+          },
+          ".text-shadow-none": {
+            "text-shadow": "none",
+          },
         },
-        '.text-shadow-md': {
-          'text-shadow': '3px 3px 6px rgba(0, 0, 0, 0.5)',
-        },
-        '.text-shadow-lg': {
-          'text-shadow': '4px 4px 8px rgba(0, 0, 0, 0.5)',
-        },
-        '.text-shadow-xl': {
-          'text-shadow': '5px 5px 10px rgba(0, 0, 0, 0.5)',
-        },
-        '.text-shadow-2xl': {
-          'text-shadow': '6px 6px 12px rgba(0, 0, 0, 0.5)',
-        },
-        '.text-shadow-none': {
-          'text-shadow': 'none',
-        }
-      }, ['responsive', 'hover'])
-    }
+        ["responsive", "hover"]
+      );
+    },
   ],
-}
+};

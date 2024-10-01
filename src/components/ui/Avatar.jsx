@@ -7,6 +7,7 @@ const Avatar = ({ image, title="User avatar", className }) => {
         <Image
             src={ image }
             alt={ title }
+            title="Avatar"
             width={40}
             height={40}
             className="h-full object-cover object-center"

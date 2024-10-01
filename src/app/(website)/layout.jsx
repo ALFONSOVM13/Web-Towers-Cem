@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-import styles from "./styles.css";
-import Menu from "@/components/menu/Menu";
-import Header from "@/components/header/Header";
 import FooterSection from "@/components/footer/FooterSection";
+import Header from "@/components/header/Header";
+import Menu from "@/components/menu/Menu";
 import RightSideButton from "@/components/ui/RightSideButton";
+import { useState } from "react";
+import styles from "./styles.css";
 
 const RootLayout = ({ children }) => {
   const [active, setActive] = useState(false);

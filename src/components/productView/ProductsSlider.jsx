@@ -63,7 +63,7 @@ const ProductsSlider = ({ title, name, description, image, video }) => {
 
         <div className="flex-1 border-l-slate-600 pl-4 md:border-l flex flex-col items-center">
           <div className="relative flex justify-center items-center w-full">
-            <figure className="relative h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] md:h-[400px] md:w-[300px] ">
+            <figure className="relative h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] md:h-[400px] md:w-[300px]">
               <img
                 src={images[currentImageIndex]}
                 alt="cemento"

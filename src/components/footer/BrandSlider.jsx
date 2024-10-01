@@ -87,6 +87,7 @@ const BrandSlider = () => {
             <LogoImage
               src={logo.src}
               alt={logo.alt}
+              title={logo.alt}
               width={logo.width}
               height={logo.height}
             />
@@ -102,6 +103,7 @@ const LogoImage = ({ src, alt, width, height }) => (
     <Image
       src={src}
       alt={alt}
+      title={alt}
       width={width}
       height={height}
       className="object-contain object-center transform scale-100 hover:scale-105 transition-transform duration-300 w-36 h-auto"

@@ -8,9 +8,9 @@ import "./style.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Towers Cem | Construyendo ciudades que respiran",
+  title: "Towers Cem | Cemento Sostenible para Ciudades que Respiran",
   description:
-    "Somos una cementera innovadora líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la descomposición de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
+    "Líder en cementos ecológicos con tecnología X-CEM. En Towers Cem fabricamos cementos verdes que descomponen CO₂ y usamos materiales reciclados para edificaciones sostenibles. Construimos el futuro con soluciones que mejoran la calidad del aire urbano.",
   color: "#000000",
   lang: "es",
   type: "website",
@@ -19,7 +19,7 @@ export const metadata = {
   robots: "index, follow",
   siteName: "Towers Cem",
   keywords:
-    "cemento, construcción, cemento colombia, sostenibilidad, calidad, innovación, tecnología, X-CEM, Towers Cem",
+    "cemento, construcción, cemento ecológico, sostenibilidad, tecnología X-CEM, cemento verde, Towers Cem, innovación en construcción",
   openGraph: {
     title: "Towers Cem | Construyendo ciudades que respiran",
     description:
@@ -28,10 +28,10 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://towerscem.com/images/OG.PNG", 
-        width: 1200, 
-        height: 630,  
-        alt: "Towers Cem Logo", 
+        url: "https://towerscem.com/images/OG.PNG",
+        width: 1200,
+        height: 630,
+        alt: "Towers Cem Logo",
       },
     ],
   },
@@ -49,7 +49,7 @@ export const metadata = {
     url: "https://towerscem.com",
     logo: "https://towerscem.com/images/OG.PNG", // Asegúrate de que la URL sea absoluta
     description:
-      "Líderes en innovación sostenible, fabricamos cementos verdes que redefinen la construcción. Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la descomposición de CO₂ y creando edificaciones más sostenibles. Construyendo ciudades que respiran.",
+      "Líderes en innovación sostenible,fabricamos cementos verdes que redefinen la construcción.Nuestra tecnología X-CEM incorpora materiales reciclados y propiedades inteligentes, permitiendo la descomposición de CO₂ y creando edificaciones más sostenibles.",
     sameAs: [
       "https://www.instagram.com/towerscem",
       "https://www.linkedin.com/company/towerscem",
@@ -58,30 +58,25 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   const isMaintenanceMode = false; // Cambia esto a `false` cuando salgas del modo de mantenimiento
-
+  //coloca la descripcion de la metadata en el head
   return (
     <html lang="es">
       <head>
-        <meta
-          name="description"
-          content="Líderes en innovación sostenible, fabricamos cementos verdes..."
-        />
-        <meta property="og:image" content="/images/OG.PNG" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <link rel="canonical" href="https://towerscem.com" />
       </head>
 
       <body className={inter.className}>
         <Script
-          strategy="afterInteractive"
+          async
+          strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-9866W71ET0`}
         />
         <Script
+          async
           id="google-analytics"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

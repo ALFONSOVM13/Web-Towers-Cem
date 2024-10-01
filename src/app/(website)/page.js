@@ -1,6 +1,13 @@
 "use client";
 import React, { useRef } from "react";
-import HeroSection from "@/components/hero/HeroSection";
+import dynamic from "next/dynamic";
+
+// Importación dinámica del componente HeroSection
+const HeroSection = dynamic(() => import("@/components/hero/HeroSection"), {
+  ssr: true, // Desactiva la renderización en el servidor
+});
+
+// Importación de otros componentes
 import NewsSection from "@/components/newsPreview/NewsSection";
 import Products from "@/components/products/Products";
 import Tecnologies from "../../../public/images/icons/Tecnologies";
@@ -8,6 +15,7 @@ import BrandSlider from "@/components/footer/BrandSlider";
 import KnowUsSection from "@/components/knowUs/KnowUsSection";
 import ServicesSection from "@/components/knowMore/ServiceSection";
 import Events from "@/components/sectionEvents/Events";
+
 const HomePage = () => {
   const knowUsRef = useRef(null); // Referencia para la sección KnowUsSection
 

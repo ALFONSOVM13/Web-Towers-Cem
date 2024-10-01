@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useState } from "react";
 import React from "react";
 import {
-  FaCheck,
   FaInstagram,
   FaLinkedinIn,
   FaTiktok,
@@ -43,55 +42,45 @@ const FooterSection = () => {
       <div className="mx-auto max-w-full ">
         <div className="flex flex-col sm:flex-row items-center justify-between pb-6 border-b border-gray-500 gap-8">
           <a href="/" className="">
-            <Image src="/logo.png" alt="Pagedone" width={150} height={150} />
+            <Image
+              src="/logo.png"
+              alt="Pagedone"
+              title="Logo de Pagedone"
+              width={150}
+              height={150}
+            />
           </a>
+
           <div className="flex items-center gap-4">
             <a
               rel="noopener noreferrer"
               target="_blank"
               href="https://www.instagram.com/towerscem"
-              className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-instagram-gradient before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
-              title="Instagram"
+              className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
             >
-              <FaInstagram
-                size={20}
-                className="text-[#ee2a7b] text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200"
-              />
+              <FaInstagram size={20} />
             </a>
-
             <a
               href="https://www.linkedin.com/company/towerscem/"
-              className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#0077b5] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
-              title="Linkedin"
+              className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
             >
-              <FaLinkedinIn
-                size={20}
-                className="text-primary-200 text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200"
-              />
+              <FaLinkedinIn size={20} />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.tiktok.com/@towerscemento"
-              className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#333] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
-              title="TikTok"
+              className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
             >
-              <FaTiktok
-                size={20}
-                className="text-complementary-300 text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200"
-              />
+              <FaTiktok size={20} />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.youtube.com/@towerscemento?sub_confirmation=1"
-              className="w-[3rem] h-[3rem] rounded-sm bg-complementary-200 flex justify-center items-center overflow-hidden relative shadow-md text-[1.5rem] transition-all duration-200 hover:scale-125 hover:text-complementary-200 before:bg-[#ff0000] before:content-[''] before:absolute before:w-[130%] before:h-[130%] before:left-[-110%] before:top-[80%] before:rotate-45 hover:before:animate-slide group"
-              title="YouTube"
+              className="p-3 rounded-full bg-white text-complementary-300  group transition-all duration-500 hover:bg-secondary-200 hover:text-complementary-200 "
             >
-              <FaYoutube
-                size={20}
-                className="text-[#ff0000] text-[1.5rem] transition-all duration-200 z-10 group-hover:text-complementary-200"
-              />
+              <FaYoutube size={20} />
             </a>
           </div>
         </div>
@@ -216,7 +205,9 @@ const FooterSection = () => {
             </div>
           </div>
           <div className="w-full lg:max-w-md mx-auto">
-            <h2 className="text-lg text-center md:text-left font-medium text-white mb-7">Newsletter</h2>
+            <h2 className="text-lg text-center md:text-left font-medium text-white mb-7">
+              Newsletter
+            </h2>
             <div className="bg-zinc-800 rounded-sm p-5">
               <form action="#" className="flex flex-col gap-5">
                 <div className="relative">

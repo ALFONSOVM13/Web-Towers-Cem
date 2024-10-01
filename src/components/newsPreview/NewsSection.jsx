@@ -6,6 +6,8 @@ import NewsGrid from "./NewsGrid";
 import news from "../../../public/tempData/news.json";
 
 const NewsSection = () => {
+  const latestNews = news.slice(-4);
+
   return (
     <section className="mx-12 sm:mx-20  bg-white h-full">
       <div className="flex justify-between items-center mb-10">
@@ -19,7 +21,7 @@ const NewsSection = () => {
           </CustomButton>
         </Link>
       </div>
-      <NewsGrid news={news} />
+      <NewsGrid news={latestNews} />
     </section>
   );
 };

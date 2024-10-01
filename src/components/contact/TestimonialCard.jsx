@@ -22,6 +22,7 @@ function TestimonialCard() {
             <Image
               src={photoTestimonial[0].image}
               alt="Overlay image"
+              title="Overlay image"
               width={536}
               height={536}
               className="object-cover w-full h-full"

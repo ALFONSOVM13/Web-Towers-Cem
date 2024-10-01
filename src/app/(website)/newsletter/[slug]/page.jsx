@@ -1,44 +1,121 @@
-import SectionHeader from "@/components/newsPage/SectionHeader";
-import "../styles.scss";
 import newsletterJson from "@/../public/tempData/newsletter.json";
-import NewsletterFrame from "@/components/newsletter/NewsletterFrame";
-import NewsletterSection from "@/components/newsletter/NewsletterSection";
-import NewsletterCard from "@/components/newsletter/NewsletterCard";
 import Link from "next/link";
+import Image from "next/image";
+import Avatar from "@/components/ui/Avatar";
+import TimeSince from "@/components/ui/TimeSince";
 
 const Page = ({ params }) => {
   const { slug } = params;
   const { newsletter: allNewsLetters } = newsletterJson;
-  const newsletter = allNewsLetters.filter((item) => item.slug === slug);
-  const otherNewsletters = allNewsLetters.filter((n) => n.slug !== slug);
+
+  const newsItem = allNewsLetters.find((item) => item.slug === slug);
+
+  if (!newsItem) {
+    return (
+      <p className="text-center text-red-500 font-content font-medium">
+        Artículo no encontrado.
+      </p>
+    );
+  }
 
   return (
-    <section className="newsletter-section relative flex flex-col justify-center z-0 pt-32">
-      <div className="flex flex-col justify-center items-center px-16 w-full text-white max-md:px-5 max-md:max-w-full">
-        <div className="flex flex-col max-md:max-w-full self-start">
-          <SectionHeader title="Newsletter" />
-          <div className="flex flex-col max-md:mt-10 mb-10 max-md:max-w-full text-left">
-            Nuestros Avances
-          </div>
+    <section className="w-full mx-auto pt-24 md:pt-28 pb-4 px-12 sm:px-20 bg-white rounded-lg">
+      <article>
+        <Image
+          width={1920}
+          height={1080}
+          src={newsItem.image}
+          alt={newsItem.title}
+          title="Imagen de artículo"
+          className="w-full h-auto object-cover rounded-t-lg mb-6"
+        />
+
+        <h1 className="text-4xl font-title font-bold mb-4 text-gray-900">
+          {newsItem.title}
+        </h1>
+
+        <p className="text-lg italic font-content text-gray-900 mb-8">
+          {newsItem.metadescription}
+        </p>
+
+        <div className="prose lg:prose-xl font-content text-gray-900 mb-8">
+          {newsItem.content.map((section, index) => (
+            <div key={index} className="mb-8">
+              <h2 className="text-3xl font-title font-bold mb-3">
+                {section.title}
+              </h2>
+              <p className="leading-relaxed">{section.paragraph}</p>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col lg:flex-row mt-6 w-full mb-5 max-md:mb-5 max-md:max-w-full gap-10">
-          <div className="max-lg:w-full w-2/3 flex gap-10 flex-col">
-            <NewsletterFrame {...newsletter[0]} index={0} />
-          </div>
-          <div className="max-lg:mt-12 lg:w-1/3 grid gap-10 grid-col-1 max-md:grid-cols-2 lg:grid-col-1  mb-20 ">
-            {otherNewsletters.map((newsletter, index) => (
+      </article>
+
+      <div className="my-5">
+        <h2 className="text-3xl font-title font-bold mb-4 text-gray-900">
+          Etiquetas
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {newsItem.tags.map((tag, index) => (
+            <span
+              key={index}
+              className="bg-secondary-200 text-complementary-200 text-sm font-medium mr-2 px-3 py-1 rounded-lg border border-primary-300"
+            >
+              #{tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="news-item-meta mt-auto flex flex-row items-center gap-4">
+        <div className="news-item-author flex items-center gap-3">
+          {newsItem.author.photo && (
+            <Avatar
+              image={newsItem.author.photo}
+              title={newsItem.author.name}
+              className="news-item-avatar"
+            />
+          )}
+          <p className="news-item-author-name font-content font-semibold text-sepia-800">
+            {newsItem.author.name}
+          </p>
+        </div>
+        <TimeSince date={new Date(newsItem.publishedAt)} />
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-3xl font-title font-bold mb-6 text-gray-900">
+          Artículos Relacionados
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+          {allNewsLetters
+            .filter((item) => item.slug !== slug)
+            .map((relatedNews, index) => (
               <Link
-                href={"/newsletter/" + newsletter.slug}
-                alt={newsletter.slug}
-                className={`${index === 0 ? "" : "mt-10"} self-end`}
-                key={newsletter.slug}
+                key={index}
+                href={`/newsletter/${relatedNews.slug}`}
+                passHref
+                className="group block bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:shadow-lg hover:scale-105"
               >
-                <NewsletterCard {...newsletter} />
+                <Image
+                  src={relatedNews.image}
+                  alt={relatedNews.title}
+                  title="Imagen de artículo"
+                  width={400}
+                  height={250}
+                  style={{ objectFit: 'cover' }}
+                  className="w-full h-56 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-title font-semibold text-gray-900 mb-2">
+                    {relatedNews.title}
+                  </h3>
+                  <p className="text-gray-600 font-content">
+                    {relatedNews.metadescription}
+                  </p>
+                </div>
               </Link>
             ))}
-          </div>
         </div>
-        <NewsletterSection />
       </div>
     </section>
   );

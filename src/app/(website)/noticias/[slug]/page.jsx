@@ -36,6 +36,7 @@ const Page = ({ params }) => {
           <Image
             src={currentNew.image}
             alt={currentNew.title}
+            title="Imagen de artículo"
             width={1200}
             height={1200}
             className="w-full h-full object-contain object-center"
