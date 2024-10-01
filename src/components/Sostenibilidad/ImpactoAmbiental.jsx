@@ -8,7 +8,7 @@ export default function ImpactoAmbiental() {
       subtitle: "COMO EMPEZAMOS",
       title: "La sostenibilidad es nuestra misión",
       description: `En Towers Cem, nos dedicamos a innovar en la industria del cemento, creando productos que no solo cumplen con las más altas normas de calidad, sino que también minimizan el impacto ambiental. Nuestro cemento fotocatalítico ayuda a reducir la contaminación del aire al descomponer los contaminantes atmosféricos cuando se expone a la luz solar. Además, utilizamos materiales reciclados en nuestros procesos de producción y buscamos constantemente nuevas formas de reducir nuestra huella de carbono.`,
-      imageSrc: "/images/sostenibilidad/section1.jfif",
+      imageSrc: "/images/sostenibilidad/section1.jpg",
       altText: "Sostenibilidad",
       backgroundColor: "bg-black",
       textColor: "text-white",
