@@ -128,7 +128,6 @@ export async function POST(request) {
         `,
       };
       
-  
       // Envía el correo a Towers Cem
       await transporter.sendMail(mailOptionsToTowers);
   

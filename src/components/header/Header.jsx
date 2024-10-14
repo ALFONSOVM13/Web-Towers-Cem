@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Header = ({ active, setActive }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +28,6 @@ const Header = ({ active, setActive }) => {
   const toggleMenu = () => {
     setActive(!active);
   };
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -37,9 +36,7 @@ const Header = ({ active, setActive }) => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
