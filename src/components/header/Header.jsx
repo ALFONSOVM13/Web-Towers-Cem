@@ -15,6 +15,7 @@ const Header = ({ active, setActive }) => {
       (pathname === "/productos/uso-general" ||
         pathname === "/cotizar" ||
         pathname === "/productos/uso-estructural" ||
+        pathname === "/politica-de-datos" ||
         pathname.includes("/newsletter"))
     ) {
       setLogo("/logoContraido2.svg");
