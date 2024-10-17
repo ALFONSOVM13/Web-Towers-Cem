@@ -117,10 +117,10 @@ const FooterSection = () => {
                 </li>
                 <li>
                   <a
-                    href="/politicas-de-privacidad"
+                    href="/politica-de-datos"
                     className="text-base font-normal max-lg:text-center text-complementary-400 whitespace-nowrap transition-all duration-300 hover:text-secondary-200 focus-within:outline-0 focus-within:text-complementary-400"
                   >
-                    Politicas de privacidad
+                    Politicas de  Datos
                   </a>
                 </li>
               </ul>
@@ -249,8 +249,8 @@ const FooterSection = () => {
                         Términos y Condiciones
                       </a>{" "}
                       y las{" "}
-                      <a href="" className="text-complementary-200">
-                        Políticas de Privacidad
+                      <a href="/politica-de-datos" target="_blank" className="text-complementary-200">
+                        Políticas de Datos
                       </a>
                     </label>
                   </div>

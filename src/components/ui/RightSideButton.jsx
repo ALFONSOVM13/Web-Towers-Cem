@@ -246,7 +246,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
             >
               He leido y acepto el{" "}
               <a
-                href="/terminos-y-condiciones"
+                href="/politica-de-datos"
                 target="_blank"
                 className="text-secondary-200"
               >
