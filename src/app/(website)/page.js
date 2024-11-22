@@ -17,7 +17,7 @@ import ServicesSection from "@/components/knowMore/ServiceSection";
 import Events from "@/components/sectionEvents/Events";
 
 const HomePage = () => {
-  const knowUsRef = useRef(null); // Referencia para la sección KnowUsSection
+  const knowUsRef = useRef(null);
 
   const scrollToKnowUsSection = () => {
     if (knowUsRef.current) {

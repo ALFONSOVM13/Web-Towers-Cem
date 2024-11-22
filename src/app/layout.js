@@ -59,8 +59,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const isMaintenanceMode = false; // Cambia esto a `false` cuando salgas del modo de mantenimiento
-  //coloca la descripcion de la metadata en el head
+  const isMaintenanceMode = false;
   return (
     <html lang="es">
       <head>
