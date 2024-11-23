@@ -1,16 +1,19 @@
-import React from "react"
-import { BiMenu } from "react-icons/bi"
+"use client";
+import { toggleSideMenu } from "@/store/ui";
+import { BiMenu } from "react-icons/bi";
+import { useDispatch } from "react-redux";
 
 export const Navbar = () => {
-  const name = "Usuario"
-  const photo = "https://randomuser.me/api/port"
+  const dispatch = useDispatch();
+  const name = "Carlos Torres"
+  const photo = "/images/team/Carlos.png"
   return (
     <header className="sticky top-0 z-10 flex justify-between items-center bg-white py-3 px-5 shadow">
       <button
-        // onClick={() => dispatch(toggleSideMenu())}
-        className="flex justify-center items-center bg-slate-100 hover:bg-slate-200 rounded-md px-1 active:scale-95"
+        onClick={() => dispatch(toggleSideMenu())}
+        className="flex justify-center items-center bg-slate-100 hover:bg-primary-100 rounded-md px-1 active:scale-95"
       >
-        <BiMenu size={20} className="text-slate-700" />
+        <BiMenu size={25} className="text-slate-700 hover:text-white" />
       </button>
       <p className="text-slate-700 font-semibold flex items-center gap-2">
         {name}

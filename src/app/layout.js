@@ -4,6 +4,7 @@ import Script from "next/script";
 import Image from "next/image";
 import "./globals.css";
 import "./style.css";
+import ReduxProvider from "@/store/ReduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -111,7 +112,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         ) : (
-          children
+          <ReduxProvider>{children}</ReduxProvider>
         )}
       </body>
     </html>
