@@ -1,7 +1,7 @@
-import { Navbar } from "@/components/ui/Navbar";
-import SideBar from "@/components/ui/SideBar";
+import { Navbar } from "@/components/ui/Navbar"
+import SideBar from "@/components/ui/SideBar"
 
-export default async function AdminLayout({ children }) {
+export default async function AdminLayout ({ children }) {
 
     // const session = await verifySession()
 
@@ -10,14 +10,14 @@ export default async function AdminLayout({ children }) {
     // }
 
 
-    return(
+    return (
         <>
-            <div className="flex">  
+            <div className="flex">
                 <SideBar />
                 <div className="w-full flex flex-col ">
                     <Navbar />
                     <main className="w-full h-full px-5 py-6" >
-                        { children }
+                        {children}
                     </main>
                 </div>
             </div>
@@ -25,5 +25,5 @@ export default async function AdminLayout({ children }) {
                 token={ session?.token }
             /> */}
         </>
-    )    
+    )
 }

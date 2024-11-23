@@ -1,9 +1,9 @@
-import React from "react";
-import { BiMenu } from "react-icons/bi";
+import React from "react"
+import { BiMenu } from "react-icons/bi"
 
 export const Navbar = () => {
-  const name = "Usuario";
-  const photo = "https://randomuser.me/api/port";
+  const name = "Usuario"
+  const photo = "https://randomuser.me/api/port"
   return (
     <header className="sticky top-0 z-10 flex justify-between items-center bg-white py-3 px-5 shadow">
       <button
@@ -30,5 +30,5 @@ export const Navbar = () => {
         )}
       </p>
     </header>
-  );
-};
+  )
+}
