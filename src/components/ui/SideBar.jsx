@@ -22,8 +22,7 @@ const menuItems = [
       { href: "/admin/eventos", text: "Crear Evento" },
       { href: "/admin/lista-eventos", text: "Lista de Eventos" },
     ],
-  },
-  { href: "/admin/usuarios", icon: FaUserGroup, text: "Usuarios" },
+  }
 ];
 
 const MenuItem = ({ href, icon: Icon, text, isExpanded, subcategories }) => {
