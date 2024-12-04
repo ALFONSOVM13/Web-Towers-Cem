@@ -24,7 +24,7 @@ export default async function UsersPage({ searchParams }) {
           className="flex items-center gap-1 px-3 py-2 bg-primary-200 hover:bg-primary-100 rounded text-white transition"
         >
            <BiPlusCircle size={20} />
-           Nuevo usuario
+           Agregar usuario
         </Link>
       </div>
       <div>

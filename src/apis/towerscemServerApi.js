@@ -27,11 +27,25 @@ const towerscemServerApi = {
 
         const response = await fetch(url, mergedOptions)
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
+        const contentType = response.headers.get("content-type")
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+            const data = await response.json()
+            if (!response.ok) {
+                const error = new Error(data.msg || 'An error occurred')
+                error.status = response.status
+                error.data = data
+                throw error
+            }
+            return data
+        } else {
+            const text = await response.text()
+            if (!response.ok) {
+                const error = new Error(text || 'An error occurred')
+                error.status = response.status
+                throw error
+            }
+            return text
         }
-
-        return response.json()
     },
 
     get: (endpoint, options = {}) => {
@@ -42,7 +56,7 @@ const towerscemServerApi = {
         return towerscemServerApi.fetch(endpoint, {
             ...options,
             method: 'POST',
-            body: JSON.stringify(body),
+            body: (body instanceof FormData) ? body : JSON.stringify(body),
         })
     },
 
