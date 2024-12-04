@@ -43,13 +43,15 @@ export const UsersList = ({ users }) => {
                       {
                         user.image
                           ? (
-                            <Image
-                              src={user.image.url}
-                              alt={user.name}
-                              width={132}
-                              height={132}
-                              className="bg-slate-100 w-12 h-12 rounded-full"
-                            />
+                            <figure className="relative overflow-hidden rounded-full w-12 h-12">
+                              <Image
+                                src={user.image.url}
+                                alt={user.name}
+                                width={132}
+                                height={132}
+                                className="bg-slate-100 object-cover object-center w-full h-full"
+                              />
+                            </figure>
                           ) : (
                             <div className=" bg-slate-100 w-12 h-12 rounded-full flex justify-center items-center font-semibold text-primary-200">
                               {user.name.slice(0, 1)}
