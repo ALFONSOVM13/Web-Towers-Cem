@@ -108,7 +108,7 @@ export const UploadImage = ({ defaultImage, onRemoveDefaultImage, file, onChange
           ) : (
             <div
               onClick={() => fileInputRef.current?.click()}
-              className="group flex justify-center items-center border border-gray-400 border-dashed rounded w-full h-full text-2xl cursor-pointer hover:border-primary-100 text-gray-400 hover:text-primary-100 p-5"
+              className={`group flex justify-center items-center border border-gray-400 border-dashed rounded w-full h-full text-2xl text-gray-400 p-5 ${ !disabled ? 'hover:border-primary-100 hover:text-primary-100 cursor-pointer' : undefined }`}
             >
               <svg
                 className="mx-auto h-8 w-8"
