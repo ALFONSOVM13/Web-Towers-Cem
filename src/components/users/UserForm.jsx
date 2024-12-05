@@ -1,18 +1,17 @@
 "use client"
 import { useRef, useState } from 'react'
 import { Controller, useForm } from "react-hook-form"
+import { toastError, toastSuccess } from '@/libs/toast'
+import { isValidEmail } from '@/utils/validators'
 import { Switch } from "../ui/Switch"
 import { UploadImage } from "../ui/UploadImage"
 import { LoadingCircle } from '../ui/LoadingCircle'
-import { uploadImage } from "@/actions/images"
 import { createUser } from '@/actions/users'
 import { USER_ROLES, USER_ROLES_OPTIONS } from "@/constants/users"
-import { isValidEmail } from '@/utils/validators'
 
 const UserForm = () => {
 
    const [loading, setLoading] = useState(false)
-
    const { register, control, handleSubmit, formState: { errors }, watch, getValues, setValue, reset } = useForm({
       defaultValues: {
          name: '',
@@ -34,34 +33,40 @@ const UserForm = () => {
       setValue('image', null, { shouldValidate: true })
    }
 
+
    const handleUserSubmit = async (formUserData) => {
 
       setLoading(true)
-      const { imageFile } = formUserData
+      const { imageFile, ...userData } = formUserData
 
-      if (imageFile) {
+      try {
+
          const formData = new FormData()
-         formData.append('image', imageFile)
 
-         const { error, data } = await uploadImage(formData)
+         Object.keys(userData).forEach(key => {
+            formData.append(key, userData[key])
+         })
 
-         if (error) {
-            setLoading(false)
-            return console.log('Hubo un error al subir la imagen', error)
+         if (imageFile) {
+            formData.delete('image')
+            formData.append('image', imageFile)
          }
+   
+         const { error } = await createUser(formData)
+   
+         if (error) {
+            throw new Error(error)
+         }
+         setTimeout(() => {
+            toastSuccess('¡Usuario creado correctamente!')
+         }, 100);
+         reset()
 
-         formUserData.image = data.id
-         delete formUserData.imageFile
+      } catch (error) {
+         toastError(error.message)
+      }finally {
+         setLoading(false)
       }
-
-      const { error } = await createUser(formUserData)
-      setLoading(false)
-
-      if (error) {
-         return console.log(error)
-      }
-
-      reset()
    }
 
 

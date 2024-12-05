@@ -1,6 +1,11 @@
 'use server'
 import { towerscemServerApi } from "@/apis/towerscemServerApi"
 import { revalidatePath } from "next/cache"
+import { cookies } from 'next/headers'
+
+const cookieStore = cookies()
+const token = cookieStore.get('session_token')
+
 
 export const getUsers = async ({ page=1, pageSize=10 }) => {
   try {
@@ -23,12 +28,28 @@ export const getUsers = async ({ page=1, pageSize=10 }) => {
 }
 
 
-export const createUser = async(formUserData) => {
+export const createUser = async(formData) => {
 
   try {
-    const data = await towerscemServerApi.post(`/users`, formUserData)
+  
+    const resp = await fetch(`${process.env.API_URL}/api/users`, {
+      method: 'POST',
+      body: formData,
+      credentials: 'include',
+      headers: {
+          Cookie: `session_token=${token?.value}`,
+      },
+    })
+
+    const data = await resp.json()
+
+    if (!resp.ok) {
+      console.log(data)
+      throw new Error(data.msg)
+    }
 
     revalidatePath('/admin/usuarios')
+
     return {
       error: null,
       data
