@@ -45,11 +45,11 @@ const towerscemClientApi = {
     },
 
     get: (endpoint, options = {}) => {
-        return towerscemServerApi.fetch(endpoint, { ...options, method: 'GET' })
+        return towerscemClientApi.fetch(endpoint, { ...options, method: 'GET' })
     },
 
     post: (endpoint, body, options = {}) => {
-        return towerscemServerApi.fetch(endpoint, {
+        return towerscemClientApi.fetch(endpoint, {
             ...options,
             method: 'POST',
             body: JSON.stringify(body),
@@ -57,7 +57,7 @@ const towerscemClientApi = {
     },
 
     put: (endpoint, body, options = {}) => {
-        return towerscemServerApi.fetch(endpoint, {
+        return towerscemClientApi.fetch(endpoint, {
             ...options,
             method: 'PUT',
             body: JSON.stringify(body),
@@ -65,7 +65,7 @@ const towerscemClientApi = {
     },
 
     delete: (endpoint, options = {}) => {
-        return towerscemServerApi.fetch(endpoint, { ...options, method: 'DELETE' })
+        return towerscemClientApi.fetch(endpoint, { ...options, method: 'DELETE' })
     },
 }
 

@@ -7,7 +7,7 @@ const cookieStore = cookies()
 const token = cookieStore.get('session_token')
 
 
-export const getUsers = async ({ page=1, pageSize=10 }) => {
+export const getUsers = async ({ page = 1, pageSize = 10 }) => {
   try {
     const data = await towerscemServerApi.get(`/users?page=${page}&pageSize=${pageSize}`, {
       headers: {
@@ -28,16 +28,16 @@ export const getUsers = async ({ page=1, pageSize=10 }) => {
 }
 
 
-export const createUser = async(formData) => {
+export const createUser = async (formData) => {
 
   try {
-  
+
     const resp = await fetch(`${process.env.API_URL}/api/users`, {
       method: 'POST',
       body: formData,
       credentials: 'include',
       headers: {
-          Cookie: `session_token=${token?.value}`,
+        Cookie: `session_token=${token?.value}`,
       },
     })
 
@@ -54,7 +54,28 @@ export const createUser = async(formData) => {
       error: null,
       data
     }
+
+  } catch (error) {
+    console.log(error.message)
+    return {
+      error: error.message,
+      data: null
+    }
+  }
+}
+
+export const deleteUser = async(id) => {
+  try {
+
+    const data = await towerscemServerApi.delete(`/users/${ id }`)
     
+    revalidatePath('/admin/usuarios')
+
+    return {
+      error: null,
+      data
+    }
+
   } catch (error) {
     console.log(error.message)
     return {

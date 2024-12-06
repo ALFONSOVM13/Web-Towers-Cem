@@ -16,11 +16,11 @@ export const uploadImage = async (formData) => {
       },
     })
 
+    const data = await response.json()
+
     if (!response.ok) {
       throw new Error(data.msg)
     }
-
-    const data = await response.json()
 
     return {
       error: null,
