@@ -6,16 +6,16 @@ import { LoadingCircle } from "./LoadingCircle"
 export const ModalDelete = ({ title, subtitle, onChange, isDeleting }) => {
   return (
     <div className="flex flex-col gap-4 p-1 max-w-[28rem]">
-      <div className="flex items-start gap-4">
+      <div className="flex flex-col items-center sm:flex-row gap-4">
         <div className="w-12 h-12 aspect-square text-lg rounded-full bg-red-100 text-red-500 flex justify-center items-center">
           <BiTrash />
         </div>
-        <div>
+        <div className="text-center sm:text-left">
           <h3 className="text-xl font-bold mb-1">{title}</h3>
           <p className="font-title text-gray-600">{subtitle}</p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row md:justify-end gap-2">
+      <div className="flex flex-col-reverse md:flex-row md:justify-end gap-2">
         <button
           className="hover:bg-slate-100 font-semibold text-gray-500 hover:text-gray-700 text-sm py-2 px-2 rounded-md transition min-w-24"
           disabled={isDeleting}
