@@ -1,8 +1,6 @@
 // Se ejecuta del lado del servidor
 import { cookies } from 'next/headers'
 
-const cookieStore = cookies()
-const token = cookieStore.get('session_token')
 const API_URL = process.env.API_URL
 
 const towerscemServerApi = {
@@ -12,7 +10,7 @@ const towerscemServerApi = {
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
-                Cookie: `session_token=${token?.value}`,
+                Cookie: `session_token=${cookies().get('session_token')?.value}`,
             },
         }
 

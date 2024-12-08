@@ -1,27 +1,27 @@
 "use client"
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Controller, useForm } from "react-hook-form"
 import { toastError, toastSuccess } from '@/libs/toast'
 import { isValidEmail } from '@/utils/validators'
 import { Switch } from "../ui/Switch"
 import { UploadImage } from "../ui/UploadImage"
 import { LoadingCircle } from '../ui/LoadingCircle'
-import { createUser } from '@/actions/users'
+import { createUser, updateUser } from '@/actions/users'
 import { USER_ROLES, USER_ROLES_OPTIONS } from "@/constants/users"
 
-const UserForm = () => {
+export const UserForm = ({ user }) => {
 
    const [loading, setLoading] = useState(false)
    const { register, control, handleSubmit, formState: { errors }, watch, getValues, setValue, reset } = useForm({
       defaultValues: {
-         name: '',
-         lastName: '',
-         image: null,
-         email: '',
+         name    : user?.name ?? '', 
+         lastName: user?.lastName ?? '',
+         image   : user?.image?.url ?? null,
+         email   : user?.email ?? '',
          password: '',
          passwordConfirm: '',
-         role: 'editor',
-         active: true,
+         role    : user?.role ??'editor',
+         active  : user?.active ?? true,
          imageFile: null
       }
    })
@@ -37,30 +37,51 @@ const UserForm = () => {
    const handleUserSubmit = async (formUserData) => {
 
       setLoading(true)
-      const { imageFile, ...userData } = formUserData
+      const { imageFile, image, ...userData } = formUserData
+
+      const formData = new FormData()
+
+      Object.keys(userData).forEach(key => {
+         formData.append(key, userData[key])
+      })
+ 
+      if( image === null ) {
+         formData.append('image', '')
+      }
+
+      if (imageFile) {
+         formData.append('image', imageFile)
+      }
 
       try {
 
-         const formData = new FormData()
+         if( user ){
+            // Editar usuario
+            formData.append('id', user.id)
+            const { error } = await updateUser(formData)
 
-         Object.keys(userData).forEach(key => {
-            formData.append(key, userData[key])
-         })
+            if (error) {
+               throw new Error(error)
+            }
 
-         if (imageFile) {
-            formData.delete('image')
-            formData.append('image', imageFile)
-         }
+            setTimeout(() => {
+               toastSuccess('¡Usuario actualizado correctamente!')
+            }, 100);
+
+         }else {
+            // Crear nuevo usuario
+            const { error } = await createUser(formData)
+      
+            if (error) {
+               throw new Error(error)
+            }
    
-         const { error } = await createUser(formData)
-   
-         if (error) {
-            throw new Error(error)
+            setTimeout(() => {
+               toastSuccess('¡Usuario creado correctamente!')
+            }, 100);
+            reset()
          }
-         setTimeout(() => {
-            toastSuccess('¡Usuario creado correctamente!')
-         }, 100);
-         reset()
+
 
       } catch (error) {
          toastError(error.message)
@@ -71,7 +92,7 @@ const UserForm = () => {
 
 
    return (
-      <div className="max-w-[44rem] mx-auto py-6 px-4 sm:p-8 bg-white rounded-md border shadow-lg">
+      <div className="max-w-[40rem] mx-auto py-6 px-4 sm:p-8 bg-white rounded-md border shadow-lg">
          <form
             onSubmit={handleSubmit(handleUserSubmit)}
             className="space-y-4 sm:space-y-6"
@@ -151,48 +172,53 @@ const UserForm = () => {
                   <span className="text-sm text-red-600">{ errors.email.message }</span>
                )}
             </div>
-            <div className="flex items-center gap-5">
-               <div className="flex-1">
-                  <label htmlFor="password" className="block text-sm sm:text-base font-medium text-gray-600 mb-1">
-                     Contraseña
-                  </label>
-                  <input
-                     type="password"
-                     id="password"
-                     disabled={loading}
-                     placeholder="******"
-                     {...register('password',{
-                        required: 'La contraseña es requerida',
-                        minLength: { value: 6, message: 'Contraseña muy corta, min 6 caracteres' }
-                     })}
-                     className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
-                  />
-                  { errors.password && (
-                     <span className="text-sm text-red-600">{ errors.password.message }</span>
-                  )}
-               </div>
-               <div className="flex-1">
-                  <label htmlFor="passwordConfirm" className="block text-sm sm:text-base font-medium text-gray-600 mb-1">
-                     Confirme la contraseña
-                  </label>
-                  <input
-                     type="password"
-                     id="passwordConfirm"
-                     disabled={loading}
-                     placeholder="******"
-                     {...register('passwordConfirm', {
-                        required: 'Confirme la contraseña',
-                        minLength: { value: 6, message: 'Contraseña muy corta, min 6 caracteres' },
-                        validate: ( value ) => passwordRef.current !== value ? 'Las contraseña no son iguales' : undefined 
-                     })}
-                     className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
-                  />
-                  { errors.passwordConfirm && (
-                     <span className="text-sm text-red-600">{ errors.passwordConfirm.message }</span>
-                  )}
-               </div>
-            </div>
-
+            {
+               !user && (
+                  <>
+                     <div className="flex items-center gap-5">
+                        <div className="flex-1">
+                           <label htmlFor="password" className="block text-sm sm:text-base font-medium text-gray-600 mb-1">
+                              Contraseña
+                           </label>
+                           <input
+                              type="password"
+                              id="password"
+                              disabled={loading}
+                              placeholder="******"
+                              {...register('password',{
+                                 required: 'La contraseña es requerida',
+                                 minLength: { value: 6, message: 'Contraseña muy corta, min 6 caracteres' }
+                              })}
+                              className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
+                           />
+                           { errors.password && (
+                              <span className="text-sm text-red-600">{ errors.password.message }</span>
+                           )}
+                        </div>
+                        <div className="flex-1">
+                           <label htmlFor="passwordConfirm" className="block text-sm sm:text-base font-medium text-gray-600 mb-1">
+                              Confirme la contraseña
+                           </label>
+                           <input
+                              type="password"
+                              id="passwordConfirm"
+                              disabled={loading}
+                              placeholder="******"
+                              {...register('passwordConfirm', {
+                                 required: 'Confirme la contraseña',
+                                 minLength: { value: 6, message: 'Contraseña muy corta, min 6 caracteres' },
+                                 validate: ( value ) => passwordRef.current !== value ? 'Las contraseña no son iguales' : undefined 
+                              })}
+                              className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
+                           />
+                           { errors.passwordConfirm && (
+                              <span className="text-sm text-red-600">{ errors.passwordConfirm.message }</span>
+                           )}
+                        </div>
+                     </div>
+                  </>
+               )
+            }
             <div>
                <label htmlFor="role" className="block text-sm sm:text-base font-medium text-gray-600 mb-1">
                   Rol
@@ -243,12 +269,10 @@ const UserForm = () => {
                   disabled={ loading }
                   className="flex items-center justify-center gap-1 px-3 min-w-[12rem] w-full sm:w-auto py-2 bg-primary-200 enabled:hover:bg-primary-100 disabled:opacity-80 rounded text-white transition uppercase"
                >
-                  {loading ? <LoadingCircle className="w-6 h-6" /> : 'Crear Usuario'}
+                  {loading ? <LoadingCircle className="w-6 h-6" /> : user ? 'Guardar' : 'Crear Usuario'}
                </button>
             </div>
          </form>
       </div>
    )
 }
-
-export default UserForm

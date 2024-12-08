@@ -1,6 +1,6 @@
+import { UserForm } from "@/components/users/UserForm";
 import Link from "next/link"
 import { BiArrowBack } from "react-icons/bi"
-import UserForm from "@/components/users/UserForm"
 
 export default function NewUserPage() {
     return (

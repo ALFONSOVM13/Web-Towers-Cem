@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { BiEditAlt, BiTrash } from "react-icons/bi"
 
 
@@ -40,12 +41,12 @@ export const UserListItem = ({ user, onDelete }) => {
       </td>
       <td className="pr-3 max-w-16">
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => { }}
+          <Link
+            href={`/admin/usuarios/${ user.id }`}
             className="items-center text-blue-600 hover:text-white bg-blue-100 hover:bg-blue-500 font-bold text-sm py-2 px-2 rounded-md transition"
           >
             <BiEditAlt />
-          </button>
+          </Link>
           <button
             onClick={() => onDelete(user)}
             className="items-center text-red-600 hover:text-white bg-red-100 hover:bg-red-500 font-bold text-sm py-2 px-2 rounded-md transition"

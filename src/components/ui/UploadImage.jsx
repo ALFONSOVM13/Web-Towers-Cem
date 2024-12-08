@@ -23,7 +23,7 @@ import { BiX } from "react-icons/bi";
  *    Deshabilita el componente, cuando está en `true`, no se puede seleccionar una imagen.
  */
 
-const imageMimeType = /image\/(png|jpg|jpeg|gif|webp)/i;
+const imageMimeType = /image\/(png|jpg|jpeg|gif|webp|avif)/i;
 
 export const UploadImage = ({ defaultImage, onRemoveDefaultImage, file, onChange, disabled }) => {
 
