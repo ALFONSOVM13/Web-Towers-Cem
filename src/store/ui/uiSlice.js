@@ -11,7 +11,10 @@ export const uiSlice = createSlice({
         toggleSideMenu: ( state )=>{
             state.toggleSideMenu = !state.toggleSideMenu            
         },
+        hideSideMenu: ( state ) => {
+            state.toggleSideMenu = false
+        }
     },
 });
 
-export const { toggleSideMenu } = uiSlice.actions;
+export const { toggleSideMenu, hideSideMenu } = uiSlice.actions;

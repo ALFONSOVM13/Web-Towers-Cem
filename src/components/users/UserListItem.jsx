@@ -6,7 +6,7 @@ import { BiEditAlt, BiTrash } from "react-icons/bi"
 export const UserListItem = ({ user, onDelete }) => {
   return (
     <>
-      <td className="py-3 pl-3 pr-2 max-w-16">
+      <td className="py-3">
         {
           user.image
             ? (
@@ -39,7 +39,7 @@ export const UserListItem = ({ user, onDelete }) => {
           : <span className="text-sm px-3 py-1 rounded-full text-gray-500 bg-gray-100 border border-gray-400">Bloqueado</span>
         }
       </td>
-      <td className="pr-3 max-w-16">
+      <td className="pr-3">
         <div className="flex items-center gap-2">
           <Link
             href={`/admin/usuarios/${ user.id }`}
