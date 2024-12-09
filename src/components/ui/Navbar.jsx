@@ -46,9 +46,9 @@ export const Navbar = () => {
     <header className="sticky top-0 z-10 flex justify-between items-center bg-white py-2 px-5 shadow">
       <button
         onClick={() => dispatch(toggleSideMenu())}
-        className="flex justify-center items-center w-9 h-9 bg-slate-100 hover:bg-primary-100 rounded-md px-1 active:scale-95"
+        className="group flex justify-center items-center w-9 h-9 bg-slate-100 hover:bg-primary-100 rounded-md px-1 active:scale-95"
       >
-        <BiMenu size={25} className="text-slate-700 hover:text-white" />
+        <BiMenu size={25} className="text-slate-700 group-hover:text-white" />
       </button>
       <div className="relative flex items-center gap-2">
         <p className="font-bold text-slate-700 capitalize">{user.name}</p>
