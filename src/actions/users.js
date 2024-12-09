@@ -1,7 +1,7 @@
 'use server'
-import { towerscemServerApi } from "@/apis/towerscemServerApi"
 import { revalidatePath } from "next/cache"
-import { cookies } from 'next/headers'
+import { towerscemServerApi } from "@/apis/towerscemServerApi"
+import { getToken } from "@/utils/getToken"
 
 export const getUsers = async ({ page = 1, pageSize = 10 }) => {
   try {
@@ -48,16 +48,13 @@ export const getUserById = async (id) => {
 
 
 export const createUser = async (formData) => {
-  const cookieStore = cookies()
-  const token = cookieStore.get('session_token')
   try {
 
     const resp = await fetch(`${process.env.API_URL}/api/users`, {
       method: 'POST',
       body: formData,
-      credentials: 'include',
       headers: {
-        Cookie: `session_token=${token?.value}`,
+        Authorization: `Bearer ${ getToken() }`,
       },
     })
 
@@ -86,9 +83,6 @@ export const createUser = async (formData) => {
 
 export const updateUser = async (formData) => {
 
-  const cookieStore = cookies()
-  const token = cookieStore.get('session_token')
-
   const userId = formData.get('id')
 
   try {
@@ -96,9 +90,8 @@ export const updateUser = async (formData) => {
     const resp = await fetch(`${process.env.API_URL}/api/users/${userId}`, {
       method: 'PATCH',
       body: formData,
-      credentials: 'include',
       headers: {
-        Cookie: `session_token=${token?.value}`,
+        Authorization: `Bearer ${ getToken() }`,
       },
     })
 

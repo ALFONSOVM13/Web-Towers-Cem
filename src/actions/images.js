@@ -1,8 +1,6 @@
 'use server'
-import { cookies } from 'next/headers'
 
-const cookieStore = cookies()
-const token = cookieStore.get('session_token')
+import { getToken } from '@/utils/getToken'
 
 export const uploadImage = async (formData) => {
 
@@ -10,9 +8,8 @@ export const uploadImage = async (formData) => {
     const response = await fetch(`${process.env.API_URL}/api/images`, {
       method: 'POST',
       body: formData,
-      credentials: 'include',
       headers: {
-          Cookie: `session_token=${token?.value}`,
+        Authorization: `Bearer ${ getToken() }`,
       },
     })
 

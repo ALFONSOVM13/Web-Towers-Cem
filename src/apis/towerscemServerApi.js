@@ -1,5 +1,5 @@
 // Se ejecuta del lado del servidor
-import { cookies } from 'next/headers'
+import { getToken } from "@/utils/getToken"
 
 const API_URL = process.env.API_URL
 
@@ -7,10 +7,9 @@ const towerscemServerApi = {
     fetch: async (endpoint, options = {}) => {
         const url = `${API_URL}/api${endpoint}`
         const defaultOptions = {
-            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
-                Cookie: `session_token=${cookies().get('session_token')?.value}`,
+                Authorization: `Bearer ${ getToken() }`
             },
         }
 
