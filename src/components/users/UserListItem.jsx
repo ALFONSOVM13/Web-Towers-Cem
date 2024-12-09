@@ -26,7 +26,7 @@ export const UserListItem = ({ user, onDelete }) => {
             )
         }
       </td>
-      <td className="max-w-48">{user.name} {user.lastName}</td>
+      <td className="max-w-48 font-semibold">{user.name} {user.lastName}</td>
       <td>
         <span className="text-gray-600">{user.email}</span>
       </td>
