@@ -1,5 +1,25 @@
 [
   {
+    "title": "WondeRun 2024 / Wearewondertech",
+    "image": "/images/news/WonderRun/portada.webp",
+    "publishedAt": "2024-12-12T11:18:00",
+    "summary": "La carrera por un ecosistema más equitativo, apoyando iniciativas como TowersCem con su cofundadora Miley Velásquez.",
+    "content": "<article style=\"font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; line-height: 1.6; color: #fff;\"><h2 style='font-size: 26px; margin-bottom: 10px; color: #fff;'>El ecosistema emprendedor, mujeres inspiradoras y un propósito único</h1><p style=\"margin-bottom: 15px;\">Nuestra directora ejecutiva fue elegida como una de las 3 emprendedoras del año en  <strong style=\"color: #ebac2d;\">Wearewondertech Latam</strong>, una comunidad que impulsa a mujeres en tecnología. Luego de un proceso de selección de varias fases, conectó nuestro propósito de construir ciudades que respiren y logramos ser uno de los emprendimientos destacados.</p><h2 style='font-size: 24px; margin-bottom: 10px; color: #fff;'>La carrera y premiación</h2><p style=\"margin-bottom: 15px;\">Esta selección contó con un último evento la <strong style=\"color: #ebac2d;\">WONDERUN</strong>, una carrera de 5km y 10km para impulsar a una de las emprendedoras y correr por un futuro más equitativo.</p><p style=\"margin-bottom: 15px;\">En esa premiación ocupamos el <span style=\"background-color: #ebac2d; padding: 2px 5px; border-radius: 3px;\">2° Lugar</span>, recibiendo una beca del programa Startup Boost Lab para levantamiento de capital.</p><h2 style='font-size: 24px; margin-bottom: 10px; color: #fff;'>Impacto y Colaboración</h2><p style=\"margin-bottom: 15px;\">Durante el evento, nuestra Directora Ejecutiva y de Operaciones, <strong style=\"color: #759c32;\">Miley Velásquez</strong>, hizo parte de la carrera 5km por ese propósito. También estuvimos durante una fase de selección, entrevistas para ser elegida como una de las 3 emprendedoras del año. Este espacio nos permitió conectar con más mujeres guerreras, emprendimientos de alto valor y dar a conocer nuestra solución.</p><h2 style='font-size: 24px; margin-bottom: 10px; color: #fff;'>Agradecimientos</h2><p style=\"margin-bottom: 15px;\">Queremos agradecer especialmente a <strong style=\"color: #759c32;\">Ana María Prieto</strong>, <strong style=\"color: #759c32;\">Alejandra Vásquez</strong>, <strong style=\"color: #759c32;\">Margarita Martínez</strong> y todo su equipo en Wearewondertech Latam por permitirnos ser parte de esta comunidad con la que impulsamos el emprendimiento y las mujeres por un futuro más equitativo.</p><p style=\"margin-top: 30px; text-align: center;\"><a href=\"https://www.wearewondertech.com/wonder-run-2024-carrera-emprendimiento-mujeres-tech-latam\" target=\"_blank\" style=\"background-color: #759c32; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px; font-weight: bold;\">Conoce más de wearewondertech aquí</a></p></article>",
+    "author": {
+      "name": "Miley Velazquez",
+      "photo": "/images/team/Miley.png",
+      "avatar": "/images/team/Miley.png"
+    },
+    "slug": "wonderun-2024",
+    "tags": [
+      "Mileyvelasquezcofundadora",
+      "Cemento",
+      "WondeRun",
+      "Mujeremprendedora"
+    ],
+    "readTime": "5 min"
+  },
+  {
     "title": "En REMTECH 2024",
     "image": "/images/news/REMTECH/Portada.jpeg",
     "publishedAt": "2024-10-04T11:18:00",
