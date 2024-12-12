@@ -83,7 +83,7 @@ const Page = ({ params }) => {
                 className="new-content text-complementary-200 text-pretty font-title text-justify text-lg"
                 dangerouslySetInnerHTML={{ __html: currentNew.content }}
               ></div>
-              <div className="flex gap-2 mt-8">
+              <div className="flex gap-2 mt-8 flex-wrap">
                 {currentNew.tags?.map((tag) => (
                   <span
                     key={tag}
@@ -94,7 +94,7 @@ const Page = ({ params }) => {
                 ))}
               </div>
             </div>
-            <aside className="xl:sticky xl:top-20 grid gap-5">
+            <aside className="xl:sticky xl:top-20 grid gap-5 w-full xl:w-auto">
               <div className="text-xl text-complementary-200">
                 Noticias Relacionadas
               </div>
