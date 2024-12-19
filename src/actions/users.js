@@ -1,7 +1,7 @@
 'use server'
 import { revalidatePath } from "next/cache"
 import { towerscemServerApi } from "@/apis/towerscemServerApi"
-import { getToken } from "@/utils/getToken"
+import { getToken } from "@/utils/token"
 
 export const getUsers = async ({ page = 1, pageSize = 10 }) => {
   try {

@@ -19,6 +19,5 @@ export const USER_ROLES_OPTIONS = [
     }
 ]
 
-
-
+export const USER_ROLES_ACCESS_DASHBOARD = ['editor', 'admin', 'super_admin']
 

@@ -9,14 +9,7 @@ import { toggleSideMenu } from "@/store/ui";
 import { isDescendantHtmlElement } from "@/utils/isDescendantHtmlElement";
 
 
-
-const user = {
-  name: 'Carlos Torres',
-  photo: '/images/team/Carlos.png',
-  role: 'super_admin'
-}
-
-export const Navbar = () => {
+export const Navbar = ({ user }) => {
 
   const dispatch = useDispatch()
   const [showDropdown, setShowDropdown] = useState(false)

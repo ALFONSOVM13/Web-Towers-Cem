@@ -1,4 +1,7 @@
 // Se ejecuta del lado del cliente
+import { getCookie } from "cookies-next"
+import { TOKEN_NAME_COOKIE } from "@/constants/auth"
+
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 const towerscemClientApi = {
@@ -8,6 +11,8 @@ const towerscemClientApi = {
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
+                Authorization: `Bearer ${ getCookie(TOKEN_NAME_COOKIE) }`
+
             },
         }
 

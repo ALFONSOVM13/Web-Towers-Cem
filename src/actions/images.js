@@ -1,6 +1,6 @@
 'use server'
 
-import { getToken } from '@/utils/getToken'
+import { getToken } from '@/utils/token'
 
 export const uploadImage = async (formData) => {
 

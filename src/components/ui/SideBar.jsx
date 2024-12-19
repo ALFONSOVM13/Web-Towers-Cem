@@ -1,13 +1,15 @@
 "use client";
-
-import { startToggleSideMenu } from "@/store/ui";
+import { useCallback } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import { BiX, BiChevronDown } from "react-icons/bi";
-import { FaCalendarCheck, FaNewspaper, FaUserGroup } from "react-icons/fa6";
+import { useRouter } from 'next/navigation';
+import { startToggleSideMenu } from "@/store/ui";
+import { BiX } from "react-icons/bi";
+import { FaCalendarCheck, FaNewspaper } from "react-icons/fa6";
 import { MdLogout } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { useCallback, useState } from 'react';
+import { MenuItem } from "@/components/ui/SideBarItem";
+import { startLogout } from '@/store/auth';
 
 const SIDEBAR_FULL_WIDTH = "w-[280px] sm:w-[240px]";
 const SIDEBAR_COLLAPSED_WIDTH = "w-[280px] sm:w-[60px]";
@@ -25,59 +27,10 @@ const menuItems = [
   }
 ];
 
-const MenuItem = ({ href, icon: Icon, text, isExpanded, subcategories }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  return (
-    <li>
-      <div className="flex flex-col">
-        <Link
-          href={href}
-          className={`flex text-lg items-center gap-5 text-white px-4 py-2 rounded-md hover:bg-primary-200`}
-          onClick={subcategories ? handleDropdownToggle : null}
-        >
-          <Icon size={25} className="text-white" />
-          {isExpanded && (
-            <span className="min-w-[150px] transition-all duration-500 flex items-center">
-              {text}
-              {subcategories && (
-                <BiChevronDown
-                  size={25}
-                  className={`ml-2 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
-                />
-              )}
-            </span>
-          )}
-        </Link>
-        {subcategories && isDropdownOpen && (
-          <ul className="ml-8 mt-2">
-            {subcategories.map((sub) => (
-              <li key={sub.href}>
-                <Link
-                  href={sub.href}
-                  className="flex text-lg items-center gap-5 text-white px-4 py-2 rounded-md hover:bg-primary-200"
-                >
-                  {isExpanded && (
-                    <span className="min-w-[150px] transition-all duration-500">
-                      {sub.text}
-                    </span>
-                  )}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </li>
-  );
-};
 
 const SideBar = () => {
   const dispatch = useDispatch();
+  const router = useRouter() 
   const toggleSideMenuState = useSelector((state) => state.ui.toggleSideMenu);
 
   const handleToggleSideMenu = useCallback(() => {
@@ -85,9 +38,9 @@ const SideBar = () => {
   }, [dispatch]);
 
   const handleLogout = useCallback(() => {
-    // Implement logout logic here
-    // dispatch(startLogout());
-  }, []);
+    dispatch(startLogout());
+    router.refresh()
+  }, [dispatch]);
 
   return (
     <>

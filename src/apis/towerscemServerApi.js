@@ -1,5 +1,5 @@
 // Se ejecuta del lado del servidor
-import { getToken } from "@/utils/getToken"
+import { getToken } from "@/utils/token"
 
 const API_URL = process.env.API_URL
 
