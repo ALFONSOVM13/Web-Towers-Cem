@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useRef } from "react"
-import Button from './Button'
+import Button from '@/components/ui/Button'
 
 const EventForm = () => {
   const [event, setEvent] = useState({

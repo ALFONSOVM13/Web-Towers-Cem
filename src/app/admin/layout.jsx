@@ -18,7 +18,7 @@ export default async function AdminLayout({ children }) {
           <SideBar />
           <div className="w-full flex flex-col ">
             <Navbar user={ session.user } />
-            <main className="w-full h-full px-5 py-6">
+            <main className="w-full h-full px-5 py-6 bg-slate-50">
               {children}
             </main>
           </div>

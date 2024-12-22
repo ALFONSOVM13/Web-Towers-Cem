@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache"
 import { towerscemServerApi } from "@/apis/towerscemServerApi"
 import { getToken } from "@/utils/token"
 
-export const getUsers = async ({ page = 1, pageSize = 10 }) => {
+export const getUsers = async ({ page = 1, pageSize = 5 }) => {
   try {
     const data = await towerscemServerApi.get(`/users?page=${page}&pageSize=${pageSize}`, {
       headers: {

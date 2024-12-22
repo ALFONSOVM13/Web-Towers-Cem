@@ -5,7 +5,7 @@ import { LoadingCircle } from "./LoadingCircle"
 
 export const ModalDelete = ({ title, subtitle, onChange, isDeleting }) => {
   return (
-    <div className="flex flex-col gap-4 p-1 max-w-[28rem]">
+    <div className="flex flex-col gap-4 p-4 max-w-[28rem]">
       <div className="flex flex-col items-center sm:flex-row gap-4">
         <div className="w-12 h-12 aspect-square text-lg rounded-full bg-red-100 text-red-500 flex justify-center items-center">
           <BiTrash />

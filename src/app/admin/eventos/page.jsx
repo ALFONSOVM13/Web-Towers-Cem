@@ -1,10 +1,18 @@
-import EventForm from '@/components/ui/EventForm'
+import { AddEventButtom } from '@/components/events/AddEventButtom'
+import EventForm from '@/components/events/EventForm-old'
 
 export default function EventosPage() {
   return (
-    <div className="container mx-auto px-4 py-">
+    <>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl md:text-3xl font-title font-bold">Eventos</h1>
+        <AddEventButtom />
+      </div>
       <EventForm />
-    </div>
+      <div>
+        Events List
+      </div>
+    </>
   )
 }
 

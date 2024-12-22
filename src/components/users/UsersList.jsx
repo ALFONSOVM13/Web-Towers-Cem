@@ -60,7 +60,7 @@ export const UsersList = ({ users }) => {
               message="No hay usuarios registrados"
               />
             ):(
-              <TableContainer>
+              <TableContainer className="bg-white">
                 <Table>
                   <Table.Thead>
                     <Table.THeadRow>

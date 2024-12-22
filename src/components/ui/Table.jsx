@@ -1,9 +1,9 @@
 import { Pagination } from "./Pagination"
 import { RegistersCounter } from "./RegistersCounter"
 
-const TableContainer = ({ children }) => {
+const TableContainer = ({ children, className='' }) => {
   return (
-    <div className={`border rounded overflow-x-auto`}>
+    <div className={`border rounded overflow-x-auto ${ className }`}>
       {children}
     </div>
   )
@@ -61,7 +61,7 @@ const TBodyRow = ({ children, index, pageSize, currentPage, className = '' }) =>
 
 const TableFooter = ({ pageSize, currentPage, currentPageSize, totalRegisters, totalPages, handleChangePage  }) => {
   return (
-    <div className="flex flex-row flex-wrap justify-between px-4 py-4 border-t">
+    <div className="flex flex-row flex-wrap justify-between px-4 py-2 border-t">
       <RegistersCounter
         pageSize={pageSize}
         currentPage={currentPage}

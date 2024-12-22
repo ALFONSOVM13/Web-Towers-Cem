@@ -25,7 +25,7 @@ import { BiX } from "react-icons/bi";
 
 const imageMimeType = /image\/(png|jpg|jpeg|gif|webp|avif)/i;
 
-export const UploadImage = ({ defaultImage, onRemoveDefaultImage, file, onChange, disabled }) => {
+export const UploadImage = ({ defaultImage, onRemoveDefaultImage, file, onChange, className='', iconSize=8, id='upload-image', object="cover", disabled }) => {
 
   const [fileDataURL, setFileDataURL] = useState(null)
 
@@ -86,7 +86,7 @@ export const UploadImage = ({ defaultImage, onRemoveDefaultImage, file, onChange
           ? (
             <div className="relative w-full h-full">
               <figure
-                className="relative w-full h-full cursor-pointer rounded"
+                className={`relative w-full h-full cursor-pointer rounded ${ object === 'contain' ? 'border border-gray-400 border-dashed' : undefined }`}
                 onClick={() => fileInputRef.current?.click()}
               >
                 <Image
@@ -94,7 +94,7 @@ export const UploadImage = ({ defaultImage, onRemoveDefaultImage, file, onChange
                   height={208}
                   src={fileDataURL || defaultImage}
                   alt={'Imagen'}
-                  className="w-full h-full object-cover object-center rounded"
+                  className={`w-full h-full object-${object} object-center rounded`}
                 />
               </figure>
               <button
@@ -108,10 +108,10 @@ export const UploadImage = ({ defaultImage, onRemoveDefaultImage, file, onChange
           ) : (
             <div
               onClick={() => fileInputRef.current?.click()}
-              className={`group flex justify-center items-center border border-gray-400 border-dashed rounded w-full h-full text-2xl text-gray-400 p-5 ${ !disabled ? 'hover:border-primary-100 hover:text-primary-100 cursor-pointer' : undefined }`}
+              className={`group flex justify-center items-center border border-gray-400 border-dashed rounded w-full h-full text-2xl text-gray-400 p-5 ${ className } ${ !disabled ? 'hover:border-blue-800 hover:text-blue-800 cursor-pointer' : undefined }`}
             >
               <svg
-                className="mx-auto h-8 w-8"
+                className={`mx-auto h-${iconSize} w-${iconSize}`}
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 48 48"
@@ -129,6 +129,7 @@ export const UploadImage = ({ defaultImage, onRemoveDefaultImage, file, onChange
       }
       <input
         type="file"
+        id={ id }
         style={{ display: 'none' }}
         disabled={disabled}
         ref={fileInputRef}

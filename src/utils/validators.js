@@ -9,3 +9,14 @@ export const isValidEmail = ( email ) => {
 
     return !!match;
 }
+
+export const isValidUrl = ( url ) => {
+    
+    const match = String(url)
+        .toLowerCase()
+        .match(
+            /^(http|https):\/\/[^ "]+$/
+        );
+
+    return !!match;
+}

@@ -62,3 +62,6 @@
     }
   }
   
+body.fixed-body {
+  overflow:hidden
+}

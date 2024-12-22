@@ -1,0 +1,73 @@
+/* ==== ==== ==== Custom Scroll ==== ==== ==== */
+.custom-scroll::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.custom-scroll::-webkit-scrollbar:vertical {
+    width:8px;
+}
+
+.custom-scroll::-webkit-scrollbar-button:increment,.custom-scroll::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.custom-scroll::-webkit-scrollbar:horizontal {
+    height: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #b4b4b4;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    border-radius: 8px;  
+}
+
+  
+/* ==== ==== ==== CKEditor ==== ==== ====*/
+/* Editor toolbar */
+.ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content {
+    @apply border-gray-200;
+    border-top-left-radius: 0.25rem !important;
+    border-top-right-radius: 0.25rem !important;
+    overflow: hidden;
+}
+
+/* Editor content */
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline {
+    border-bottom-left-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+    @apply border-gray-200;
+    @apply custom-scroll;
+}
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline:hover {
+    @apply border-blue-800;
+}
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline:focus {
+    @apply outline;
+    @apply outline-2;
+    @apply outline-blue-800;
+    @apply -outline-offset-2;
+}
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred {    
+    height: 8.5rem;
+}
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused {
+    height: 8.6rem;
+    box-shadow: none;
+    @apply border-gray-200;
+}
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline li{
+    margin-inline-start: 1.2rem;
+}
+
+.ck.ck-powered-by{
+    display: none;
+}

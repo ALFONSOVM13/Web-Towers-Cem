@@ -20,7 +20,7 @@ export const UserForm = ({ user }) => {
          email   : user?.email ?? '',
          password: '',
          passwordConfirm: '',
-         role    : user?.role ??'editor',
+         role    : user?.role ?? 'editor',
          active  : user?.active ?? true,
          imageFile: null
       }
@@ -92,7 +92,7 @@ export const UserForm = ({ user }) => {
 
 
    return (
-      <div className="max-w-[40rem] mx-auto py-6 px-4 sm:p-8 bg-white rounded-md border shadow-lg">
+      <div className="max-w-[40rem] mx-auto py-6 px-4 sm:p-8 bg-white rounded-md shadow">
          <form
             onSubmit={handleSubmit(handleUserSubmit)}
             className="space-y-4 sm:space-y-6"
@@ -120,13 +120,13 @@ export const UserForm = ({ user }) => {
                   <input
                      type="text"
                      id="name"
-                     placeholder="Ingrese los nombres del usuario"
+                     placeholder="Ingrese los nombres"
                      disabled={loading}
                      {...register('name', {
                         required: 'Los nombres son requeridos',
                         validate: (value)=> value.trim() === '' ? 'Los nombres son requeridos' : undefined
                      })}
-                     className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
+                     className="px-2 py-2 block w-full rounded border focus:outline-blue-800 hover:border-blue-800"
                   />
                   { errors.name && (
                     <span className="text-sm text-red-600">{ errors.name.message }</span>
@@ -140,12 +140,12 @@ export const UserForm = ({ user }) => {
                      type="text"
                      id="lastName"
                      disabled={loading}
-                     placeholder="Ingrese los apellidos del usuario"
+                     placeholder="Ingrese los apellidos"
                      {...register('lastName', {
                         required: 'Los apellidos son requeridos',
                         validate: (value)=> value.trim() === '' ? 'Los apellidos son requeridos' : undefined
                      })}
-                     className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
+                     className="px-2 py-2 block w-full rounded border focus:outline-blue-800 hover:border-blue-800"
                   />
                   { errors.lastName && (
                     <span className="text-sm text-red-600">{ errors.lastName.message }</span>
@@ -166,7 +166,7 @@ export const UserForm = ({ user }) => {
                      required: 'El correo es requerido',
                      validate: value => !isValidEmail(value) ? 'EL correo no es válido': undefined
                   })}
-                  className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
+                  className="px-2 py-2 block w-full rounded border focus:outline-blue-800 hover:border-blue-800"
                />
                { errors.email && (
                   <span className="text-sm text-red-600">{ errors.email.message }</span>
@@ -189,7 +189,7 @@ export const UserForm = ({ user }) => {
                                  required: 'La contraseña es requerida',
                                  minLength: { value: 6, message: 'Contraseña muy corta, min 6 caracteres' }
                               })}
-                              className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
+                              className="px-2 py-2 block w-full rounded border focus:outline-blue-800 hover:border-blue-800"
                            />
                            { errors.password && (
                               <span className="text-sm text-red-600">{ errors.password.message }</span>
@@ -209,7 +209,7 @@ export const UserForm = ({ user }) => {
                                  minLength: { value: 6, message: 'Contraseña muy corta, min 6 caracteres' },
                                  validate: ( value ) => passwordRef.current !== value ? 'Las contraseña no son iguales' : undefined 
                               })}
-                              className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
+                              className="px-2 py-2 block w-full rounded border focus:outline-blue-800 hover:border-blue-800"
                            />
                            { errors.passwordConfirm && (
                               <span className="text-sm text-red-600">{ errors.passwordConfirm.message }</span>
@@ -230,7 +230,7 @@ export const UserForm = ({ user }) => {
                      required: 'El rol es requerido',
                      validate: value => !USER_ROLES.includes(value) ? 'El rol no es válido' : undefined
                   })}
-                  className="px-2 py-2 block w-full rounded bg-gray-100 border-gray-400 shadow-sm focus:border-indigo-300"
+                  className="px-2 py-2 block w-full rounded border focus:outline-blue-800 hover:border-blue-800"
                >
                   {
                      USER_ROLES_OPTIONS.map(({ value, label }) => (
@@ -262,7 +262,6 @@ export const UserForm = ({ user }) => {
                   )}
                />
             </div>
-
             <div className="flex justify-center gap-4">
                <button
                   type="submit"

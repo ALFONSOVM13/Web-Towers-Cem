@@ -15,15 +15,19 @@ const SIDEBAR_FULL_WIDTH = "w-[280px] sm:w-[240px]";
 const SIDEBAR_COLLAPSED_WIDTH = "w-[280px] sm:w-[60px]";
 
 const menuItems = [
-  { href: "/admin/noticias", icon: FaNewspaper, text: "Noticias" },
+  { 
+      href: "/admin/noticias", 
+      icon: FaNewspaper, 
+      text: "Noticias"
+  },
   {
-    href: "",
+    href: "/admin/eventos",
     icon: FaCalendarCheck,
     text: "Eventos",
-    subcategories: [
-      { href: "/admin/eventos", text: "Crear Evento" },
-      { href: "/admin/lista-eventos", text: "Lista de Eventos" },
-    ],
+    // subcategories: [
+    //   { href: "/admin/eventos", text: "Crear Evento" },
+    //   { href: "/admin/lista-eventos", text: "Lista de Eventos" },
+    // ],
   }
 ];
 
