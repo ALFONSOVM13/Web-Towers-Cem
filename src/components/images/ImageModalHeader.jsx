@@ -1,19 +1,26 @@
 'use client'
 import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { MdClose } from "react-icons/md"
-import { towerscemClientApi } from "@/apis/towerscemClientApi"
-import { toastError } from "@/libs/toast"
+import { startLoadImageCategories } from "@/store/images/imagesThunk"
 
 export const ImageModalHeader = ({ title, onClose, onChangeImageCategory, currentImageCategory='' }) => {
 
-    const [imageCategories, setImageCategories] = useState()
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
+
+    const { imageCategories } = useSelector( state => state.images )
+    const dispatch = useDispatch()
+
+    const loagImageCategories = async () => {
+        setIsLoading(true)
+        await dispatch( startLoadImageCategories() )
+        setIsLoading(false)
+    }
 
     useEffect(() => {
-        towerscemClientApi.get('/imageCategories')
-            .then(data => setImageCategories(data) )
-            .catch(()=> toastError('Hubo un error al cargar las categorías') )
-            .finally(()=> setIsLoading(false) )
+        if(imageCategories.data.length === 0){
+            loagImageCategories()
+        }
     }, [])
 
 
