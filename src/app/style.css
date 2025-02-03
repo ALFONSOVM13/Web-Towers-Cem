@@ -61,7 +61,5 @@
       transform: scale(1) rotate(360deg);
     }
   }
+
   
-body.fixed-body {
-  overflow:hidden
-}
