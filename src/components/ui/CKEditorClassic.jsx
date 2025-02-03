@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import { ClassicEditor, Essentials, BlockQuote, Paragraph, Bold, Italic, Underline, Link, List, } from 'ckeditor5';
 import 'ckeditor5/ckeditor5.css';
 import './CKEditorClassic.scss';
