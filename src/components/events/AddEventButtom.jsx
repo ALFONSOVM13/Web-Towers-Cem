@@ -13,7 +13,7 @@ export const AddEventButtom = () => {
         <>
             <button
                 onClick={()=>setShowEventForm( true )} 
-                className="flex items-center gap-1 px-3 py-2 bg-primary-200 hover:bg-primary-100 rounded text-white transition"
+                className="flex items-center gap-1 px-3 py-2 font-semibold text-sm bg-primary-200 hover:bg-primary-100 rounded text-white transition"
             >
                 <BiPlusCircle size={20} />
                 Agregar Evento
