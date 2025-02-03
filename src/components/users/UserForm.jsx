@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState } from 'react'
+import {  useRef, useState } from 'react'
 import { Controller, useForm } from "react-hook-form"
 import { toastError, toastSuccess } from '@/libs/toast'
 import { isValidEmail } from '@/utils/validators'
@@ -266,7 +266,7 @@ export const UserForm = ({ user }) => {
                <button
                   type="submit"
                   disabled={ loading }
-                  className="flex items-center justify-center gap-1 px-3 min-w-[12rem] w-full sm:w-auto py-2 bg-primary-200 enabled:hover:bg-primary-100 disabled:opacity-80 rounded text-white transition uppercase"
+                  className="flex items-center justify-center font-semibold text-sm gap-1 px-3 min-w-[12rem] w-full sm:w-auto py-2 bg-primary-200 enabled:hover:bg-primary-100 disabled:opacity-80 rounded text-white transition"
                >
                   {loading ? <LoadingCircle className="w-6 h-6" /> : user ? 'Guardar' : 'Crear Usuario'}
                </button>
