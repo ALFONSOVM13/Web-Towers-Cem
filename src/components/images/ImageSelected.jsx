@@ -3,12 +3,23 @@ import { useState } from "react"
 import Image from "next/image"
 import { BiX } from "react-icons/bi"
 import { ModalContainer } from "@/components/ui/ModalContainer"
-import { ImagesModal } from "./ImagesModal"
+import { ImagesModal } from "@/components/images/ImagesModal"
 
-
-export const ImageSelected = ({ value, onChange, iconSize=8, object = 'cover' }) => {
+export const ImageSelected = ({ value, onChange, iconSize=8, object='cover', defaultImageCategory='' }) => {
 
     const [showImagesModal, setShowImagesModal] = useState(false)
+
+    const handleChangeImage = (images=[]) => {
+        if(images.length >= 1){
+            onChange(images[0])
+        }else {
+            onChange(null)
+        }
+    }
+
+    const handleDeleteImage = () => {
+        onChange(null)
+    }
 
     return (
         <>
@@ -20,9 +31,9 @@ export const ImageSelected = ({ value, onChange, iconSize=8, object = 'cover' })
                             onClick={() => setShowImagesModal(true)}
                         >
                             <Image
-                                width={208}
-                                height={208}
-                                src={value}
+                                width={400}
+                                height={200}
+                                src={value.url}
                                 alt={'Imagen'}
                                 className={`w-full h-full object-${object} object-center rounded`}
                             />
@@ -62,9 +73,9 @@ export const ImageSelected = ({ value, onChange, iconSize=8, object = 'cover' })
                 onClose={() => setShowImagesModal(false)}
             >
                 <ImagesModal
-                    values={[]}
-                    onChange={console.log}
-                    imageCategory={'events'}
+                    values={ value ? [ value ] : []}
+                    onChange={handleChangeImage}
+                    imageCategory={defaultImageCategory}
                     onClose={ () => setShowImagesModal(false) }
                 />
             </ModalContainer>

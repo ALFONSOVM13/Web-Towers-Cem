@@ -4,7 +4,7 @@ import Image from "next/image";
 import { BiX } from "react-icons/bi";
 import { FiUploadCloud } from "react-icons/fi";
 import { toastError } from "@/libs/toast";
-import { ButtonSelectFiles } from "./ButtonSelectFiles";
+import { ButtonSelectFiles } from "@/components/images/ButtonSelectFiles";
 import { arrayFilesToFileList } from "@/utils/form";
 import { LoadingCircle } from "../ui/LoadingCircle";
 
@@ -102,12 +102,9 @@ export const UploadMultipleImages = ({imageCategory, onGetResults}) => {
     }
 
 
-
-
-
     return (
         <div className="py-1">
-            <div className="flex flex-col md:flex-row justify-between gap-1 pb-3">
+            <div className="flex flex-col sm:flex-row justify-between gap-1 pb-1">
                 <ButtonSelectFiles
                     onClick={()=> fileInputRef.current?.click()}
                     lengthFiles={files?.length ?? 0}
@@ -123,7 +120,7 @@ export const UploadMultipleImages = ({imageCategory, onGetResults}) => {
                 />
                 <button
                     type="button"
-                    className="flex justify-center items-center gap-2 px-5 py-2 w-full max-w-[9.1rem] font-semibold text-sm bg-primary-200 enabled:hover:bg-primary-100 disabled:opacity-60 rounded text-white transition"
+                    className="flex justify-center items-center gap-2 px-5 py-2 w-full sm:max-w-[9.1rem] font-semibold text-sm bg-primary-200 enabled:hover:bg-primary-100 disabled:opacity-60 rounded text-white transition"
                     onClick={ uploadImages }
                     disabled={ !files || files.length === 0 || loading }
                 >
