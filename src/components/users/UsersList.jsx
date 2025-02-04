@@ -23,7 +23,7 @@ export const UsersList = ({ users }) => {
   const handleDeleteUser = async (confirm) => {
 
     if (!confirm) {
-      return setUserToDelete(false)
+      return setUserToDelete(null)
     }
 
     setIsDeleting(true)
@@ -57,7 +57,7 @@ export const UsersList = ({ users }) => {
           data.length === 0
             ? (
               <MessageWithoutResults
-              message="No hay usuarios registrados"
+                message="No hay usuarios registrados"
               />
             ):(
               <TableContainer className="bg-white">
