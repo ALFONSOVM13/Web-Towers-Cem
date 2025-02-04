@@ -3,29 +3,32 @@ import { Navbar } from "@/components/ui/Navbar";
 import SideBar from "@/components/ui/SideBar";
 import { verifySession } from "@/actions/auth";
 import { InitializerSessionState } from "@/store/InitializerSessionState";
+import { DashboardProviders } from "@/store/DashboardProviders";
 
 export default async function AdminLayout({ children }) {
 
   const session = await verifySession()
 
-  if( !session ){
-      redirect('/iniciar-sesion')
+  if (!session) {
+    redirect('/iniciar-sesion')
   }
 
   return (
     <>
+      <DashboardProviders>
         <div className="flex">
           <SideBar />
           <div className="w-full flex flex-col ">
-            <Navbar user={ session.user } />
+            <Navbar user={session.user} />
             <main className="w-full h-full px-5 py-6 bg-slate-50">
               {children}
             </main>
           </div>
         </div>
-        <InitializerSessionState 
-          session={ session }
+        <InitializerSessionState
+          session={session}
         />
+      </DashboardProviders>
     </>
   );
 }
