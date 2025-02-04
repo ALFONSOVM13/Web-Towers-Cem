@@ -2,6 +2,25 @@
 import { towerscemServerApi } from "@/apis/towerscemServerApi"
 import { revalidatePath } from "next/cache"
 
+export const getEvents = async({ page = 1, pageSize = 5 }) => {
+    try {
+        const data = await towerscemServerApi.get(`/events?page=${ page }&pageSize=${ pageSize }`, {
+            headers: {
+                'Cache-Control': 'no-store'
+            }
+        })
+        return {
+            error: null,
+            data
+        }
+    } catch (error) {
+        console.log(error.message)
+        return {
+          error: error.message,
+          data: null
+        }    
+    }
+}
 
 
 export const createEvent = async( formData ) => {
