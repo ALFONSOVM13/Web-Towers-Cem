@@ -59,7 +59,7 @@ const TBodyRow = ({ children, index, pageSize, currentPage, className = '' }) =>
   )
 }
 
-const TableFooter = ({ pageSize, currentPage, currentPageSize, totalRegisters, totalPages, handleChangePage  }) => {
+const TableFooter = ({ pageSize, currentPage, currentPageSize, totalRegisters, totalPages, handleChangePage, label  }) => {
   return (
     <div className="flex flex-row flex-wrap justify-between px-4 py-2 border-t">
       <RegistersCounter
@@ -67,6 +67,7 @@ const TableFooter = ({ pageSize, currentPage, currentPageSize, totalRegisters, t
         currentPage={currentPage}
         currentPageSize={currentPageSize}
         totalRegisters={totalRegisters}
+        label={label}
       />
       <Pagination
         currentPage={currentPage}
