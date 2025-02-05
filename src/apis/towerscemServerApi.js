@@ -65,6 +65,14 @@ const towerscemServerApi = {
         })
     },
 
+    patch: (endpoint, body, options = {}) => {
+        return towerscemServerApi.fetch(endpoint, {
+            ...options,
+            method: 'PATCH',
+            body: JSON.stringify(body),
+        })
+    },
+
     delete: (endpoint, options = {}) => {
         return towerscemServerApi.fetch(endpoint, { ...options, method: 'DELETE' })
     },
