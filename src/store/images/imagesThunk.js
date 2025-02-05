@@ -1,6 +1,6 @@
 import { towerscemClientApi } from "@/apis/towerscemClientApi"
 import { toastError } from "@/libs/toast"
-import { setImageCategories } from "@/store/images/imagesSlice"
+import { setImageCategories, setImages } from "@/store/images/imagesSlice"
 
 
 export const startLoadImageCategories = ()=> {
@@ -10,6 +10,17 @@ export const startLoadImageCategories = ()=> {
             dispatch( setImageCategories(data) )
         } catch (error) {
             toastError('Hubo un error al cargar las categorías')
+        }
+    }
+}
+
+export const startLoadImages = ({ page, imageCategory }) => {
+    return async ( dispatch )=> {
+        try {
+            const data = await towerscemClientApi.get(`/images?imageCategory=${imageCategory}&page=${page}&pageSize=5`)
+            dispatch( setImages(data) )
+        } catch (error) {
+            toastError('Hubo un error al cargar las imágenes')
         }
     }
 }
