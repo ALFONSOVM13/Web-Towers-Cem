@@ -1,10 +1,9 @@
+'use client'
 import Image from "next/image"
-import Link from "next/link"
 import { BiEditAlt, BiTrash, BiLinkExternal } from "react-icons/bi"
 
 
-export const EventListItem = ({ event }) => {
-    console.log(event)
+export const EventListItem = ({ event, onSetEventToEdit, onSetEventToDelete }) => {
     return (
         <>
             <td className="w-48 py-3">
@@ -40,14 +39,14 @@ export const EventListItem = ({ event }) => {
                 <div className="flex items-center gap-2">
                     <button
                         type="button"
-                        onClick={()=>{}}
+                        onClick={()=>onSetEventToEdit(event)}
                         className="items-center text-blue-600 hover:text-white bg-blue-100 hover:bg-blue-500 font-bold text-sm py-2 px-2 rounded-md transition"
                     >
                         <BiEditAlt />
                     </button>
                     <button
                         type="button"
-                        onClick={() => {}}
+                        onClick={() => onSetEventToDelete(event)}
                         className="items-center text-red-600 hover:text-white bg-red-100 hover:bg-red-500 font-bold text-sm py-2 px-2 rounded-md transition"
                     >
                         <BiTrash />

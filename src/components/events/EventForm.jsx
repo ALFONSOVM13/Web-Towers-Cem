@@ -6,7 +6,7 @@ import { CKEditorClassic } from '@/components/ui/CKEditorClassic'
 import { Switch } from '@/components/ui/Switch'
 import { LoadingCircle } from '@/components/ui/LoadingCircle'
 import { ImageSelected } from '@/components/images/ImageSelected'
-import { createEvent } from '@/actions/events'
+import { createEvent, updateEvent } from '@/actions/events'
 import { isValidUrl } from '@/utils/validators'
 import { toastError, toastSuccess } from '@/libs/toast'
 
@@ -15,14 +15,13 @@ export const EventForm = ({ title, onClose, eventEdit }) => {
   const [isLoading, setIsLoading] = useState(false)
   const { register, control, handleSubmit, formState: { errors }, getValues } = useForm({
     defaultValues: {
-      title: '',
-      url: '',
-      bannerDesktop: null,
-      bannerMobile: null,
-      isPublished: true
+      title        : eventEdit?.title || '',
+      url          : eventEdit?.url || '',
+      bannerDesktop: eventEdit?.bannerDesktop || null,
+      bannerMobile : eventEdit?.bannerMobile || null,
+      isPublished  : eventEdit?.isPublished ?? true
     }
   })
-
 
   const handleEventSubmit = async (formData) => {
 
@@ -33,6 +32,23 @@ export const EventForm = ({ title, onClose, eventEdit }) => {
 
       if (eventEdit) {
         // Editar evento
+        const { error } = await updateEvent({
+          id: eventEdit.id,
+          title,
+          url,
+          bannerDesktop: bannerDesktop.id,
+          bannerMobile: bannerMobile.id,
+          isPublished
+        })
+
+        if(error){
+          throw new Error(error)
+        }
+
+        setTimeout(() => {
+          toastSuccess('¡Evento actualizado correctamente!')
+        }, 100);
+        onClose()
 
       } else {
         // Crear evento
@@ -61,7 +77,6 @@ export const EventForm = ({ title, onClose, eventEdit }) => {
     }
   }
 
-  console.log(getValues('isPublished'))
 
   return (
     <div className="w-[94vw] max-h-[97vh] px-4 py-5 sm:px-5 sm:p-5 sm:max-w-[40rem] overflow-y-auto">
@@ -236,7 +251,8 @@ export const EventForm = ({ title, onClose, eventEdit }) => {
           >
             {isLoading
               ? <LoadingCircle className="w-6 h-6" />
-              : getValues('isPublished') ? 'Publicar' : 'Guardar'
+              : eventEdit ? 'Guardar' 
+                : getValues('isPublished') ? 'Publicar' : 'Guardar'
             }
           </button>
         </div>
