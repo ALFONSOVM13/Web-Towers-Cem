@@ -17,6 +17,7 @@ export const ModalDelete = ({ title, subtitle, onChange, isDeleting }) => {
       </div>
       <div className="flex flex-col-reverse md:flex-row md:justify-end gap-2">
         <button
+          type="button"
           className="hover:bg-slate-100 font-semibold text-gray-500 hover:text-gray-700 text-sm py-2 px-2 rounded-md transition min-w-24"
           disabled={isDeleting}
           onClick={() => onChange(false)}
@@ -24,6 +25,7 @@ export const ModalDelete = ({ title, subtitle, onChange, isDeleting }) => {
           Cancelar
         </button>
         <button
+          type="button"
           className="text-red-600 enabled:hover:text-white bg-red-100 enabled:hover:bg-red-500 font-semibold text-sm py-2 px-2 rounded-md transition min-w-24"
           disabled={isDeleting}
           onClick={() => onChange(true)}
