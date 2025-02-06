@@ -1,16 +1,20 @@
 'use client'
-import { useRouter } from "next/navigation"
-import { Table, TableContainer, TableFooter } from "../ui/Table"
-import { EventListItem } from "./EventListItem"
 import { useState } from "react"
-import { ModalContainer } from "../ui/ModalContainer"
-import { EventForm } from "./EventForm"
+import { useRouter } from "next/navigation"
+import { ModalContainer } from "@/components/ui/ModalContainer"
+import { ModalDelete } from "@/components/ui/ModalDelete"
+import { EventListItem } from "@/components/events/EventListItem"
+import { EventForm } from "@/components/events/EventForm"
+import { Table, TableContainer, TableFooter } from "@/components/ui/Table"
+import { deleteEvent } from "@/actions/events"
+import { toastError, toastSuccess } from "@/libs/toast"
 
 export const EventList = ({ events }) => {
 
     const { data, currentPage, pageSize, currentPageSize, totalPages, totalEvents } = events
     const [eventToEdit, setEventToEdit] = useState(null)
     const [eventToDelete, setEventToDelete] = useState(null)
+    const [isDeleting, setIsDeleting] = useState(false)
 
     const router = useRouter()
 
@@ -18,12 +22,30 @@ export const EventList = ({ events }) => {
         router.push(`?page=${pageSelected}&pageSize=${pageSize}`)
     }
 
+    const handleDeleteEvent = async(confirm) => {
 
+        if (!confirm) {
+            return setEventToDelete(null)
+        }
 
+        setIsDeleting(true)
+        try {
+            
+            const { error, data } = await deleteEvent(eventToDelete.id)
 
-    const handleDeleteEvent = (confirm) => {
-        if (confirm) {
-            return console.log('Eliminación cancelada!');
+            if (error) {
+              throw new Error(error)
+            }
+
+            setTimeout(() => {
+              toastSuccess(data.msg)
+              setEventToDelete(null)
+            }, 100)
+        } catch (error) {
+            console.log(error)
+            toastError(error.message || 'Hubo un error al eliminar el evento')
+        } finally {
+            setIsDeleting(false)
         }
 
     }
@@ -92,6 +114,17 @@ export const EventList = ({ events }) => {
                     onClose={()=>setEventToEdit(null)}
                     eventEdit={ eventToEdit }
 
+                />
+            </ModalContainer>
+            <ModalContainer
+                show={!!eventToDelete}
+                onClose={() => setEventToDelete(null)}
+            >
+                <ModalDelete
+                    title={'Eliminar evento'}
+                    subtitle={`¿Desea eliminar el evento ${eventToDelete?.title}?`}
+                    onChange={handleDeleteEvent}
+                    isDeleting={isDeleting}
                 />
             </ModalContainer>
         </>

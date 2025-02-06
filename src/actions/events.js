@@ -59,3 +59,22 @@ export const updateEvent = async( formData ) => {
         }
     }
 }
+
+export const deleteEvent = async(id) => {
+    try {
+        const data = await towerscemServerApi.delete(`/events/${id}`)
+        revalidatePath('/admin/events')
+    
+        return {
+          error: null,
+          data
+        }
+
+    } catch (error) {
+        console.log(error.message)
+        return {
+          error: error.message,
+          data: null
+        }
+    }
+}
