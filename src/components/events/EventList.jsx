@@ -6,8 +6,8 @@ import { ModalDelete } from "@/components/ui/ModalDelete"
 import { EventListItem } from "@/components/events/EventListItem"
 import { EventForm } from "@/components/events/EventForm"
 import { Table, TableContainer, TableFooter } from "@/components/ui/Table"
+import { MessageWithoutResults } from "@/components/ui/MessageWithoutResults"
 import { deleteEvent } from "@/actions/events"
-import { MessageWithoutResults } from "../ui/MessageWithoutResults"
 import { toastError, toastSuccess } from "@/libs/toast"
 
 export const EventList = ({ events }) => {

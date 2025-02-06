@@ -1,13 +1,13 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { UserListItem } from "./UserListItem"
-import { ModalContainer } from "../ui/ModalContainer"
-import { ModalDelete } from "../ui/ModalDelete"
-import { toastError, toastSuccess } from "@/libs/toast"
+import { UserListItem } from "@/components/users/UserListItem"
+import { ModalContainer } from "@/components/ui/ModalContainer"
+import { ModalDelete } from "@/components/ui/ModalDelete"
+import { Table, TableContainer, TableFooter } from "@/components/ui/Table"
+import { MessageWithoutResults } from "@/components/ui/MessageWithoutResults"
 import { deleteUser } from "@/actions/users"
-import { Table, TableContainer, TableFooter } from "../ui/Table"
-import { MessageWithoutResults } from "../ui/MessageWithoutResults"
+import { toastError, toastSuccess } from "@/libs/toast"
 
 export const UsersList = ({ users }) => {
 
