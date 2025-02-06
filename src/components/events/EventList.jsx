@@ -7,6 +7,7 @@ import { EventListItem } from "@/components/events/EventListItem"
 import { EventForm } from "@/components/events/EventForm"
 import { Table, TableContainer, TableFooter } from "@/components/ui/Table"
 import { deleteEvent } from "@/actions/events"
+import { MessageWithoutResults } from "../ui/MessageWithoutResults"
 import { toastError, toastSuccess } from "@/libs/toast"
 
 export const EventList = ({ events }) => {
@@ -47,7 +48,6 @@ export const EventList = ({ events }) => {
         } finally {
             setIsDeleting(false)
         }
-
     }
 
     return (
@@ -58,7 +58,7 @@ export const EventList = ({ events }) => {
                     data.length === 0
                         ? (
                             <MessageWithoutResults
-                                message="No hay usuarios registrados"
+                                message="No hay eventos publicados"
                             />
                         ) : (
                             <TableContainer className="bg-white">
