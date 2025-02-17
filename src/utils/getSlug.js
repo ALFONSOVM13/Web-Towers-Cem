@@ -11,3 +11,9 @@ export const getSlug = ( text ) => {
     .trim() // Eliminar espacios al inicio y final
     .replace(/\s+/g, '-') || 'default-slug'; // Fallback para strings vacíos
 }
+
+
+export const isValidSlug = (slug) => {
+  const regex = /^[a-zA-Z0-9-_]+$/
+  return regex.test(slug) 
+};
