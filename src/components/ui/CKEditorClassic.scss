@@ -26,13 +26,12 @@
 }
 
   
-/* ==== ==== ==== CKEditor ==== ==== ====*/
-/* Editor toolbar */
+// /* ==== ==== ==== CKEditor ==== ==== ====*/
+// /* Editor toolbar */
 .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content {
     @apply border-gray-200;
     border-top-left-radius: 0.25rem !important;
     border-top-right-radius: 0.25rem !important;
-    overflow: hidden;
 }
 
 /* Editor content */

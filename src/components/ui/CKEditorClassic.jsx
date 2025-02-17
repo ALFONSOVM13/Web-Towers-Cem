@@ -1,16 +1,16 @@
 'use client'
 import { useState } from 'react'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
-import { ClassicEditor, Essentials, BlockQuote, Paragraph, Bold, Italic, Underline, Link, List, } from 'ckeditor5';
+import { ClassicEditor, Essentials, FontColor, FontBackgroundColor, BlockQuote, Paragraph, Bold, Italic, Underline, Link, List, } from 'ckeditor5';
 import 'ckeditor5/ckeditor5.css';
 import './CKEditorClassic.scss';
 
 
 const editorToolbar = [
-    'undo', 'redo', '|', 'bold', 'italic', 'underline', 'link', 'blockQuote', 'bulletedList', 'numberedList'
+    'undo', 'redo', '|', 'bold', 'italic', 'underline', '|', 'fontColor', 'fontBackgroundColor', '|', 'link', 'blockQuote', 'bulletedList', 'numberedList'
 ]
 
-export const CKEditorClassic = ({ value, onChanche, placeholder='Contenido', id="wysiwyg -editor", height }) => {
+export const CKEditorClassic = ({ value, onChanche, placeholder='Contenido', id="wysiwyg-editor", height }) => {
 
     const [classesEditorContainer, setClassesEditorContainer] = useState('')
 
@@ -24,8 +24,11 @@ export const CKEditorClassic = ({ value, onChanche, placeholder='Contenido', id=
                 config={{
                     licenseKey:'GPL',
                     placeholder,
-                    plugins: [Essentials, BlockQuote, Paragraph, Bold, Italic, Underline, Link, List ],
-                    toolbar: editorToolbar,
+                    plugins: [Essentials, BlockQuote, Paragraph, Bold, Italic, Underline, FontColor, FontBackgroundColor, Link, List ],
+                    toolbar: {
+                        shouldNotGroupWhenFull: false,
+                        items: editorToolbar
+                    },
                 }}
                 onChange={(_event, editor) => {
                     const data = editor.getData()
