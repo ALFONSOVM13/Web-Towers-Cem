@@ -8,8 +8,10 @@ import { ModalDelete } from "@/components/ui/ModalDelete"
 import { toastError, toastSuccess } from "@/libs/toast"
 import { deleteAuthor } from "@/actions/authors"
 import { AuthorForm } from "./AuthorForm"
+import { MessageWithoutResults } from "../ui/MessageWithoutResults"
 
-export const AuthorList = ({ authors }) => {
+
+export const AuthorsList = ({ authors }) => {
 
   const { data, currentPage, pageSize, currentPageSize, totalPages, totalAuthors } = authors
   const [authorToEdit, setAuthorToEdit] = useState(null)
@@ -48,11 +50,10 @@ export const AuthorList = ({ authors }) => {
     }
   }
 
-
   return (
     <>
       <div className="max-w-[75rem] mx-auto">
-        <div className="my-4">Author Filter</div>
+        <div className="my-4">Author Filters</div>
         {
           data.length === 0
             ? (
