@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from "react"
 import { Controller, useForm } from "react-hook-form"
 import { MdClose } from "react-icons/md"
@@ -9,7 +8,7 @@ import { toastError, toastSuccess } from "@/libs/toast"
 import { createAuthor } from "@/actions/authors"
 
 export const AuthorForm = ({ title, onClose, authorEdit }) => {
-  console.log(authorEdit)
+  
   const [isLoading, setIsLoading] = useState(false)
   const { register, control, handleSubmit, formState: { errors }, getValues, setValue } = useForm({
     defaultValues: {
@@ -27,13 +26,15 @@ export const AuthorForm = ({ title, onClose, authorEdit }) => {
 
   const handleAuthorSubmit = async (formAuthorData) => {
     setIsLoading(true)
-    const { photoFile, photo, ...authorData } = formAuthorData
+    const { photoFile, photo, lastName='', name } = formAuthorData
 
     const formData = new FormData()
 
-    Object.keys(authorData).forEach(key => {
-      formData.append(key, authorData[key])
-    })
+    formData.append('name', name)
+
+    if(lastName && lastName.trim() !== ''){
+      formData.append('lastName', lastName)
+    }
 
     if (photo === null) {
       formData.append('image', '')
