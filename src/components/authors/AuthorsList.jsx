@@ -32,7 +32,7 @@ export const AuthorsList = ({ authors }) => {
     setIsDeleting(true)
     try {
 
-      const { error, data } = await deleteAuthor(userToDelete.id)
+      const { error, data } = await deleteAuthor(authorToDelete.id)
 
       if (error) {
         throw new Error(error)
