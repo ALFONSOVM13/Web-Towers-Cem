@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { AddAuthorButtom } from "@/components/authors/AddAuthorButtom";
-import { AuthorList } from "@/components/authors/authorList";
 import { getAuthors } from "@/actions/authors";
+import { AuthorsList } from "@/components/authors/AuthorsList";
 
 export default async function AuthorsPage({ searchParams }) {
 
@@ -13,6 +13,7 @@ export default async function AuthorsPage({ searchParams }) {
     notFound()
   }
 
+
   return (
     <>
       <div className="flex items-center justify-between">
@@ -20,7 +21,7 @@ export default async function AuthorsPage({ searchParams }) {
         <AddAuthorButtom />
       </div>
       <div>
-        <AuthorList authors={data} />
+        <AuthorsList authors={data} />
       </div>
     </>
   );
